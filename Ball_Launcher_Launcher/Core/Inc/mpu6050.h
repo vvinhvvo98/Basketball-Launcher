@@ -14,7 +14,7 @@
 #include "stm32f4xx_hal.h"
 
 /**
- * @brief MPU6050 structure definition.
+ * @brief Struct representing a mpu6050 imu sensor.
  */
 typedef struct
 {

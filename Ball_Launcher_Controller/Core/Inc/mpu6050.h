@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file            mpu6050.h
-  * @brief           Header for mpu.c file.
+  * @brief           Header for mpu6050.c file.
   *                  This file contains the common defines of the application.
   ******************************************************************************
   */
@@ -14,8 +14,9 @@
 #include "stm32f4xx_hal.h"
 
 /**
- * @brief MPU6050 structure definition.
+ * @brief Struct representing a mpu6050 imu sensor.
  */
+ 
 typedef struct
 {
     I2C_HandleTypeDef* hi2c; /**< I2C handle */
