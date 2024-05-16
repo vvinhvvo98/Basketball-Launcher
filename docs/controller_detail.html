@@ -98,21 +98,54 @@ $(function(){initNavTree('controller_detail.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="overview"></a>
 FINAL DESIGN</h1>
+<p>The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket. <br  />
+</p>
 <p><img src="control.png" alt="" width="1200" height="1000" class="inline"/></p>
-<p>UPDATE </p>
+<p>PICTURE UPDATE NEEDED</p>
+<h1><a class="anchor" id="schematic"></a>
+SCHEMATICS</h1>
+<p>The PDF of this schematic is also attached with higher solution can be found in <a href="schematic1.pdf">PDF SCHEMATIC</a> Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 BlackPill, mpu6050 IMU, HC-05, and LEDs together.</p>
+<p><img src="PCBCONTROLLER.png" alt="" width="1200" height="800" class="inline"/></p>
+<p><img src="PCBCONTROLLERLAYOUT.png" alt="" width="1200" height="1500" class="inline"/></p>
+<h1><a class="anchor" id="fsm"></a>
+FINITE STATE MACHINE</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">State   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Actions   </th><th class="markdownTableHeadNone">Transitions    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT - Attempt to connect, read IMU data, and turn on LED1 if the connection is successful   </td><td class="markdownTableBodyNone">- Attempt to connect<br  />
+- Read IMU data<br  />
+- Turn on LED1 if successful   </td><td class="markdownTableBodyNone">- If unsuccessful, transition to <b>STATE 0A: BLINK LED</b><br  />
+- If successful, transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">STATE0A   </td><td class="markdownTableBodyNone">BLINK LED - Blink three LEDs to indicate unsuccessful connection   </td><td class="markdownTableBodyNone">- Blink three LEDs   </td><td class="markdownTableBodyNone">- After blinking LEDs, transition back to <b>STATE 0: INIT</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">IMU READING - Continuously read IMU data   </td><td class="markdownTableBodyNone">- Continuously read IMU data   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 2: CHECK BUTTONS STATUS</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">CHECK BUTTONS STATUS - Check the status of the buttons   </td><td class="markdownTableBodyNone">- Check buttons status   </td><td class="markdownTableBodyNone">- If button is pushed, transition to <b>STATE 3: BLUETOOTH TRANSFER</b><br  />
+- If button 2 is pushed, turn on LED2 and LED3, and transition to <b>STATE 2A</b><br  />
+- Always transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">STATE2A   </td><td class="markdownTableBodyNone">CHECK BUTTONS STATUS - Check the status of the buttons and transfer data continuously   </td><td class="markdownTableBodyNone">- Check buttons status<br  />
+- Transfer data   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">BLUETOOTH TRANSFER - Transfer data via Bluetooth   </td><td class="markdownTableBodyNone">- Transfer data via Bluetooth   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 1: IMU READING</b>   </td></tr>
+</table>
+<p><img src="FSM1.png" alt="" width="1200" height="1200" class="inline"/></p>
+<p>PICTURE UPDATE NEEDED</p>
 <h1><a class="anchor" id="bom"></a>
 BILL OF MATERIAL</h1>
 <div align="center"> <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Component   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Image    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">PCBA   </td><td class="markdownTableBodyNone">Customized PCBA   </td><td class="markdownTableBodyNone"><img src="pcb1.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
+<td class="markdownTableBodyNone">PCBA   </td><td class="markdownTableBodyNone">Customized PCBA on top of the handle   </td><td class="markdownTableBodyNone"><img src="pcb1.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Handle   </td><td class="markdownTableBodyNone">3D printed handle with thread   </td><td class="markdownTableBodyNone"><img src="brk.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">MCU   </td><td class="markdownTableBodyNone">STM32 BlackPill microcontroller   </td><td class="markdownTableBodyNone"><img src="bp.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IMU   </td><td class="markdownTableBodyNone"><a class="el" href="struct_m_p_u6050.html">MPU6050</a> 6 DOF motion sensor   </td><td class="markdownTableBodyNone"><img src="imu.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
+<td class="markdownTableBodyNone">IMU   </td><td class="markdownTableBodyNone">mpu6050 6 DOF motion sensor   </td><td class="markdownTableBodyNone"><img src="imu.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Button   </td><td class="markdownTableBodyNone">Additional buttons for control the launcher   </td><td class="markdownTableBodyNone"><img src="button.png" alt="" width="200" height="200" class="inline"/>    </td></tr>
 <tr class="markdownTableRowEven">
@@ -122,11 +155,7 @@ BILL OF MATERIAL</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Resistor   </td><td class="markdownTableBodyNone">Resistor for LED   </td><td class="markdownTableBodyNone"><img src="r.png" alt="" width="200" height="200" class="inline"/>   </td></tr>
 </table>
-</div><h1><a class="anchor" id="fsm"></a>
-FINITE STATE MACHINE</h1>
-<p><img src="FSM1.png" alt="" width="1200" height="1000" class="inline"/></p>
-<p>UPDATE </p>
-</div></div><!-- contents -->
+</div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

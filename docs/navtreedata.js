@@ -28,8 +28,9 @@ var NAVTREE =
     [ "MAIN PAGE", "index.html", "index" ],
     [ "CONTROLLER", "controller_detail.html", [
       [ "FINAL DESIGN", "controller_detail.html#overview", null ],
-      [ "BILL OF MATERIAL", "controller_detail.html#bom", null ],
-      [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ]
+      [ "SCHEMATICS", "controller_detail.html#schematic", null ],
+      [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ],
+      [ "BILL OF MATERIAL", "controller_detail.html#bom", null ]
     ] ],
     [ "LAUNCHER", "launcher_detail.html", null ],
     [ "Topics", "topics.html", "topics" ],
