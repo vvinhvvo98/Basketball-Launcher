@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['y_0',['Y',['../struct_m_p_u6050.html#a946c0c3660c4174153bacafdfcb251a7',1,'MPU6050']]]
+  ['period_0',['period',['../struct_stepper_x.html#a234194365df7b9db2ef378d173995584',1,'StepperX']]],
+  ['pulsewidth_1',['pulseWidth',['../struct_radio_x.html#a04b99a1f25c9970fc0cb5c0eecfbe1e9',1,'RadioX']]]
 ];

@@ -101,49 +101,56 @@ $(function(){initNavTree('stepper__driver_8h_source.html',''); initResizable(); 
   <div class="headertitle"><div class="title">stepper_driver.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * stepper_driver.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: May 9, 2024</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: vvinh</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef STEPPER_DRIVER_H_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define STEPPER_DRIVER_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_stepper_x.html">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    TIM_HandleTypeDef* timer;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    GPIO_TypeDef* GPIOx;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    int64_t speed;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    uint32_t period;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    uint32_t channel;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    uint16_t EN_PIN;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    uint16_t DIR_PIN;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    uint16_t gearRatio;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>;</div>
+<a href="stepper__driver_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef STEPPER_DRIVER_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define STEPPER_DRIVER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_stepper_x.html">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#a4fc718ad0dbd95e88791b9c4f2f8aa37">   21</a></span>    TIM_HandleTypeDef* <a class="code hl_variable" href="struct_stepper_x.html#a4fc718ad0dbd95e88791b9c4f2f8aa37">timer</a>;   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#a381d1ff924da2de5e35f5076a5156d33">   22</a></span>    GPIO_TypeDef* <a class="code hl_variable" href="struct_stepper_x.html#a381d1ff924da2de5e35f5076a5156d33">GPIOx</a>;        </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#abf3380ccfac5171bb47e37dfe5928fab">   23</a></span>    int64_t <a class="code hl_variable" href="struct_stepper_x.html#abf3380ccfac5171bb47e37dfe5928fab">speed</a>;              </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#a234194365df7b9db2ef378d173995584">   24</a></span>    uint32_t <a class="code hl_variable" href="struct_stepper_x.html#a234194365df7b9db2ef378d173995584">period</a>;            </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#a157c5cdbcc5047918e0e9143f31a134e">   25</a></span>    uint32_t <a class="code hl_variable" href="struct_stepper_x.html#a157c5cdbcc5047918e0e9143f31a134e">channel</a>;           </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#a6b0197088f0724dfbf6078e8d02480e2">   26</a></span>    uint16_t <a class="code hl_variable" href="struct_stepper_x.html#a6b0197088f0724dfbf6078e8d02480e2">EN_PIN</a>;            </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#ab6c6b328ba1016f87c1933f8ff5081d5">   27</a></span>    uint16_t <a class="code hl_variable" href="struct_stepper_x.html#ab6c6b328ba1016f87c1933f8ff5081d5">DIR_PIN</a>;           </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_stepper_x.html#adafc8318f73364b9830217b47eb20db0">   28</a></span>    uint16_t <a class="code hl_variable" href="struct_stepper_x.html#adafc8318f73364b9830217b47eb20db0">gearRatio</a>;         </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>} <a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>;</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// Prototype for motor object &quot;method&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> stepper_init     (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx, TIM_HandleTypeDef* timer, uint32_t channel, GPIO_TypeDef* GPIO, uint16_t EN_PIN, uint16_t DIR_PIN, uint16_t gearRatio);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> stepper_enable   (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> stepper_disable  (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> stepper_setspeed (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx, int64_t speed);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">//void update_speed     (StepperX* stepperx, int64_t speed);</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">/* STEPPER_DRIVER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astruct_stepper_x_html"><div class="ttname"><a href="struct_stepper_x.html">StepperX</a></div><div class="ttdef"><b>Definition</b> stepper_driver.h:16</div></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="stepper__driver_8h.html#a9630cd83b13f7922ecde99a323ca8385">stepper_init</a> (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx, TIM_HandleTypeDef* timer, uint32_t channel, GPIO_TypeDef* GPIO, uint16_t EN_PIN, uint16_t DIR_PIN, uint16_t gearRatio);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="stepper__driver_8h.html#aabb336128283f9f044c232509c2ee058">stepper_enable</a> (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="stepper__driver_8h.html#a7653383f7841e64f6dc24ab3fcf4a06f">stepper_disable</a> (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> <a class="code hl_function" href="stepper__driver_8h.html#a0c4230eed0c2005a01090ec319310939">stepper_setspeed</a> (<a class="code hl_struct" href="struct_stepper_x.html">StepperX</a>* stepperx, int64_t speed);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">/* STEPPER_DRIVER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="astepper__driver_8h_html_a0c4230eed0c2005a01090ec319310939"><div class="ttname"><a href="stepper__driver_8h.html#a0c4230eed0c2005a01090ec319310939">stepper_setspeed</a></div><div class="ttdeci">void stepper_setspeed(StepperX *stepperx, int64_t speed)</div><div class="ttdoc">Sets the speed of the stepper motor.</div><div class="ttdef"><b>Definition</b> stepper_driver.c:62</div></div>
+<div class="ttc" id="astepper__driver_8h_html_a7653383f7841e64f6dc24ab3fcf4a06f"><div class="ttname"><a href="stepper__driver_8h.html#a7653383f7841e64f6dc24ab3fcf4a06f">stepper_disable</a></div><div class="ttdeci">void stepper_disable(StepperX *stepperx)</div><div class="ttdoc">Disables the stepper motor.</div><div class="ttdef"><b>Definition</b> stepper_driver.c:52</div></div>
+<div class="ttc" id="astepper__driver_8h_html_a9630cd83b13f7922ecde99a323ca8385"><div class="ttname"><a href="stepper__driver_8h.html#a9630cd83b13f7922ecde99a323ca8385">stepper_init</a></div><div class="ttdeci">void stepper_init(StepperX *stepperx, TIM_HandleTypeDef *timer, uint32_t channel, GPIO_TypeDef *GPIO, uint16_t EN_PIN, uint16_t DIR_PIN, uint16_t gearRatio)</div><div class="ttdoc">Initializes the stepper motor.</div><div class="ttdef"><b>Definition</b> stepper_driver.c:26</div></div>
+<div class="ttc" id="astepper__driver_8h_html_aabb336128283f9f044c232509c2ee058"><div class="ttname"><a href="stepper__driver_8h.html#aabb336128283f9f044c232509c2ee058">stepper_enable</a></div><div class="ttdeci">void stepper_enable(StepperX *stepperx)</div><div class="ttdoc">Enables the stepper motor.</div><div class="ttdef"><b>Definition</b> stepper_driver.c:43</div></div>
+<div class="ttc" id="astruct_stepper_x_html"><div class="ttname"><a href="struct_stepper_x.html">StepperX</a></div><div class="ttdoc">Struct representing a stepper motor.</div><div class="ttdef"><b>Definition</b> stepper_driver.h:20</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a157c5cdbcc5047918e0e9143f31a134e"><div class="ttname"><a href="struct_stepper_x.html#a157c5cdbcc5047918e0e9143f31a134e">StepperX::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdef"><b>Definition</b> stepper_driver.h:25</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a234194365df7b9db2ef378d173995584"><div class="ttname"><a href="struct_stepper_x.html#a234194365df7b9db2ef378d173995584">StepperX::period</a></div><div class="ttdeci">uint32_t period</div><div class="ttdef"><b>Definition</b> stepper_driver.h:24</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a381d1ff924da2de5e35f5076a5156d33"><div class="ttname"><a href="struct_stepper_x.html#a381d1ff924da2de5e35f5076a5156d33">StepperX::GPIOx</a></div><div class="ttdeci">GPIO_TypeDef * GPIOx</div><div class="ttdef"><b>Definition</b> stepper_driver.h:22</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a4fc718ad0dbd95e88791b9c4f2f8aa37"><div class="ttname"><a href="struct_stepper_x.html#a4fc718ad0dbd95e88791b9c4f2f8aa37">StepperX::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> stepper_driver.h:21</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a6b0197088f0724dfbf6078e8d02480e2"><div class="ttname"><a href="struct_stepper_x.html#a6b0197088f0724dfbf6078e8d02480e2">StepperX::EN_PIN</a></div><div class="ttdeci">uint16_t EN_PIN</div><div class="ttdef"><b>Definition</b> stepper_driver.h:26</div></div>
+<div class="ttc" id="astruct_stepper_x_html_ab6c6b328ba1016f87c1933f8ff5081d5"><div class="ttname"><a href="struct_stepper_x.html#ab6c6b328ba1016f87c1933f8ff5081d5">StepperX::DIR_PIN</a></div><div class="ttdeci">uint16_t DIR_PIN</div><div class="ttdef"><b>Definition</b> stepper_driver.h:27</div></div>
+<div class="ttc" id="astruct_stepper_x_html_abf3380ccfac5171bb47e37dfe5928fab"><div class="ttname"><a href="struct_stepper_x.html#abf3380ccfac5171bb47e37dfe5928fab">StepperX::speed</a></div><div class="ttdeci">int64_t speed</div><div class="ttdef"><b>Definition</b> stepper_driver.h:23</div></div>
+<div class="ttc" id="astruct_stepper_x_html_adafc8318f73364b9830217b47eb20db0"><div class="ttname"><a href="struct_stepper_x.html#adafc8318f73364b9830217b47eb20db0">StepperX::gearRatio</a></div><div class="ttdeci">uint16_t gearRatio</div><div class="ttdef"><b>Definition</b> stepper_driver.h:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><b>stepper_driver.h</b></li>
+    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><a class="el" href="stepper__driver_8h.html">stepper_driver.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

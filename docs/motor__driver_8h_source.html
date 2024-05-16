@@ -101,44 +101,50 @@ $(function(){initNavTree('motor__driver_8h_source.html',''); initResizable(); })
   <div class="headertitle"><div class="title">motor_driver.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * motor_driver.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: Apr 18, 2024</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: vvinh</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef INC_MOTOR_DRIVER_H_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define INC_MOTOR_DRIVER_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;stm32l4xx_hal.h&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="struct_motor_x.html">   14</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    TIM_HandleTypeDef* timer;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    uint32_t channel1;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    uint32_t channel2;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    int32_t duty;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    int32_t CCR;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>} <a class="code hl_struct" href="struct_motor_x.html">MotorX</a>;</div>
+<a href="motor__driver_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef INC_MOTOR_DRIVER_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define INC_MOTOR_DRIVER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;stm32l4xx_hal.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_motor_x.html">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_motor_x.html#a3edfd141b882dbf147c9a9be6cf13351">   21</a></span>    TIM_HandleTypeDef* <a class="code hl_variable" href="struct_motor_x.html#a3edfd141b882dbf147c9a9be6cf13351">timer</a>;   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_motor_x.html#a0e07154cc7bcc601c5d3572e53077c9c">   22</a></span>    uint32_t <a class="code hl_variable" href="struct_motor_x.html#a0e07154cc7bcc601c5d3572e53077c9c">channel1</a>;          </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_motor_x.html#ae50cbd3f7dad5359a52ee6039f709831">   23</a></span>    uint32_t <a class="code hl_variable" href="struct_motor_x.html#ae50cbd3f7dad5359a52ee6039f709831">channel2</a>;          </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_motor_x.html#a5f8806c2da45238de5177b935838f168">   24</a></span>    int32_t <a class="code hl_variable" href="struct_motor_x.html#a5f8806c2da45238de5177b935838f168">duty</a>;               </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_motor_x.html#a7b4943db2ba5cb1cbcd012a4d024af12">   25</a></span>    int32_t <a class="code hl_variable" href="struct_motor_x.html#a7b4943db2ba5cb1cbcd012a4d024af12">CCR</a>;                </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="struct_motor_x.html">MotorX</a>;</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// Prototype for motor object &quot;method&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> motor_init   (<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx, TIM_HandleTypeDef* timer, uint32_t channel1, uint32_t channel2, int32_t CCR);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> motor_enable (<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> motor_setduty(<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx, int32_t duty);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> motor_disable(<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">/* INC_MOTOR_DRIVER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astruct_motor_x_html"><div class="ttname"><a href="struct_motor_x.html">MotorX</a></div><div class="ttdef"><b>Definition</b> motor_driver.h:15</div></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="motor__driver_8h.html#ae07dcb9c5b7ee221d80c90ed9e8686dd">motor_init</a>(<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx, TIM_HandleTypeDef* timer, uint32_t channel1, uint32_t channel2, int32_t CCR);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="motor__driver_8h.html#adbf9f817ae15ca81bf8c0f78f4b4adcd">motor_enable</a>(<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="motor__driver_8h.html#a2e3fc3bc70d188b7ee3e7da0bd9a1013">motor_setduty</a>(<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx, int32_t duty);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="motor__driver_8h.html#ad18cec6b800a0df6a56afa77f5bac4ed">motor_disable</a>(<a class="code hl_struct" href="struct_motor_x.html">MotorX</a>* motx);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">/* INC_MOTOR_DRIVER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="amotor__driver_8h_html_a2e3fc3bc70d188b7ee3e7da0bd9a1013"><div class="ttname"><a href="motor__driver_8h.html#a2e3fc3bc70d188b7ee3e7da0bd9a1013">motor_setduty</a></div><div class="ttdeci">void motor_setduty(MotorX *motx, int32_t duty)</div><div class="ttdoc">Sets the duty cycle of the motor driver.</div><div class="ttdef"><b>Definition</b> motor_driver.c:48</div></div>
+<div class="ttc" id="amotor__driver_8h_html_ad18cec6b800a0df6a56afa77f5bac4ed"><div class="ttname"><a href="motor__driver_8h.html#ad18cec6b800a0df6a56afa77f5bac4ed">motor_disable</a></div><div class="ttdeci">void motor_disable(MotorX *motx)</div><div class="ttdoc">Disables the motor driver.</div><div class="ttdef"><b>Definition</b> motor_driver.c:65</div></div>
+<div class="ttc" id="amotor__driver_8h_html_adbf9f817ae15ca81bf8c0f78f4b4adcd"><div class="ttname"><a href="motor__driver_8h.html#adbf9f817ae15ca81bf8c0f78f4b4adcd">motor_enable</a></div><div class="ttdeci">void motor_enable(MotorX *motx)</div><div class="ttdoc">Enables the motor driver.</div><div class="ttdef"><b>Definition</b> motor_driver.c:37</div></div>
+<div class="ttc" id="amotor__driver_8h_html_ae07dcb9c5b7ee221d80c90ed9e8686dd"><div class="ttname"><a href="motor__driver_8h.html#ae07dcb9c5b7ee221d80c90ed9e8686dd">motor_init</a></div><div class="ttdeci">void motor_init(MotorX *motx, TIM_HandleTypeDef *timer, uint32_t channel1, uint32_t channel2, int32_t CCR)</div><div class="ttdoc">Initializes the motor driver.</div><div class="ttdef"><b>Definition</b> motor_driver.c:22</div></div>
+<div class="ttc" id="astruct_motor_x_html"><div class="ttname"><a href="struct_motor_x.html">MotorX</a></div><div class="ttdoc">Struct representing a motor driver.</div><div class="ttdef"><b>Definition</b> motor_driver.h:20</div></div>
+<div class="ttc" id="astruct_motor_x_html_a0e07154cc7bcc601c5d3572e53077c9c"><div class="ttname"><a href="struct_motor_x.html#a0e07154cc7bcc601c5d3572e53077c9c">MotorX::channel1</a></div><div class="ttdeci">uint32_t channel1</div><div class="ttdef"><b>Definition</b> motor_driver.h:22</div></div>
+<div class="ttc" id="astruct_motor_x_html_a3edfd141b882dbf147c9a9be6cf13351"><div class="ttname"><a href="struct_motor_x.html#a3edfd141b882dbf147c9a9be6cf13351">MotorX::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> motor_driver.h:21</div></div>
+<div class="ttc" id="astruct_motor_x_html_a5f8806c2da45238de5177b935838f168"><div class="ttname"><a href="struct_motor_x.html#a5f8806c2da45238de5177b935838f168">MotorX::duty</a></div><div class="ttdeci">int32_t duty</div><div class="ttdef"><b>Definition</b> motor_driver.h:24</div></div>
+<div class="ttc" id="astruct_motor_x_html_a7b4943db2ba5cb1cbcd012a4d024af12"><div class="ttname"><a href="struct_motor_x.html#a7b4943db2ba5cb1cbcd012a4d024af12">MotorX::CCR</a></div><div class="ttdeci">int32_t CCR</div><div class="ttdef"><b>Definition</b> motor_driver.h:25</div></div>
+<div class="ttc" id="astruct_motor_x_html_ae50cbd3f7dad5359a52ee6039f709831"><div class="ttname"><a href="struct_motor_x.html#ae50cbd3f7dad5359a52ee6039f709831">MotorX::channel2</a></div><div class="ttdeci">uint32_t channel2</div><div class="ttdef"><b>Definition</b> motor_driver.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><b>motor_driver.h</b></li>
+    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><a class="el" href="motor__driver_8h.html">motor_driver.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -1,8 +1,8 @@
 /**
   ******************************************************************************
-  * @file           : mpu6050.h
-  * @brief          : Header for mpu.c file.
-  *                   This file contains the common defines of the application.
+  * @file            mpu6050.h
+  * @brief           Header for mpu6050.c file.
+  *                  This file contains the common defines of the application.
   ******************************************************************************
   */
 

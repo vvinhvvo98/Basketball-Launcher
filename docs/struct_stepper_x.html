@@ -99,34 +99,154 @@ $(function(){initNavTree('struct_stepper_x.html',''); initResizable(); });
   <div class="headertitle"><div class="title">StepperX Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Struct representing a stepper motor.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="stepper__driver_8h_source.html">stepper_driver.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a4fc718ad0dbd95e88791b9c4f2f8aa37" id="r_a4fc718ad0dbd95e88791b9c4f2f8aa37"><td class="memItemLeft" align="right" valign="top"><a id="a4fc718ad0dbd95e88791b9c4f2f8aa37" name="a4fc718ad0dbd95e88791b9c4f2f8aa37"></a>
-TIM_HandleTypeDef *&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b></td></tr>
+<tr class="memitem:a4fc718ad0dbd95e88791b9c4f2f8aa37" id="r_a4fc718ad0dbd95e88791b9c4f2f8aa37"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4fc718ad0dbd95e88791b9c4f2f8aa37">timer</a></td></tr>
 <tr class="separator:a4fc718ad0dbd95e88791b9c4f2f8aa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a381d1ff924da2de5e35f5076a5156d33" id="r_a381d1ff924da2de5e35f5076a5156d33"><td class="memItemLeft" align="right" valign="top"><a id="a381d1ff924da2de5e35f5076a5156d33" name="a381d1ff924da2de5e35f5076a5156d33"></a>
-GPIO_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><b>GPIOx</b></td></tr>
+<tr class="memitem:a381d1ff924da2de5e35f5076a5156d33" id="r_a381d1ff924da2de5e35f5076a5156d33"><td class="memItemLeft" align="right" valign="top">GPIO_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a381d1ff924da2de5e35f5076a5156d33">GPIOx</a></td></tr>
 <tr class="separator:a381d1ff924da2de5e35f5076a5156d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf3380ccfac5171bb47e37dfe5928fab" id="r_abf3380ccfac5171bb47e37dfe5928fab"><td class="memItemLeft" align="right" valign="top"><a id="abf3380ccfac5171bb47e37dfe5928fab" name="abf3380ccfac5171bb47e37dfe5928fab"></a>
-int64_t&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
+<tr class="memitem:abf3380ccfac5171bb47e37dfe5928fab" id="r_abf3380ccfac5171bb47e37dfe5928fab"><td class="memItemLeft" align="right" valign="top">int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf3380ccfac5171bb47e37dfe5928fab">speed</a></td></tr>
 <tr class="separator:abf3380ccfac5171bb47e37dfe5928fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a234194365df7b9db2ef378d173995584" id="r_a234194365df7b9db2ef378d173995584"><td class="memItemLeft" align="right" valign="top"><a id="a234194365df7b9db2ef378d173995584" name="a234194365df7b9db2ef378d173995584"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>period</b></td></tr>
+<tr class="memitem:a234194365df7b9db2ef378d173995584" id="r_a234194365df7b9db2ef378d173995584"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a234194365df7b9db2ef378d173995584">period</a></td></tr>
 <tr class="separator:a234194365df7b9db2ef378d173995584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a157c5cdbcc5047918e0e9143f31a134e" id="r_a157c5cdbcc5047918e0e9143f31a134e"><td class="memItemLeft" align="right" valign="top"><a id="a157c5cdbcc5047918e0e9143f31a134e" name="a157c5cdbcc5047918e0e9143f31a134e"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>channel</b></td></tr>
+<tr class="memitem:a157c5cdbcc5047918e0e9143f31a134e" id="r_a157c5cdbcc5047918e0e9143f31a134e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a157c5cdbcc5047918e0e9143f31a134e">channel</a></td></tr>
 <tr class="separator:a157c5cdbcc5047918e0e9143f31a134e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0197088f0724dfbf6078e8d02480e2" id="r_a6b0197088f0724dfbf6078e8d02480e2"><td class="memItemLeft" align="right" valign="top"><a id="a6b0197088f0724dfbf6078e8d02480e2" name="a6b0197088f0724dfbf6078e8d02480e2"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>EN_PIN</b></td></tr>
+<tr class="memitem:a6b0197088f0724dfbf6078e8d02480e2" id="r_a6b0197088f0724dfbf6078e8d02480e2"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b0197088f0724dfbf6078e8d02480e2">EN_PIN</a></td></tr>
 <tr class="separator:a6b0197088f0724dfbf6078e8d02480e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6c6b328ba1016f87c1933f8ff5081d5" id="r_ab6c6b328ba1016f87c1933f8ff5081d5"><td class="memItemLeft" align="right" valign="top"><a id="ab6c6b328ba1016f87c1933f8ff5081d5" name="ab6c6b328ba1016f87c1933f8ff5081d5"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>DIR_PIN</b></td></tr>
+<tr class="memitem:ab6c6b328ba1016f87c1933f8ff5081d5" id="r_ab6c6b328ba1016f87c1933f8ff5081d5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c6b328ba1016f87c1933f8ff5081d5">DIR_PIN</a></td></tr>
 <tr class="separator:ab6c6b328ba1016f87c1933f8ff5081d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adafc8318f73364b9830217b47eb20db0" id="r_adafc8318f73364b9830217b47eb20db0"><td class="memItemLeft" align="right" valign="top"><a id="adafc8318f73364b9830217b47eb20db0" name="adafc8318f73364b9830217b47eb20db0"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>gearRatio</b></td></tr>
+<tr class="memitem:adafc8318f73364b9830217b47eb20db0" id="r_adafc8318f73364b9830217b47eb20db0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adafc8318f73364b9830217b47eb20db0">gearRatio</a></td></tr>
 <tr class="separator:adafc8318f73364b9830217b47eb20db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Struct representing a stepper motor. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a157c5cdbcc5047918e0e9143f31a134e" name="a157c5cdbcc5047918e0e9143f31a134e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157c5cdbcc5047918e0e9143f31a134e">&#9670;&#160;</a></span>channel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t StepperX::channel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Timer channel for PWM generation. </p>
+
+</div>
+</div>
+<a id="ab6c6b328ba1016f87c1933f8ff5081d5" name="ab6c6b328ba1016f87c1933f8ff5081d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c6b328ba1016f87c1933f8ff5081d5">&#9670;&#160;</a></span>DIR_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t StepperX::DIR_PIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Direction pin for the stepper motor driver. </p>
+
+</div>
+</div>
+<a id="a6b0197088f0724dfbf6078e8d02480e2" name="a6b0197088f0724dfbf6078e8d02480e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0197088f0724dfbf6078e8d02480e2">&#9670;&#160;</a></span>EN_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t StepperX::EN_PIN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable pin for the stepper motor driver. </p>
+
+</div>
+</div>
+<a id="adafc8318f73364b9830217b47eb20db0" name="adafc8318f73364b9830217b47eb20db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adafc8318f73364b9830217b47eb20db0">&#9670;&#160;</a></span>gearRatio</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t StepperX::gearRatio</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gear ratio of the stepper motor. </p>
+
+</div>
+</div>
+<a id="a381d1ff924da2de5e35f5076a5156d33" name="a381d1ff924da2de5e35f5076a5156d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381d1ff924da2de5e35f5076a5156d33">&#9670;&#160;</a></span>GPIOx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GPIO_TypeDef* StepperX::GPIOx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>GPIO port for control pins. </p>
+
+</div>
+</div>
+<a id="a234194365df7b9db2ef378d173995584" name="a234194365df7b9db2ef378d173995584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a234194365df7b9db2ef378d173995584">&#9670;&#160;</a></span>period</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t StepperX::period</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Period of the PWM signal. </p>
+
+</div>
+</div>
+<a id="abf3380ccfac5171bb47e37dfe5928fab" name="abf3380ccfac5171bb47e37dfe5928fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3380ccfac5171bb47e37dfe5928fab">&#9670;&#160;</a></span>speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int64_t StepperX::speed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Speed of the stepper motor. </p>
+
+</div>
+</div>
+<a id="a4fc718ad0dbd95e88791b9c4f2f8aa37" name="a4fc718ad0dbd95e88791b9c4f2f8aa37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc718ad0dbd95e88791b9c4f2f8aa37">&#9670;&#160;</a></span>timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TIM_HandleTypeDef* StepperX::timer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Timer handle for PWM generation. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>Ball_Launcher_Launcher/Core/Inc/<a class="el" href="stepper__driver_8h_source.html">stepper_driver.h</a></li>
 </ul>

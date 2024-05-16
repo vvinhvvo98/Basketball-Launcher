@@ -64,7 +64,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_ball___launcher___controller_2_core_2_inc_2main_8h.html"
+"_ball___launcher___controller_2_core_2_inc_2main_8h.html",
+"struct_stepper_x.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

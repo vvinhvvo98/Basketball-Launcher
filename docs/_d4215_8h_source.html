@@ -101,42 +101,40 @@ $(function(){initNavTree('_d4215_8h_source.html',''); initResizable(); });
   <div class="headertitle"><div class="title">D4215.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * D4215.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: May 1, 2024</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: vvinh</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef INC_D4215_H_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define INC_D4215_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_d4215x.html">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    TIM_HandleTypeDef* timer;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    uint32_t channel;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    int32_t speed;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <a class="code hl_struct" href="struct_d4215x.html">D4215x</a>;</div>
+<a href="_d4215_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef INC_D4215_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define INC_D4215_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_d4215x.html">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_d4215x.html#a093565e368d4ec27b1b5ea816ccc8ed8">   21</a></span>    TIM_HandleTypeDef* <a class="code hl_variable" href="struct_d4215x.html#a093565e368d4ec27b1b5ea816ccc8ed8">timer</a>;   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_d4215x.html#a23698e26b67da284a39314d432f3c97d">   22</a></span>    uint32_t <a class="code hl_variable" href="struct_d4215x.html#a23698e26b67da284a39314d432f3c97d">channel</a>;           </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_d4215x.html#a34b7450e7f539ae8329feb38f134cb1e">   23</a></span>    int32_t <a class="code hl_variable" href="struct_d4215x.html#a34b7450e7f539ae8329feb38f134cb1e">speed</a>;              </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <a class="code hl_struct" href="struct_d4215x.html">D4215x</a>;</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// Prototype for motor object &quot;method&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> D4215_init(<a class="code hl_struct" href="struct_d4215x.html">D4215x</a>* bldcx, TIM_HandleTypeDef* timer, uint32_t channel);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> D4215_set (<a class="code hl_struct" href="struct_d4215x.html">D4215x</a>* bldcx, int32_t speed); <span class="comment">// speed = [5 10]</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif </span><span class="comment">/* INC_D4215_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astruct_d4215x_html"><div class="ttname"><a href="struct_d4215x.html">D4215x</a></div><div class="ttdef"><b>Definition</b> D4215.h:16</div></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="_d4215_8h.html#aaa758e89b5b9cd7961a672dd55ea86a8">D4215_init</a>(<a class="code hl_struct" href="struct_d4215x.html">D4215x</a>* bldcx, TIM_HandleTypeDef* timer, uint32_t channel);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="_d4215_8h.html#ae642c2f56605faf60bad46388a9e1b5a">D4215_set</a>(<a class="code hl_struct" href="struct_d4215x.html">D4215x</a>* bldcx, int32_t speed); <span class="comment">// speed = [5 10]</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif </span><span class="comment">/* INC_D4215_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_d4215_8h_html_aaa758e89b5b9cd7961a672dd55ea86a8"><div class="ttname"><a href="_d4215_8h.html#aaa758e89b5b9cd7961a672dd55ea86a8">D4215_init</a></div><div class="ttdeci">void D4215_init(D4215x *bldcx, TIM_HandleTypeDef *timer, uint32_t channel)</div><div class="ttdoc">Initializes the D4215 motor driver.</div><div class="ttdef"><b>Definition</b> D4215.c:21</div></div>
+<div class="ttc" id="a_d4215_8h_html_ae642c2f56605faf60bad46388a9e1b5a"><div class="ttname"><a href="_d4215_8h.html#ae642c2f56605faf60bad46388a9e1b5a">D4215_set</a></div><div class="ttdeci">void D4215_set(D4215x *bldcx, int32_t speed)</div><div class="ttdoc">Sets the speed of the D4215 motor.</div><div class="ttdef"><b>Definition</b> D4215.c:34</div></div>
+<div class="ttc" id="astruct_d4215x_html"><div class="ttname"><a href="struct_d4215x.html">D4215x</a></div><div class="ttdoc">Struct representing a D4215 motor driver.</div><div class="ttdef"><b>Definition</b> D4215.h:20</div></div>
+<div class="ttc" id="astruct_d4215x_html_a093565e368d4ec27b1b5ea816ccc8ed8"><div class="ttname"><a href="struct_d4215x.html#a093565e368d4ec27b1b5ea816ccc8ed8">D4215x::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> D4215.h:21</div></div>
+<div class="ttc" id="astruct_d4215x_html_a23698e26b67da284a39314d432f3c97d"><div class="ttname"><a href="struct_d4215x.html#a23698e26b67da284a39314d432f3c97d">D4215x::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdef"><b>Definition</b> D4215.h:22</div></div>
+<div class="ttc" id="astruct_d4215x_html_a34b7450e7f539ae8329feb38f134cb1e"><div class="ttname"><a href="struct_d4215x.html#a34b7450e7f539ae8329feb38f134cb1e">D4215x::speed</a></div><div class="ttdeci">int32_t speed</div><div class="ttdef"><b>Definition</b> D4215.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><b>D4215.h</b></li>
+    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><a class="el" href="_d4215_8h.html">D4215.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

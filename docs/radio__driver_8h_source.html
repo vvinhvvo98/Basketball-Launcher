@@ -101,48 +101,56 @@ $(function(){initNavTree('radio__driver_8h_source.html',''); initResizable(); })
   <div class="headertitle"><div class="title">radio_driver.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * radio_driver.h</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  Created on: May 2, 2024</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *      Author: vvinh</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef INC_RADIO_DRIVER_H_</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define INC_RADIO_DRIVER_H_</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_radio_x.html">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    TIM_HandleTypeDef* timer;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    uint32_t channel1;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    uint32_t channel2;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    uint32_t sum1;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    uint32_t sum2;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    uint32_t counter1;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    uint32_t counter2;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">double</span> pulseWidth;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="struct_radio_x.html">RadioX</a>;</div>
+<a href="radio__driver_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef INC_RADIO_DRIVER_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define INC_RADIO_DRIVER_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_radio_x.html">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_radio_x.html#a4ce10784d49608151eaefd33cfbbfc1a">   21</a></span>    TIM_HandleTypeDef* <a class="code hl_variable" href="struct_radio_x.html#a4ce10784d49608151eaefd33cfbbfc1a">timer</a>;   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_radio_x.html#a331e9df9227fc732faed053f6c4843b2">   22</a></span>    uint32_t <a class="code hl_variable" href="struct_radio_x.html#a331e9df9227fc732faed053f6c4843b2">channel1</a>;          </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_radio_x.html#aba67fea2dc046a50cf19e0c075827651">   23</a></span>    uint32_t <a class="code hl_variable" href="struct_radio_x.html#aba67fea2dc046a50cf19e0c075827651">channel2</a>;          </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_radio_x.html#a02d53df078e52ecdd2319abed5d3d67e">   24</a></span>    uint32_t <a class="code hl_variable" href="struct_radio_x.html#a02d53df078e52ecdd2319abed5d3d67e">sum1</a>;              </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_radio_x.html#ac6f4352fa010ac9799db6f2ac771d312">   25</a></span>    uint32_t <a class="code hl_variable" href="struct_radio_x.html#ac6f4352fa010ac9799db6f2ac771d312">sum2</a>;              </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_radio_x.html#a339055571525dc95540a98543c3a0603">   26</a></span>    uint32_t <a class="code hl_variable" href="struct_radio_x.html#a339055571525dc95540a98543c3a0603">counter1</a>;          </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_radio_x.html#ace746c63fc4cc6874603dcbba1c7cdca">   27</a></span>    uint32_t <a class="code hl_variable" href="struct_radio_x.html#ace746c63fc4cc6874603dcbba1c7cdca">counter2</a>;          </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_radio_x.html#a04b99a1f25c9970fc0cb5c0eecfbe1e9">   28</a></span>    <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_radio_x.html#a04b99a1f25c9970fc0cb5c0eecfbe1e9">pulseWidth</a>;          </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <a class="code hl_struct" href="struct_radio_x.html">RadioX</a>;</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> Radio_init(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio, TIM_HandleTypeDef* timer, uint32_t channel1, uint32_t channel2);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> capturePulseWidth(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> update(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio, <span class="keywordtype">int</span> pw1, <span class="keywordtype">int</span> pw2);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">double</span> Radio_getPulseWidth(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif </span><span class="comment">/* INC_RADIO_DRIVER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astruct_radio_x_html"><div class="ttname"><a href="struct_radio_x.html">RadioX</a></div><div class="ttdef"><b>Definition</b> radio_driver.h:16</div></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="radio__driver_8h.html#a582f025b267f30a8b79a57cd2a95d5ea">Radio_init</a>(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio, TIM_HandleTypeDef* timer, uint32_t channel1, uint32_t channel2);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="radio__driver_8h.html#a44f4cc75e4b2a4a33e163340fd57c223">capturePulseWidth</a>(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="radio__driver_8h.html#a492a4fe5ab05721268b3484b7c8e9be5">update</a>(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio, <span class="keywordtype">int</span> pw1, <span class="keywordtype">int</span> pw2);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">double</span> <a class="code hl_function" href="radio__driver_8h.html#ac6d11311b6d85de460732788a14962b9">Radio_getPulseWidth</a>(<a class="code hl_struct" href="struct_radio_x.html">RadioX</a>* radio);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">/* INC_RADIO_DRIVER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aradio__driver_8h_html_a44f4cc75e4b2a4a33e163340fd57c223"><div class="ttname"><a href="radio__driver_8h.html#a44f4cc75e4b2a4a33e163340fd57c223">capturePulseWidth</a></div><div class="ttdeci">void capturePulseWidth(RadioX *radio)</div><div class="ttdoc">Captures the pulse width from the radio signal.</div><div class="ttdef"><b>Definition</b> radio_driver.c:42</div></div>
+<div class="ttc" id="aradio__driver_8h_html_a492a4fe5ab05721268b3484b7c8e9be5"><div class="ttname"><a href="radio__driver_8h.html#a492a4fe5ab05721268b3484b7c8e9be5">update</a></div><div class="ttdeci">void update(RadioX *radio, int pw1, int pw2)</div><div class="ttdoc">Updates the pulse width values.</div><div class="ttdef"><b>Definition</b> radio_driver.c:56</div></div>
+<div class="ttc" id="aradio__driver_8h_html_a582f025b267f30a8b79a57cd2a95d5ea"><div class="ttname"><a href="radio__driver_8h.html#a582f025b267f30a8b79a57cd2a95d5ea">Radio_init</a></div><div class="ttdeci">void Radio_init(RadioX *radio, TIM_HandleTypeDef *timer, uint32_t channel1, uint32_t channel2)</div><div class="ttdoc">Initializes the radio driver.</div><div class="ttdef"><b>Definition</b> radio_driver.c:22</div></div>
+<div class="ttc" id="aradio__driver_8h_html_ac6d11311b6d85de460732788a14962b9"><div class="ttname"><a href="radio__driver_8h.html#ac6d11311b6d85de460732788a14962b9">Radio_getPulseWidth</a></div><div class="ttdeci">double Radio_getPulseWidth(RadioX *radio)</div><div class="ttdoc">Gets the calculated pulse width.</div><div class="ttdef"><b>Definition</b> radio_driver.c:81</div></div>
+<div class="ttc" id="astruct_radio_x_html"><div class="ttname"><a href="struct_radio_x.html">RadioX</a></div><div class="ttdoc">Struct representing a radio driver.</div><div class="ttdef"><b>Definition</b> radio_driver.h:20</div></div>
+<div class="ttc" id="astruct_radio_x_html_a02d53df078e52ecdd2319abed5d3d67e"><div class="ttname"><a href="struct_radio_x.html#a02d53df078e52ecdd2319abed5d3d67e">RadioX::sum1</a></div><div class="ttdeci">uint32_t sum1</div><div class="ttdef"><b>Definition</b> radio_driver.h:24</div></div>
+<div class="ttc" id="astruct_radio_x_html_a04b99a1f25c9970fc0cb5c0eecfbe1e9"><div class="ttname"><a href="struct_radio_x.html#a04b99a1f25c9970fc0cb5c0eecfbe1e9">RadioX::pulseWidth</a></div><div class="ttdeci">double pulseWidth</div><div class="ttdef"><b>Definition</b> radio_driver.h:28</div></div>
+<div class="ttc" id="astruct_radio_x_html_a331e9df9227fc732faed053f6c4843b2"><div class="ttname"><a href="struct_radio_x.html#a331e9df9227fc732faed053f6c4843b2">RadioX::channel1</a></div><div class="ttdeci">uint32_t channel1</div><div class="ttdef"><b>Definition</b> radio_driver.h:22</div></div>
+<div class="ttc" id="astruct_radio_x_html_a339055571525dc95540a98543c3a0603"><div class="ttname"><a href="struct_radio_x.html#a339055571525dc95540a98543c3a0603">RadioX::counter1</a></div><div class="ttdeci">uint32_t counter1</div><div class="ttdef"><b>Definition</b> radio_driver.h:26</div></div>
+<div class="ttc" id="astruct_radio_x_html_a4ce10784d49608151eaefd33cfbbfc1a"><div class="ttname"><a href="struct_radio_x.html#a4ce10784d49608151eaefd33cfbbfc1a">RadioX::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> radio_driver.h:21</div></div>
+<div class="ttc" id="astruct_radio_x_html_aba67fea2dc046a50cf19e0c075827651"><div class="ttname"><a href="struct_radio_x.html#aba67fea2dc046a50cf19e0c075827651">RadioX::channel2</a></div><div class="ttdeci">uint32_t channel2</div><div class="ttdef"><b>Definition</b> radio_driver.h:23</div></div>
+<div class="ttc" id="astruct_radio_x_html_ac6f4352fa010ac9799db6f2ac771d312"><div class="ttname"><a href="struct_radio_x.html#ac6f4352fa010ac9799db6f2ac771d312">RadioX::sum2</a></div><div class="ttdeci">uint32_t sum2</div><div class="ttdef"><b>Definition</b> radio_driver.h:25</div></div>
+<div class="ttc" id="astruct_radio_x_html_ace746c63fc4cc6874603dcbba1c7cdca"><div class="ttname"><a href="struct_radio_x.html#ace746c63fc4cc6874603dcbba1c7cdca">RadioX::counter2</a></div><div class="ttdeci">uint32_t counter2</div><div class="ttdef"><b>Definition</b> radio_driver.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><b>radio_driver.h</b></li>
+    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><a class="el" href="radio__driver_8h.html">radio_driver.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

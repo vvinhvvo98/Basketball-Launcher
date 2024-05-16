@@ -1,6 +1,6 @@
 /**
  * @file mpu6050.c
- * @brief Implementation of MPU6050 sensor functions.
+ * @brief Implementation of mpu6050 sensor functions.
  * 
  *  Created on: May 3, 2024
  *  Author: vvinh
