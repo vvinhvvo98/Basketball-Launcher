@@ -19,7 +19,7 @@
  * @section schematic1 SCHEMATICS
  * The PDF of this schematic is also attached with higher solution can be found in [PDF SCHEMATIC](schematic2.pdf).
  * Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient: 
- * https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher.
+ * https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher.  
  * Below are the all of the PCB schematic contains total of 4 pages describe in the table below 
  * 
  * <div align="center">

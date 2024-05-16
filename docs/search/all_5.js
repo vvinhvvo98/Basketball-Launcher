@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['electronics_0',['ELECTRONICS',['../controller_detail.html#bome2',1,'BILL OF MATERIAL - ELECTRONICS'],['../launcher_detail.html#bome22',1,'BILL OF MATERIAL - ELECTRONICS']]],
-  ['error_5fhandler_1',['Error_Handler',['../main_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c'],['../main_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c']]]
+  ['debugmon_5fhandler_0',['DebugMon_Handler',['../stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c']]],
+  ['design_1',['DESIGN',['../index.html#design',1,'DESIGN'],['../controller_detail.html#overview',1,'FINAL DESIGN'],['../launcher_detail.html#overview1',1,'FINAL DESIGN']]],
+  ['dt_2',['dt',['../struct_m_p_u6050.html#af6d87519df44bd0e8c81405c2ca2a7ec',1,'MPU6050']]]
 ];

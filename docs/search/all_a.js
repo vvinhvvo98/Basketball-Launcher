@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['launcher_0',['LAUNCHER',['../launcher_detail.html',1,'LAUNCHER'],['../index.html#launcher',1,'LAUNCHER']]],
-  ['launcher_2ec_1',['launcher.c',['../launcher_8c.html',1,'']]]
+  ['improvement_0',['FUTURE IMPROVEMENT',['../index.html#improve',1,'']]],
+  ['info_1',['CONTACT INFO',['../index.html#info',1,'']]]
 ];

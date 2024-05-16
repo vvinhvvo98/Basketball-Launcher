@@ -1,10 +1,19 @@
-/*
- * mpu6050.c
- *
+/**
+ * @file mpu6050.c
+ * @brief Implementation of MPU6050 sensor functions.
+ * 
  *  Created on: May 3, 2024
- *      Author: vvinh
+ *  Author: vvinh
  */
 #include "mpu6050.h"
+
+/**
+ * @brief Initializes the MPU6050 sensor.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @param hi2c Pointer to the I2C handle structure.
+ * @return uint16_t Returns 1 if initialization is successful, otherwise 0.
+ */
 
 uint16_t  mpu6050_init(MPU6050* imux, I2C_HandleTypeDef* hi2c) {
     imux->hi2c = hi2c;
@@ -31,6 +40,12 @@ uint16_t  mpu6050_init(MPU6050* imux, I2C_HandleTypeDef* hi2c) {
     }
 }
 
+/**
+ * @brief Calibrates the MPU6050 sensor.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ */
+
 void mpu6050_calibrate(MPU6050* imux) {
     int16_t gX_total = 0;
     int16_t	gY_total = 0;
@@ -53,6 +68,13 @@ void mpu6050_calibrate(MPU6050* imux) {
     imux->Z = 0;
 }
 
+/**
+ * @brief Updates the MPU6050 sensor data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @param dt Time interval in milliseconds.
+ */
+
 void mpu6050_update(MPU6050* imux, uint16_t dt) {
     uint8_t data[6];
     int16_t gx, gy, gz;
@@ -73,26 +95,68 @@ void mpu6050_update(MPU6050* imux, uint16_t dt) {
     }
 }
 
+/**
+ * @brief Gets the calibrated X-axis gyroscope data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int16_t Calibrated X-axis gyroscope data.
+ */
 
 int16_t mpu6050_get_gX(MPU6050* imux){
 	return (imux->gX - imux->gX_offset);
 }
 
+/**
+ * @brief Gets the calibrated Y-axis gyroscope data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int16_t Calibrated Y-axis gyroscope data.
+ */
+
 int16_t mpu6050_get_gY(MPU6050* imux) {
 	return (imux->gY - imux->gY_offset);
 }
+
+/**
+ * @brief Gets the calibrated Z-axis gyroscope data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int16_t Calibrated Z-axis gyroscope data.
+ */
 
 int16_t mpu6050_get_gZ(MPU6050* imux) {
 	return (imux->gZ - imux->gZ_offset);
 }
 
+/**
+ * @brief Gets the X-axis accelerometer data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int32_t X-axis accelerometer data.
+ */
+
 int32_t mpu6050_get_X(MPU6050* imux){
 	return imux->X/1000;
 }
 
+/**
+ * @brief Gets the Y-axis accelerometer data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int32_t Y-axis accelerometer data.
+ */
+
 int32_t mpu6050_get_Y(MPU6050* imux) {
 	return imux->Y/1000;
 }
+
+/**
+ * @brief Gets the Z-axis accelerometer data.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int32_t Z-axis accelerometer data.
+ */
+
 int32_t mpu6050_get_Z(MPU6050* imux) {
 	return imux->Z/1000;
 }
