@@ -64,7 +64,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"_ball___launcher___controller_2_core_2_inc_2main_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

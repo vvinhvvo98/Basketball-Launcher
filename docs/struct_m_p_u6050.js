@@ -8,7 +8,7 @@ var struct_m_p_u6050 =
     [ "gY_offset", "struct_m_p_u6050.html#a18b759d309d981232e9ff977a5178a8d", null ],
     [ "gZ", "struct_m_p_u6050.html#a2ea5775b7ca7994fadc92aa62568f41d", null ],
     [ "gZ_offset", "struct_m_p_u6050.html#a446352156975fdf9407e669e3b8ab252", null ],
-    [ "hi2c", "struct_m_p_u6050.html#aa133576cdb5e081dfe9b0d1c3d168b31", null ],
+    [ "hi2c", "struct_m_p_u6050.html#a50c7e8e7ec13401c109b9591f5790115", null ],
     [ "status", "struct_m_p_u6050.html#aed6b12d66f4c0c2466a60543c3500ffb", null ],
     [ "X", "struct_m_p_u6050.html#ad9d9640ba35e9847002cfde3b160f535", null ],
     [ "Y", "struct_m_p_u6050.html#a946c0c3660c4174153bacafdfcb251a7", null ],
