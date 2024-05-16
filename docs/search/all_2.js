@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['launcher_0',['Launcher',['../C:/Users/vvinh/Desktop/School/ME 507/Basketball-Launcher/Basketball-Launcher/PAGES/mainpage.c#launcher',1,'']]]
+  ['design_0',['DESIGN',['../index.html#design',1,'DESIGN'],['../controller_detail.html#overview',1,'FINAL DESIGN']]]
 ];

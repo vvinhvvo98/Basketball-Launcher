@@ -1,11 +1,24 @@
 var NAVTREEINDEX0 =
 {
-"dir_b06cade65eef272be3550abfe849ef3f.html":[1,0,0],
-"files.html":[1,0],
+"controller_8c.html":[3,0,0,0],
+"controller_detail.html":[1],
+"controller_detail.html#bom":[1,1],
+"controller_detail.html#fsm":[1,2],
+"controller_detail.html#overview":[1,0],
+"controller_detail.html#sourcecode":[1,3],
+"dir_b06cade65eef272be3550abfe849ef3f.html":[3,0,0],
+"files.html":[3,0],
 "index.html":[],
 "index.html":[0],
+"index.html#controller":[0,3],
+"index.html#design":[0,2],
 "index.html#detail":[0,1],
+"index.html#improve":[0,6],
+"index.html#launcher":[0,4],
 "index.html#motivation":[0,0],
-"mainpage_8c.html":[1,0,0,0],
+"index.html#result":[0,5],
+"launcher_8c.html":[3,0,0,1],
+"launcher_detail.html":[2],
+"mainpage_8c.html":[3,0,0,2],
 "pages.html":[]
 };

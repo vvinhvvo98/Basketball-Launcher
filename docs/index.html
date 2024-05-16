@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BASKETBALL LAUNCHER: BACKGROUND</title>
+<title>BASKETBALL LAUNCHER: MAIN PAGE</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,6 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="peashooter.png"/></td>
   <td id="projectalign">
    <div id="projectname">BASKETBALL LAUNCHER
    </div>
@@ -92,15 +93,40 @@ $(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">BACKGROUND </div></div>
+  <div class="headertitle"><div class="title">MAIN PAGE </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="motivation"></a>
 MOTIVATION</h1>
-<p>The objective of this project is to develop a software application that performs efficient data processing and provides insightful analytics. The application aims to be user-friendly, scalable, and maintainable.</p>
+<p>The motivation for this project is to build a prototype for a full-scale basketball-playing robot. The project will start with a small-scale version to test the concept and gather insights for future improvements. This approach will provide an opportunity to develop customized PCBAs that can control the robot for its intended purposes.</p>
 <h1><a class="anchor" id="detail"></a>
 OBJECTIVE</h1>
-<p>The project is divided into several modules, each responsible for different aspects of the application. The core functionalities include data collection, preprocessing, analysis, and visualization. The system architecture is designed to be modular, allowing for easy integration of new features. </p>
+<p>The objective of the project includes integrating the mechanical design with PCBA electronic components and programming aspects using the C programming language. This project will primarily use 3D-printed parts, along with shafts and bearings to support the robot's housing. The PCBAs will be designed using Fusion 360 software and manufactured by JLCPCB. The programming will be done on an STM32 microcontroller using the C language.</p>
+<p>The project is divided into two main assemblies:</p>
+<ul>
+<li>The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. The controller will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input.</li>
+<li>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller signals it. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.</li>
+</ul>
+<h1><a class="anchor" id="design"></a>
+DESIGN</h1>
+<p>The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. The overall design of the two main assemblies in the project is sketched and listed below for reference. The sketch represents a rough idea of how all components are connected and communicate with each other. </p><div class="image">
+<img src="overall.png" alt=""/>
+</div>
+<p> <a href="overall.pdf">PDF Sketch</a></p>
+<h1><a class="anchor" id="controller"></a>
+CONTROLLER</h1>
+<p>More detail about the controller's Bill of Materials and source code can be found in: <a class="el" href="controller_detail.html">CONTROLLER</a> <img src="control.png" alt="" width="1200" height="1000" class="inline"/></p>
+<p>UPDATE</p>
+<h1><a class="anchor" id="launcher"></a>
+LAUNCHER</h1>
+<p>FINAL LAUNCHER PICTURE &lt;------------------------------------------------&mdash;</p>
+<p>More detail about the launcher Bill of Materials and source code can be found in: <a class="el" href="launcher_detail.html">LAUNCHER</a></p>
+<h1><a class="anchor" id="result"></a>
+RESULT</h1>
+<p>YOUTUBE LINK &lt;------------------------------------------------&mdash;</p>
+<h1><a class="anchor" id="improve"></a>
+FUTURE IMPROVEMENT</h1>
+<p>LIST OF FUTURE IMPROVEMENT &lt;------------------------------------------------&mdash; </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mainpage_2ec_0',['mainpage.c',['../mainpage_8c.html',1,'']]],
-  ['motivation_1',['MOTIVATION',['../index.html#motivation',1,'']]]
+  ['final_20design_0',['FINAL DESIGN',['../controller_detail.html#overview',1,'']]],
+  ['finite_20state_20machine_1',['FINITE STATE MACHINE',['../controller_detail.html#fsm',1,'']]],
+  ['future_20improvement_2',['FUTURE IMPROVEMENT',['../index.html#improve',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['background_0',['BACKGROUND',['../index.html',1,'']]]
+  ['bill_20of_20material_0',['BILL OF MATERIAL',['../controller_detail.html#bom',1,'']]]
 ];

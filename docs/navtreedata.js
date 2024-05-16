@@ -25,7 +25,14 @@
 var NAVTREE =
 [
   [ "BASKETBALL LAUNCHER", "index.html", [
-    [ "BACKGROUND", "index.html", "index" ],
+    [ "MAIN PAGE", "index.html", "index" ],
+    [ "CONTROLLER", "controller_detail.html", [
+      [ "FINAL DESIGN", "controller_detail.html#overview", null ],
+      [ "BILL OF MATERIAL", "controller_detail.html#bom", null ],
+      [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ],
+      [ "CONTROLLER SOURCE CODE LAYOUT", "controller_detail.html#sourcecode", null ]
+    ] ],
+    [ "LAUNCHER", "launcher_detail.html", null ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ]
     ] ]
@@ -34,7 +41,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_b06cade65eef272be3550abfe849ef3f.html"
+"controller_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
