@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['X',['../struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655',1,'MPU6050']]]
+  ['vdd_5fvalue_0',['VDD_VALUE',['../stm32f4xx__hal__conf_8h.html#aae550dad9f96d52cfce5e539adadbbb4',1,'stm32f4xx_hal_conf.h']]]
 ];

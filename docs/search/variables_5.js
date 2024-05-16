@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['X',['../struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655',1,'MPU6050']]]
+  ['imustat_0',['imuStat',['../main_8c.html#a3d8b58ec4e3d666164e1c3bf39690eec',1,'main.c']]]
 ];
