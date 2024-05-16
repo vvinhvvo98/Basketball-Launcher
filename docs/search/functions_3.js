@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['d4215_5finit_0',['D4215_init',['../_d4215_8h.html#aaa758e89b5b9cd7961a672dd55ea86a8',1,'D4215_init(D4215x *bldcx, TIM_HandleTypeDef *timer, uint32_t channel):&#160;D4215.c'],['../_d4215_8c.html#aaa758e89b5b9cd7961a672dd55ea86a8',1,'D4215_init(D4215x *bldcx, TIM_HandleTypeDef *timer, uint32_t channel):&#160;D4215.c']]],
-  ['d4215_5fset_1',['D4215_set',['../_d4215_8h.html#ae642c2f56605faf60bad46388a9e1b5a',1,'D4215_set(D4215x *bldcx, int32_t speed):&#160;D4215.c'],['../_d4215_8c.html#accba284f7a56d8e175de16a9cd048c1b',1,'D4215_set(D4215x *bldcx, int32_t spd):&#160;D4215.c']]],
-  ['debugmon_5fhandler_2',['DebugMon_Handler',['../_ball___launcher___controller_2_core_2_inc_2stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../_ball___launcher___controller_2_core_2_src_2stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../_ball___launcher___launcher_2_core_2_inc_2stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../_ball___launcher___launcher_2_core_2_src_2stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c']]]
+  ['hardfault_5fhandler_0',['HardFault_Handler',['../stm32f4xx__it_8h.html#a2bffc10d5bd4106753b7c30e86903bea',1,'stm32f4xx_it.h']]]
 ];

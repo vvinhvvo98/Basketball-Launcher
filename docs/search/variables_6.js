@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imustat_0',['imuStat',['../_ball___launcher___controller_2_core_2_src_2main_8c.html#a3d8b58ec4e3d666164e1c3bf39690eec',1,'main.c']]]
+  ['y_0',['Y',['../struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d',1,'MPU6050']]]
 ];

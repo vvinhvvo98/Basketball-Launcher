@@ -42,7 +42,6 @@ var NAVTREE =
       [ "BILL OF MATERIAL - MECHANICAL", "launcher_detail.html#bomm1", null ],
       [ "BILL OF MATERIAL - CYCLOIDAL GEARBOX", "launcher_detail.html#bomm3", null ]
     ] ],
-    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -54,9 +53,8 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -65,9 +63,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_ball___launcher___controller_2_core_2_inc_2main_8h.html",
-"_ball___launcher___launcher_2_core_2_inc_2stm32f4xx__hal__conf_8h.html#a7f6bf06dfbf91fd866a9d62ab54d0e81",
-"struct_radio_x.html#a06ad26bec06cf3a7a6300bc7185bca0d"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

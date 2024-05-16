@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['y_0',['Y',['../struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d',1,'MPU6050::Y'],['../_ball___launcher___controller_2_core_2_src_2main_8c.html#a98de3e2097facbbea557f864201e435d',1,'Y:&#160;main.c']]],
-  ['youtube_20reference_1',['YOUTUBE REFERENCE',['../index.html#youtube',1,'']]]
+  ['z_0',['Z',['../struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a',1,'MPU6050']]]
 ];

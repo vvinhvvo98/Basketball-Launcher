@@ -139,8 +139,6 @@ Functions</h2></td></tr>
 <dl class="section attention"><dt>Attention</dt><dd></dd></dl>
 <p>Copyright (c) 2024 STMicroelectronics. All rights reserved.</p>
 <p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
-
-<p class="definition">Definition in file <a class="el" href="">stm32f4xx_it.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a850cefb17a977292ae5eb4cafa9976c3" name="a850cefb17a977292ae5eb4cafa9976c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a850cefb17a977292ae5eb4cafa9976c3">&#9670;&#160;</a></span>BusFault_Handler()</h2>
@@ -158,17 +156,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Pre-fetch fault, memory access fault. </p>
-<div class="fragment"><div class="line"><span class="lineno">  115</span>{</div>
-<div class="line"><span class="lineno">  116</span>  <span class="comment">/* USER CODE BEGIN BusFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  117</span> </div>
-<div class="line"><span class="lineno">  118</span>  <span class="comment">/* USER CODE END BusFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  119</span>  <span class="keywordflow">while</span> (1)</div>
-<div class="line"><span class="lineno">  120</span>  {</div>
-<div class="line"><span class="lineno">  121</span>    <span class="comment">/* USER CODE BEGIN W1_BusFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  122</span>    <span class="comment">/* USER CODE END W1_BusFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  123</span>  }</div>
-<div class="line"><span class="lineno">  124</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="adbdfb05858cc36fc520974df37ec3cb0" name="adbdfb05858cc36fc520974df37ec3cb0"></a>
@@ -187,15 +175,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Debug monitor. </p>
-<div class="fragment"><div class="line"><span class="lineno">  158</span>{</div>
-<div class="line"><span class="lineno">  159</span>  <span class="comment">/* USER CODE BEGIN DebugMonitor_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>  <span class="comment">/* USER CODE END DebugMonitor_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  162</span>  <span class="comment">/* USER CODE BEGIN DebugMonitor_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>  <span class="comment">/* USER CODE END DebugMonitor_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  165</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2bffc10d5bd4106753b7c30e86903bea" name="a2bffc10d5bd4106753b7c30e86903bea"></a>
@@ -214,17 +194,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Hard fault interrupt. </p>
-<div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
-<div class="line"><span class="lineno">   86</span>  <span class="comment">/* USER CODE BEGIN HardFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>  <span class="comment">/* USER CODE END HardFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">   89</span>  <span class="keywordflow">while</span> (1)</div>
-<div class="line"><span class="lineno">   90</span>  {</div>
-<div class="line"><span class="lineno">   91</span>    <span class="comment">/* USER CODE BEGIN W1_HardFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">   92</span>    <span class="comment">/* USER CODE END W1_HardFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">   93</span>  }</div>
-<div class="line"><span class="lineno">   94</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3150f74512510287a942624aa9b44cc5" name="a3150f74512510287a942624aa9b44cc5"></a>
@@ -243,17 +213,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Memory management fault. </p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
-<div class="line"><span class="lineno">  101</span>  <span class="comment">/* USER CODE BEGIN MemoryManagement_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>  <span class="comment">/* USER CODE END MemoryManagement_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  104</span>  <span class="keywordflow">while</span> (1)</div>
-<div class="line"><span class="lineno">  105</span>  {</div>
-<div class="line"><span class="lineno">  106</span>    <span class="comment">/* USER CODE BEGIN W1_MemoryManagement_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  107</span>    <span class="comment">/* USER CODE END W1_MemoryManagement_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  108</span>  }</div>
-<div class="line"><span class="lineno">  109</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6ad7a5e3ee69cb6db6a6b9111ba898bc" name="a6ad7a5e3ee69cb6db6a6b9111ba898bc"></a>
@@ -272,17 +232,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Non maskable interrupt. </p>
-<div class="fragment"><div class="line"><span class="lineno">   70</span>{</div>
-<div class="line"><span class="lineno">   71</span>  <span class="comment">/* USER CODE BEGIN NonMaskableInt_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>  <span class="comment">/* USER CODE END NonMaskableInt_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">   74</span>  <span class="comment">/* USER CODE BEGIN NonMaskableInt_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">   75</span>   <span class="keywordflow">while</span> (1)</div>
-<div class="line"><span class="lineno">   76</span>  {</div>
-<div class="line"><span class="lineno">   77</span>  }</div>
-<div class="line"><span class="lineno">   78</span>  <span class="comment">/* USER CODE END NonMaskableInt_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">   79</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6303e1f258cbdc1f970ce579cc015623" name="a6303e1f258cbdc1f970ce579cc015623"></a>
@@ -301,15 +251,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Pendable request for system service. </p>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>{</div>
-<div class="line"><span class="lineno">  172</span>  <span class="comment">/* USER CODE BEGIN PendSV_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  173</span> </div>
-<div class="line"><span class="lineno">  174</span>  <span class="comment">/* USER CODE END PendSV_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  175</span>  <span class="comment">/* USER CODE BEGIN PendSV_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  176</span> </div>
-<div class="line"><span class="lineno">  177</span>  <span class="comment">/* USER CODE END PendSV_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  178</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3e5ddb3df0d62f2dc357e64a3f04a6ce" name="a3e5ddb3df0d62f2dc357e64a3f04a6ce"></a>
@@ -328,15 +270,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles System service call via SWI instruction. </p>
-<div class="fragment"><div class="line"><span class="lineno">  145</span>{</div>
-<div class="line"><span class="lineno">  146</span>  <span class="comment">/* USER CODE BEGIN SVCall_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  147</span> </div>
-<div class="line"><span class="lineno">  148</span>  <span class="comment">/* USER CODE END SVCall_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  149</span>  <span class="comment">/* USER CODE BEGIN SVCall_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>  <span class="comment">/* USER CODE END SVCall_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  152</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab5e09814056d617c521549e542639b7e" name="ab5e09814056d617c521549e542639b7e"></a>
@@ -355,16 +289,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles System tick timer. </p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>{</div>
-<div class="line"><span class="lineno">  185</span>  <span class="comment">/* USER CODE BEGIN SysTick_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  186</span> </div>
-<div class="line"><span class="lineno">  187</span>  <span class="comment">/* USER CODE END SysTick_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  188</span>  HAL_IncTick();</div>
-<div class="line"><span class="lineno">  189</span>  <span class="comment">/* USER CODE BEGIN SysTick_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  190</span> </div>
-<div class="line"><span class="lineno">  191</span>  <span class="comment">/* USER CODE END SysTick_IRQn 1 */</span></div>
-<div class="line"><span class="lineno">  192</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1d98923de2ed6b7309b66f9ba2971647" name="a1d98923de2ed6b7309b66f9ba2971647"></a>
@@ -383,17 +308,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function handles Undefined instruction or illegal state. </p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>{</div>
-<div class="line"><span class="lineno">  131</span>  <span class="comment">/* USER CODE BEGIN UsageFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  132</span> </div>
-<div class="line"><span class="lineno">  133</span>  <span class="comment">/* USER CODE END UsageFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  134</span>  <span class="keywordflow">while</span> (1)</div>
-<div class="line"><span class="lineno">  135</span>  {</div>
-<div class="line"><span class="lineno">  136</span>    <span class="comment">/* USER CODE BEGIN W1_UsageFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  137</span>    <span class="comment">/* USER CODE END W1_UsageFault_IRQn 0 */</span></div>
-<div class="line"><span class="lineno">  138</span>  }</div>
-<div class="line"><span class="lineno">  139</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

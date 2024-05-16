@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['dir_5fpin_0',['DIR_PIN',['../struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e',1,'StepperX']]],
-  ['dt_1',['dt',['../struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416',1,'MPU6050']]],
-  ['duty_2',['duty',['../struct_motor_x.html#ab6a8993805fd7b50a32669337ca3a37a',1,'MotorX']]]
+  ['gx_0',['gX',['../struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d',1,'MPU6050']]],
+  ['gx_5foffset_1',['gX_offset',['../struct_m_p_u6050.html#a8dc74401ac9eb35a6f266e1c3251d41c',1,'MPU6050']]],
+  ['gy_2',['gY',['../struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452',1,'MPU6050']]],
+  ['gy_5foffset_3',['gY_offset',['../struct_m_p_u6050.html#a6252bad7e25acad5bf9bfc2e43b08708',1,'MPU6050']]],
+  ['gz_4',['gZ',['../struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752',1,'MPU6050']]],
+  ['gz_5foffset_5',['gZ_offset',['../struct_m_p_u6050.html#a0dacdc364e59a4dec5fc6a23e7f62fac',1,'MPU6050']]]
 ];

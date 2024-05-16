@@ -108,9 +108,7 @@ Include dependency graph for sysmem.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ball___launcher___launcher_2_core_2_src_2sysmem_8c__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_src_2sysmem_8c" alt=""/></div>
 </div>
-</div>
-<p><a href="">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a68125648bcce70b6bb3aa0be50e99700" id="r_a68125648bcce70b6bb3aa0be50e99700"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68125648bcce70b6bb3aa0be50e99700">_sbrk</a> (ptrdiff_t incr)</td></tr>
@@ -126,8 +124,6 @@ Functions</h2></td></tr>
 <dl class="section attention"><dt>Attention</dt><dd></dd></dl>
 <p>Copyright (c) 2024 STMicroelectronics. All rights reserved.</p>
 <p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
-
-<p class="definition">Definition in file <a class="el" href="">sysmem.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a68125648bcce70b6bb3aa0be50e99700" name="a68125648bcce70b6bb3aa0be50e99700"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a68125648bcce70b6bb3aa0be50e99700">&#9670;&#160;</a></span>_sbrk()</h2>
@@ -158,33 +154,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to allocated memory </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>{</div>
-<div class="line"><span class="lineno">   55</span>  <span class="keyword">extern</span> uint8_t _end; <span class="comment">/* Symbol defined in the linker script */</span></div>
-<div class="line"><span class="lineno">   56</span>  <span class="keyword">extern</span> uint8_t _estack; <span class="comment">/* Symbol defined in the linker script */</span></div>
-<div class="line"><span class="lineno">   57</span>  <span class="keyword">extern</span> uint32_t _Min_Stack_Size; <span class="comment">/* Symbol defined in the linker script */</span></div>
-<div class="line"><span class="lineno">   58</span>  <span class="keyword">const</span> uint32_t stack_limit = (uint32_t)&amp;_estack - (uint32_t)&amp;_Min_Stack_Size;</div>
-<div class="line"><span class="lineno">   59</span>  <span class="keyword">const</span> uint8_t *max_heap = (uint8_t *)stack_limit;</div>
-<div class="line"><span class="lineno">   60</span>  uint8_t *prev_heap_end;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>  <span class="comment">/* Initialize heap end at first call */</span></div>
-<div class="line"><span class="lineno">   63</span>  <span class="keywordflow">if</span> (NULL == __sbrk_heap_end)</div>
-<div class="line"><span class="lineno">   64</span>  {</div>
-<div class="line"><span class="lineno">   65</span>    __sbrk_heap_end = &amp;_end;</div>
-<div class="line"><span class="lineno">   66</span>  }</div>
-<div class="line"><span class="lineno">   67</span> </div>
-<div class="line"><span class="lineno">   68</span>  <span class="comment">/* Protect heap from growing into the reserved MSP stack */</span></div>
-<div class="line"><span class="lineno">   69</span>  <span class="keywordflow">if</span> (__sbrk_heap_end + incr &gt; max_heap)</div>
-<div class="line"><span class="lineno">   70</span>  {</div>
-<div class="line"><span class="lineno">   71</span>    errno = ENOMEM;</div>
-<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">return</span> (<span class="keywordtype">void</span> *)-1;</div>
-<div class="line"><span class="lineno">   73</span>  }</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>  prev_heap_end = __sbrk_heap_end;</div>
-<div class="line"><span class="lineno">   76</span>  __sbrk_heap_end += incr;</div>
-<div class="line"><span class="lineno">   77</span> </div>
-<div class="line"><span class="lineno">   78</span>  <span class="keywordflow">return</span> (<span class="keywordtype">void</span> *)prev_heap_end;</div>
-<div class="line"><span class="lineno">   79</span>}</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

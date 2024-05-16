@@ -135,8 +135,6 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="_d4215_8c.html" title="Implementation of hobby bldc motor driver functions.">D4215.c</a> file. This file contains the common defines of the application. </p>
-
-<p class="definition">Definition in file <a class="el" href="">D4215.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="aaa758e89b5b9cd7961a672dd55ea86a8" name="aaa758e89b5b9cd7961a672dd55ea86a8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa758e89b5b9cd7961a672dd55ea86a8">&#9670;&#160;</a></span>D4215_init()</h2>
@@ -180,17 +178,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                                                           {</div>
-<div class="line"><span class="lineno">   22</span>    bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a> = timer;</div>
-<div class="line"><span class="lineno">   23</span>    bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a> = channel;</div>
-<div class="line"><span class="lineno">   24</span>    bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a36dda2666e5436e608a494230ca9076b">speed</a> = 0;</div>
-<div class="line"><span class="lineno">   25</span>    HAL_TIM_PWM_Start(bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a>);</div>
-<div class="line"><span class="lineno">   26</span>}</div>
-<div class="ttc" id="astruct_d4215x_html_a0c72dd5e18823aef187a34137983c9a6"><div class="ttname"><a href="struct_d4215x.html#a0c72dd5e18823aef187a34137983c9a6">D4215x::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdef"><b>Definition</b> D4215.h:22</div></div>
-<div class="ttc" id="astruct_d4215x_html_a30b15aedcc086ca7abb69f7ac012ce64"><div class="ttname"><a href="struct_d4215x.html#a30b15aedcc086ca7abb69f7ac012ce64">D4215x::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> D4215.h:21</div></div>
-<div class="ttc" id="astruct_d4215x_html_a36dda2666e5436e608a494230ca9076b"><div class="ttname"><a href="struct_d4215x.html#a36dda2666e5436e608a494230ca9076b">D4215x::speed</a></div><div class="ttdeci">int32_t speed</div><div class="ttdef"><b>Definition</b> D4215.h:23</div></div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#l00022">D4215x::channel</a>, <a class="el" href="#l00023">D4215x::speed</a>, and <a class="el" href="#l00021">D4215x::timer</a>.</p>
 
 </div>
 </div>
@@ -229,13 +216,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">   34</span>                                           {</div>
-<div class="line"><span class="lineno">   35</span>    <span class="keywordtype">double</span> speed = 0.05 * spd + 5;</div>
-<div class="line"><span class="lineno">   36</span>    bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a36dda2666e5436e608a494230ca9076b">speed</a> = speed;</div>
-<div class="line"><span class="lineno">   37</span>    __HAL_TIM_SET_COMPARE(bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, bldcx-&gt;<a class="code hl_variable" href="struct_d4215x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a>, speed * 5000);</div>
-<div class="line"><span class="lineno">   38</span>}</div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="#l00022">D4215x::channel</a>, <a class="el" href="#l00023">D4215x::speed</a>, and <a class="el" href="#l00021">D4215x::timer</a>.</p>
 
 </div>
 </div>
