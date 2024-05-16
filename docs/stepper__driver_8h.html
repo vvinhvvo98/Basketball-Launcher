@@ -116,7 +116,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="stepper__driver_8h__dep__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_inc_2stepper__driver_8hdep" alt=""/></div>
 </div>
 </div>
-<p><a href="stepper__driver_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -141,6 +141,8 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="stepper__driver_8c.html" title="Implementation of stepper motor driver functions.">stepper_driver.c</a> file. This file contains the common defines of the application. </p>
+
+<p class="definition">Definition in file <a class="el" href="">stepper_driver.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a7653383f7841e64f6dc24ab3fcf4a06f" name="a7653383f7841e64f6dc24ab3fcf4a06f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7653383f7841e64f6dc24ab3fcf4a06f">&#9670;&#160;</a></span>stepper_disable()</h2>
@@ -164,6 +166,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>                                         {</div>
+<div class="line"><span class="lineno">   53</span>    HAL_GPIO_WritePin (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">GPIOx</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a26cd3405b6201e6460615f64e7344b82">EN_PIN</a>, 1);</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="astruct_stepper_x_html_a1cb502d7339fa12f24109da591102eb2"><div class="ttname"><a href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">StepperX::GPIOx</a></div><div class="ttdeci">GPIO_TypeDef * GPIOx</div><div class="ttdef"><b>Definition</b> stepper_driver.h:22</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a26cd3405b6201e6460615f64e7344b82"><div class="ttname"><a href="struct_stepper_x.html#a26cd3405b6201e6460615f64e7344b82">StepperX::EN_PIN</a></div><div class="ttdeci">uint16_t EN_PIN</div><div class="ttdef"><b>Definition</b> stepper_driver.h:26</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00026">StepperX::EN_PIN</a>, and <a class="el" href="#l00022">StepperX::GPIOx</a>.</p>
 
 </div>
 </div>
@@ -189,6 +198,11 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   43</span>                                        {</div>
+<div class="line"><span class="lineno">   44</span>    HAL_GPIO_WritePin (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">GPIOx</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a26cd3405b6201e6460615f64e7344b82">EN_PIN</a>, 0);</div>
+<div class="line"><span class="lineno">   45</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00026">StepperX::EN_PIN</a>, and <a class="el" href="#l00022">StepperX::GPIOx</a>.</p>
 
 </div>
 </div>
@@ -249,6 +263,25 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   26</span>                                                                                                                                                              {</div>
+<div class="line"><span class="lineno">   27</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>    = timer;</div>
+<div class="line"><span class="lineno">   28</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a>  = channel;</div>
+<div class="line"><span class="lineno">   29</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">GPIOx</a>    = GPIO;</div>
+<div class="line"><span class="lineno">   30</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a26cd3405b6201e6460615f64e7344b82">EN_PIN</a>   = EN_PIN;</div>
+<div class="line"><span class="lineno">   31</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e">DIR_PIN</a>  = DIR_PIN;</div>
+<div class="line"><span class="lineno">   32</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#acc7ceed3f01a38406b9b2eaead343f89">gearRatio</a> = gearRatio;</div>
+<div class="line"><span class="lineno">   33</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a4102b0d3e98cdde59d302fae2c7410cd">speed</a>    = 0;</div>
+<div class="line"><span class="lineno">   34</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a81b43df06332b4fef558297592bb7ff1">period</a>   = 2000;</div>
+<div class="line"><span class="lineno">   35</span>    HAL_TIM_PWM_Start (timer, channel);</div>
+<div class="line"><span class="lineno">   36</span>}</div>
+<div class="ttc" id="astruct_stepper_x_html_a0c72dd5e18823aef187a34137983c9a6"><div class="ttname"><a href="struct_stepper_x.html#a0c72dd5e18823aef187a34137983c9a6">StepperX::channel</a></div><div class="ttdeci">uint32_t channel</div><div class="ttdef"><b>Definition</b> stepper_driver.h:25</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a30b15aedcc086ca7abb69f7ac012ce64"><div class="ttname"><a href="struct_stepper_x.html#a30b15aedcc086ca7abb69f7ac012ce64">StepperX::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> stepper_driver.h:21</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a3921d1e1b140f1cb684cc18f883f4f3e"><div class="ttname"><a href="struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e">StepperX::DIR_PIN</a></div><div class="ttdeci">uint16_t DIR_PIN</div><div class="ttdef"><b>Definition</b> stepper_driver.h:27</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a4102b0d3e98cdde59d302fae2c7410cd"><div class="ttname"><a href="struct_stepper_x.html#a4102b0d3e98cdde59d302fae2c7410cd">StepperX::speed</a></div><div class="ttdeci">int64_t speed</div><div class="ttdef"><b>Definition</b> stepper_driver.h:23</div></div>
+<div class="ttc" id="astruct_stepper_x_html_a81b43df06332b4fef558297592bb7ff1"><div class="ttname"><a href="struct_stepper_x.html#a81b43df06332b4fef558297592bb7ff1">StepperX::period</a></div><div class="ttdeci">uint32_t period</div><div class="ttdef"><b>Definition</b> stepper_driver.h:24</div></div>
+<div class="ttc" id="astruct_stepper_x_html_acc7ceed3f01a38406b9b2eaead343f89"><div class="ttname"><a href="struct_stepper_x.html#acc7ceed3f01a38406b9b2eaead343f89">StepperX::gearRatio</a></div><div class="ttdeci">uint16_t gearRatio</div><div class="ttdef"><b>Definition</b> stepper_driver.h:28</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00025">StepperX::channel</a>, <a class="el" href="#l00027">StepperX::DIR_PIN</a>, <a class="el" href="#l00026">StepperX::EN_PIN</a>, <a class="el" href="#l00028">StepperX::gearRatio</a>, <a class="el" href="#l00022">StepperX::GPIOx</a>, <a class="el" href="#l00024">StepperX::period</a>, <a class="el" href="#l00023">StepperX::speed</a>, and <a class="el" href="#l00021">StepperX::timer</a>.</p>
 
 </div>
 </div>
@@ -279,6 +312,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>                                                        {</div>
+<div class="line"><span class="lineno">   63</span>    stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a81b43df06332b4fef558297592bb7ff1">period</a> = speed;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span> (speed &gt; 0){</div>
+<div class="line"><span class="lineno">   65</span>        HAL_GPIO_WritePin (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">GPIOx</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e">DIR_PIN</a>, 1);</div>
+<div class="line"><span class="lineno">   66</span>        __HAL_TIM_SET_COMPARE(stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a>, (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a81b43df06332b4fef558297592bb7ff1">period</a>)/2);</div>
+<div class="line"><span class="lineno">   67</span>    }</div>
+<div class="line"><span class="lineno">   68</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (speed &lt; 0) {</div>
+<div class="line"><span class="lineno">   69</span>        HAL_GPIO_WritePin (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">GPIOx</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e">DIR_PIN</a>, 0);</div>
+<div class="line"><span class="lineno">   70</span>        __HAL_TIM_SET_COMPARE(stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a>, (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a81b43df06332b4fef558297592bb7ff1">period</a>)/2);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   73</span>        HAL_GPIO_WritePin (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2">GPIOx</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e">DIR_PIN</a>, 1);</div>
+<div class="line"><span class="lineno">   74</span>        __HAL_TIM_SET_COMPARE(stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a0c72dd5e18823aef187a34137983c9a6">channel</a>, (stepperx-&gt;<a class="code hl_variable" href="struct_stepper_x.html#a81b43df06332b4fef558297592bb7ff1">period</a>)/2);</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="line"><span class="lineno">   76</span>    <span class="comment">//update_speed(stepperx, abs(speed));</span></div>
+<div class="line"><span class="lineno">   77</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00025">StepperX::channel</a>, <a class="el" href="#l00027">StepperX::DIR_PIN</a>, <a class="el" href="#l00022">StepperX::GPIOx</a>, <a class="el" href="#l00024">StepperX::period</a>, and <a class="el" href="#l00021">StepperX::timer</a>.</p>
 
 </div>
 </div>

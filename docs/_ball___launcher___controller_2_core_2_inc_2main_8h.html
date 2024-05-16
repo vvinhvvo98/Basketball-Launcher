@@ -108,7 +108,7 @@ Include dependency graph for main.h:</div>
 <div class="center"><img src="_ball___launcher___controller_2_core_2_inc_2main_8h__incl.png" border="0" usemap="#a_ball___launcher___controller_2_core_2_inc_2main_8h" alt=""/></div>
 </div>
 </div>
-<p><a href="_ball___launcher___controller_2_core_2_inc_2main_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -121,6 +121,8 @@ Functions</h2></td></tr>
 <dl class="section attention"><dt>Attention</dt><dd></dd></dl>
 <p>Copyright (c) 2024 STMicroelectronics. All rights reserved.</p>
 <p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+
+<p class="definition">Definition in file <a class="el" href="">main.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1730ffe1e560465665eb47d9264826f9" name="a1730ffe1e560465665eb47d9264826f9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1730ffe1e560465665eb47d9264826f9">&#9670;&#160;</a></span>Error_Handler()</h2>
@@ -144,7 +146,16 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><span class="lineno">  318</span>{</div>
+<div class="line"><span class="lineno">  319</span>  <span class="comment">/* USER CODE BEGIN Error_Handler_Debug */</span></div>
+<div class="line"><span class="lineno">  320</span>  <span class="comment">/* User can add his own implementation to report the HAL error return state */</span></div>
+<div class="line"><span class="lineno">  321</span>  __disable_irq();</div>
+<div class="line"><span class="lineno">  322</span>  <span class="keywordflow">while</span> (1)</div>
+<div class="line"><span class="lineno">  323</span>  {</div>
+<div class="line"><span class="lineno">  324</span>  }</div>
+<div class="line"><span class="lineno">  325</span>  <span class="comment">/* USER CODE END Error_Handler_Debug */</span></div>
+<div class="line"><span class="lineno">  326</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

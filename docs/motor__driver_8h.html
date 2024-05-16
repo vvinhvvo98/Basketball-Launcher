@@ -116,7 +116,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="motor__driver_8h__dep__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_inc_2motor__driver_8hdep" alt=""/></div>
 </div>
 </div>
-<p><a href="motor__driver_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -141,6 +141,8 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="motor__driver_8c.html" title="Implementation of DC motor driver functions.">motor_driver.c</a> file. This file contains the common defines of the application. </p>
+
+<p class="definition">Definition in file <a class="el" href="">motor_driver.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ad18cec6b800a0df6a56afa77f5bac4ed" name="ad18cec6b800a0df6a56afa77f5bac4ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad18cec6b800a0df6a56afa77f5bac4ed">&#9670;&#160;</a></span>motor_disable()</h2>
@@ -171,6 +173,15 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   65</span>                                 {</div>
+<div class="line"><span class="lineno">   66</span>    __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a>, 0);</div>
+<div class="line"><span class="lineno">   67</span>    __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a>, 0);</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="astruct_motor_x_html_a06ad26bec06cf3a7a6300bc7185bca0d"><div class="ttname"><a href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">MotorX::channel2</a></div><div class="ttdeci">uint32_t channel2</div><div class="ttdef"><b>Definition</b> motor_driver.h:23</div></div>
+<div class="ttc" id="astruct_motor_x_html_a30b15aedcc086ca7abb69f7ac012ce64"><div class="ttname"><a href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">MotorX::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> motor_driver.h:21</div></div>
+<div class="ttc" id="astruct_motor_x_html_a9dce966b13d986333ed5a0b5ab1fe956"><div class="ttname"><a href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">MotorX::channel1</a></div><div class="ttdeci">uint32_t channel1</div><div class="ttdef"><b>Definition</b> motor_driver.h:22</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00022">MotorX::channel1</a>, <a class="el" href="#l00023">MotorX::channel2</a>, and <a class="el" href="#l00021">MotorX::timer</a>.</p>
 
 </div>
 </div>
@@ -203,6 +214,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                {</div>
+<div class="line"><span class="lineno">   38</span>    __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a>, 100 * motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb">CCR</a>);</div>
+<div class="line"><span class="lineno">   39</span>    __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a>, 100 * motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb">CCR</a>);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+<div class="ttc" id="astruct_motor_x_html_a971355a900a7bb851c697c00622d7bcb"><div class="ttname"><a href="struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb">MotorX::CCR</a></div><div class="ttdeci">int32_t CCR</div><div class="ttdef"><b>Definition</b> motor_driver.h:25</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00025">MotorX::CCR</a>, <a class="el" href="#l00022">MotorX::channel1</a>, <a class="el" href="#l00023">MotorX::channel2</a>, and <a class="el" href="#l00021">MotorX::timer</a>.</p>
 
 </div>
 </div>
@@ -262,6 +280,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                                           {</div>
+<div class="line"><span class="lineno">   23</span>    motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a> = timer;</div>
+<div class="line"><span class="lineno">   24</span>    motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a> = channel1;</div>
+<div class="line"><span class="lineno">   25</span>    motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a> = channel2;</div>
+<div class="line"><span class="lineno">   26</span>    motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb">CCR</a> = CCR;</div>
+<div class="line"><span class="lineno">   27</span>    motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#ab6a8993805fd7b50a32669337ca3a37a">duty</a> = 0;</div>
+<div class="line"><span class="lineno">   28</span>    HAL_TIM_PWM_Start(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a>);</div>
+<div class="line"><span class="lineno">   29</span>    HAL_TIM_PWM_Start(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a>);</div>
+<div class="line"><span class="lineno">   30</span>}</div>
+<div class="ttc" id="astruct_motor_x_html_ab6a8993805fd7b50a32669337ca3a37a"><div class="ttname"><a href="struct_motor_x.html#ab6a8993805fd7b50a32669337ca3a37a">MotorX::duty</a></div><div class="ttdeci">int32_t duty</div><div class="ttdef"><b>Definition</b> motor_driver.h:24</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00025">MotorX::CCR</a>, <a class="el" href="#l00022">MotorX::channel1</a>, <a class="el" href="#l00023">MotorX::channel2</a>, <a class="el" href="#l00024">MotorX::duty</a>, and <a class="el" href="#l00021">MotorX::timer</a>.</p>
 
 </div>
 </div>
@@ -300,6 +330,19 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>                                               {</div>
+<div class="line"><span class="lineno">   49</span>    motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#ab6a8993805fd7b50a32669337ca3a37a">duty</a> = duty;</div>
+<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">if</span> (duty &gt;= 0) {</div>
+<div class="line"><span class="lineno">   51</span>        __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a>, duty * motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb">CCR</a>);</div>
+<div class="line"><span class="lineno">   52</span>        __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a>, 0);</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (duty &lt; 0) {</div>
+<div class="line"><span class="lineno">   55</span>        __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a>, 0);</div>
+<div class="line"><span class="lineno">   56</span>        __HAL_TIM_SET_COMPARE(motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a>, -duty * motx-&gt;<a class="code hl_variable" href="struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb">CCR</a>);</div>
+<div class="line"><span class="lineno">   57</span>    }</div>
+<div class="line"><span class="lineno">   58</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00025">MotorX::CCR</a>, <a class="el" href="#l00022">MotorX::channel1</a>, <a class="el" href="#l00023">MotorX::channel2</a>, <a class="el" href="#l00024">MotorX::duty</a>, and <a class="el" href="#l00021">MotorX::timer</a>.</p>
 
 </div>
 </div>

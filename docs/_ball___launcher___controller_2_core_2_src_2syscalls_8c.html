@@ -115,7 +115,9 @@ Include dependency graph for syscalls.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ball___launcher___controller_2_core_2_src_2syscalls_8c__incl.png" border="0" usemap="#a_ball___launcher___controller_2_core_2_src_2syscalls_8c" alt=""/></div>
 </div>
-</div><table class="memberdecls">
+</div>
+<p><a href="">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa53ed4b191897a1bfc205aa1da005d24" id="r_aa53ed4b191897a1bfc205aa1da005d24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa53ed4b191897a1bfc205aa1da005d24">__io_putchar</a> (int ch) <a class="el" href="#af9aace1b44b73111e15aa39f06f43456">__attribute__</a>((weak))</td></tr>
@@ -171,6 +173,8 @@ Variables</h2></td></tr>
 <dl class="section attention"><dt>Attention</dt><dd></dd></dl>
 <p>Copyright (c) 2020-2024 STMicroelectronics. All rights reserved.</p>
 <p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+
+<p class="definition">Definition in file <a class="el" href="">syscalls.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="af9aace1b44b73111e15aa39f06f43456" name="af9aace1b44b73111e15aa39f06f43456"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9aace1b44b73111e15aa39f06f43456">&#9670;&#160;</a></span>__attribute__()</h2>
@@ -186,6 +190,20 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   68</span>{</div>
+<div class="line"><span class="lineno">   69</span>  (void)file;</div>
+<div class="line"><span class="lineno">   70</span>  <span class="keywordtype">int</span> DataIdx;</div>
+<div class="line"><span class="lineno">   71</span> </div>
+<div class="line"><span class="lineno">   72</span>  <span class="keywordflow">for</span> (DataIdx = 0; DataIdx &lt; len; DataIdx++)</div>
+<div class="line"><span class="lineno">   73</span>  {</div>
+<div class="line"><span class="lineno">   74</span>    *ptr++ = <a class="code hl_function" href="#ad0122671640a3af49792ddaa59e8294e">__io_getchar</a>();</div>
+<div class="line"><span class="lineno">   75</span>  }</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>  <span class="keywordflow">return</span> len;</div>
+<div class="line"><span class="lineno">   78</span>}</div>
+<div class="ttc" id="a_ball___launcher___controller_2_core_2_src_2syscalls_8c_html_ad0122671640a3af49792ddaa59e8294e"><div class="ttname"><a href="#ad0122671640a3af49792ddaa59e8294e">__io_getchar</a></div><div class="ttdeci">int __io_getchar(void)</div><div class="ttdef"><b>Definition</b> syscalls.c:36</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00036">__io_getchar()</a>.</p>
 
 </div>
 </div>
@@ -211,6 +229,9 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                 { 0 };</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#l00067">__attribute__()</a>.</p>
 
 </div>
 </div>
@@ -253,7 +274,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   93</span>{</div>
+<div class="line"><span class="lineno">   94</span>  (void)file;</div>
+<div class="line"><span class="lineno">   95</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   96</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad2a07db8fdf26151eb98ba5711fad8c5" name="ad2a07db8fdf26151eb98ba5711fad8c5"></a>
@@ -279,7 +304,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  170</span>{</div>
+<div class="line"><span class="lineno">  171</span>  (void)name;</div>
+<div class="line"><span class="lineno">  172</span>  (void)argv;</div>
+<div class="line"><span class="lineno">  173</span>  (void)env;</div>
+<div class="line"><span class="lineno">  174</span>  errno = ENOMEM;</div>
+<div class="line"><span class="lineno">  175</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  176</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="abc96bd69b58b2deaddb484478d911c1b" name="abc96bd69b58b2deaddb484478d911c1b"></a>
@@ -296,6 +328,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{</div>
+<div class="line"><span class="lineno">   63</span>  <a class="code hl_function" href="#a062a5101199c3128edd5170f2575bb10">_kill</a>(status, -1);</div>
+<div class="line"><span class="lineno">   64</span>  <span class="keywordflow">while</span> (1) {}    <span class="comment">/* Make sure we hang here */</span></div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="a_ball___launcher___controller_2_core_2_src_2syscalls_8c_html_a062a5101199c3128edd5170f2575bb10"><div class="ttname"><a href="#a062a5101199c3128edd5170f2575bb10">_kill</a></div><div class="ttdeci">int _kill(int pid, int sig)</div><div class="ttdef"><b>Definition</b> syscalls.c:53</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00053">_kill()</a>.</p>
 
 </div>
 </div>
@@ -313,7 +352,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  164</span>{</div>
+<div class="line"><span class="lineno">  165</span>  errno = EAGAIN;</div>
+<div class="line"><span class="lineno">  166</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  167</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a41eef54307912a82d20e71c3d47315aa" name="a41eef54307912a82d20e71c3d47315aa"></a>
@@ -334,7 +377,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
+<div class="line"><span class="lineno">  101</span>  (void)file;</div>
+<div class="line"><span class="lineno">  102</span>  st-&gt;st_mode = S_IFCHR;</div>
+<div class="line"><span class="lineno">  103</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  104</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a945e539df8e0f66d3c73c533fe1968ee" name="a945e539df8e0f66d3c73c533fe1968ee"></a>
@@ -351,7 +399,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
+<div class="line"><span class="lineno">   50</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   51</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad3134a3dc296622b8d1c5456e481505b" name="ad3134a3dc296622b8d1c5456e481505b"></a>
@@ -368,7 +419,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  107</span>{</div>
+<div class="line"><span class="lineno">  108</span>  (void)file;</div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">  110</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a062a5101199c3128edd5170f2575bb10" name="a062a5101199c3128edd5170f2575bb10"></a>
@@ -389,6 +444,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   54</span>{</div>
+<div class="line"><span class="lineno">   55</span>  (void)pid;</div>
+<div class="line"><span class="lineno">   56</span>  (void)sig;</div>
+<div class="line"><span class="lineno">   57</span>  errno = EINVAL;</div>
+<div class="line"><span class="lineno">   58</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">   59</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="#l00061">_exit()</a>.</p>
 
 </div>
 </div>
@@ -410,7 +473,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  156</span>{</div>
+<div class="line"><span class="lineno">  157</span>  (void)old;</div>
+<div class="line"><span class="lineno">  158</span>  (void)<span class="keyword">new</span>;</div>
+<div class="line"><span class="lineno">  159</span>  errno = EMLINK;</div>
+<div class="line"><span class="lineno">  160</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  161</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7a61311bdf1cb025fc07dc2bdae22ce4" name="a7a61311bdf1cb025fc07dc2bdae22ce4"></a>
@@ -436,7 +505,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  113</span>{</div>
+<div class="line"><span class="lineno">  114</span>  (void)file;</div>
+<div class="line"><span class="lineno">  115</span>  (void)ptr;</div>
+<div class="line"><span class="lineno">  116</span>  (void)dir;</div>
+<div class="line"><span class="lineno">  117</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a270c9113047edd8d64186710ad76062b" name="a270c9113047edd8d64186710ad76062b"></a>
@@ -462,7 +537,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  121</span>{</div>
+<div class="line"><span class="lineno">  122</span>  (void)path;</div>
+<div class="line"><span class="lineno">  123</span>  (void)flags;</div>
+<div class="line"><span class="lineno">  124</span>  <span class="comment">/* Pretend like we always fail */</span></div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  126</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a4711e961db985ed2c850a8be6597af50" name="a4711e961db985ed2c850a8be6597af50"></a>
@@ -483,7 +564,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  149</span>{</div>
+<div class="line"><span class="lineno">  150</span>  (void)file;</div>
+<div class="line"><span class="lineno">  151</span>  st-&gt;st_mode = S_IFCHR;</div>
+<div class="line"><span class="lineno">  152</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  153</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aaf727ebf57cd64d6c58b23e6ee4a4a69" name="aaf727ebf57cd64d6c58b23e6ee4a4a69"></a>
@@ -500,7 +586,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  143</span>{</div>
+<div class="line"><span class="lineno">  144</span>  (void)buf;</div>
+<div class="line"><span class="lineno">  145</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  146</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a70b2f211d665cded5637065aa2bb89dc" name="a70b2f211d665cded5637065aa2bb89dc"></a>
@@ -517,7 +607,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  136</span>{</div>
+<div class="line"><span class="lineno">  137</span>  (void)name;</div>
+<div class="line"><span class="lineno">  138</span>  errno = ENOENT;</div>
+<div class="line"><span class="lineno">  139</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  140</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aeef0c3372d04caa1bcc99fed2ab6ec72" name="aeef0c3372d04caa1bcc99fed2ab6ec72"></a>
@@ -534,7 +629,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  129</span>{</div>
+<div class="line"><span class="lineno">  130</span>  (void)status;</div>
+<div class="line"><span class="lineno">  131</span>  errno = ECHILD;</div>
+<div class="line"><span class="lineno">  132</span>  <span class="keywordflow">return</span> -1;</div>
+<div class="line"><span class="lineno">  133</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a25c7f100d498300fff65568c2fcfe639" name="a25c7f100d498300fff65568c2fcfe639"></a>
@@ -551,7 +651,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   45</span>{</div>
+<div class="line"><span class="lineno">   46</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>

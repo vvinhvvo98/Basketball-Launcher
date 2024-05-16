@@ -107,7 +107,9 @@ Include dependency graph for mpu6050.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="_ball___launcher___launcher_2_core_2_src_2mpu6050_8c__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_src_2mpu6050_8c" alt=""/></div>
 </div>
-</div><table class="memberdecls">
+</div>
+<p><a href="">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a84091077cde2737d6afa76ee69cbe2e7" id="r_a84091077cde2737d6afa76ee69cbe2e7"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84091077cde2737d6afa76ee69cbe2e7">mpu6050_init</a> (<a class="el" href="struct_m_p_u6050.html">MPU6050</a> *imux, I2C_HandleTypeDef *hi2c)</td></tr>
@@ -141,6 +143,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of mpu6050 sensor functions. </p>
 <p>Created on: May 3, 2024 Author: vvinh </p>
+
+<p class="definition">Definition in file <a class="el" href="">mpu6050.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="afce6eaf948ee778c47de0ee0a1eed19b" name="afce6eaf948ee778c47de0ee0a1eed19b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afce6eaf948ee778c47de0ee0a1eed19b">&#9670;&#160;</a></span>mpu6050_calibrate()</h2>
@@ -164,6 +168,41 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                      {</div>
+<div class="line"><span class="lineno">   50</span>    int16_t gX_total = 0;</div>
+<div class="line"><span class="lineno">   51</span>    int16_t gY_total = 0;</div>
+<div class="line"><span class="lineno">   52</span>    int16_t gZ_total = 0;</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> num_samples = 10;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_samples; i++) {</div>
+<div class="line"><span class="lineno">   56</span>        <a class="code hl_function" href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#a7fdf73fea9b3cd4c034f92cae6df1d89">mpu6050_update</a>(imux, 10);</div>
+<div class="line"><span class="lineno">   57</span>        gX_total += imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d">gX</a>;</div>
+<div class="line"><span class="lineno">   58</span>        gY_total += imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452">gY</a>;</div>
+<div class="line"><span class="lineno">   59</span>        gZ_total += imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752">gZ</a>;</div>
+<div class="line"><span class="lineno">   60</span>        HAL_Delay(10);</div>
+<div class="line"><span class="lineno">   61</span>    }</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a8dc74401ac9eb35a6f266e1c3251d41c">gX_offset</a> = gX_total / num_samples;</div>
+<div class="line"><span class="lineno">   64</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a6252bad7e25acad5bf9bfc2e43b08708">gY_offset</a> = gY_total / num_samples;</div>
+<div class="line"><span class="lineno">   65</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a0dacdc364e59a4dec5fc6a23e7f62fac">gZ_offset</a> = gZ_total / num_samples;</div>
+<div class="line"><span class="lineno">   66</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655">X</a> = 0;</div>
+<div class="line"><span class="lineno">   67</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d">Y</a> = 0;</div>
+<div class="line"><span class="lineno">   68</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a">Z</a> = 0;</div>
+<div class="line"><span class="lineno">   69</span>}</div>
+<div class="ttc" id="a_ball___launcher___controller_2_core_2_src_2mpu6050_8c_html_a7fdf73fea9b3cd4c034f92cae6df1d89"><div class="ttname"><a href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#a7fdf73fea9b3cd4c034f92cae6df1d89">mpu6050_update</a></div><div class="ttdeci">void mpu6050_update(MPU6050 *imux, uint16_t dt)</div><div class="ttdoc">Updates the MPU6050 sensor data.</div><div class="ttdef"><b>Definition</b> mpu6050.c:78</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a0dacdc364e59a4dec5fc6a23e7f62fac"><div class="ttname"><a href="struct_m_p_u6050.html#a0dacdc364e59a4dec5fc6a23e7f62fac">MPU6050::gZ_offset</a></div><div class="ttdeci">int16_t gZ_offset</div><div class="ttdef"><b>Definition</b> mpu6050.h:33</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a158916f3f452bccade03134dd750e452"><div class="ttname"><a href="struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452">MPU6050::gY</a></div><div class="ttdeci">int16_t gY</div><div class="ttdef"><b>Definition</b> mpu6050.h:28</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a15a78e2c6057c34f33a3e3ba9d4a2655"><div class="ttname"><a href="struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655">MPU6050::X</a></div><div class="ttdeci">int32_t X</div><div class="ttdef"><b>Definition</b> mpu6050.h:35</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a2c037649b97f103359d32fc55121c752"><div class="ttname"><a href="struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752">MPU6050::gZ</a></div><div class="ttdeci">int16_t gZ</div><div class="ttdef"><b>Definition</b> mpu6050.h:29</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a3b7b3697003e0a1383b4b26fab9ae68a"><div class="ttname"><a href="struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a">MPU6050::Z</a></div><div class="ttdeci">int32_t Z</div><div class="ttdef"><b>Definition</b> mpu6050.h:37</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a6252bad7e25acad5bf9bfc2e43b08708"><div class="ttname"><a href="struct_m_p_u6050.html#a6252bad7e25acad5bf9bfc2e43b08708">MPU6050::gY_offset</a></div><div class="ttdeci">int16_t gY_offset</div><div class="ttdef"><b>Definition</b> mpu6050.h:32</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a8dc74401ac9eb35a6f266e1c3251d41c"><div class="ttname"><a href="struct_m_p_u6050.html#a8dc74401ac9eb35a6f266e1c3251d41c">MPU6050::gX_offset</a></div><div class="ttdeci">int16_t gX_offset</div><div class="ttdef"><b>Definition</b> mpu6050.h:31</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a98de3e2097facbbea557f864201e435d"><div class="ttname"><a href="struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d">MPU6050::Y</a></div><div class="ttdeci">int32_t Y</div><div class="ttdef"><b>Definition</b> mpu6050.h:36</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_af311395520d3063de824b529c9cdb10d"><div class="ttname"><a href="struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d">MPU6050::gX</a></div><div class="ttdeci">int16_t gX</div><div class="ttdef"><b>Definition</b> mpu6050.h:27</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00027">MPU6050::gX</a>, <a class="el" href="#l00031">MPU6050::gX_offset</a>, <a class="el" href="#l00028">MPU6050::gY</a>, <a class="el" href="#l00032">MPU6050::gY_offset</a>, <a class="el" href="#l00029">MPU6050::gZ</a>, <a class="el" href="#l00033">MPU6050::gZ_offset</a>, <a class="el" href="#l00078">mpu6050_update()</a>, <a class="el" href="#l00035">MPU6050::X</a>, <a class="el" href="#l00036">MPU6050::Y</a>, and <a class="el" href="#l00037">MPU6050::Z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00078">main()</a>.</p>
 
 </div>
 </div>
@@ -190,6 +229,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int16_t Calibrated X-axis gyroscope data. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>                                     {</div>
+<div class="line"><span class="lineno">  106</span>    <span class="keywordflow">return</span> (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d">gX</a> - imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a8dc74401ac9eb35a6f266e1c3251d41c">gX_offset</a>);</div>
+<div class="line"><span class="lineno">  107</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00027">MPU6050::gX</a>, and <a class="el" href="#l00031">MPU6050::gX_offset</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00078">main()</a>.</p>
 
 </div>
 </div>
@@ -216,6 +262,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int16_t Calibrated Y-axis gyroscope data. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  116</span>                                      {</div>
+<div class="line"><span class="lineno">  117</span>    <span class="keywordflow">return</span> (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452">gY</a> - imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a6252bad7e25acad5bf9bfc2e43b08708">gY_offset</a>);</div>
+<div class="line"><span class="lineno">  118</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00028">MPU6050::gY</a>, and <a class="el" href="#l00032">MPU6050::gY_offset</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00078">main()</a>.</p>
 
 </div>
 </div>
@@ -242,6 +295,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int16_t Calibrated Z-axis gyroscope data. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                      {</div>
+<div class="line"><span class="lineno">  128</span>    <span class="keywordflow">return</span> (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752">gZ</a> - imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a0dacdc364e59a4dec5fc6a23e7f62fac">gZ_offset</a>);</div>
+<div class="line"><span class="lineno">  129</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00029">MPU6050::gZ</a>, and <a class="el" href="#l00033">MPU6050::gZ_offset</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00078">main()</a>.</p>
 
 </div>
 </div>
@@ -268,6 +328,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int32_t X-axis accelerometer data. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                                    {</div>
+<div class="line"><span class="lineno">  139</span>    <span class="keywordflow">return</span> imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655">X</a>/1000;</div>
+<div class="line"><span class="lineno">  140</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00035">MPU6050::X</a>.</p>
 
 </div>
 </div>
@@ -294,6 +359,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int32_t Y-axis accelerometer data. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  149</span>                                     {</div>
+<div class="line"><span class="lineno">  150</span>    <span class="keywordflow">return</span> imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d">Y</a>/1000;</div>
+<div class="line"><span class="lineno">  151</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00036">MPU6050::Y</a>.</p>
 
 </div>
 </div>
@@ -320,6 +390,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int32_t Z-axis accelerometer data. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  160</span>                                     {</div>
+<div class="line"><span class="lineno">  161</span>    <span class="keywordflow">return</span> imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a">Z</a>/1000;</div>
+<div class="line"><span class="lineno">  162</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00037">MPU6050::Z</a>.</p>
 
 </div>
 </div>
@@ -351,6 +426,37 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uint16_t Returns 1 if initialization is successful, otherwise 0. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                               {</div>
+<div class="line"><span class="lineno">   19</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#ac19f4e4e848dfa58d8e9de5784e77905">hi2c</a> = hi2c;</div>
+<div class="line"><span class="lineno">   20</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d">gX</a> = 0;</div>
+<div class="line"><span class="lineno">   21</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452">gY</a> = 0;</div>
+<div class="line"><span class="lineno">   22</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752">gZ</a> = 0;</div>
+<div class="line"><span class="lineno">   23</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a8dc74401ac9eb35a6f266e1c3251d41c">gX_offset</a> = 0;</div>
+<div class="line"><span class="lineno">   24</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a6252bad7e25acad5bf9bfc2e43b08708">gY_offset</a> = 0;</div>
+<div class="line"><span class="lineno">   25</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a0dacdc364e59a4dec5fc6a23e7f62fac">gZ_offset</a> = 0;</div>
+<div class="line"><span class="lineno">   26</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655">X</a> = 0;</div>
+<div class="line"><span class="lineno">   27</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d">Y</a> = 0;</div>
+<div class="line"><span class="lineno">   28</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a">Z</a> = 0;</div>
+<div class="line"><span class="lineno">   29</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a41a6aad09727eb120338c35535a652a6">addr</a> = 0x68;</div>
+<div class="line"><span class="lineno">   30</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24">status</a> = HAL_I2C_IsDeviceReady(imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#ac19f4e4e848dfa58d8e9de5784e77905">hi2c</a>, (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a41a6aad09727eb120338c35535a652a6">addr</a> &lt;&lt; 1), 1, 100);</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">if</span> (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24">status</a> == HAL_OK) {</div>
+<div class="line"><span class="lineno">   32</span>            uint8_t data[2];</div>
+<div class="line"><span class="lineno">   33</span>            data[0] = 0x00;</div>
+<div class="line"><span class="lineno">   34</span>            HAL_I2C_Mem_Write(imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#ac19f4e4e848dfa58d8e9de5784e77905">hi2c</a>, (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a41a6aad09727eb120338c35535a652a6">addr</a> &lt;&lt; 1), 0x6B, I2C_MEMADD_SIZE_8BIT, data, 1, 100);</div>
+<div class="line"><span class="lineno">   35</span>            HAL_I2C_Mem_Write(imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#ac19f4e4e848dfa58d8e9de5784e77905">hi2c</a>, (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a41a6aad09727eb120338c35535a652a6">addr</a> &lt;&lt; 1), 0x1B, I2C_MEMADD_SIZE_8BIT, data, 1, 100);</div>
+<div class="line"><span class="lineno">   36</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   37</span>    }</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">else</span>{</div>
+<div class="line"><span class="lineno">   39</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   40</span>    }</div>
+<div class="line"><span class="lineno">   41</span>}</div>
+<div class="ttc" id="astruct_m_p_u6050_html_a41a6aad09727eb120338c35535a652a6"><div class="ttname"><a href="struct_m_p_u6050.html#a41a6aad09727eb120338c35535a652a6">MPU6050::addr</a></div><div class="ttdeci">uint16_t addr</div><div class="ttdef"><b>Definition</b> mpu6050.h:24</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_a72c1658eb37db971e7f6bca046bc6f24"><div class="ttname"><a href="struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24">MPU6050::status</a></div><div class="ttdeci">HAL_StatusTypeDef status</div><div class="ttdef"><b>Definition</b> mpu6050.h:23</div></div>
+<div class="ttc" id="astruct_m_p_u6050_html_ac19f4e4e848dfa58d8e9de5784e77905"><div class="ttname"><a href="struct_m_p_u6050.html#ac19f4e4e848dfa58d8e9de5784e77905">MPU6050::hi2c</a></div><div class="ttdeci">I2C_HandleTypeDef * hi2c</div><div class="ttdef"><b>Definition</b> mpu6050.h:22</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00024">MPU6050::addr</a>, <a class="el" href="#l00027">MPU6050::gX</a>, <a class="el" href="#l00031">MPU6050::gX_offset</a>, <a class="el" href="#l00028">MPU6050::gY</a>, <a class="el" href="#l00032">MPU6050::gY_offset</a>, <a class="el" href="#l00029">MPU6050::gZ</a>, <a class="el" href="#l00033">MPU6050::gZ_offset</a>, <a class="el" href="#l00022">MPU6050::hi2c</a>, <a class="el" href="#l00023">MPU6050::status</a>, <a class="el" href="#l00035">MPU6050::X</a>, <a class="el" href="#l00036">MPU6050::Y</a>, and <a class="el" href="#l00037">MPU6050::Z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00078">main()</a>.</p>
 
 </div>
 </div>
@@ -381,6 +487,32 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   78</span>                                                {</div>
+<div class="line"><span class="lineno">   79</span>    uint8_t data[6];</div>
+<div class="line"><span class="lineno">   80</span>    int16_t gx, gy, gz;</div>
+<div class="line"><span class="lineno">   81</span>    imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24">status</a> = HAL_I2C_Mem_Read(imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#ac19f4e4e848dfa58d8e9de5784e77905">hi2c</a>, (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a41a6aad09727eb120338c35535a652a6">addr</a> &lt;&lt; 1), 0x43, I2C_MEMADD_SIZE_8BIT, data, 6, 100);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span> (imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24">status</a> == HAL_OK) {</div>
+<div class="line"><span class="lineno">   84</span>        gx = (int16_t)((data[0] &lt;&lt; 8) | data[1]);</div>
+<div class="line"><span class="lineno">   85</span>        gy = (int16_t)((data[2] &lt;&lt; 8) | data[3]);</div>
+<div class="line"><span class="lineno">   86</span>        gz = (int16_t)((data[4] &lt;&lt; 8) | data[5]);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>        imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d">gX</a> = gx / 131;</div>
+<div class="line"><span class="lineno">   89</span>        imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452">gY</a> = gy / 131;</div>
+<div class="line"><span class="lineno">   90</span>        imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752">gZ</a> = gz / 131;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a15a78e2c6057c34f33a3e3ba9d4a2655">X</a> += (<a class="code hl_function" href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#a9ea00ce90e91d89bd407680c26e726bc">mpu6050_get_gX</a>(imux) * dt);</div>
+<div class="line"><span class="lineno">   93</span>        imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d">Y</a> += (<a class="code hl_function" href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#aff1ec64e5ad571812ea3cdede42fb546">mpu6050_get_gY</a>(imux) * dt);</div>
+<div class="line"><span class="lineno">   94</span>        imux-&gt;<a class="code hl_variable" href="struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a">Z</a> += (<a class="code hl_function" href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#a43d5b475f578b8f07e2281ced858173f">mpu6050_get_gZ</a>(imux) * dt);</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
+<div class="line"><span class="lineno">   96</span>}</div>
+<div class="ttc" id="a_ball___launcher___controller_2_core_2_src_2mpu6050_8c_html_a43d5b475f578b8f07e2281ced858173f"><div class="ttname"><a href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#a43d5b475f578b8f07e2281ced858173f">mpu6050_get_gZ</a></div><div class="ttdeci">int16_t mpu6050_get_gZ(MPU6050 *imux)</div><div class="ttdoc">Gets the calibrated Z-axis gyroscope data.</div><div class="ttdef"><b>Definition</b> mpu6050.c:127</div></div>
+<div class="ttc" id="a_ball___launcher___controller_2_core_2_src_2mpu6050_8c_html_a9ea00ce90e91d89bd407680c26e726bc"><div class="ttname"><a href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#a9ea00ce90e91d89bd407680c26e726bc">mpu6050_get_gX</a></div><div class="ttdeci">int16_t mpu6050_get_gX(MPU6050 *imux)</div><div class="ttdoc">Gets the calibrated X-axis gyroscope data.</div><div class="ttdef"><b>Definition</b> mpu6050.c:105</div></div>
+<div class="ttc" id="a_ball___launcher___controller_2_core_2_src_2mpu6050_8c_html_aff1ec64e5ad571812ea3cdede42fb546"><div class="ttname"><a href="_ball___launcher___controller_2_core_2_src_2mpu6050_8c.html#aff1ec64e5ad571812ea3cdede42fb546">mpu6050_get_gY</a></div><div class="ttdeci">int16_t mpu6050_get_gY(MPU6050 *imux)</div><div class="ttdoc">Gets the calibrated Y-axis gyroscope data.</div><div class="ttdef"><b>Definition</b> mpu6050.c:116</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00024">MPU6050::addr</a>, <a class="el" href="#l00027">MPU6050::gX</a>, <a class="el" href="#l00028">MPU6050::gY</a>, <a class="el" href="#l00029">MPU6050::gZ</a>, <a class="el" href="#l00022">MPU6050::hi2c</a>, <a class="el" href="#l00105">mpu6050_get_gX()</a>, <a class="el" href="#l00116">mpu6050_get_gY()</a>, <a class="el" href="#l00127">mpu6050_get_gZ()</a>, <a class="el" href="#l00023">MPU6050::status</a>, <a class="el" href="#l00035">MPU6050::X</a>, <a class="el" href="#l00036">MPU6050::Y</a>, and <a class="el" href="#l00037">MPU6050::Z</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00078">main()</a>.</p>
 
 </div>
 </div>

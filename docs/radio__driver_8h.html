@@ -116,7 +116,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="radio__driver_8h__dep__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_inc_2radio__driver_8hdep" alt=""/></div>
 </div>
 </div>
-<p><a href="radio__driver_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -141,6 +141,8 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="radio__driver_8c.html" title="Implementation of radio driver functions.">radio_driver.c</a> file. This file contains the common defines of the application. </p>
+
+<p class="definition">Definition in file <a class="el" href="">radio_driver.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a44f4cc75e4b2a4a33e163340fd57c223" name="a44f4cc75e4b2a4a33e163340fd57c223"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44f4cc75e4b2a4a33e163340fd57c223">&#9670;&#160;</a></span>capturePulseWidth()</h2>
@@ -164,6 +166,21 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                      {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordtype">int</span> pw1 = HAL_TIM_ReadCapturedValue(radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a>);</div>
+<div class="line"><span class="lineno">   44</span>    <span class="keywordtype">int</span> pw2 = HAL_TIM_ReadCapturedValue(radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a>, radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a>);</div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_function" href="radio__driver_8c.html#a492a4fe5ab05721268b3484b7c8e9be5">update</a>(radio, pw1, pw2);</div>
+<div class="line"><span class="lineno">   46</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137">pulseWidth</a> = (double)(radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2">counter2</a> - radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525">counter1</a>);</div>
+<div class="line"><span class="lineno">   47</span>}</div>
+<div class="ttc" id="aradio__driver_8c_html_a492a4fe5ab05721268b3484b7c8e9be5"><div class="ttname"><a href="radio__driver_8c.html#a492a4fe5ab05721268b3484b7c8e9be5">update</a></div><div class="ttdeci">void update(RadioX *radio, int pw1, int pw2)</div><div class="ttdoc">Updates the pulse width values.</div><div class="ttdef"><b>Definition</b> radio_driver.c:56</div></div>
+<div class="ttc" id="astruct_radio_x_html_a06ad26bec06cf3a7a6300bc7185bca0d"><div class="ttname"><a href="struct_radio_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">RadioX::channel2</a></div><div class="ttdeci">uint32_t channel2</div><div class="ttdef"><b>Definition</b> radio_driver.h:23</div></div>
+<div class="ttc" id="astruct_radio_x_html_a30b15aedcc086ca7abb69f7ac012ce64"><div class="ttname"><a href="struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64">RadioX::timer</a></div><div class="ttdeci">TIM_HandleTypeDef * timer</div><div class="ttdef"><b>Definition</b> radio_driver.h:21</div></div>
+<div class="ttc" id="astruct_radio_x_html_a3e3a92e2b80deeb063f71f96c4549137"><div class="ttname"><a href="struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137">RadioX::pulseWidth</a></div><div class="ttdeci">double pulseWidth</div><div class="ttdef"><b>Definition</b> radio_driver.h:28</div></div>
+<div class="ttc" id="astruct_radio_x_html_a7a0a90242eea451f43eeb3e08d6212b2"><div class="ttname"><a href="struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2">RadioX::counter2</a></div><div class="ttdeci">uint32_t counter2</div><div class="ttdef"><b>Definition</b> radio_driver.h:27</div></div>
+<div class="ttc" id="astruct_radio_x_html_a9dce966b13d986333ed5a0b5ab1fe956"><div class="ttname"><a href="struct_radio_x.html#a9dce966b13d986333ed5a0b5ab1fe956">RadioX::channel1</a></div><div class="ttdeci">uint32_t channel1</div><div class="ttdef"><b>Definition</b> radio_driver.h:22</div></div>
+<div class="ttc" id="astruct_radio_x_html_acbcc8fb505a4cdd9573f816fd073e525"><div class="ttname"><a href="struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525">RadioX::counter1</a></div><div class="ttdeci">uint32_t counter1</div><div class="ttdef"><b>Definition</b> radio_driver.h:26</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00022">RadioX::channel1</a>, <a class="el" href="#l00023">RadioX::channel2</a>, <a class="el" href="#l00026">RadioX::counter1</a>, <a class="el" href="#l00027">RadioX::counter2</a>, <a class="el" href="#l00028">RadioX::pulseWidth</a>, <a class="el" href="#l00021">RadioX::timer</a>, and <a class="el" href="#l00056">update()</a>.</p>
 
 </div>
 </div>
@@ -190,6 +207,15 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Calculated pulse width. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   81</span>                                          {</div>
+<div class="line"><span class="lineno">   82</span>    <span class="keywordflow">if</span> (radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137">pulseWidth</a> &gt; 2000.00) {</div>
+<div class="line"><span class="lineno">   83</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">   84</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   85</span>        <span class="keywordflow">return</span> radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137">pulseWidth</a> / 1000.00;</div>
+<div class="line"><span class="lineno">   86</span>    }</div>
+<div class="line"><span class="lineno">   87</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00028">RadioX::pulseWidth</a>.</p>
 
 </div>
 </div>
@@ -232,6 +258,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   22</span>                                                                                               {</div>
+<div class="line"><span class="lineno">   23</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64">timer</a> = timer;</div>
+<div class="line"><span class="lineno">   24</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a9dce966b13d986333ed5a0b5ab1fe956">channel1</a> = channel1;</div>
+<div class="line"><span class="lineno">   25</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a06ad26bec06cf3a7a6300bc7185bca0d">channel2</a> = channel2;</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>    HAL_TIM_IC_Start_IT(timer, channel1);</div>
+<div class="line"><span class="lineno">   28</span>    HAL_TIM_IC_Start_IT(timer, channel2);</div>
+<div class="line"><span class="lineno">   29</span> </div>
+<div class="line"><span class="lineno">   30</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9">sum1</a> = 0;</div>
+<div class="line"><span class="lineno">   31</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c">sum2</a> = 0;</div>
+<div class="line"><span class="lineno">   32</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525">counter1</a> = 0;</div>
+<div class="line"><span class="lineno">   33</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2">counter2</a> = 0;</div>
+<div class="line"><span class="lineno">   34</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137">pulseWidth</a> = 0;</div>
+<div class="line"><span class="lineno">   35</span>}</div>
+<div class="ttc" id="astruct_radio_x_html_a0fe44f0d86c23c11c828d4cb5102409c"><div class="ttname"><a href="struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c">RadioX::sum2</a></div><div class="ttdeci">uint32_t sum2</div><div class="ttdef"><b>Definition</b> radio_driver.h:25</div></div>
+<div class="ttc" id="astruct_radio_x_html_a24f50adf55dc7ab33804a4105ff480d9"><div class="ttname"><a href="struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9">RadioX::sum1</a></div><div class="ttdeci">uint32_t sum1</div><div class="ttdef"><b>Definition</b> radio_driver.h:24</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00022">RadioX::channel1</a>, <a class="el" href="#l00023">RadioX::channel2</a>, <a class="el" href="#l00026">RadioX::counter1</a>, <a class="el" href="#l00027">RadioX::counter2</a>, <a class="el" href="#l00028">RadioX::pulseWidth</a>, <a class="el" href="#l00024">RadioX::sum1</a>, <a class="el" href="#l00025">RadioX::sum2</a>, and <a class="el" href="#l00021">RadioX::timer</a>.</p>
 
 </div>
 </div>
@@ -268,6 +312,28 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="fragment"><div class="line"><span class="lineno">   56</span>                                             {</div>
+<div class="line"><span class="lineno">   57</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> max = 19000;</div>
+<div class="line"><span class="lineno">   58</span>    <span class="keywordtype">int</span> delta1, delta2;</div>
+<div class="line"><span class="lineno">   59</span>    <span class="keywordflow">if</span> (pw1 &lt; radio-&gt;sum1) {</div>
+<div class="line"><span class="lineno">   60</span>        delta1 = (max - radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9">sum1</a> - 1) + pw1;</div>
+<div class="line"><span class="lineno">   61</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   62</span>        delta1 = pw1 - radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9">sum1</a>;</div>
+<div class="line"><span class="lineno">   63</span>    }</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">if</span> (pw2 &lt; radio-&gt;sum2) {</div>
+<div class="line"><span class="lineno">   65</span>        delta2 = (max - radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c">sum2</a> - 1) + pw2;</div>
+<div class="line"><span class="lineno">   66</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   67</span>        delta2 = pw2 - radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c">sum2</a>;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9">sum1</a> = pw1;</div>
+<div class="line"><span class="lineno">   70</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c">sum2</a> = pw2;</div>
+<div class="line"><span class="lineno">   71</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525">counter1</a> += delta1;</div>
+<div class="line"><span class="lineno">   72</span>    radio-&gt;<a class="code hl_variable" href="struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2">counter2</a> += delta2;</div>
+<div class="line"><span class="lineno">   73</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="#l00026">RadioX::counter1</a>, <a class="el" href="#l00027">RadioX::counter2</a>, <a class="el" href="#l00024">RadioX::sum1</a>, and <a class="el" href="#l00025">RadioX::sum2</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="#l00042">capturePulseWidth()</a>.</p>
 
 </div>
 </div>
