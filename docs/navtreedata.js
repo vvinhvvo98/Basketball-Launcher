@@ -24,12 +24,17 @@
 */
 var NAVTREE =
 [
-  [ "BASKETBALL LAUNCHER", "index.html", ]
+  [ "BASKETBALL LAUNCHER", "index.html", [
+    [ "BACKGROUND", "index.html", "index" ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"dir_b06cade65eef272be3550abfe849ef3f.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

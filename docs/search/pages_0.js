@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_20page_0',['MAIN PAGE',['../index.html',1,'']]]
+  ['background_0',['BACKGROUND',['../index.html',1,'']]]
 ];
