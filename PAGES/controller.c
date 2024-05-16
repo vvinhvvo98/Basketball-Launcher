@@ -16,14 +16,17 @@
  * 
  * PICTURE UPDATE NEEDED
  * 
-* @section schematic SCHEMATICS
- * The PDF of this schematic is also attached with higher solution can be found in [PDF SCHEMATIC](schematic1.pdf)
- * Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage
+ *  
+ * @section schematic SCHEMATICS
+ * The PDF of this schematic is also attached with higher solution can be found in [PDF SCHEMATIC](schematic1.pdf).
+ * Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient: 
+ * https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Controller
  * Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 BlackPill, mpu6050 IMU, HC-05, and LEDs together. 
  * 
  * <img src="PCBCONTROLLER.png" width="1200" height="800">
  * 
- * <img src="PCBCONTROLLERLAYOUT.png" width="1200" height="1500">
+ * <img src="PCBCONTROLLERLAYOUT.png" width="1200" height="400">
+ * 
  * 
  * @section fsm FINITE STATE MACHINE
  * | State       | Description                                                                                   | Actions                                                                                          | Transitions                                                                                                                                                  |
@@ -35,22 +38,20 @@
  * | STATE2A     | CHECK BUTTONS STATUS - Check the status of the buttons and transfer data continuously         | - Check buttons status<br>- Transfer data                                                        | - Always transition to **STATE 1: IMU READING**                                                                                                              |
  * | STATE3      | BLUETOOTH TRANSFER - Transfer data via Bluetooth                                              | - Transfer data via Bluetooth                                                                    | - Always transition back to **STATE 1: IMU READING**                                                                                                         | 
  *
+ * TABLE UPDATE NEEDED
+ * 
  * <img src="FSM1.png" width="1200" height="1200"> 
  * 
  * PICTURE UPDATE NEEDED
  * 
- * @section bom BILL OF MATERIAL
- * <div align="center">
- * | Component| Description                                       | Image                                          |
- * | -------- | ------------------------------------------------- | ---------------------------------------------- |
- * | PCBA     | Customized PCBA on top of the handle              | <img src="pcb1.png"   width="200" height="200">|
- * | Handle   | 3D printed handle with thread                     | <img src="brk.png"    width="200" height="200">|
- * | MCU      | STM32 BlackPill microcontroller                   | <img src="bp.png"     width="200" height="200">|
- * | IMU      | mpu6050 6 DOF motion sensor                       | <img src="imu.png"    width="200" height="200">|
- * | Button   | Additional buttons for control the launcher       | <img src="button.png" width="200" height="200">|
- * | Bluetooth| Bluetooth module using UART communication         | <img src="hc05.png"   width="200" height="200">|
- * | LED      | Indicator LED for bluetooth, IMU and ESC status.  | <img src="led.png"    width="200" height="200">|
- * | Resistor | Resistor for LED                                  | <img src="r.png"      width="200" height="200">|
- * </div>
- *
+ * 
+ * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS
+ * Most of the 3D printed parts are printed using BambuLab XC1 3D printer. Moreover, and BambuLab filaments. 
+ * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
+ * 
+ * 
+ * @section bome2 BILL OF MATERIAL - ELECTRONICS
+ * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BOM_UPDATE.xlsx)
+ * 
+ * PUT THE OVERALL PCBA_LAUNCHER PICTURE HERE <---------------------------------------------------------
  */

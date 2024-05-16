@@ -30,9 +30,18 @@ var NAVTREE =
       [ "FINAL DESIGN", "controller_detail.html#overview", null ],
       [ "SCHEMATICS", "controller_detail.html#schematic", null ],
       [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ],
-      [ "BILL OF MATERIAL", "controller_detail.html#bom", null ]
+      [ "BILL OF MATERIAL - 3D PRINTED PARTS", "controller_detail.html#bomm5", null ],
+      [ "BILL OF MATERIAL - ELECTRONICS", "controller_detail.html#bome2", null ]
     ] ],
-    [ "LAUNCHER", "launcher_detail.html", null ],
+    [ "LAUNCHER", "launcher_detail.html", [
+      [ "FINAL DESIGN", "launcher_detail.html#overview1", null ],
+      [ "SCHEMATICS", "launcher_detail.html#schematic1", null ],
+      [ "FINITE STATE MACHINE", "launcher_detail.html#fsm1", null ],
+      [ "BILL OF MATERIAL - 3D PRINTED PARTS", "launcher_detail.html#bomm4", null ],
+      [ "BILL OF MATERIAL - ELECTRONICS", "launcher_detail.html#bome22", null ],
+      [ "BILL OF MATERIAL - MECHANICAL", "launcher_detail.html#bomm1", null ],
+      [ "BILL OF MATERIAL - CYCLOIDAL GEARBOX", "launcher_detail.html#bomm3", null ]
+    ] ],
     [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

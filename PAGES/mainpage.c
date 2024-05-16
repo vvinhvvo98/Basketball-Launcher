@@ -6,10 +6,12 @@
 /**
  * @mainpage MAIN PAGE
  *
+ * 
  * @section motivation MOTIVATION
  * The motivation for this project is to build a prototype for a full-scale basketball-playing robot.
  * The project will start with a small-scale version to test the concept and gather insights for future improvements.
  * This approach will provide an opportunity to develop customized PCBAs that can control the robot for its intended purposes.
+ * 
  * 
  * @section detail OBJECTIVE
  * The objective of the project includes integrating the mechanical design with PCBA electronic component.
@@ -28,6 +30,7 @@
  * It will then shoot the basketball when the controller signals it. 
  * The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.
  *  
+ * 
  * @section design DESIGN
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
@@ -50,6 +53,7 @@
  * 
  * PICTURE UPDATE NEEDED
  * 
+ * 
  * @section controller CONTROLLER
  * The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. 
  * It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input. 
@@ -70,13 +74,16 @@
  * - Improve stronger stepper driver that can allow faster and stronger rotation motion
  * - Increase moving angle of the launcher to more than 120°
  * 
+ * 
  * @section youtube YOUTUBE REFERENCE
  * YOUTUBE LINK UPDATE NEEDED <---------------------------------------------------
+ * 
  * 
  * @section repository REPOSITORY REFERENCE
  * All code that will be referenced in this portfolio relate to project is accessible through https://github.com/vvinhvvo98/Basketball-Launcher
  * 
  * However, you may find it more useful to read through the website exploring the source code.
+ * 
  * 
  * @section info CONTACT INFO
  * 

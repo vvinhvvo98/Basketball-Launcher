@@ -96,7 +96,109 @@ $(function(){initNavTree('launcher_detail.html',''); initResizable(); });
   <div class="headertitle"><div class="title">LAUNCHER</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="overview1"></a>
+FINAL DESIGN</h1>
+<p>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning.</p>
+<p><img src="launcher.png" alt="" width="1200" height="1250" class="inline"/> PICTURE UPDATE NEEDED</p>
+<h1><a class="anchor" id="schematic1"></a>
+SCHEMATICS</h1>
+<p>The PDF of this schematic is also attached with higher solution can be found in <a href="schematic2.pdf">PDF SCHEMATIC</a>. Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient: <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher">https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher</a> Below are the all of the PCB schematic contains total of 4 pages describe in the table below</p>
+<div align="center"> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Page   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1   </td><td class="markdownTableBodyNone">Power source schematic for power the pcb, drivers, mcu, etc    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2   </td><td class="markdownTableBodyNone">All connection to power and program for STM32F401CEU6 chip    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3   </td><td class="markdownTableBodyNone">All connection to power and program for DRV8825 stepper motor driver    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">Additional pins + test pads and connectors for limit switches + stepper motors   </td></tr>
+</table>
+</div><p><img src="p1.png" alt="" width="1200" height="800" class="inline"/></p>
+<p><img src="p2.png" alt="" width="1200" height="800" class="inline"/></p>
+<p><img src="p3.png" alt="" width="1200" height="800" class="inline"/></p>
+<p><img src="p4.png" alt="" width="1200" height="800" class="inline"/></p>
+<p><img src="fppf.png" alt="" width="1200" height="600" class="inline"/></p>
+<h1><a class="anchor" id="fsm1"></a>
+FINITE STATE MACHINE</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">State   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Actions   </th><th class="markdownTableHeadNone">Transitions    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT - Attempt to connect, read IMU data, and turn on LED1 if the connection is successful   </td><td class="markdownTableBodyNone">- Attempt to connect<br  />
+- Read IMU data<br  />
+- Turn on LED1 if successful   </td><td class="markdownTableBodyNone">- If unsuccessful, transition to <b>STATE 0A: BLINK LED</b><br  />
+- If successful, transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">STATE0A   </td><td class="markdownTableBodyNone">BLINK LED - Blink three LEDs to indicate unsuccessful connection   </td><td class="markdownTableBodyNone">- Blink three LEDs   </td><td class="markdownTableBodyNone">- After blinking LEDs, transition back to <b>STATE 0: INIT</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">IMU READING - Continuously read IMU data   </td><td class="markdownTableBodyNone">- Continuously read IMU data   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 2: CHECK BUTTONS STATUS</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">CHECK BUTTONS STATUS - Check the status of the buttons   </td><td class="markdownTableBodyNone">- Check buttons status   </td><td class="markdownTableBodyNone">- If button is pushed, transition to <b>STATE 3: BLUETOOTH TRANSFER</b><br  />
+- If button 2 is pushed, turn on LED2 and LED3, and transition to <b>STATE 2A</b><br  />
+- Always transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">STATE2A   </td><td class="markdownTableBodyNone">CHECK BUTTONS STATUS - Check the status of the buttons and transfer data continuously   </td><td class="markdownTableBodyNone">- Check buttons status<br  />
+- Transfer data   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">BLUETOOTH TRANSFER - Transfer data via Bluetooth   </td><td class="markdownTableBodyNone">- Transfer data via Bluetooth   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 1: IMU READING</b>   </td></tr>
+</table>
+<p>TABLE UPDATE NEEDED</p>
+<p><img src="FSM1.png" alt="" width="1200" height="1200" class="inline"/></p>
+<p>PICTURE UPDATE NEEDED</p>
+<h1><a class="anchor" id="bomm4"></a>
+BILL OF MATERIAL - 3D PRINTED PARTS</h1>
+<p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer. Moreover, and BambuLab filaments. All the CAD 3D model files can be found here for reference: <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD">https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD</a></p>
+<h1><a class="anchor" id="bome22"></a>
+BILL OF MATERIAL - ELECTRONICS</h1>
+<p>All of the components for electronics are listed in the attached PDF file here: <a href="BOM_UPDATE.xlsx">BOM EXCEL</a></p>
+<p>PUT THE OVERALL PCBA_LAUNCHER PICTURE HERE &lt;------------------------------------------------------&mdash;</p>
+<h1><a class="anchor" id="bomm1"></a>
+BILL OF MATERIAL - MECHANICAL</h1>
+<div align="center"></div><div align="center"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Components   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Image    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">NEMA17   </td><td class="markdownTableBodyNone">NEMA17 stepper motor   </td><td class="markdownTableBodyNone"><img src="nema17.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">NEMA17 + GEAR BOX   </td><td class="markdownTableBodyNone">NEMA17 stepper motor + planetary gearbox   </td><td class="markdownTableBodyNone"><img src="nema17_gearbox.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">D4215 BLDC   </td><td class="markdownTableBodyNone">D4215 BLDC 650 Kvmotor   </td><td class="markdownTableBodyNone"><img src="d4215_bldc.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">UBEC ESC   </td><td class="markdownTableBodyNone">Hobby ESC control for BLDC   </td><td class="markdownTableBodyNone"><img src="ubec_esc.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">O-RING   </td><td class="markdownTableBodyNone">Friction O-Ring   </td><td class="markdownTableBodyNone"><img src="o_ring.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">SWITCH   </td><td class="markdownTableBodyNone">Switch for BLDC   </td><td class="markdownTableBodyNone"><img src="switch.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">BASKETBALL   </td><td class="markdownTableBodyNone">5 inches basketball   </td><td class="markdownTableBodyNone"><img src="basketball.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">LIMIT SWITCH   </td><td class="markdownTableBodyNone">Limit switches for safety   </td><td class="markdownTableBodyNone"><img src="limit_switch.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">BATTERY   </td><td class="markdownTableBodyNone">Lipo battery 11.1 V   </td><td class="markdownTableBodyNone"><img src="battery.png" alt="" width="250" height="250" class="inline"/>   </td></tr>
+</table>
+</div><div align="center"></div><h1><a class="anchor" id="bomm3"></a>
+BILL OF MATERIAL - CYCLOIDAL GEARBOX</h1>
+<div align="center"> <img src="CG.png" alt="" width="600" height="600" class="inline"/> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Components   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Image    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bearing   </td><td class="markdownTableBodyNone">OD = 55 mm + ID = 35 mm + t = 10 mm   </td><td class="markdownTableBodyNone"><img src="45bearing.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Bearing   </td><td class="markdownTableBodyNone">OD = 47 mm + ID = 35 mm + t = 7 mm   </td><td class="markdownTableBodyNone"><img src="35bearing.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bearing   </td><td class="markdownTableBodyNone">OD = 37 mm + ID = 25 mm + t = 7 mm   </td><td class="markdownTableBodyNone"><img src="25bearing.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Bearing   </td><td class="markdownTableBodyNone">OD = 15 mm + ID = 6 mm + t = 5 mm   </td><td class="markdownTableBodyNone"><img src="6bearing.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Bolt   </td><td class="markdownTableBodyNone">M6 + L = 70 mm + Bolt   </td><td class="markdownTableBodyNone"><img src="bolt.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Nut   </td><td class="markdownTableBodyNone">M6 + t = 5 mm + Nut   </td><td class="markdownTableBodyNone"><img src="nut.png" alt="" width="250" height="250" class="inline"/>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Nut   </td><td class="markdownTableBodyNone">M6 + t = 5 mm + Lock Nut   </td><td class="markdownTableBodyNone"><img src="locknut.png" alt="" width="250" height="250" class="inline"/>   </td></tr>
+</table>
+</div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
