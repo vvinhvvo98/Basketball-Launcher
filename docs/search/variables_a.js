@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_0',['Z',['../struct_m_p_u6050.html#a3b7b3697003e0a1383b4b26fab9ae68a',1,'MPU6050::Z'],['../main_8c.html#a3b7b3697003e0a1383b4b26fab9ae68a',1,'Z:&#160;main.c']]]
+  ['timer_0',['timer',['../struct_d4215x.html#a30b15aedcc086ca7abb69f7ac012ce64',1,'D4215x::timer'],['../struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64',1,'MotorX::timer'],['../struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64',1,'RadioX::timer'],['../struct_stepper_x.html#a30b15aedcc086ca7abb69f7ac012ce64',1,'StepperX::timer']]]
 ];
