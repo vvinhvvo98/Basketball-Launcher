@@ -24,12 +24,50 @@
 */
 var NAVTREE =
 [
-  [ "BASKETBALL LAUNCHER", "index.html", ]
+  [ "BASKETBALL LAUNCHER", "index.html", [
+    [ "MAIN PAGE", "index.html", "index" ],
+    [ "CONTROLLER", "controller_detail.html", [
+      [ "FINAL DESIGN", "controller_detail.html#overview", null ],
+      [ "SCHEMATICS", "controller_detail.html#schematic", null ],
+      [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ],
+      [ "BILL OF MATERIAL - 3D PRINTED PARTS", "controller_detail.html#bomm5", null ],
+      [ "BILL OF MATERIAL - ELECTRONICS", "controller_detail.html#bome2", null ]
+    ] ],
+    [ "LAUNCHER", "launcher_detail.html", [
+      [ "FINAL DESIGN", "launcher_detail.html#overview1", null ],
+      [ "SCHEMATICS", "launcher_detail.html#schematic1", null ],
+      [ "FINITE STATE MACHINE", "launcher_detail.html#fsm1", null ],
+      [ "BILL OF MATERIAL - 3D PRINTED PARTS", "launcher_detail.html#bomm4", null ],
+      [ "BILL OF MATERIAL - ELECTRONICS", "launcher_detail.html#bome22", null ],
+      [ "BILL OF MATERIAL - MECHANICAL", "launcher_detail.html#bomm1", null ],
+      [ "BILL OF MATERIAL - CYCLOIDAL GEARBOX", "launcher_detail.html#bomm3", null ]
+    ] ],
+    [ "Topics", "topics.html", "topics" ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
+    ] ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"_ball___launcher___controller_2_core_2_inc_2main_8h.html",
+"_ball___launcher___launcher_2_core_2_inc_2stm32f4xx__hal__conf_8h.html#a74c081bc55e9ff96bf229f44e96c6155",
+"struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
