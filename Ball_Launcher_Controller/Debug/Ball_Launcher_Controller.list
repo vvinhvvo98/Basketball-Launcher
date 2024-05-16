@@ -37,11 +37,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  0001619b  00000000  00000000  000131fe  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000c810  00000000  00000000  00029399  2**0
+ 17 .debug_line   0000c813  00000000  00000000  00029399  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00088131  00000000  00000000  00035ba9  2**0
+ 18 .debug_str    00088131  00000000  00000000  00035bac  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000bdcda  2**0
+ 19 .comment      00000043  00000000  00000000  000bdcdd  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00002be8  00000000  00000000  000bdd20  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -1023,10 +1023,10 @@ __STATIC_FORCEINLINE void __disable_irq(void)
  800090a:	e7fd      	b.n	8000908 <Error_Handler+0x8>
 
 0800090c <mpu6050_init>:
- *  Created on: May 3, 2024
- *      Author: vvinh
+ * @param imux Pointer to the MPU6050 structure.
+ * @param hi2c Pointer to the I2C handle structure.
+ * @return uint16_t Returns 1 if initialization is successful, otherwise 0.
  */
-#include "mpu6050.h"
 
 uint16_t  mpu6050_init(MPU6050* imux, I2C_HandleTypeDef* hi2c) {
  800090c:	b580      	push	{r7, lr}
@@ -1148,6 +1148,10 @@ uint16_t  mpu6050_init(MPU6050* imux, I2C_HandleTypeDef* hi2c) {
  80009d0:	bd80      	pop	{r7, pc}
 
 080009d2 <mpu6050_calibrate>:
+ * @brief Calibrates the MPU6050 sensor.
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ */
 
 void mpu6050_calibrate(MPU6050* imux) {
  80009d2:	b580      	push	{r7, lr}
@@ -1253,6 +1257,10 @@ void mpu6050_calibrate(MPU6050* imux) {
 	...
 
 08000a88 <mpu6050_update>:
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @param dt Time interval in milliseconds.
+ */
 
 void mpu6050_update(MPU6050* imux, uint16_t dt) {
  8000a88:	b580      	push	{r7, lr}
@@ -1390,7 +1398,10 @@ void mpu6050_update(MPU6050* imux, uint16_t dt) {
  8000b88:	3e88cb3d 	.word	0x3e88cb3d
 
 08000b8c <mpu6050_get_gX>:
-
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int16_t Calibrated X-axis gyroscope data.
+ */
 
 int16_t mpu6050_get_gX(MPU6050* imux){
  8000b8c:	b480      	push	{r7}
@@ -1415,6 +1426,10 @@ int16_t mpu6050_get_gX(MPU6050* imux){
  8000bb4:	4770      	bx	lr
 
 08000bb6 <mpu6050_get_gY>:
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int16_t Calibrated Y-axis gyroscope data.
+ */
 
 int16_t mpu6050_get_gY(MPU6050* imux) {
  8000bb6:	b480      	push	{r7}
@@ -1439,6 +1454,10 @@ int16_t mpu6050_get_gY(MPU6050* imux) {
  8000bde:	4770      	bx	lr
 
 08000be0 <mpu6050_get_gZ>:
+ * 
+ * @param imux Pointer to the MPU6050 structure.
+ * @return int16_t Calibrated Z-axis gyroscope data.
+ */
 
 int16_t mpu6050_get_gZ(MPU6050* imux) {
  8000be0:	b480      	push	{r7}

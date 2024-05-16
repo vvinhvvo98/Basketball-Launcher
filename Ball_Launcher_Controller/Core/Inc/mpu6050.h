@@ -1,9 +1,10 @@
-/*
- * mpu6050.h
- *
- *  Created on: May 3, 2024
- *      Author: vvinh
- */
+/**
+  ******************************************************************************
+  * @file           : mpu6050.h
+  * @brief          : Header for mpu.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  */
 
 #ifndef MPU6050_H_
 #define MPU6050_H_
