@@ -5,6 +5,7 @@ var index =
     [ "DESIGN", "index.html#design", null ],
     [ "CONTROLLER", "index.html#controller", null ],
     [ "LAUNCHER", "index.html#launcher", null ],
-    [ "RESULT", "index.html#result", null ],
-    [ "FUTURE IMPROVEMENT", "index.html#improve", null ]
+    [ "FUTURE IMPROVEMENT", "index.html#improve", null ],
+    [ "YOUTUBE REFERENCE", "index.html#youtube", null ],
+    [ "REPOSITORY REFERENCE", "index.html#repository", null ]
 ];

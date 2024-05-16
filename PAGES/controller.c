@@ -28,7 +28,5 @@
  * <img src="FSM1.png" width="1200" height="1000"> 
  * 
  * UPDATE
- * @section sourcecode CONTROLLER SOURCE CODE LAYOUT
- * 
  *
  */

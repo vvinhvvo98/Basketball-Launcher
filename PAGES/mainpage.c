@@ -30,8 +30,8 @@
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
  * The sketch represents a rough idea of how all components are connected and communicate with each other.
+ * The PDF of the sketch is also attached with higher solution can be found in [PDF Sketch](overall.pdf)
  * @image html overall.png
- * [PDF Sketch](overall.pdf)
  * 
  * @section controller CONTROLLER
  * More detail about the controller's Bill of Materials and source code can be found in:
@@ -41,14 +41,19 @@
  * UPDATE
  * 
  * @section launcher LAUNCHER
- * FINAL LAUNCHER PICTURE <---------------------------------------------------
- * 
  * More detail about the launcher Bill of Materials and source code can be found in:
  * \ref launcher_detail "LAUNCHER"
+ * <img src="launcher.png" width="1200" height="1250">
  * 
- * @section result RESULT
- * YOUTUBE LINK <---------------------------------------------------
+ * UPDATE
+ * 
  * 
  * @section improve FUTURE IMPROVEMENT
+ * LIST OF FUTURE IMPROVEMENT <---------------------------------------------------
+ * 
+ * @section youtube YOUTUBE REFERENCE
+ * YOUTUBE LINK <---------------------------------------------------
+ * 
+ * @section repository REPOSITORY REFERENCE
  * LIST OF FUTURE IMPROVEMENT <---------------------------------------------------
  */

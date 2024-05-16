@@ -29,19 +29,28 @@ var NAVTREE =
     [ "CONTROLLER", "controller_detail.html", [
       [ "FINAL DESIGN", "controller_detail.html#overview", null ],
       [ "BILL OF MATERIAL", "controller_detail.html#bom", null ],
-      [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ],
-      [ "CONTROLLER SOURCE CODE LAYOUT", "controller_detail.html#sourcecode", null ]
+      [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ]
     ] ],
     [ "LAUNCHER", "launcher_detail.html", null ],
+    [ "Topics", "topics.html", "topics" ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ]
+    ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"controller_8c.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
