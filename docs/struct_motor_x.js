@@ -1,8 +1,8 @@
 var struct_motor_x =
 [
-    [ "CCR", "struct_motor_x.html#a7b4943db2ba5cb1cbcd012a4d024af12", null ],
-    [ "channel1", "struct_motor_x.html#a0e07154cc7bcc601c5d3572e53077c9c", null ],
-    [ "channel2", "struct_motor_x.html#ae50cbd3f7dad5359a52ee6039f709831", null ],
-    [ "duty", "struct_motor_x.html#a5f8806c2da45238de5177b935838f168", null ],
-    [ "timer", "struct_motor_x.html#a3edfd141b882dbf147c9a9be6cf13351", null ]
+    [ "CCR", "struct_motor_x.html#a971355a900a7bb851c697c00622d7bcb", null ],
+    [ "channel1", "struct_motor_x.html#a9dce966b13d986333ed5a0b5ab1fe956", null ],
+    [ "channel2", "struct_motor_x.html#a06ad26bec06cf3a7a6300bc7185bca0d", null ],
+    [ "duty", "struct_motor_x.html#ab6a8993805fd7b50a32669337ca3a37a", null ],
+    [ "timer", "struct_motor_x.html#a30b15aedcc086ca7abb69f7ac012ce64", null ]
 ];

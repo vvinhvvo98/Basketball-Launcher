@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['period_0',['period',['../struct_stepper_x.html#a234194365df7b9db2ef378d173995584',1,'StepperX']]],
-  ['pulsewidth_1',['pulseWidth',['../struct_radio_x.html#a04b99a1f25c9970fc0cb5c0eecfbe1e9',1,'RadioX']]]
+  ['imustat_0',['imuStat',['../_ball___launcher___controller_2_core_2_src_2main_8c.html#a3d8b58ec4e3d666164e1c3bf39690eec',1,'main.c']]]
 ];
