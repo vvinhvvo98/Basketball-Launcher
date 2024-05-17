@@ -1,6 +1,6 @@
 var dir_5f0bd777afe5046ac2fdac207f53c90f =
 [
-    [ "main.c", "_ball___launcher___controller_2_core_2_src_2main_8c.html", "_ball___launcher___controller_2_core_2_src_2main_8c" ],
+    [ "main.c", "main_8c.html", "main_8c" ],
     [ "mpu6050.c", "mpu6050_8c.html", "mpu6050_8c" ],
     [ "stm32f4xx_hal_msp.c", "_ball___launcher___controller_2_core_2_src_2stm32f4xx__hal__msp_8c.html", "_ball___launcher___controller_2_core_2_src_2stm32f4xx__hal__msp_8c" ],
     [ "stm32f4xx_it.c", "_ball___launcher___controller_2_core_2_src_2stm32f4xx__it_8c.html", "_ball___launcher___controller_2_core_2_src_2stm32f4xx__it_8c" ],

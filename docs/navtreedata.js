@@ -65,8 +65,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_ball___launcher___controller_2_core_2_inc_2main_8h.html",
-"_ball___launcher___main_2_core_2_inc_2stm32f4xx__hal__conf_8h.html#ac79983d623c7f760c5077618a453561b"
+"_ball___launcher___controller_2_core_2_inc_2stm32f4xx__hal__conf_8h.html",
+"_ball___launcher___main_2_core_2_inc_2stm32f4xx__it_8h.html#a6303e1f258cbdc1f970ce579cc015623"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

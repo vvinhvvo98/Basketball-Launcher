@@ -1,8 +1,8 @@
 var searchData=
 [
   ['schematics_0',['SCHEMATICS',['../controller_detail.html#schematic',1,'SCHEMATICS'],['../launcher_detail.html#schematic1',1,'SCHEMATICS']]],
-  ['shot_1',['shot',['../_ball___launcher___controller_2_core_2_src_2main_8c.html#a734a6bb09e6a5fc98ebb8436df7ae452',1,'shot:&#160;main.c'],['../_ball___launcher___main_2_core_2_src_2main_8c.html#a734a6bb09e6a5fc98ebb8436df7ae452',1,'shot:&#160;main.c']]],
-  ['stat_2',['stat',['../_ball___launcher___controller_2_core_2_src_2main_8c.html#a9ebb6eed90bd90fa99f9cf9e1f6c69fd',1,'main.c']]],
+  ['shot_1',['shot',['../main_8c.html#a734a6bb09e6a5fc98ebb8436df7ae452',1,'shot:&#160;main.c'],['../main1_8c.html#a734a6bb09e6a5fc98ebb8436df7ae452',1,'shot:&#160;main1.c']]],
+  ['stat_2',['stat',['../main_8c.html#a9ebb6eed90bd90fa99f9cf9e1f6c69fd',1,'main.c']]],
   ['state_20machine_3',['STATE MACHINE',['../controller_detail.html#fsm',1,'FINITE STATE MACHINE'],['../launcher_detail.html#fsm1',1,'FINITE STATE MACHINE']]],
   ['status_4',['status',['../struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24',1,'MPU6050']]],
   ['stm32f4xx_5fhal_5fconf_2eh_5',['stm32f4xx_hal_conf.h',['../_ball___launcher___controller_2_core_2_inc_2stm32f4xx__hal__conf_8h.html',1,'(Global Namespace)'],['../_ball___launcher___main_2_core_2_inc_2stm32f4xx__hal__conf_8h.html',1,'(Global Namespace)']]],
@@ -21,7 +21,7 @@ var searchData=
   ['syscalls_2ec_18',['syscalls.c',['../_ball___launcher___controller_2_core_2_src_2syscalls_8c.html',1,'(Global Namespace)'],['../_ball___launcher___main_2_core_2_src_2syscalls_8c.html',1,'(Global Namespace)']]],
   ['sysmem_2ec_19',['sysmem.c',['../_ball___launcher___controller_2_core_2_src_2sysmem_8c.html',1,'(Global Namespace)'],['../_ball___launcher___main_2_core_2_src_2sysmem_8c.html',1,'(Global Namespace)']]],
   ['system_5fstm32f4xx_2ec_20',['system_stm32f4xx.c',['../_ball___launcher___controller_2_core_2_src_2system__stm32f4xx_8c.html',1,'(Global Namespace)'],['../_ball___launcher___main_2_core_2_src_2system__stm32f4xx_8c.html',1,'(Global Namespace)']]],
-  ['systemclock_5fconfig_21',['SystemClock_Config',['../_ball___launcher___controller_2_core_2_src_2main_8c.html#a70af21c671abfcc773614a9a4f63d920',1,'SystemClock_Config(void):&#160;main.c'],['../_ball___launcher___main_2_core_2_src_2main_8c.html#a70af21c671abfcc773614a9a4f63d920',1,'SystemClock_Config(void):&#160;main.c']]],
+  ['systemclock_5fconfig_21',['SystemClock_Config',['../main_8c.html#a70af21c671abfcc773614a9a4f63d920',1,'SystemClock_Config(void):&#160;main.c'],['../main1_8c.html#a70af21c671abfcc773614a9a4f63d920',1,'SystemClock_Config(void):&#160;main1.c']]],
   ['systemcoreclock_22',['SystemCoreClock',['../group___s_t_m32_f4xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6',1,'SystemCoreClock:&#160;system_stm32f4xx.c'],['../group___s_t_m32_f4xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6',1,'SystemCoreClock:&#160;system_stm32f4xx.c']]],
   ['systemcoreclockupdate_23',['SystemCoreClockUpdate',['../group___s_t_m32_f4xx___system___private___functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f',1,'system_stm32f4xx.c']]],
   ['systeminit_24',['SystemInit',['../group___s_t_m32_f4xx___system___private___functions.html#ga93f514700ccf00d08dbdcff7f1224eb2',1,'system_stm32f4xx.c']]],
