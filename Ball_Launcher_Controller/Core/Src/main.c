@@ -63,16 +63,29 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-int32_t gX = 0;
-int32_t gY = 0;
-int32_t gZ = 0;
+// Init gX, gY, gZ
+int16_t gX = 0;
+int16_t gY = 0;
+int16_t gZ = 0;
+// Init stat, shot, move flags
 uint16_t stat = 0;
 uint16_t shot = 0;
 uint16_t move = 0;
+// Init state constant
+uint16_t STATE 			   = 0;
+uint16_t STATE_0_INIT      = 0;
+uint16_t STATE_1_ERROR     = 1;
+uint16_t STATE_2_IMU       = 2;
+uint16_t STATE_3_BUTTON_LED= 3;
+uint16_t STATE_4_TRANSFER  = 4;
+
 char buffer[100];
 /* USER CODE END 0 */
 
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
 {
 
@@ -111,25 +124,68 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  switch (STATE) {
+	          case 0: // STATE_INIT
+	              if (stat) {
+	            	  stat = mpu6050_init(&imu, &hi2c1);
+	            	  HAL_Delay(500);
+	            	  mpu6050_calibrate(&imu);
+	            	  HAL_Delay(500);
+	                  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, stat);
+	                  STATE = STATE_2_IMU;
+	              } else {
+	                  STATE = STATE_1_ERROR;
+	              }
+	              break;
 
-	  shot = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4);
-	  move = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
+	          case 1:
+	              HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_3);
+	              HAL_Delay(200);
+	              STATE = STATE_0_INIT;
+	              break;
 
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, stat);
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, shot);
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, move);
+	          case 2:
+	              mpu6050_update(&imu);
+	              gX = mpu6050_get_gX(&imu);
+	              gY = mpu6050_get_gY(&imu);
+	              gZ = mpu6050_get_gZ(&imu);
+	              STATE = STATE_3_BUTTON_LED;
+	              break;
 
-	  mpu6050_update(&imu);
-	  gX = mpu6050_get_gX(&imu);
-	  gY = mpu6050_get_gY(&imu);
-	  gZ = mpu6050_get_gZ(&imu);
+	          case 3:
+	              shot = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4);
+	              move = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
+	              HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, shot); // LED2
+	              HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, move); // LED3
+	              STATE = STATE_4_TRANSFER;
+	              break;
 
-	  snprintf(buffer, sizeof(buffer), "%ld\t%ld\t%ld\t%ld\r\n",move,shot,gZ,gY);
-	  HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
-	  HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), 100);
-	  HAL_Delay(10);
+	          case 4:
+	              snprintf(buffer, sizeof(buffer), "%d\t%d\t%d\t%d\r\n", (int)move, (int)shot, gZ, gY);
+	              HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
+	              HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), 100);
+	              HAL_Delay(10);
+	              STATE = STATE_2_IMU;
+	              break;
+	      }
+//	  shot = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4);
+//	  move = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
+//
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, stat);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, shot);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, move);
+//
+//	  mpu6050_update(&imu);
+//	  gX = mpu6050_get_gX(&imu);
+//	  gY = mpu6050_get_gY(&imu);
+//	  gZ = mpu6050_get_gZ(&imu);
+//
+//	  snprintf(buffer, sizeof(buffer), "%d\t%d\t%d\t%d\r\n",move,shot,gZ,gY);
+//	  HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
+//	  HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), 100);
+//	  HAL_Delay(10);
     /* USER CODE END WHILE */
-    
+
     /* USER CODE BEGIN 3 */
   }
 

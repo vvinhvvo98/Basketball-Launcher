@@ -15,7 +15,7 @@ Main program body.
 void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
 \begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
 \begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
@@ -27,17 +27,29 @@ UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a2cf715bef37f7e8ef385a309
 \item 
 UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
 \item 
-int32\+\_\+t \mbox{\hyperlink{main_8c_a2613577158a3a316e776cdfa4ad0797c}{gX}} = 0
+int16\+\_\+t \mbox{\hyperlink{main_8c_af311395520d3063de824b529c9cdb10d}{gX}} = 0
 \item 
-int32\+\_\+t \mbox{\hyperlink{main_8c_a8d1ef3943fde3b9f72d044b6c4c6dc89}{gY}} = 0
+int16\+\_\+t \mbox{\hyperlink{main_8c_a158916f3f452bccade03134dd750e452}{gY}} = 0
 \item 
-int32\+\_\+t \mbox{\hyperlink{main_8c_a95753c65751f206a2315ed33c84c6b09}{gZ}} = 0
+int16\+\_\+t \mbox{\hyperlink{main_8c_a2c037649b97f103359d32fc55121c752}{gZ}} = 0
 \item 
 uint16\+\_\+t \mbox{\hyperlink{main_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} = 0
 \item 
 uint16\+\_\+t \mbox{\hyperlink{main_8c_a734a6bb09e6a5fc98ebb8436df7ae452}{shot}} = 0
 \item 
 uint16\+\_\+t \mbox{\hyperlink{main_8c_af0ccf006f74d313e9fcefe4a8edd47b8}{move}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a942cbc58d5df6ff6e78e7de2da6bb43d}{STATE}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a18428ffe41044eaa981a9aa5d12c0268}{STATE\+\_\+0\+\_\+\+INIT}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_ac121bcf9c6185c1391e9d76671c0cab9}{STATE\+\_\+1\+\_\+\+ERROR}} = 1
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a5552820803f06a882be3bf1cdfbde998}{STATE\+\_\+2\+\_\+\+IMU}} = 2
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_aca0f5e1c40d574009ccfb91fe42929d0}{STATE\+\_\+3\+\_\+\+BUTTON\+\_\+\+LED}} = 3
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a6e420747c5d2d0820f7a909bb0084f66}{STATE\+\_\+4\+\_\+\+TRANSFER}} = 4
 \item 
 char \mbox{\hyperlink{main_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} \mbox{[}100\mbox{]}
 \end{DoxyCompactItemize}
@@ -75,6 +87,15 @@ This function is executed in case of error occurrence.
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
 \Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
 \index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
 \index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
@@ -103,23 +124,23 @@ Initializes the CPU, AHB and APB buses clocks
 \doxysubsubsection{\texorpdfstring{buffer}{buffer}}
 {\footnotesize\ttfamily char buffer\mbox{[}100\mbox{]}}
 
-\Hypertarget{main_8c_a2613577158a3a316e776cdfa4ad0797c}\label{main_8c_a2613577158a3a316e776cdfa4ad0797c} 
+\Hypertarget{main_8c_af311395520d3063de824b529c9cdb10d}\label{main_8c_af311395520d3063de824b529c9cdb10d} 
 \index{main.c@{main.c}!gX@{gX}}
 \index{gX@{gX}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{gX}{gX}}
-{\footnotesize\ttfamily int32\+\_\+t gX = 0}
+{\footnotesize\ttfamily int16\+\_\+t gX = 0}
 
-\Hypertarget{main_8c_a8d1ef3943fde3b9f72d044b6c4c6dc89}\label{main_8c_a8d1ef3943fde3b9f72d044b6c4c6dc89} 
+\Hypertarget{main_8c_a158916f3f452bccade03134dd750e452}\label{main_8c_a158916f3f452bccade03134dd750e452} 
 \index{main.c@{main.c}!gY@{gY}}
 \index{gY@{gY}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{gY}{gY}}
-{\footnotesize\ttfamily int32\+\_\+t gY = 0}
+{\footnotesize\ttfamily int16\+\_\+t gY = 0}
 
-\Hypertarget{main_8c_a95753c65751f206a2315ed33c84c6b09}\label{main_8c_a95753c65751f206a2315ed33c84c6b09} 
+\Hypertarget{main_8c_a2c037649b97f103359d32fc55121c752}\label{main_8c_a2c037649b97f103359d32fc55121c752} 
 \index{main.c@{main.c}!gZ@{gZ}}
 \index{gZ@{gZ}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{gZ}{gZ}}
-{\footnotesize\ttfamily int32\+\_\+t gZ = 0}
+{\footnotesize\ttfamily int16\+\_\+t gZ = 0}
 
 \Hypertarget{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7} 
 \index{main.c@{main.c}!hi2c1@{hi2c1}}
@@ -156,4 +177,40 @@ Initializes the CPU, AHB and APB buses clocks
 \index{stat@{stat}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{stat}{stat}}
 {\footnotesize\ttfamily uint16\+\_\+t stat = 0}
+
+\Hypertarget{main_8c_a942cbc58d5df6ff6e78e7de2da6bb43d}\label{main_8c_a942cbc58d5df6ff6e78e7de2da6bb43d} 
+\index{main.c@{main.c}!STATE@{STATE}}
+\index{STATE@{STATE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE}{STATE}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE = 0}
+
+\Hypertarget{main_8c_a18428ffe41044eaa981a9aa5d12c0268}\label{main_8c_a18428ffe41044eaa981a9aa5d12c0268} 
+\index{main.c@{main.c}!STATE\_0\_INIT@{STATE\_0\_INIT}}
+\index{STATE\_0\_INIT@{STATE\_0\_INIT}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_0\_INIT}{STATE\_0\_INIT}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+0\+\_\+\+INIT = 0}
+
+\Hypertarget{main_8c_ac121bcf9c6185c1391e9d76671c0cab9}\label{main_8c_ac121bcf9c6185c1391e9d76671c0cab9} 
+\index{main.c@{main.c}!STATE\_1\_ERROR@{STATE\_1\_ERROR}}
+\index{STATE\_1\_ERROR@{STATE\_1\_ERROR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_1\_ERROR}{STATE\_1\_ERROR}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+1\+\_\+\+ERROR = 1}
+
+\Hypertarget{main_8c_a5552820803f06a882be3bf1cdfbde998}\label{main_8c_a5552820803f06a882be3bf1cdfbde998} 
+\index{main.c@{main.c}!STATE\_2\_IMU@{STATE\_2\_IMU}}
+\index{STATE\_2\_IMU@{STATE\_2\_IMU}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_2\_IMU}{STATE\_2\_IMU}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+2\+\_\+\+IMU = 2}
+
+\Hypertarget{main_8c_aca0f5e1c40d574009ccfb91fe42929d0}\label{main_8c_aca0f5e1c40d574009ccfb91fe42929d0} 
+\index{main.c@{main.c}!STATE\_3\_BUTTON\_LED@{STATE\_3\_BUTTON\_LED}}
+\index{STATE\_3\_BUTTON\_LED@{STATE\_3\_BUTTON\_LED}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_3\_BUTTON\_LED}{STATE\_3\_BUTTON\_LED}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+3\+\_\+\+BUTTON\+\_\+\+LED = 3}
+
+\Hypertarget{main_8c_a6e420747c5d2d0820f7a909bb0084f66}\label{main_8c_a6e420747c5d2d0820f7a909bb0084f66} 
+\index{main.c@{main.c}!STATE\_4\_TRANSFER@{STATE\_4\_TRANSFER}}
+\index{STATE\_4\_TRANSFER@{STATE\_4\_TRANSFER}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_4\_TRANSFER}{STATE\_4\_TRANSFER}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+4\+\_\+\+TRANSFER = 4}
 
