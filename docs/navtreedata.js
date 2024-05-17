@@ -66,7 +66,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"syscalls_8c.html#ad3134a3dc296622b8d1c5456e481505b"
+"system__stm32f4xx_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

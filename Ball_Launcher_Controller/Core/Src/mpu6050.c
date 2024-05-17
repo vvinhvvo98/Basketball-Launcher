@@ -23,9 +23,6 @@ uint16_t  mpu6050_init(MPU6050* imux, I2C_HandleTypeDef* hi2c) {
     imux->gX_offset = 0;
     imux->gY_offset = 0;
     imux->gZ_offset = 0;
-    imux->X = 0;
-    imux->Y = 0;
-    imux->Z = 0;
     imux->addr = 0x68;
     imux->status = HAL_I2C_IsDeviceReady(imux->hi2c, (imux->addr << 1), 1, 100);
     if (imux->status == HAL_OK) {
@@ -53,7 +50,7 @@ void mpu6050_calibrate(MPU6050* imux) {
     const int num_samples = 10;
 
     for (int i = 0; i < num_samples; i++) {
-        mpu6050_update(imux, 10);
+        mpu6050_update(imux);
         gX_total += imux->gX;
         gY_total += imux->gY;
         gZ_total += imux->gZ;
@@ -63,9 +60,6 @@ void mpu6050_calibrate(MPU6050* imux) {
     imux->gX_offset = gX_total / num_samples;
     imux->gY_offset = gY_total / num_samples;
     imux->gZ_offset = gZ_total / num_samples;
-    imux->X = 0;
-    imux->Y = 0;
-    imux->Z = 0;
 }
 
 /**
@@ -75,7 +69,7 @@ void mpu6050_calibrate(MPU6050* imux) {
  * @param dt Time interval in milliseconds.
  */
 
-void mpu6050_update(MPU6050* imux, uint16_t dt) {
+void mpu6050_update(MPU6050* imux) {
     uint8_t data[6];
     int16_t gx, gy, gz;
     imux->status = HAL_I2C_Mem_Read(imux->hi2c, (imux->addr << 1), 0x43, I2C_MEMADD_SIZE_8BIT, data, 6, 100);
@@ -88,10 +82,6 @@ void mpu6050_update(MPU6050* imux, uint16_t dt) {
         imux->gX = gx / 131;
         imux->gY = gy / 131;
         imux->gZ = gz / 131;
-
-        imux->X += (mpu6050_get_gX(imux) * dt);
-        imux->Y += (mpu6050_get_gY(imux) * dt);
-        imux->Z += (mpu6050_get_gZ(imux) * dt);
     }
 }
 
@@ -128,35 +118,4 @@ int16_t mpu6050_get_gZ(MPU6050* imux) {
 	return (imux->gZ - imux->gZ_offset);
 }
 
-/**
- * @brief Gets the X-axis accelerometer data.
- * 
- * @param imux Pointer to the MPU6050 structure.
- * @return int32_t X-axis accelerometer data.
- */
 
-int32_t mpu6050_get_X(MPU6050* imux){
-	return imux->X/1000;
-}
-
-/**
- * @brief Gets the Y-axis accelerometer data.
- * 
- * @param imux Pointer to the MPU6050 structure.
- * @return int32_t Y-axis accelerometer data.
- */
-
-int32_t mpu6050_get_Y(MPU6050* imux) {
-	return imux->Y/1000;
-}
-
-/**
- * @brief Gets the Z-axis accelerometer data.
- * 
- * @param imux Pointer to the MPU6050 structure.
- * @return int32_t Z-axis accelerometer data.
- */
-
-int32_t mpu6050_get_Z(MPU6050* imux) {
-	return imux->Z/1000;
-}

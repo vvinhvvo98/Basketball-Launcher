@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dt_0',['dt',['../struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416',1,'MPU6050']]]
+  ['buffer_0',['buffer',['../main_8c.html#a542df3d5bbe8c96a672476931ec18220',1,'main.c']]]
 ];

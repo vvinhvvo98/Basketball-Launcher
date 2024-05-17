@@ -42,7 +42,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-I2C_HandleTypeDef  hi2c1;
+I2C_HandleTypeDef hi2c1;
+
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
@@ -62,19 +63,16 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int32_t X = 0;
-int32_t Y = 0;
-int32_t Z = 0;
 
-uint16_t imuStat = 0;
-uint16_t esc = 0;
-uint16_t lock = 0;
+int32_t gX = 0;
+int32_t gY = 0;
+int32_t gZ = 0;
+uint16_t stat = 0;
+uint16_t shot = 0;
+uint16_t move = 0;
+char buffer[100];
 /* USER CODE END 0 */
 
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
 int main(void)
 {
 
@@ -103,28 +101,35 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
   MPU6050 imu;
-  imuStat = mpu6050_init(&imu, &hi2c1);
+  stat = mpu6050_init(&imu, &hi2c1);
   mpu6050_calibrate(&imu);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-//  char buffer[100];
   while (1)
   {
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, imuStat);
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, esc);
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, lock);
-	  mpu6050_update(&imu, 1);
-	  X = mpu6050_get_gX(&imu);
-	  Y = mpu6050_get_gY(&imu);
-	  Z = mpu6050_get_gZ(&imu);
-	  char buffer[100];
-	  snprintf(buffer, sizeof(buffer), "%ld\t%ld\t%ld\r\n", X, Y, Z);
-	  HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
-    /* USER CODE END WHILE */
 
+	  shot = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_4);
+	  move = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_5);
+
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, stat);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, shot);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, move);
+
+	  mpu6050_update(&imu);
+	  gX = mpu6050_get_gX(&imu);
+	  gY = mpu6050_get_gY(&imu);
+	  gZ = mpu6050_get_gZ(&imu);
+
+	  snprintf(buffer, sizeof(buffer), "%ld\t%ld\t%ld\t%ld\r\n",move,shot,gZ,gY);
+	  HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
+	  HAL_UART_Transmit(&huart2, (uint8_t *)buffer, strlen(buffer), 100);
+	  HAL_Delay(10);
+    /* USER CODE END WHILE */
+    
     /* USER CODE BEGIN 3 */
   }
 
@@ -226,7 +231,7 @@ static void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   huart1.Instance = USART1;
-  huart1.Init.BaudRate = 115200;
+  huart1.Init.BaudRate = 9600;
   huart1.Init.WordLength = UART_WORDLENGTH_8B;
   huart1.Init.StopBits = UART_STOPBITS_1;
   huart1.Init.Parity = UART_PARITY_NONE;
@@ -259,7 +264,7 @@ static void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   huart2.Instance = USART2;
-  huart2.Init.BaudRate = 115200;
+  huart2.Init.BaudRate = 9600;
   huart2.Init.WordLength = UART_WORDLENGTH_8B;
   huart2.Init.StopBits = UART_STOPBITS_1;
   huart2.Init.Parity = UART_PARITY_NONE;
@@ -294,6 +299,12 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : PA4 PA5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB3 PB4 PB5 */
   GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5;

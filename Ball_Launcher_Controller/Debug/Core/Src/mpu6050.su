@@ -1,9 +1,6 @@
 ../Core/Src/mpu6050.c:18:11:mpu6050_init	40	static
-../Core/Src/mpu6050.c:49:6:mpu6050_calibrate	32	static
-../Core/Src/mpu6050.c:78:6:mpu6050_update	48	static
-../Core/Src/mpu6050.c:105:9:mpu6050_get_gX	16	static
-../Core/Src/mpu6050.c:116:9:mpu6050_get_gY	16	static
-../Core/Src/mpu6050.c:127:9:mpu6050_get_gZ	16	static
-../Core/Src/mpu6050.c:138:9:mpu6050_get_X	16	static
-../Core/Src/mpu6050.c:149:9:mpu6050_get_Y	16	static
-../Core/Src/mpu6050.c:160:9:mpu6050_get_Z	16	static
+../Core/Src/mpu6050.c:46:6:mpu6050_calibrate	32	static
+../Core/Src/mpu6050.c:72:6:mpu6050_update	48	static
+../Core/Src/mpu6050.c:95:9:mpu6050_get_gX	16	static
+../Core/Src/mpu6050.c:106:9:mpu6050_get_gY	16	static
+../Core/Src/mpu6050.c:117:9:mpu6050_get_gZ	16	static

@@ -9,5 +9,5 @@ var mpu6050_8h =
     [ "mpu6050_get_Y", "mpu6050_8h.html#a604feb09984cc64950d98b711044bbf3", null ],
     [ "mpu6050_get_Z", "mpu6050_8h.html#a34ebf02768ba66f4d160afe9adbcc458", null ],
     [ "mpu6050_init", "mpu6050_8h.html#a84091077cde2737d6afa76ee69cbe2e7", null ],
-    [ "mpu6050_update", "mpu6050_8h.html#a7fdf73fea9b3cd4c034f92cae6df1d89", null ]
+    [ "mpu6050_update", "mpu6050_8h.html#a617e3e6502d7a67be5e844967eb454f3", null ]
 ];

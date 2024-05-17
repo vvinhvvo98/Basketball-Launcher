@@ -113,7 +113,6 @@ Functions</h2></td></tr>
 <tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">System Clock Configuration.  <br /></td></tr>
 <tr class="separator:a70af21c671abfcc773614a9a4f63d920"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
-<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <br /></td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
 <tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
@@ -127,18 +126,20 @@ Variables</h2></td></tr>
 <tr class="separator:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9479c261d65eecedd3d9582f7f0f89c" id="r_aa9479c261d65eecedd3d9582f7f0f89c"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a></td></tr>
 <tr class="separator:aa9479c261d65eecedd3d9582f7f0f89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15a78e2c6057c34f33a3e3ba9d4a2655" id="r_a15a78e2c6057c34f33a3e3ba9d4a2655"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15a78e2c6057c34f33a3e3ba9d4a2655">X</a> = 0</td></tr>
-<tr class="separator:a15a78e2c6057c34f33a3e3ba9d4a2655"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98de3e2097facbbea557f864201e435d" id="r_a98de3e2097facbbea557f864201e435d"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98de3e2097facbbea557f864201e435d">Y</a> = 0</td></tr>
-<tr class="separator:a98de3e2097facbbea557f864201e435d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b7b3697003e0a1383b4b26fab9ae68a" id="r_a3b7b3697003e0a1383b4b26fab9ae68a"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b7b3697003e0a1383b4b26fab9ae68a">Z</a> = 0</td></tr>
-<tr class="separator:a3b7b3697003e0a1383b4b26fab9ae68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d8b58ec4e3d666164e1c3bf39690eec" id="r_a3d8b58ec4e3d666164e1c3bf39690eec"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d8b58ec4e3d666164e1c3bf39690eec">imuStat</a> = 0</td></tr>
-<tr class="separator:a3d8b58ec4e3d666164e1c3bf39690eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2734d2dc435053d71f094b4f3005dc5c" id="r_a2734d2dc435053d71f094b4f3005dc5c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2734d2dc435053d71f094b4f3005dc5c">esc</a> = 0</td></tr>
-<tr class="separator:a2734d2dc435053d71f094b4f3005dc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1efbca367ba1cb7a781d8b8776ed7d5e" id="r_a1efbca367ba1cb7a781d8b8776ed7d5e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1efbca367ba1cb7a781d8b8776ed7d5e">lock</a> = 0</td></tr>
-<tr class="separator:a1efbca367ba1cb7a781d8b8776ed7d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2613577158a3a316e776cdfa4ad0797c" id="r_a2613577158a3a316e776cdfa4ad0797c"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2613577158a3a316e776cdfa4ad0797c">gX</a> = 0</td></tr>
+<tr class="separator:a2613577158a3a316e776cdfa4ad0797c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d1ef3943fde3b9f72d044b6c4c6dc89" id="r_a8d1ef3943fde3b9f72d044b6c4c6dc89"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d1ef3943fde3b9f72d044b6c4c6dc89">gY</a> = 0</td></tr>
+<tr class="separator:a8d1ef3943fde3b9f72d044b6c4c6dc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95753c65751f206a2315ed33c84c6b09" id="r_a95753c65751f206a2315ed33c84c6b09"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95753c65751f206a2315ed33c84c6b09">gZ</a> = 0</td></tr>
+<tr class="separator:a95753c65751f206a2315ed33c84c6b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ebb6eed90bd90fa99f9cf9e1f6c69fd" id="r_a9ebb6eed90bd90fa99f9cf9e1f6c69fd"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ebb6eed90bd90fa99f9cf9e1f6c69fd">stat</a> = 0</td></tr>
+<tr class="separator:a9ebb6eed90bd90fa99f9cf9e1f6c69fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a734a6bb09e6a5fc98ebb8436df7ae452" id="r_a734a6bb09e6a5fc98ebb8436df7ae452"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a734a6bb09e6a5fc98ebb8436df7ae452">shot</a> = 0</td></tr>
+<tr class="separator:a734a6bb09e6a5fc98ebb8436df7ae452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ccf006f74d313e9fcefe4a8edd47b8" id="r_af0ccf006f74d313e9fcefe4a8edd47b8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ccf006f74d313e9fcefe4a8edd47b8">move</a> = 0</td></tr>
+<tr class="separator:af0ccf006f74d313e9fcefe4a8edd47b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542df3d5bbe8c96a672476931ec18220" id="r_a542df3d5bbe8c96a672476931ec18220"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a542df3d5bbe8c96a672476931ec18220">buffer</a> [100]</td></tr>
+<tr class="separator:a542df3d5bbe8c96a672476931ec18220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main program body. </p>
@@ -186,14 +187,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The application entry point. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">int</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="a70af21c671abfcc773614a9a4f63d920" name="a70af21c671abfcc773614a9a4f63d920"></a>
@@ -225,14 +218,56 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a2734d2dc435053d71f094b4f3005dc5c" name="a2734d2dc435053d71f094b4f3005dc5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2734d2dc435053d71f094b4f3005dc5c">&#9670;&#160;</a></span>esc</h2>
+<a id="a542df3d5bbe8c96a672476931ec18220" name="a542df3d5bbe8c96a672476931ec18220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542df3d5bbe8c96a672476931ec18220">&#9670;&#160;</a></span>buffer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t esc = 0</td>
+          <td class="memname">char buffer[100]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2613577158a3a316e776cdfa4ad0797c" name="a2613577158a3a316e776cdfa4ad0797c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2613577158a3a316e776cdfa4ad0797c">&#9670;&#160;</a></span>gX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t gX = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d1ef3943fde3b9f72d044b6c4c6dc89" name="a8d1ef3943fde3b9f72d044b6c4c6dc89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d1ef3943fde3b9f72d044b6c4c6dc89">&#9670;&#160;</a></span>gY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t gY = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95753c65751f206a2315ed33c84c6b09" name="a95753c65751f206a2315ed33c84c6b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95753c65751f206a2315ed33c84c6b09">&#9670;&#160;</a></span>gZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t gZ = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -281,70 +316,42 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d8b58ec4e3d666164e1c3bf39690eec" name="a3d8b58ec4e3d666164e1c3bf39690eec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d8b58ec4e3d666164e1c3bf39690eec">&#9670;&#160;</a></span>imuStat</h2>
+<a id="af0ccf006f74d313e9fcefe4a8edd47b8" name="af0ccf006f74d313e9fcefe4a8edd47b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ccf006f74d313e9fcefe4a8edd47b8">&#9670;&#160;</a></span>move</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t imuStat = 0</td>
+          <td class="memname">uint16_t move = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1efbca367ba1cb7a781d8b8776ed7d5e" name="a1efbca367ba1cb7a781d8b8776ed7d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1efbca367ba1cb7a781d8b8776ed7d5e">&#9670;&#160;</a></span>lock</h2>
+<a id="a734a6bb09e6a5fc98ebb8436df7ae452" name="a734a6bb09e6a5fc98ebb8436df7ae452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a734a6bb09e6a5fc98ebb8436df7ae452">&#9670;&#160;</a></span>shot</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t lock = 0</td>
+          <td class="memname">uint16_t shot = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a15a78e2c6057c34f33a3e3ba9d4a2655" name="a15a78e2c6057c34f33a3e3ba9d4a2655"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15a78e2c6057c34f33a3e3ba9d4a2655">&#9670;&#160;</a></span>X</h2>
+<a id="a9ebb6eed90bd90fa99f9cf9e1f6c69fd" name="a9ebb6eed90bd90fa99f9cf9e1f6c69fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ebb6eed90bd90fa99f9cf9e1f6c69fd">&#9670;&#160;</a></span>stat</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t X = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a98de3e2097facbbea557f864201e435d" name="a98de3e2097facbbea557f864201e435d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98de3e2097facbbea557f864201e435d">&#9670;&#160;</a></span>Y</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t Y = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3b7b3697003e0a1383b4b26fab9ae68a" name="a3b7b3697003e0a1383b4b26fab9ae68a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b7b3697003e0a1383b4b26fab9ae68a">&#9670;&#160;</a></span>Z</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t Z = 0</td>
+          <td class="memname">uint16_t stat = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

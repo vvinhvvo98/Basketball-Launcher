@@ -32,10 +32,6 @@ typedef struct
     int16_t gY_offset; /**< Gyroscope Y axis offset */
     int16_t gZ_offset; /**< Gyroscope Z axis offset */
 
-    int32_t X; /**< Accelerometer X axis data */
-    int32_t Y; /**< Accelerometer Y axis data */
-    int32_t Z; /**< Accelerometer Z axis data */
-
 } MPU6050;
 
 /**
@@ -60,7 +56,7 @@ void mpu6050_calibrate(MPU6050* imux);
  * @param imux Pointer to the MPU6050 structure.
  * @param dt Time interval in milliseconds.
  */
-void mpu6050_update(MPU6050* imux, uint16_t dt);
+void mpu6050_update(MPU6050* imux);
 
 /**
  * @brief Gets the calibrated X-axis gyroscope data.
