@@ -1,0 +1,201 @@
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Src/main\+\_\+C.c File Reference}
+\hypertarget{main___c_8c}{}\label{main___c_8c}\index{Ball\_Launcher\_Controller/Core/Src/main\_C.c@{Ball\_Launcher\_Controller/Core/Src/main\_C.c}}
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}mpu6050.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main___c_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main___c_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main___c_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+I2\+C\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main___c_8c_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main___c_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main___c_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{main___c_8c_af311395520d3063de824b529c9cdb10d}{gX}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{main___c_8c_a158916f3f452bccade03134dd750e452}{gY}} = 0
+\item 
+int16\+\_\+t \mbox{\hyperlink{main___c_8c_a2c037649b97f103359d32fc55121c752}{gZ}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_a734a6bb09e6a5fc98ebb8436df7ae452}{shot}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_af0ccf006f74d313e9fcefe4a8edd47b8}{move}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_a942cbc58d5df6ff6e78e7de2da6bb43d}{STATE}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_a18428ffe41044eaa981a9aa5d12c0268}{STATE\+\_\+0\+\_\+\+INIT}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_ac121bcf9c6185c1391e9d76671c0cab9}{STATE\+\_\+1\+\_\+\+ERROR}} = 1
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_a5552820803f06a882be3bf1cdfbde998}{STATE\+\_\+2\+\_\+\+IMU}} = 2
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_aca0f5e1c40d574009ccfb91fe42929d0}{STATE\+\_\+3\+\_\+\+BUTTON\+\_\+\+LED}} = 3
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main___c_8c_a6e420747c5d2d0820f7a909bb0084f66}{STATE\+\_\+4\+\_\+\+TRANSFER}} = 4
+\item 
+char \mbox{\hyperlink{main___c_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} \mbox{[}100\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main___c_8c_a1730ffe1e560465665eb47d9264826f9}\label{main___c_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main\_C.c@{main\_C.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main___c_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main___c_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main\_C.c@{main\_C.c}!main@{main}}
+\index{main@{main}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main___c_8c_a70af21c671abfcc773614a9a4f63d920}\label{main___c_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main\_C.c@{main\_C.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main___c_8c_a542df3d5bbe8c96a672476931ec18220}\label{main___c_8c_a542df3d5bbe8c96a672476931ec18220} 
+\index{main\_C.c@{main\_C.c}!buffer@{buffer}}
+\index{buffer@{buffer}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char buffer\mbox{[}100\mbox{]}}
+
+\Hypertarget{main___c_8c_af311395520d3063de824b529c9cdb10d}\label{main___c_8c_af311395520d3063de824b529c9cdb10d} 
+\index{main\_C.c@{main\_C.c}!gX@{gX}}
+\index{gX@{gX}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{gX}{gX}}
+{\footnotesize\ttfamily int16\+\_\+t gX = 0}
+
+\Hypertarget{main___c_8c_a158916f3f452bccade03134dd750e452}\label{main___c_8c_a158916f3f452bccade03134dd750e452} 
+\index{main\_C.c@{main\_C.c}!gY@{gY}}
+\index{gY@{gY}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{gY}{gY}}
+{\footnotesize\ttfamily int16\+\_\+t gY = 0}
+
+\Hypertarget{main___c_8c_a2c037649b97f103359d32fc55121c752}\label{main___c_8c_a2c037649b97f103359d32fc55121c752} 
+\index{main\_C.c@{main\_C.c}!gZ@{gZ}}
+\index{gZ@{gZ}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{gZ}{gZ}}
+{\footnotesize\ttfamily int16\+\_\+t gZ = 0}
+
+\Hypertarget{main___c_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main___c_8c_af7b2c26e44dadaaa798a5c3d82914ba7} 
+\index{main\_C.c@{main\_C.c}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle\+Type\+Def hi2c1}
+
+\Hypertarget{main___c_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main___c_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+\index{main\_C.c@{main\_C.c}!huart1@{huart1}}
+\index{huart1@{huart1}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart1}
+
+\Hypertarget{main___c_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{main___c_8c_aa9479c261d65eecedd3d9582f7f0f89c} 
+\index{main\_C.c@{main\_C.c}!huart2@{huart2}}
+\index{huart2@{huart2}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart2}
+
+\Hypertarget{main___c_8c_af0ccf006f74d313e9fcefe4a8edd47b8}\label{main___c_8c_af0ccf006f74d313e9fcefe4a8edd47b8} 
+\index{main\_C.c@{main\_C.c}!move@{move}}
+\index{move@{move}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily uint16\+\_\+t move = 0}
+
+\Hypertarget{main___c_8c_a734a6bb09e6a5fc98ebb8436df7ae452}\label{main___c_8c_a734a6bb09e6a5fc98ebb8436df7ae452} 
+\index{main\_C.c@{main\_C.c}!shot@{shot}}
+\index{shot@{shot}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{shot}{shot}}
+{\footnotesize\ttfamily uint16\+\_\+t shot = 0}
+
+\Hypertarget{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}\label{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd} 
+\index{main\_C.c@{main\_C.c}!stat@{stat}}
+\index{stat@{stat}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{stat}{stat}}
+{\footnotesize\ttfamily uint16\+\_\+t stat = 0}
+
+\Hypertarget{main___c_8c_a942cbc58d5df6ff6e78e7de2da6bb43d}\label{main___c_8c_a942cbc58d5df6ff6e78e7de2da6bb43d} 
+\index{main\_C.c@{main\_C.c}!STATE@{STATE}}
+\index{STATE@{STATE}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{STATE}{STATE}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE = 0}
+
+\Hypertarget{main___c_8c_a18428ffe41044eaa981a9aa5d12c0268}\label{main___c_8c_a18428ffe41044eaa981a9aa5d12c0268} 
+\index{main\_C.c@{main\_C.c}!STATE\_0\_INIT@{STATE\_0\_INIT}}
+\index{STATE\_0\_INIT@{STATE\_0\_INIT}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_0\_INIT}{STATE\_0\_INIT}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+0\+\_\+\+INIT = 0}
+
+\Hypertarget{main___c_8c_ac121bcf9c6185c1391e9d76671c0cab9}\label{main___c_8c_ac121bcf9c6185c1391e9d76671c0cab9} 
+\index{main\_C.c@{main\_C.c}!STATE\_1\_ERROR@{STATE\_1\_ERROR}}
+\index{STATE\_1\_ERROR@{STATE\_1\_ERROR}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_1\_ERROR}{STATE\_1\_ERROR}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+1\+\_\+\+ERROR = 1}
+
+\Hypertarget{main___c_8c_a5552820803f06a882be3bf1cdfbde998}\label{main___c_8c_a5552820803f06a882be3bf1cdfbde998} 
+\index{main\_C.c@{main\_C.c}!STATE\_2\_IMU@{STATE\_2\_IMU}}
+\index{STATE\_2\_IMU@{STATE\_2\_IMU}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_2\_IMU}{STATE\_2\_IMU}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+2\+\_\+\+IMU = 2}
+
+\Hypertarget{main___c_8c_aca0f5e1c40d574009ccfb91fe42929d0}\label{main___c_8c_aca0f5e1c40d574009ccfb91fe42929d0} 
+\index{main\_C.c@{main\_C.c}!STATE\_3\_BUTTON\_LED@{STATE\_3\_BUTTON\_LED}}
+\index{STATE\_3\_BUTTON\_LED@{STATE\_3\_BUTTON\_LED}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_3\_BUTTON\_LED}{STATE\_3\_BUTTON\_LED}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+3\+\_\+\+BUTTON\+\_\+\+LED = 3}
+
+\Hypertarget{main___c_8c_a6e420747c5d2d0820f7a909bb0084f66}\label{main___c_8c_a6e420747c5d2d0820f7a909bb0084f66} 
+\index{main\_C.c@{main\_C.c}!STATE\_4\_TRANSFER@{STATE\_4\_TRANSFER}}
+\index{STATE\_4\_TRANSFER@{STATE\_4\_TRANSFER}!main\_C.c@{main\_C.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_4\_TRANSFER}{STATE\_4\_TRANSFER}}
+{\footnotesize\ttfamily uint16\+\_\+t STATE\+\_\+4\+\_\+\+TRANSFER = 4}
+

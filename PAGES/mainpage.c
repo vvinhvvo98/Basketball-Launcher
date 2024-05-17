@@ -84,6 +84,15 @@
  * 
  * However, you may find it more useful to read through the website exploring the source code.
  * 
+ * NOTE: You may find the files with a small specification at the end either "_C" or "_M" that stands for Controller code and Main Code. 
+ * Files' name and the files' header code need to be renamed without that term in case the projects are recreated.
+ * The inconvenience is due to the drawback of uploading codes in 2 projects to one website on GitHub.
+ *
+ * For example:
+ *
+ * - main_C.c means the main code file for the controller. Needs to be changed to main.c before running in any IDE.
+ * - main_M.c means the main code file for the main launcher. Needs to be changed to main.c before running in any IDE.
+ * - etc.
  * 
  * @section info CONTACT INFO
  * 

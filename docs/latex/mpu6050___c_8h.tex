@@ -1,0 +1,194 @@
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Inc/mpu6050\+\_\+C.h File Reference}
+\hypertarget{mpu6050___c_8h}{}\label{mpu6050___c_8h}\index{Ball\_Launcher\_Controller/Core/Inc/mpu6050\_C.h@{Ball\_Launcher\_Controller/Core/Inc/mpu6050\_C.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_m_p_u6050}{MPU6050}}
+\begin{DoxyCompactList}\small\item\em Struct representing a mpu6050 imu sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_a84091077cde2737d6afa76ee69cbe2e7}{mpu6050\+\_\+init}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux, I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hi2c)
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{struct_m_p_u6050}{MPU6050} sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpu6050___c_8h_afce6eaf948ee778c47de0ee0a1eed19b}{mpu6050\+\_\+calibrate}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Calibrates the \doxylink{struct_m_p_u6050}{MPU6050} sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mpu6050___c_8h_a617e3e6502d7a67be5e844967eb454f3}{mpu6050\+\_\+update}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Updates the \doxylink{struct_m_p_u6050}{MPU6050} sensor data. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_a9ea00ce90e91d89bd407680c26e726bc}{mpu6050\+\_\+get\+\_\+gX}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Gets the calibrated X-\/axis gyroscope data. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_aff1ec64e5ad571812ea3cdede42fb546}{mpu6050\+\_\+get\+\_\+gY}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Gets the calibrated Y-\/axis gyroscope data. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_a43d5b475f578b8f07e2281ced858173f}{mpu6050\+\_\+get\+\_\+gZ}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Gets the calibrated Z-\/axis gyroscope data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_a46f9847b0bc4a9ac73eeeaba24bb8dfc}{mpu6050\+\_\+get\+\_\+X}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Gets the X-\/axis accelerometer data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_a604feb09984cc64950d98b711044bbf3}{mpu6050\+\_\+get\+\_\+Y}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Gets the Y-\/axis accelerometer data. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{mpu6050___c_8h_a34ebf02768ba66f4d160afe9adbcc458}{mpu6050\+\_\+get\+\_\+Z}} (\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}imux)
+\begin{DoxyCompactList}\small\item\em Gets the Z-\/axis accelerometer data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mpu6050___c_8h_afce6eaf948ee778c47de0ee0a1eed19b}\label{mpu6050___c_8h_afce6eaf948ee778c47de0ee0a1eed19b} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_calibrate@{mpu6050\_calibrate}}
+\index{mpu6050\_calibrate@{mpu6050\_calibrate}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_calibrate()}{mpu6050\_calibrate()}}
+{\footnotesize\ttfamily void mpu6050\+\_\+calibrate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Calibrates the \doxylink{struct_m_p_u6050}{MPU6050} sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{mpu6050___c_8h_a9ea00ce90e91d89bd407680c26e726bc}\label{mpu6050___c_8h_a9ea00ce90e91d89bd407680c26e726bc} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_get\_gX@{mpu6050\_get\_gX}}
+\index{mpu6050\_get\_gX@{mpu6050\_get\_gX}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_get\_gX()}{mpu6050\_get\_gX()}}
+{\footnotesize\ttfamily int16\+\_\+t mpu6050\+\_\+get\+\_\+gX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Gets the calibrated X-\/axis gyroscope data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int16\+\_\+t Calibrated X-\/axis gyroscope data. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_aff1ec64e5ad571812ea3cdede42fb546}\label{mpu6050___c_8h_aff1ec64e5ad571812ea3cdede42fb546} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_get\_gY@{mpu6050\_get\_gY}}
+\index{mpu6050\_get\_gY@{mpu6050\_get\_gY}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_get\_gY()}{mpu6050\_get\_gY()}}
+{\footnotesize\ttfamily int16\+\_\+t mpu6050\+\_\+get\+\_\+gY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Gets the calibrated Y-\/axis gyroscope data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int16\+\_\+t Calibrated Y-\/axis gyroscope data. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_a43d5b475f578b8f07e2281ced858173f}\label{mpu6050___c_8h_a43d5b475f578b8f07e2281ced858173f} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_get\_gZ@{mpu6050\_get\_gZ}}
+\index{mpu6050\_get\_gZ@{mpu6050\_get\_gZ}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_get\_gZ()}{mpu6050\_get\_gZ()}}
+{\footnotesize\ttfamily int16\+\_\+t mpu6050\+\_\+get\+\_\+gZ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Gets the calibrated Z-\/axis gyroscope data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int16\+\_\+t Calibrated Z-\/axis gyroscope data. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_a46f9847b0bc4a9ac73eeeaba24bb8dfc}\label{mpu6050___c_8h_a46f9847b0bc4a9ac73eeeaba24bb8dfc} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_get\_X@{mpu6050\_get\_X}}
+\index{mpu6050\_get\_X@{mpu6050\_get\_X}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_get\_X()}{mpu6050\_get\_X()}}
+{\footnotesize\ttfamily int32\+\_\+t mpu6050\+\_\+get\+\_\+X (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Gets the X-\/axis accelerometer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t X-\/axis accelerometer data. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_a604feb09984cc64950d98b711044bbf3}\label{mpu6050___c_8h_a604feb09984cc64950d98b711044bbf3} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_get\_Y@{mpu6050\_get\_Y}}
+\index{mpu6050\_get\_Y@{mpu6050\_get\_Y}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_get\_Y()}{mpu6050\_get\_Y()}}
+{\footnotesize\ttfamily int32\+\_\+t mpu6050\+\_\+get\+\_\+Y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Gets the Y-\/axis accelerometer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t Y-\/axis accelerometer data. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_a34ebf02768ba66f4d160afe9adbcc458}\label{mpu6050___c_8h_a34ebf02768ba66f4d160afe9adbcc458} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_get\_Z@{mpu6050\_get\_Z}}
+\index{mpu6050\_get\_Z@{mpu6050\_get\_Z}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_get\_Z()}{mpu6050\_get\_Z()}}
+{\footnotesize\ttfamily int32\+\_\+t mpu6050\+\_\+get\+\_\+Z (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Gets the Z-\/axis accelerometer data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t Z-\/axis accelerometer data. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_a84091077cde2737d6afa76ee69cbe2e7}\label{mpu6050___c_8h_a84091077cde2737d6afa76ee69cbe2e7} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_init@{mpu6050\_init}}
+\index{mpu6050\_init@{mpu6050\_init}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_init()}{mpu6050\_init()}}
+{\footnotesize\ttfamily uint16\+\_\+t mpu6050\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux,  }\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hi2c }\end{DoxyParamCaption})}
+
+
+
+Initializes the \doxylink{struct_m_p_u6050}{MPU6050} sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+{\em hi2c} & Pointer to the I2C handle structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Returns 1 if initialization is successful, otherwise 0. 
+\end{DoxyReturn}
+\Hypertarget{mpu6050___c_8h_a617e3e6502d7a67be5e844967eb454f3}\label{mpu6050___c_8h_a617e3e6502d7a67be5e844967eb454f3} 
+\index{mpu6050\_C.h@{mpu6050\_C.h}!mpu6050\_update@{mpu6050\_update}}
+\index{mpu6050\_update@{mpu6050\_update}!mpu6050\_C.h@{mpu6050\_C.h}}
+\doxysubsubsection{\texorpdfstring{mpu6050\_update()}{mpu6050\_update()}}
+{\footnotesize\ttfamily void mpu6050\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_m_p_u6050}{MPU6050}} \texorpdfstring{$\ast$}{*}}]{imux }\end{DoxyParamCaption})}
+
+
+
+Updates the \doxylink{struct_m_p_u6050}{MPU6050} sensor data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imux} & Pointer to the \doxylink{struct_m_p_u6050}{MPU6050} structure. \\
+\hline
+{\em dt} & Time interval in milliseconds. \\
+\hline
+\end{DoxyParams}
