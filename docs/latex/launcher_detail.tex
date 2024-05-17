@@ -1,0 +1,113 @@
+\chapter{LAUNCHER}
+\hypertarget{launcher_detail}{}\label{launcher_detail}\index{LAUNCHER@{LAUNCHER}}
+\hypertarget{launcher_detail_overview1}{}\doxysection{\texorpdfstring{FINAL DESIGN}{FINAL DESIGN}}\label{launcher_detail_overview1}
+The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32\+F401\+CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning.
+
+ PICTURE UPDATE NEEDED\hypertarget{launcher_detail_schematic1}{}\doxysection{\texorpdfstring{SCHEMATICS}{SCHEMATICS}}\label{launcher_detail_schematic1}
+The PDF of this schematic is also attached with higher solution can be found in \href{schematic2.pdf}{\texttt{ PDF SCHEMATIC}}. Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+Ball\+\_\+\+Launcher\+\_\+\+Launcher}}. ~\newline
+ Below are the all of the PCB schematic contains total of 4 pages describe in the table below
+
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Page   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Page   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+1   &Power source schematic for power the pcb, drivers, mcu, etc    \\\cline{1-2}
+2   &All connection to power and program for STM32\+F401\+CEU6 chip    \\\cline{1-2}
+3   &All connection to power and program for DRV8825 stepper motor driver    \\\cline{1-2}
+4   &Additional pins + test pads and connectors for limit switches + stepper motors   \\\cline{1-2}
+\end{longtabu}
+
+
+
+
+
+
+
+
+
+
+\hypertarget{launcher_detail_fsm1}{}\doxysection{\texorpdfstring{FINITE STATE MACHINE}{FINITE STATE MACHINE}}\label{launcher_detail_fsm1}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
+\endhead
+STATE0   &INIT -\/ Attempt to connect, read IMU data, and turn on LED1 if the connection is successful   &-\/ Attempt to connect~\newline
+-\/ Read IMU data~\newline
+-\/ Turn on LED1 if successful   &-\/ If unsuccessful, transition to {\bfseries{STATE 0A\+: BLINK LED}}~\newline
+-\/ If successful, transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
+STATE0A   &BLINK LED -\/ Blink three LEDs to indicate unsuccessful connection   &-\/ Blink three LEDs   &-\/ After blinking LEDs, transition back to {\bfseries{STATE 0\+: INIT}}    \\\cline{1-4}
+STATE1   &IMU READING -\/ Continuously read IMU data   &-\/ Continuously read IMU data   &-\/ Always transition to {\bfseries{STATE 2\+: CHECK BUTTONS STATUS}}    \\\cline{1-4}
+STATE2   &CHECK BUTTONS STATUS -\/ Check the status of the buttons   &-\/ Check buttons status   &-\/ If button is pushed, transition to {\bfseries{STATE 3\+: BLUETOOTH TRANSFER}}~\newline
+-\/ If button 2 is pushed, turn on LED2 and LED3, and transition to {\bfseries{STATE 2A}}~\newline
+-\/ Always transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
+STATE2A   &CHECK BUTTONS STATUS -\/ Check the status of the buttons and transfer data continuously   &-\/ Check buttons status~\newline
+-\/ Transfer data   &-\/ Always transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
+STATE3   &BLUETOOTH TRANSFER -\/ Transfer data via Bluetooth   &-\/ Transfer data via Bluetooth   &-\/ Always transition back to {\bfseries{STATE 1\+: IMU READING}}   \\\cline{1-4}
+\end{longtabu}
+
+
+TABLE UPDATE NEEDED
+
+
+
+PICTURE UPDATE NEEDED\hypertarget{launcher_detail_bomm4}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ 3D PRINTED PARTS}{BILL OF MATERIAL -\/ 3D PRINTED PARTS}}\label{launcher_detail_bomm4}
+Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer. Moreover, and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+CAD}}\hypertarget{launcher_detail_bome22}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{launcher_detail_bome22}
+All of the components for electronics are listed in the attached PDF file here\+: \href{BOM_UPDATE.xlsx}{\texttt{ BOM EXCEL}}
+
+PUT THE OVERALL PCBA\+\_\+\+LAUNCHER PICTURE HERE \texorpdfstring{$<$}{<}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---\hypertarget{launcher_detail_bomm1}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ MECHANICAL}{BILL OF MATERIAL -\/ MECHANICAL}}\label{launcher_detail_bomm1}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Components   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Image    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Components   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Image    }\\\cline{1-3}
+\endhead
+NEMA17   &NEMA17 stepper motor   &    \\\cline{1-3}
+NEMA17 + GEAR BOX   &NEMA17 stepper motor + planetary gearbox   &    \\\cline{1-3}
+D4215 BLDC   &D4215 BLDC 650 Kvmotor   &    \\\cline{1-3}
+UBEC ESC   &Hobby ESC control for BLDC   &    \\\cline{1-3}
+O-\/\+RING   &Friction O-\/\+Ring   &    \\\cline{1-3}
+SWITCH   &Switch for BLDC   &    \\\cline{1-3}
+BASKETBALL   &5 inches basketball   &    \\\cline{1-3}
+LIMIT SWITCH   &Limit switches for safety   &    \\\cline{1-3}
+BATTERY   &Lipo battery 11.\+1 V   &   \\\cline{1-3}
+\end{longtabu}
+
+
+\hypertarget{launcher_detail_bomm3}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}}\label{launcher_detail_bomm3}
+  \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Components   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Image    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Components   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Image    }\\\cline{1-3}
+\endhead
+Bearing   &OD = 55 mm + ID = 35 mm + t = 10 mm   &    \\\cline{1-3}
+Bearing   &OD = 47 mm + ID = 35 mm + t = 7 mm   &    \\\cline{1-3}
+Bearing   &OD = 37 mm + ID = 25 mm + t = 7 mm   &    \\\cline{1-3}
+Bearing   &OD = 15 mm + ID = 6 mm + t = 5 mm   &    \\\cline{1-3}
+Bolt   &M6 + L = 70 mm + Bolt   &    \\\cline{1-3}
+Nut   &M6 + t = 5 mm + Nut   &    \\\cline{1-3}
+Nut   &M6 + t = 5 mm + Lock Nut   &   \\\cline{1-3}
+\end{longtabu}
+ 

@@ -1,0 +1,48 @@
+\chapter{CONTROLLER}
+\hypertarget{controller_detail}{}\label{controller_detail}\index{CONTROLLER@{CONTROLLER}}
+\hypertarget{controller_detail_overview}{}\doxysection{\texorpdfstring{FINAL DESIGN}{FINAL DESIGN}}\label{controller_detail_overview}
+The controller will use an STM32 Black\+Pill microcontroller with an IMU sensor attached to the user\textquotesingle{}s hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor\textquotesingle{}s input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-\/05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-\/printed handle bracket. ~\newline
+
+
+
+
+PICTURE UPDATE NEEDED\hypertarget{controller_detail_schematic}{}\doxysection{\texorpdfstring{SCHEMATICS}{SCHEMATICS}}\label{controller_detail_schematic}
+The PDF of this schematic is also attached with higher solution can be found in \href{schematic1.pdf}{\texttt{ PDF SCHEMATIC}}. Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Controller}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+Ball\+\_\+\+Launcher\+\_\+\+Controller}} Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 Black\+Pill, mpu6050 IMU, HC-\/05, and LEDs together.
+
+
+
+\hypertarget{controller_detail_fsm}{}\doxysection{\texorpdfstring{FINITE STATE MACHINE}{FINITE STATE MACHINE}}\label{controller_detail_fsm}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
+\endhead
+STATE0   &INIT -\/ Attempt to connect, read IMU data, and turn on LED1 if the connection is successful   &-\/ Attempt to connect~\newline
+-\/ Read IMU data~\newline
+-\/ Turn on LED1 if successful   &-\/ If unsuccessful, transition to {\bfseries{STATE 0A\+: BLINK LED}}~\newline
+-\/ If successful, transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
+STATE0A   &BLINK LED -\/ Blink three LEDs to indicate unsuccessful connection   &-\/ Blink three LEDs   &-\/ After blinking LEDs, transition back to {\bfseries{STATE 0\+: INIT}}    \\\cline{1-4}
+STATE1   &IMU READING -\/ Continuously read IMU data   &-\/ Continuously read IMU data   &-\/ Always transition to {\bfseries{STATE 2\+: CHECK BUTTONS STATUS}}    \\\cline{1-4}
+STATE2   &CHECK BUTTONS STATUS -\/ Check the status of the buttons   &-\/ Check buttons status   &-\/ If button is pushed, transition to {\bfseries{STATE 3\+: BLUETOOTH TRANSFER}}~\newline
+-\/ If button 2 is pushed, turn on LED2 and LED3, and transition to {\bfseries{STATE 2A}}~\newline
+-\/ Always transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
+STATE2A   &CHECK BUTTONS STATUS -\/ Check the status of the buttons and transfer data continuously   &-\/ Check buttons status~\newline
+-\/ Transfer data   &-\/ Always transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
+STATE3   &BLUETOOTH TRANSFER -\/ Transfer data via Bluetooth   &-\/ Transfer data via Bluetooth   &-\/ Always transition back to {\bfseries{STATE 1\+: IMU READING}}   \\\cline{1-4}
+\end{longtabu}
+
+
+TABLE UPDATE NEEDED
+
+
+
+PICTURE UPDATE NEEDED\hypertarget{controller_detail_bomm5}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ 3D PRINTED PARTS}{BILL OF MATERIAL -\/ 3D PRINTED PARTS}}\label{controller_detail_bomm5}
+Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer. Moreover, and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+CAD}}\hypertarget{controller_detail_bome2}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{controller_detail_bome2}
+All of the components for electronics are listed in the attached PDF file here\+: \href{BOM_UPDATE.xlsx}{\texttt{ BOM EXCEL}}
+
+PUT THE OVERALL PCBA\+\_\+\+LAUNCHER PICTURE HERE \texorpdfstring{$<$}{<}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
