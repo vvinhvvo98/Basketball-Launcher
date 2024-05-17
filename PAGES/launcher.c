@@ -53,7 +53,7 @@
  * 
  * TABLE UPDATE NEEDED
  * 
- * <img src="FSM1.png" width="1200" height="1200"> 
+ * <img src="FSM1.png" width="1200" height="200"> 
  * 
  * PICTURE UPDATE NEEDED
  * 
