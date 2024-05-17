@@ -29,20 +29,15 @@
  * 
  * 
  * @section fsm FINITE STATE MACHINE
- * | State       | Description                                                                                   | Actions                                                                                          | Transitions                                                                                                                                                  |
- * |-------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
- * | STATE0      | INIT - Attempt to connect, read IMU data, and turn on LED1 if the connection is successful    | - Attempt to connect<br>- Read IMU data<br>- Turn on LED1 if successful                          | - If unsuccessful, transition to **STATE 0A: BLINK LED**<br>- If successful, transition to **STATE 1: IMU READING**                                          |
- * | STATE0A     | BLINK LED - Blink three LEDs to indicate unsuccessful connection                              | - Blink three LEDs                                                                               | - After blinking LEDs, transition back to **STATE 0: INIT**                                                                                                  |
- * | STATE1      | IMU READING - Continuously read IMU data                                                      | - Continuously read IMU data                                                                     | - Always transition to **STATE 2: CHECK BUTTONS STATUS**                                                                                                     |
- * | STATE2      | CHECK BUTTONS STATUS - Check the status of the buttons                                        | - Check buttons status                                                                           | - If button is pushed, transition to **STATE 3: BLUETOOTH TRANSFER**<br>- If button 2 is pushed, turn on LED2 and LED3, and transition to **STATE 2A**<br>- Always transition to **STATE 1: IMU READING** |
- * | STATE2A     | CHECK BUTTONS STATUS - Check the status of the buttons and transfer data continuously         | - Check buttons status<br>- Transfer data                                                        | - Always transition to **STATE 1: IMU READING**                                                                                                              |
- * | STATE3      | BLUETOOTH TRANSFER - Transfer data via Bluetooth                                              | - Transfer data via Bluetooth                                                                    | - Always transition back to **STATE 1: IMU READING**                                                                                                         | 
- *
- * TABLE UPDATE NEEDED
+ * | State       | Description                                        | Actions                                                | Transitions                                                                                    |
+ * |-------------|----------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------|
+ * | STATE0      | INIT - Attempt to connect to IMU                   | - Attempt to connect<br> - Turn on LED1 if successful  | - If unsuccessful, transition to **STATE 1**<br> - If successful, transition to **STATE 2**    |
+ * | STATE1      | ERROR- Failed to connecto IMU                      | - Toggle LED1 if failed to connect to the IMU          | - Always transition to **STATE 0**                                                             |
+ * | STATE2      | IMU  - Read data from the IMU                      | - Continuosly read the data from the IMU               | - Always transition to **STATE 3**                                                             |
+ * | STATE3      | BUTTON_LED - Read buttons & update LEDs            | - Countinously read the button<br> - Update the LEDs   | - Always transition back to **STATE 4**                                                        | 
+ * | STATE4      | TRANSFER   - Send data to UART1 and UART6          | - Send data to UART1 (bluetooth)<br> - UART6 (debug)   | - Always transition back to **STATE 2**                                                        | 
  * 
  * <img src="FSM1.png" width="1200" height="800"> 
- * 
- * PICTURE UPDATE NEEDED
  * 
  * 
  * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS

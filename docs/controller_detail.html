@@ -113,27 +113,21 @@ FINITE STATE MACHINE</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">State   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Actions   </th><th class="markdownTableHeadNone">Transitions    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT - Attempt to connect, read IMU data, and turn on LED1 if the connection is successful   </td><td class="markdownTableBodyNone">- Attempt to connect<br  />
-- Read IMU data<br  />
-- Turn on LED1 if successful   </td><td class="markdownTableBodyNone">- If unsuccessful, transition to <b>STATE 0A: BLINK LED</b><br  />
-- If successful, transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT - Attempt to connect to IMU   </td><td class="markdownTableBodyNone">- Attempt to connect<br  />
+ - Turn on LED1 if successful   </td><td class="markdownTableBodyNone">- If unsuccessful, transition to <b>STATE 1</b><br  />
+ - If successful, transition to <b>STATE 2</b>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE0A   </td><td class="markdownTableBodyNone">BLINK LED - Blink three LEDs to indicate unsuccessful connection   </td><td class="markdownTableBodyNone">- Blink three LEDs   </td><td class="markdownTableBodyNone">- After blinking LEDs, transition back to <b>STATE 0: INIT</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">ERROR- Failed to connecto IMU   </td><td class="markdownTableBodyNone">- Toggle LED1 if failed to connect to the IMU   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 0</b>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">IMU READING - Continuously read IMU data   </td><td class="markdownTableBodyNone">- Continuously read IMU data   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 2: CHECK BUTTONS STATUS</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">IMU - Read data from the IMU   </td><td class="markdownTableBodyNone">- Continuosly read the data from the IMU   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 3</b>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">CHECK BUTTONS STATUS - Check the status of the buttons   </td><td class="markdownTableBodyNone">- Check buttons status   </td><td class="markdownTableBodyNone">- If button is pushed, transition to <b>STATE 3: BLUETOOTH TRANSFER</b><br  />
-- If button 2 is pushed, turn on LED2 and LED3, and transition to <b>STATE 2A</b><br  />
-- Always transition to <b>STATE 1: IMU READING</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">BUTTON_LED - Read buttons &amp; update LEDs   </td><td class="markdownTableBodyNone">- Countinously read the button<br  />
+ - Update the LEDs   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 4</b>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE2A   </td><td class="markdownTableBodyNone">CHECK BUTTONS STATUS - Check the status of the buttons and transfer data continuously   </td><td class="markdownTableBodyNone">- Check buttons status<br  />
-- Transfer data   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 1: IMU READING</b>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">BLUETOOTH TRANSFER - Transfer data via Bluetooth   </td><td class="markdownTableBodyNone">- Transfer data via Bluetooth   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 1: IMU READING</b>   </td></tr>
+<td class="markdownTableBodyNone">STATE4   </td><td class="markdownTableBodyNone">TRANSFER - Send data to UART1 and UART6   </td><td class="markdownTableBodyNone">- Send data to UART1 (bluetooth)<br  />
+ - UART6 (debug)   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 2</b>   </td></tr>
 </table>
-<p>TABLE UPDATE NEEDED</p>
 <p><img src="FSM1.png" alt="" width="1200" height="800" class="inline"/></p>
-<p>PICTURE UPDATE NEEDED</p>
 <h1><a class="anchor" id="bomm5"></a>
 BILL OF MATERIAL - 3D PRINTED PARTS</h1>
 <p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer. Moreover, and BambuLab filaments. All the CAD 3D model files can be found here for reference: <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD">https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD</a></p>
