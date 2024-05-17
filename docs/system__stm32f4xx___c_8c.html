@@ -100,6 +100,9 @@ $(function(){initNavTree('system__stm32f4xx___c_8c.html',''); initResizable(); }
   <div class="headertitle"><div class="title">system_stm32f4xx_C.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>CMSIS Cortex-M4 Device Peripheral Access Layer System Source File.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;stm32f4xx.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -127,7 +130,18 @@ Variables</h2></td></tr>
 <tr class="memitem:ga5b4f8b768465842cf854a8f993b375e9" id="r_ga5b4f8b768465842cf854a8f993b375e9"><td class="memItemLeft" align="right" valign="top">const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_m32_f4xx___system___private___variables.html#ga5b4f8b768465842cf854a8f993b375e9">APBPrescTable</a> [8] = {0, 0, 0, 0, 1, 2, 3, 4}</td></tr>
 <tr class="separator:ga5b4f8b768465842cf854a8f993b375e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>CMSIS Cortex-M4 Device Peripheral Access Layer System Source File. </p>
+<dl class="section author"><dt>Author</dt><dd>MCD Application Team </dd></dl>
+<p>This file provides two functions and one global variable to be called from user application:</p><ul>
+<li><a class="el" href="group___s_t_m32_f4xx___system___private___functions.html#ga93f514700ccf00d08dbdcff7f1224eb2" title="Setup the microcontroller system Initialize the FPU setting, vector table location and External memor...">SystemInit()</a>: This function is called at startup just after reset and before branch to main program. This call is made inside the "startup_stm32f4xx.s" file.</li>
+<li>SystemCoreClock variable: Contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters.</li>
+<li><a class="el" href="group___s_t_m32_f4xx___system___private___functions.html#gae0c36a9591fe6e9c45ecb21a794f0f0f" title="Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable cont...">SystemCoreClockUpdate()</a>: Updates the variable SystemCoreClock and must be called whenever the core clock is changed during program execution.</li>
+</ul>
+<dl class="section attention"><dt>Attention</dt><dd></dd></dl>
+<p>Copyright (c) 2017 STMicroelectronics. All rights reserved.</p>
+<p>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

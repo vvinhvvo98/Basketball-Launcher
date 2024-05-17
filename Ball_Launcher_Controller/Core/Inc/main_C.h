@@ -1,8 +1,8 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file            main.h
-  * @brief           Header for main.c file.
+  * @file            main_C.h
+  * @brief           Header for main_C.c file.
   *                  This file contains the common defines of the application.
   ******************************************************************************
   * @attention

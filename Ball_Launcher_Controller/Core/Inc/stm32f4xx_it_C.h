@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    stm32f4xx_it.h
+  * @file    stm32f4xx_it_C.h
   * @brief   This file contains the headers of the interrupt handlers.
   ******************************************************************************
   * @attention

@@ -1,5 +1,10 @@
 \doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Src/system\+\_\+stm32f4xx\+\_\+C.c File Reference}
 \hypertarget{system__stm32f4xx___c_8c}{}\label{system__stm32f4xx___c_8c}\index{Ball\_Launcher\_Controller/Core/Src/system\_stm32f4xx\_C.c@{Ball\_Launcher\_Controller/Core/Src/system\_stm32f4xx\_C.c}}
+
+
+CMSIS Cortex-\/\+M4 Device Peripheral Access Layer System Source File.  
+
+
 {\ttfamily \#include "{}stm32f4xx.\+h"{}}\newline
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
@@ -24,3 +29,24 @@ const uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f4xx___system___private___va
 \item 
 const uint8\+\_\+t \mbox{\hyperlink{group___s_t_m32_f4xx___system___private___variables_ga5b4f8b768465842cf854a8f993b375e9}{APBPresc\+Table}} \mbox{[}8\mbox{]} = \{0, 0, 0, 0, 1, 2, 3, 4\}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CMSIS Cortex-\/\+M4 Device Peripheral Access Layer System Source File. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+This file provides two functions and one global variable to be called from user application\+:
+\begin{DoxyItemize}
+\item \doxylink{group___s_t_m32_f4xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()}\+: This function is called at startup just after reset and before branch to main program. This call is made inside the "{}startup\+\_\+stm32f4xx.\+s"{} file.
+\item System\+Core\+Clock variable\+: Contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters.
+\item \doxylink{group___s_t_m32_f4xx___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update()}\+: Updates the variable System\+Core\+Clock and must be called whenever the core clock is changed during program execution.
+\end{DoxyItemize}
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2017 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
