@@ -107,11 +107,6 @@ $(function(){initNavTree('_ball___launcher___controller_2_core_2_inc_2stm32f4xx_
 <code>#include &quot;stm32f4xx_hal_i2c.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal_pwr.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal_uart.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for stm32f4xx_hal_conf.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="_ball___launcher___controller_2_core_2_inc_2stm32f4xx__hal__conf_8h__incl.png" border="0" usemap="#a_ball___launcher___controller_2_core_2_inc_2stm32f4xx__hal__conf_8h" alt=""/></div>
-</div>
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -261,9 +256,9 @@ Macros</h2></td></tr>
 <tr class="separator:a41e5cb0b39ad74f0aafb83dbcecf9006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bcc92663c42ec434f527847bbc4abc1" id="r_a3bcc92663c42ec434f527847bbc4abc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcc92663c42ec434f527847bbc4abc1">MAC_ADDR5</a>&#160;&#160;&#160;0U</td></tr>
 <tr class="separator:a3bcc92663c42ec434f527847bbc4abc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cdaf687f7a7f2dba570d5a722990786" id="r_a0cdaf687f7a7f2dba570d5a722990786"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* buffer size for receive               */</td></tr>
+<tr class="memitem:a0cdaf687f7a7f2dba570d5a722990786" id="r_a0cdaf687f7a7f2dba570d5a722990786"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="_ball___launcher___controller_2_core_2_src_2main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for receive               */</td></tr>
 <tr class="separator:a0cdaf687f7a7f2dba570d5a722990786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83956dfc1b135c3c92ac409758b6cf4" id="r_af83956dfc1b135c3c92ac409758b6cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* buffer size for transmit              */</td></tr>
+<tr class="memitem:af83956dfc1b135c3c92ac409758b6cf4" id="r_af83956dfc1b135c3c92ac409758b6cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="_ball___launcher___controller_2_core_2_src_2main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for transmit              */</td></tr>
 <tr class="separator:af83956dfc1b135c3c92ac409758b6cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62b0f224fa9c4f2e5574c9e52526f751" id="r_a62b0f224fa9c4f2e5574c9e52526f751"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62b0f224fa9c4f2e5574c9e52526f751">ETH_RXBUFNB</a>&#160;&#160;&#160;4U       /* 4 Rx buffers of size <a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>  */</td></tr>
 <tr class="separator:a62b0f224fa9c4f2e5574c9e52526f751"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,7 +371,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ETH_RX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* buffer size for receive               */</td>
+          <td class="memname">#define ETH_RX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="_ball___launcher___controller_2_core_2_src_2main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for receive               */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -404,7 +399,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ETH_TX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* buffer size for transmit              */</td>
+          <td class="memname">#define ETH_TX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="_ball___launcher___controller_2_core_2_src_2main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for transmit              */</td>
         </tr>
       </table>
 </div><div class="memdoc">
