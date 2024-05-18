@@ -42,7 +42,7 @@
  * 
  * 
  * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS
- * Most of the 3D printed parts are printed using BambuLab XC1 3D printer. Moreover, and BambuLab filaments. 
+ * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
  * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
  * 
  * 
