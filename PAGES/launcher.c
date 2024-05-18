@@ -16,8 +16,8 @@
  * <img src="launcher.png" width="1200" height="1250">
  * PICTURE UPDATE NEEDED
  * 
- * @section schematic1 SCHEMATICS
- * The PDF of this schematic is also attached with higher solution can be found in [PDF SCHEMATIC](schematic2.pdf).
+ * @section schematic1 LAUNCHER PCBA
+ * The PDF of this schematic is also attached with higher solution can be found in [PDF SCHEMATIC](LauncherSchematic.pdf).
  * Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient: 
  * https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher.  
  * Below are the all of the PCB schematic contains total of 4 pages describe in the table below 
@@ -41,6 +41,8 @@
  * 
  * <img src="fppf.png" width="1200" height="600">
  * 
+ * <img src="finalpcb2.png" width="1200" height="400">
+ * 
  * @section fsm1 FINITE STATE MACHINE
  * | State       | Description                                                                                   | Actions                                                                                          | Transitions                                                                                                                                                  |
  * |-------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -53,7 +55,7 @@
  * 
  * TABLE UPDATE NEEDED
  * 
- * <img src="FSM1.png" width="1200" height="200"> 
+ * <img src="FSM2.png" width="1200" height="1000"> 
  * 
  * PICTURE UPDATE NEEDED
  * 
@@ -64,9 +66,8 @@
  *
  *  
  * @section bome22 BILL OF MATERIAL - ELECTRONICS
- * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BOM_UPDATE.xlsx)
+ * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BILL_OF_MATERIAL.xlsx)
  * 
- * PUT THE OVERALL PCBA_LAUNCHER PICTURE HERE <---------------------------------------------------------
  * 
  * @section bomm1 BILL OF MATERIAL - MECHANICAL
  * <div align="center">

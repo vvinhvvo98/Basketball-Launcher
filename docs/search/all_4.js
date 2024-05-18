@@ -9,8 +9,9 @@ var searchData=
   ['cmsis_6',['CMSIS',['../group___c_m_s_i_s.html',1,'']]],
   ['contact_20info_7',['CONTACT INFO',['../index.html#info',1,'']]],
   ['controller_8',['CONTROLLER',['../controller_detail.html',1,'CONTROLLER'],['../index.html#controller',1,'CONTROLLER']]],
-  ['controller_2ec_9',['controller.c',['../controller_8c.html',1,'']]],
-  ['counter1_10',['counter1',['../struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525',1,'RadioX']]],
-  ['counter2_11',['counter2',['../struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2',1,'RadioX']]],
-  ['cycloidal_20gearbox_12',['BILL OF MATERIAL - CYCLOIDAL GEARBOX',['../launcher_detail.html#bomm3',1,'']]]
+  ['controller_20pcba_9',['CONTROLLER PCBA',['../controller_detail.html#schematic',1,'']]],
+  ['controller_2ec_10',['controller.c',['../controller_8c.html',1,'']]],
+  ['counter1_11',['counter1',['../struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525',1,'RadioX']]],
+  ['counter2_12',['counter2',['../struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2',1,'RadioX']]],
+  ['cycloidal_20gearbox_13',['BILL OF MATERIAL - CYCLOIDAL GEARBOX',['../launcher_detail.html#bomm3',1,'']]]
 ];

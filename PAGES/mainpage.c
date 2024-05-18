@@ -35,7 +35,7 @@
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
  * The sketch represents a rough idea of how all components are connected and communicate with each other.
- * The PDF of the sketch is also attached with higher solution can be found in [PDF Sketch](overall.pdf)
+ * The PDF of the sketch is also attached with higher solution can be found in [PDF Sketch](OverallDesign.pdf)
  * 
  * @image html overall.png
  * 
@@ -84,15 +84,13 @@
  * 
  * However, you may find it more useful to read through the website exploring the source code.
  * 
- * NOTE: You may find the files with a small specification at the end either "_C" or "_M" that stands for Controller code and Main Code. 
+ * NOTE: You may find the Controller's code with a small specification "_C" at the end of the file  that stands for Controller code. 
  * Files' name and the files' header code need to be renamed without that term in case the projects are recreated.
- * The inconvenience is due to the drawback of uploading codes in 2 projects to one website on GitHub.
+ * The inconvenience is due to the drawback of uploading codes in 2 projects to one GitHub Repository.
  *
  * For example:
- *
+ * 
  * - main_C.c means the main code file for the controller. Needs to be changed to main.c before running in any IDE.
- * - main_M.c means the main code file for the main launcher. Needs to be changed to main.c before running in any IDE.
- * - etc.
  * 
  * @section info CONTACT INFO
  * 

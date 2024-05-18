@@ -13,7 +13,7 @@ The project is divided into two main assemblies\+:
 \item The controller will use an STM32 Black\+Pill microcontroller with an IMU sensor attached to the user\textquotesingle{}s hand. The controller will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor\textquotesingle{}s input.
 \item The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller signals it. The launcher will use a customized PCBA centered around the STM32\+F401\+CEU6 chip, which will act as the core component to determine movement.
 \end{DoxyItemize}\hypertarget{index_design}{}\doxysection{\texorpdfstring{DESIGN}{DESIGN}}\label{index_design}
-The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. The overall design of the two main assemblies in the project is sketched and listed below for reference. The sketch represents a rough idea of how all components are connected and communicate with each other. The PDF of the sketch is also attached with higher solution can be found in \href{overall.pdf}{\texttt{ PDF Sketch}}
+The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. The overall design of the two main assemblies in the project is sketched and listed below for reference. The sketch represents a rough idea of how all components are connected and communicate with each other. The PDF of the sketch is also attached with higher solution can be found in \href{OverallDesign.pdf}{\texttt{ PDF Sketch}}
 
 \hypertarget{index_launcher}{}\doxysection{\texorpdfstring{LAUNCHER}{LAUNCHER}}\label{index_launcher}
 The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32\+F401\+CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning. More detail about the launcher Bill of Materials, design, source code can be found in\+: \doxysectlink{launcher_detail}{LAUNCHER}{0}
@@ -37,15 +37,13 @@ All code that will be referenced in this portfolio relate to project is accessib
 
 However, you may find it more useful to read through the website exploring the source code.
 
-NOTE\+: You may find the files with a small specification at the end either "{}\+\_\+\+C"{} or "{}\+\_\+\+M"{} that stands for Controller code and Main Code. Files\textquotesingle{} name and the files\textquotesingle{} header code need to be renamed without that term in case the projects are recreated. The inconvenience is due to the drawback of uploading codes in 2 projects to one website on Git\+Hub.
+NOTE\+: You may find the Controller\textquotesingle{}s code with a small specification "{}\+\_\+\+C"{} at the end of the file that stands for Controller code. Files\textquotesingle{} name and the files\textquotesingle{} header code need to be renamed without that term in case the projects are recreated. The inconvenience is due to the drawback of uploading codes in 2 projects to one Git\+Hub Repository.
 
 For example\+:
 
 
 \begin{DoxyItemize}
 \item \doxylink{main___c_8c}{main\+\_\+\+C.\+c} means the main code file for the controller. Needs to be changed to \doxylink{main_8c}{main.\+c} before running in any IDE.
-\item main\+\_\+\+M.\+c means the main code file for the main launcher. Needs to be changed to \doxylink{main_8c}{main.\+c} before running in any IDE.
-\item etc.
 \end{DoxyItemize}\hypertarget{index_info}{}\doxysection{\texorpdfstring{CONTACT INFO}{CONTACT INFO}}\label{index_info}
 
 \begin{DoxyPre}   
