@@ -88,7 +88,7 @@
  * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
  * <div align="center">
  * <img src="CG.png" width="800" height="800"> 
- * 
+ * <iframe width="420" height="315" src="https://www.youtube.com/embed/VXcm26m4MQA" frameborder="0" allowfullscreen></iframe>
  * <a href="https://www.youtube.com/watch?v=VXcm26m4MQA&list=PPSV" target="_blank"> Cycloidal GearBox Animation</a>
  * | Components | Description                          | Image                                               |
  * | -----------| -----------------------------------  | ----------------------------------------------------|
