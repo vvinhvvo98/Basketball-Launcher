@@ -58,6 +58,23 @@
  * <img src="FSM2.png" width="1200" height="1000"> 
  * 
  * 
+ * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
+ * <div align="center">
+ * <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a>
+ * 
+ * <img src="CG.png" width="800" height="800"> 
+ * 
+ * | Components | Description                          | Image                                               |
+ * | -----------| -----------------------------------  | ----------------------------------------------------|
+ * | Bearing    | OD = 55 mm + ID = 35 mm + t = 10 mm  | <img src="45bearing.png" width="250" height="250">  |
+ * | Bearing    | OD = 47 mm + ID = 35 mm + t =  7 mm  | <img src="35bearing.png" width="250" height="250">  |
+ * | Bearing    | OD = 37 mm + ID = 25 mm + t =  7 mm  | <img src="25bearing.png" width="250" height="250">  |
+ * | Bearing    | OD = 15 mm + ID =  6 mm + t =  5 mm  | <img src="6bearing.png" width="250" height="250">   |
+ * | Bolt       | M6         +  L = 70 mm  + Bolt      | <img src="bolt.png" width="250" height="250">       |
+ * | Nut        | M6         +  t =  5 mm  + Nut       | <img src="nut.png" width="250" height="250">        |
+ * | Nut        | M6         +  t =  5 mm  + Lock Nut  | <img src="locknut.png" width="250" height="250">    |
+ * </div>
+ * 
  * @section bomm4 BILL OF MATERIAL - 3D PRINTED PARTS
  * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
  * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
@@ -85,22 +102,7 @@
  * </div>
  * 
  * 
- * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
- * <div align="center">
- * <img src="CG.png" width="800" height="800"> 
- * <iframe width="420" height="315" src="https://www.youtube.com/embed/VXcm26m4MQA" frameborder="0" allowfullscreen></iframe>
- * <a href="https://www.youtube.com/watch?v=VXcm26m4MQA&list=PPSV" target="_blank"> Cycloidal GearBox Animation</a>
- * | Components | Description                          | Image                                               |
- * | -----------| -----------------------------------  | ----------------------------------------------------|
- * | Bearing    | OD = 55 mm + ID = 35 mm + t = 10 mm  | <img src="45bearing.png" width="250" height="250">  |
- * | Bearing    | OD = 47 mm + ID = 35 mm + t =  7 mm  | <img src="35bearing.png" width="250" height="250">  |
- * | Bearing    | OD = 37 mm + ID = 25 mm + t =  7 mm  | <img src="25bearing.png" width="250" height="250">  |
- * | Bearing    | OD = 15 mm + ID =  6 mm + t =  5 mm  | <img src="6bearing.png" width="250" height="250">   |
- * | Bolt       | M6         +  L = 70 mm  + Bolt      | <img src="bolt.png" width="250" height="250">       |
- * | Nut        | M6         +  t =  5 mm  + Nut       | <img src="nut.png" width="250" height="250">        |
- * | Nut        | M6         +  t =  5 mm  + Lock Nut  | <img src="locknut.png" width="250" height="250">    |
- * </div>
- * 
+
  *
  *  
  */
