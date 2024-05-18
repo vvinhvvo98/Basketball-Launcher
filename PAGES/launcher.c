@@ -43,19 +43,30 @@
  * 
  * <img src="finalpcb2.png" width="1200" height="400">
  * 
+ * 
  * @section fsm1 FINITE STATE MACHINE
- * | State       | Description                                                                                   | Actions                                                                                          | Transitions                                                                                                                                                  |
- * |-------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
- * | STATE0      | INIT - Attempt to connect, read IMU data, and turn on LED1 if the connection is successful    | - Attempt to connect<br>- Read IMU data<br>- Turn on LED1 if successful                          | - If unsuccessful, transition to **STATE 0A: BLINK LED**<br>- If successful, transition to **STATE 1: IMU READING**                                          |
- * | STATE0A     | BLINK LED - Blink three LEDs to indicate unsuccessful connection                              | - Blink three LEDs                                                                               | - After blinking LEDs, transition back to **STATE 0: INIT**                                                                                                  |
- * | STATE1      | IMU READING - Continuously read IMU data                                                      | - Continuously read IMU data                                                                     | - Always transition to **STATE 2: CHECK BUTTONS STATUS**                                                                                                     |
- * | STATE2      | CHECK BUTTONS STATUS - Check the status of the buttons                                        | - Check buttons status                                                                           | - If button is pushed, transition to **STATE 3: BLUETOOTH TRANSFER**<br>- If button 2 is pushed, turn on LED2 and LED3, and transition to **STATE 2A**<br>- Always transition to **STATE 1: IMU READING** |
- * | STATE2A     | CHECK BUTTONS STATUS - Check the status of the buttons and transfer data continuously         | - Check buttons status<br>- Transfer data                                                        | - Always transition to **STATE 1: IMU READING**                                                                                                              |
- * | STATE3      | BLUETOOTH TRANSFER - Transfer data via Bluetooth                                              | - Transfer data via Bluetooth                                                                    | - Always transition back to **STATE 1: IMU READING**                                                                                                         | 
+ * | State       | Description                   | Actions                                             | Transitions                                                                                                                                                                               |
+ * |-------------|-------------------------------|---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ * | STATE0      | INIT                          | - Init all objects in the system                    | - Always transition to **STATE 1**                                                                                                                                                        |
+ * | STATE1      | HOME POSITION CALIBRATION     | - Launcher finding limit switches and homing        | - Always transition to **STATE 2** if done calibration <br> - Otherwise stay in **STATE 1**                                                                                                    |
+ * | STATE2      | DECISION HUB                  | - Jumping to different state according to condition | - Move to **STATE 3** if MOVE == 1 & SHOT == 0 <br> - Move to **STATE 4** if SHOT == 1 & MOVE == 0 <br> - Move to **STATE 5** if hit any switches <br> - Move to **STATE 6** if ESTOP == 1|
+ * | STATE3      | STEPPER RUN                   | - Runnning stepper motor                            | - Always transition to **STATE 2**                                                                                                                                                        |
+ * | STATE4      | BLDC RUN                      | - Running BLDC Motor until fast speed               | - Always transition to **STATE 2**                                                                                                                                                        |
+ * | STATE5      | LIMIT SWITCH                  | - Return to home position after hitting the switches| - Stay in **STATE 5" until done homing <br> - Then transition to **STATE 2** when done                                                                                                    | 
+ * | STATE6      | ESTOP                         | - Turn off everything if we hitting the ESTOP       | - Stop the launcher immediately                                                                                                                                                           | 
  * 
  * TABLE UPDATE NEEDED
  * 
  * <img src="FSM2.png" width="1200" height="1000"> 
+ * 
+ * 
+ * @section bomm4 BILL OF MATERIAL - 3D PRINTED PARTS
+ * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
+ * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
+ *
+ *  
+ * @section bome22 BILL OF MATERIAL - ELECTRONICS
+ * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BILL_OF_MATERIAL.xlsx)
  * 
  * 
  * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
@@ -74,14 +85,6 @@
  * | Nut        | M6         +  t =  5 mm  + Nut       | <img src="nut.png" width="250" height="250">        |
  * | Nut        | M6         +  t =  5 mm  + Lock Nut  | <img src="locknut.png" width="250" height="250">    |
  * </div>
- * 
- * @section bomm4 BILL OF MATERIAL - 3D PRINTED PARTS
- * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
- * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
- *
- *  
- * @section bome22 BILL OF MATERIAL - ELECTRONICS
- * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BILL_OF_MATERIAL.xlsx)
  * 
  * 
  * @section bomm1 BILL OF MATERIAL - MECHANICAL

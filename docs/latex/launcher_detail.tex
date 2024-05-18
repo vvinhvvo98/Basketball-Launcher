@@ -45,24 +45,26 @@ The PDF of this schematic is also attached with higher solution can be found in 
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
 \endhead
-STATE0   &INIT -\/ Attempt to connect, read IMU data, and turn on LED1 if the connection is successful   &-\/ Attempt to connect~\newline
--\/ Read IMU data~\newline
--\/ Turn on LED1 if successful   &-\/ If unsuccessful, transition to {\bfseries{STATE 0A\+: BLINK LED}}~\newline
--\/ If successful, transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
-STATE0A   &BLINK LED -\/ Blink three LEDs to indicate unsuccessful connection   &-\/ Blink three LEDs   &-\/ After blinking LEDs, transition back to {\bfseries{STATE 0\+: INIT}}    \\\cline{1-4}
-STATE1   &IMU READING -\/ Continuously read IMU data   &-\/ Continuously read IMU data   &-\/ Always transition to {\bfseries{STATE 2\+: CHECK BUTTONS STATUS}}    \\\cline{1-4}
-STATE2   &CHECK BUTTONS STATUS -\/ Check the status of the buttons   &-\/ Check buttons status   &-\/ If button is pushed, transition to {\bfseries{STATE 3\+: BLUETOOTH TRANSFER}}~\newline
--\/ If button 2 is pushed, turn on LED2 and LED3, and transition to {\bfseries{STATE 2A}}~\newline
--\/ Always transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
-STATE2A   &CHECK BUTTONS STATUS -\/ Check the status of the buttons and transfer data continuously   &-\/ Check buttons status~\newline
--\/ Transfer data   &-\/ Always transition to {\bfseries{STATE 1\+: IMU READING}}    \\\cline{1-4}
-STATE3   &BLUETOOTH TRANSFER -\/ Transfer data via Bluetooth   &-\/ Transfer data via Bluetooth   &-\/ Always transition back to {\bfseries{STATE 1\+: IMU READING}}   \\\cline{1-4}
+STATE0   &INIT   &-\/ Init all objects in the system   &-\/ Always transition to {\bfseries{STATE 1}}    \\\cline{1-4}
+STATE1   &HOME POSITION CALIBRATION   &-\/ Launcher finding limit switches and homing   &-\/ Always transition to {\bfseries{STATE 2}} if done calibration ~\newline
+ -\/ Otherwise stay in {\bfseries{STATE 1}}    \\\cline{1-4}
+STATE2   &DECISION HUB   &-\/ Jumping to different state according to condition   &-\/ Move to {\bfseries{STATE 3}} if MOVE == 1 \& SHOT == 0 ~\newline
+ -\/ Move to {\bfseries{STATE 4}} if SHOT == 1 \& MOVE == 0 ~\newline
+ -\/ Move to {\bfseries{STATE 5}} if hit any switches ~\newline
+ -\/ Move to {\bfseries{STATE 6}} if ESTOP == 1    \\\cline{1-4}
+STATE3   &STEPPER RUN   &-\/ Runnning stepper motor   &-\/ Always transition to {\bfseries{STATE 2}}    \\\cline{1-4}
+STATE4   &BLDC RUN   &-\/ Running BLDC Motor until fast speed   &-\/ Always transition to {\bfseries{STATE 2}}    \\\cline{1-4}
+STATE5   &LIMIT SWITCH   &-\/ Return to home position after hitting the switches   &-\/ Stay in {\bfseries{STATE 5"{} until done homing ~\newline
+ -\/ Then transition to \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+STATE 2}} when done    \\\cline{1-4}
+STATE6   &ESTOP   &-\/ Turn off everything if we hitting the ESTOP   &-\/ Stop the launcher immediately   \\\cline{1-4}
 \end{longtabu}
 
 
 TABLE UPDATE NEEDED
 
-\hypertarget{launcher_detail_bomm3}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}}\label{launcher_detail_bomm3}
+\hypertarget{launcher_detail_bomm4}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ 3D PRINTED PARTS}{BILL OF MATERIAL -\/ 3D PRINTED PARTS}}\label{launcher_detail_bomm4}
+Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+CAD}}\hypertarget{launcher_detail_bome22}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{launcher_detail_bome22}
+All of the components for electronics are listed in the attached PDF file here\+: \href{BILL_OF_MATERIAL.xlsx}{\texttt{ BOM EXCEL}}\hypertarget{launcher_detail_bomm3}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}}\label{launcher_detail_bomm3}
  \href{https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB}{\texttt{ CYCLOIDAL GEARBOX DEMONSTRATION}}
 
 
@@ -85,9 +87,7 @@ Bolt   &M6 + L = 70 mm + Bolt   &    \\\cline{1-3}
 Nut   &M6 + t = 5 mm + Nut   &    \\\cline{1-3}
 Nut   &M6 + t = 5 mm + Lock Nut   &   \\\cline{1-3}
 \end{longtabu}
-\hypertarget{launcher_detail_bomm4}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ 3D PRINTED PARTS}{BILL OF MATERIAL -\/ 3D PRINTED PARTS}}\label{launcher_detail_bomm4}
-Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+CAD}}\hypertarget{launcher_detail_bome22}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{launcher_detail_bome22}
-All of the components for electronics are listed in the attached PDF file here\+: \href{BILL_OF_MATERIAL.xlsx}{\texttt{ BOM EXCEL}}\hypertarget{launcher_detail_bomm1}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ MECHANICAL}{BILL OF MATERIAL -\/ MECHANICAL}}\label{launcher_detail_bomm1}
+\hypertarget{launcher_detail_bomm1}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ MECHANICAL}{BILL OF MATERIAL -\/ MECHANICAL}}\label{launcher_detail_bomm1}
 
 
 \tabulinesep=1mm
