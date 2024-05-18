@@ -57,8 +57,6 @@
  * 
  * <img src="FSM2.png" width="1200" height="1000"> 
  * 
- * PICTURE UPDATE NEEDED
- * 
  * 
  * @section bomm4 BILL OF MATERIAL - 3D PRINTED PARTS
  * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
@@ -89,7 +87,9 @@
  * 
  * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
  * <div align="center">
- *  <img src="CG.png" width="600" height="600"> 
+ * <img src="CG.png" width="800" height="800"> 
+ * 
+ * <a href="https://www.youtube.com/watch?v=VXcm26m4MQA&list=PPSV" target="_blank"> Cycloidal GearBox Animation</a>
  * | Components | Description                          | Image                                               |
  * | -----------| -----------------------------------  | ----------------------------------------------------|
  * | Bearing    | OD = 55 mm + ID = 35 mm + t = 10 mm  | <img src="45bearing.png" width="250" height="250">  |
