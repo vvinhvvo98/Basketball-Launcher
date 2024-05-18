@@ -7,5 +7,9 @@ var searchData=
   ['radio_5finit_4',['Radio_init',['../radio__driver_8c.html#a582f025b267f30a8b79a57cd2a95d5ea',1,'Radio_init(RadioX *radio, TIM_HandleTypeDef *timer, uint32_t channel1, uint32_t channel2):&#160;radio_driver.c'],['../radio__driver_8h.html#a582f025b267f30a8b79a57cd2a95d5ea',1,'Radio_init(RadioX *radio, TIM_HandleTypeDef *timer, uint32_t channel1, uint32_t channel2):&#160;radio_driver.c']]],
   ['radiox_5',['RadioX',['../struct_radio_x.html',1,'']]],
   ['reference_6',['REFERENCE',['../index.html#repository',1,'REPOSITORY REFERENCE'],['../index.html#youtube',1,'YOUTUBE REFERENCE']]],
-  ['repository_20reference_7',['REPOSITORY REFERENCE',['../index.html#repository',1,'']]]
+  ['reference_20manual_7',['REFERENCE MANUAL',['../reports_detail.html#doc3',1,'']]],
+  ['report_8',['OVERALL REPORT',['../reports_detail.html#doc4',1,'']]],
+  ['report_2ec_9',['report.c',['../report_8c.html',1,'']]],
+  ['reports_10',['REPORTS',['../reports_detail.html',1,'']]],
+  ['repository_20reference_11',['REPOSITORY REFERENCE',['../index.html#repository',1,'']]]
 ];
