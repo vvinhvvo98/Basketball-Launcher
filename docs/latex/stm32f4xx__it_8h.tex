@@ -1,5 +1,5 @@
-\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Inc/stm32f4xx\+\_\+it.h File Reference}
-\hypertarget{stm32f4xx__it_8h}{}\label{stm32f4xx__it_8h}\index{Ball\_Launcher\_Controller/Core/Inc/stm32f4xx\_it.h@{Ball\_Launcher\_Controller/Core/Inc/stm32f4xx\_it.h}}
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/stm32f4xx\+\_\+it.h File Reference}
+\hypertarget{stm32f4xx__it_8h}{}\label{stm32f4xx__it_8h}\index{Ball\_Launcher\_Main/Core/Inc/stm32f4xx\_it.h@{Ball\_Launcher\_Main/Core/Inc/stm32f4xx\_it.h}}
 
 
 This file contains the headers of the interrupt handlers.  
@@ -25,7 +25,11 @@ void \mbox{\hyperlink{stm32f4xx__it_8h_adbdfb05858cc36fc520974df37ec3cb0}{Debug\
 void \mbox{\hyperlink{stm32f4xx__it_8h_a6303e1f258cbdc1f970ce579cc015623}{Pend\+SV\+\_\+\+Handler}} (void)
 \begin{DoxyCompactList}\small\item\em This function handles Pendable request for system service. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{stm32f4xx__it_8h_ab5e09814056d617c521549e542639b7e}{Sys\+Tick\+\_\+\+Handler}} (void)
-\begin{DoxyCompactList}\small\item\em This function handles System tick timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function handles System tick timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stm32f4xx__it_8h_a7133f3f78767503641d307386e68bd28}{TIM4\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles TIM4 global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stm32f4xx__it_8h_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}{USART1\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles USART1 global interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -119,6 +123,16 @@ This function handles System service call via SWI instruction.
 
 This function handles System tick timer. 
 
+\Hypertarget{stm32f4xx__it_8h_a7133f3f78767503641d307386e68bd28}\label{stm32f4xx__it_8h_a7133f3f78767503641d307386e68bd28} 
+\index{stm32f4xx\_it.h@{stm32f4xx\_it.h}!TIM4\_IRQHandler@{TIM4\_IRQHandler}}
+\index{TIM4\_IRQHandler@{TIM4\_IRQHandler}!stm32f4xx\_it.h@{stm32f4xx\_it.h}}
+\doxysubsubsection{\texorpdfstring{TIM4\_IRQHandler()}{TIM4\_IRQHandler()}}
+{\footnotesize\ttfamily void TIM4\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles TIM4 global interrupt. 
+
 \Hypertarget{stm32f4xx__it_8h_a1d98923de2ed6b7309b66f9ba2971647}\label{stm32f4xx__it_8h_a1d98923de2ed6b7309b66f9ba2971647} 
 \index{stm32f4xx\_it.h@{stm32f4xx\_it.h}!UsageFault\_Handler@{UsageFault\_Handler}}
 \index{UsageFault\_Handler@{UsageFault\_Handler}!stm32f4xx\_it.h@{stm32f4xx\_it.h}}
@@ -128,4 +142,14 @@ This function handles System tick timer.
 
 
 This function handles Undefined instruction or illegal state. 
+
+\Hypertarget{stm32f4xx__it_8h_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}\label{stm32f4xx__it_8h_a7139cd4baabbbcbab0c1fe6d7d4ae1cc} 
+\index{stm32f4xx\_it.h@{stm32f4xx\_it.h}!USART1\_IRQHandler@{USART1\_IRQHandler}}
+\index{USART1\_IRQHandler@{USART1\_IRQHandler}!stm32f4xx\_it.h@{stm32f4xx\_it.h}}
+\doxysubsubsection{\texorpdfstring{USART1\_IRQHandler()}{USART1\_IRQHandler()}}
+{\footnotesize\ttfamily void USART1\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles USART1 global interrupt. 
 

@@ -1,0 +1,2 @@
+../Core/Src/switch.c:20:6:Switch_init	1
+../Core/Src/switch.c:26:9:Switch_getStatus	1

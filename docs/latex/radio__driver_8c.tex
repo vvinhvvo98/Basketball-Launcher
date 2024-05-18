@@ -1,0 +1,52 @@
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Src/radio\+\_\+driver.c File Reference}
+\hypertarget{radio__driver_8c}{}\label{radio__driver_8c}\index{Ball\_Launcher\_Main/Core/Src/radio\_driver.c@{Ball\_Launcher\_Main/Core/Src/radio\_driver.c}}
+{\ttfamily \#include "{}radio\+\_\+driver.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{radio__driver_8c_a582f025b267f30a8b79a57cd2a95d5ea}{Radio\+\_\+init}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio, TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}timer, uint32\+\_\+t channel1, uint32\+\_\+t channel2)
+\item 
+void \mbox{\hyperlink{radio__driver_8c_a44f4cc75e4b2a4a33e163340fd57c223}{capture\+Pulse\+Width}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
+\item 
+void \mbox{\hyperlink{radio__driver_8c_a492a4fe5ab05721268b3484b7c8e9be5}{update}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio, int pw1, int pw2)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{radio__driver_8c_af148015dfcc60d4476a3db48ee4e5b37}{Radio\+\_\+get\+Pulse\+Width}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{radio__driver_8c_acaa1ddfe413c54eee0f5b043e34f094b}{Radio\+\_\+get\+Status}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{radio__driver_8c_a44f4cc75e4b2a4a33e163340fd57c223}\label{radio__driver_8c_a44f4cc75e4b2a4a33e163340fd57c223} 
+\index{radio\_driver.c@{radio\_driver.c}!capturePulseWidth@{capturePulseWidth}}
+\index{capturePulseWidth@{capturePulseWidth}!radio\_driver.c@{radio\_driver.c}}
+\doxysubsubsection{\texorpdfstring{capturePulseWidth()}{capturePulseWidth()}}
+{\footnotesize\ttfamily void capture\+Pulse\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+\Hypertarget{radio__driver_8c_af148015dfcc60d4476a3db48ee4e5b37}\label{radio__driver_8c_af148015dfcc60d4476a3db48ee4e5b37} 
+\index{radio\_driver.c@{radio\_driver.c}!Radio\_getPulseWidth@{Radio\_getPulseWidth}}
+\index{Radio\_getPulseWidth@{Radio\_getPulseWidth}!radio\_driver.c@{radio\_driver.c}}
+\doxysubsubsection{\texorpdfstring{Radio\_getPulseWidth()}{Radio\_getPulseWidth()}}
+{\footnotesize\ttfamily uint32\+\_\+t Radio\+\_\+get\+Pulse\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+\Hypertarget{radio__driver_8c_acaa1ddfe413c54eee0f5b043e34f094b}\label{radio__driver_8c_acaa1ddfe413c54eee0f5b043e34f094b} 
+\index{radio\_driver.c@{radio\_driver.c}!Radio\_getStatus@{Radio\_getStatus}}
+\index{Radio\_getStatus@{Radio\_getStatus}!radio\_driver.c@{radio\_driver.c}}
+\doxysubsubsection{\texorpdfstring{Radio\_getStatus()}{Radio\_getStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t Radio\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+
+\Hypertarget{radio__driver_8c_a582f025b267f30a8b79a57cd2a95d5ea}\label{radio__driver_8c_a582f025b267f30a8b79a57cd2a95d5ea} 
+\index{radio\_driver.c@{radio\_driver.c}!Radio\_init@{Radio\_init}}
+\index{Radio\_init@{Radio\_init}!radio\_driver.c@{radio\_driver.c}}
+\doxysubsubsection{\texorpdfstring{Radio\_init()}{Radio\_init()}}
+{\footnotesize\ttfamily void Radio\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio,  }\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{timer,  }\item[{uint32\+\_\+t}]{channel1,  }\item[{uint32\+\_\+t}]{channel2 }\end{DoxyParamCaption})}
+
+\Hypertarget{radio__driver_8c_a492a4fe5ab05721268b3484b7c8e9be5}\label{radio__driver_8c_a492a4fe5ab05721268b3484b7c8e9be5} 
+\index{radio\_driver.c@{radio\_driver.c}!update@{update}}
+\index{update@{update}!radio\_driver.c@{radio\_driver.c}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio,  }\item[{int}]{pw1,  }\item[{int}]{pw2 }\end{DoxyParamCaption})}
+

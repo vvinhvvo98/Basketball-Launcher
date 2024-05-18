@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BASKETBALL LAUNCHER: Ball_Launcher_Launcher/Core/Inc/radio_driver.h File Reference</title>
+<title>BASKETBALL LAUNCHER: Ball_Launcher_Main/Core/Inc/radio_driver.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,44 +99,31 @@ $(function(){initNavTree('radio__driver_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">radio_driver.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Header for radio_driver.c file. This file contains the common defines of the application.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for radio_driver.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="radio__driver_8h__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_inc_2radio__driver_8h" alt=""/></div>
-</div>
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_radio_x.html">RadioX</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct representing a radio driver.  <a href="struct_radio_x.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a582f025b267f30a8b79a57cd2a95d5ea" id="r_a582f025b267f30a8b79a57cd2a95d5ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a582f025b267f30a8b79a57cd2a95d5ea">Radio_init</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio, TIM_HandleTypeDef *timer, uint32_t channel1, uint32_t channel2)</td></tr>
-<tr class="memdesc:a582f025b267f30a8b79a57cd2a95d5ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the radio driver.  <br /></td></tr>
 <tr class="separator:a582f025b267f30a8b79a57cd2a95d5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f4cc75e4b2a4a33e163340fd57c223" id="r_a44f4cc75e4b2a4a33e163340fd57c223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f4cc75e4b2a4a33e163340fd57c223">capturePulseWidth</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
-<tr class="memdesc:a44f4cc75e4b2a4a33e163340fd57c223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures the pulse width from the radio signal.  <br /></td></tr>
 <tr class="separator:a44f4cc75e4b2a4a33e163340fd57c223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492a4fe5ab05721268b3484b7c8e9be5" id="r_a492a4fe5ab05721268b3484b7c8e9be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a492a4fe5ab05721268b3484b7c8e9be5">update</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio, int pw1, int pw2)</td></tr>
-<tr class="memdesc:a492a4fe5ab05721268b3484b7c8e9be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the pulse width values.  <br /></td></tr>
 <tr class="separator:a492a4fe5ab05721268b3484b7c8e9be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6d11311b6d85de460732788a14962b9" id="r_ac6d11311b6d85de460732788a14962b9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6d11311b6d85de460732788a14962b9">Radio_getPulseWidth</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
-<tr class="memdesc:ac6d11311b6d85de460732788a14962b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the calculated pulse width.  <br /></td></tr>
-<tr class="separator:ac6d11311b6d85de460732788a14962b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af148015dfcc60d4476a3db48ee4e5b37" id="r_af148015dfcc60d4476a3db48ee4e5b37"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af148015dfcc60d4476a3db48ee4e5b37">Radio_getPulseWidth</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
+<tr class="separator:af148015dfcc60d4476a3db48ee4e5b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa1ddfe413c54eee0f5b043e34f094b" id="r_acaa1ddfe413c54eee0f5b043e34f094b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa1ddfe413c54eee0f5b043e34f094b">Radio_getStatus</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
+<tr class="separator:acaa1ddfe413c54eee0f5b043e34f094b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header for radio_driver.c file. This file contains the common defines of the application. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a44f4cc75e4b2a4a33e163340fd57c223" name="a44f4cc75e4b2a4a33e163340fd57c223"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44f4cc75e4b2a4a33e163340fd57c223">&#9670;&#160;</a></span>capturePulseWidth()</h2>
 
@@ -152,24 +139,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Captures the pulse width from the radio signal. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Struct representing a radio driver.">RadioX</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="ac6d11311b6d85de460732788a14962b9" name="ac6d11311b6d85de460732788a14962b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6d11311b6d85de460732788a14962b9">&#9670;&#160;</a></span>Radio_getPulseWidth()</h2>
+<a id="af148015dfcc60d4476a3db48ee4e5b37" name="af148015dfcc60d4476a3db48ee4e5b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af148015dfcc60d4476a3db48ee4e5b37">&#9670;&#160;</a></span>Radio_getPulseWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double Radio_getPulseWidth </td>
+          <td class="memname">uint32_t Radio_getPulseWidth </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radio_x.html">RadioX</a> *</td>          <td class="paramname"><span class="paramname"><em>radio</em></span></td><td>)</td>
           <td></td>
@@ -177,14 +156,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Gets the calculated pulse width. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Struct representing a radio driver.">RadioX</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Calculated pulse width. </dd></dl>
+</div>
+</div>
+<a id="acaa1ddfe413c54eee0f5b043e34f094b" name="acaa1ddfe413c54eee0f5b043e34f094b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa1ddfe413c54eee0f5b043e34f094b">&#9670;&#160;</a></span>Radio_getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Radio_getStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_radio_x.html">RadioX</a> *</td>          <td class="paramname"><span class="paramname"><em>radio</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -217,17 +204,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the radio driver. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Struct representing a radio driver.">RadioX</a> structure. </td></tr>
-    <tr><td class="paramname">timer</td><td>Pointer to the timer handle. </td></tr>
-    <tr><td class="paramname">channel1</td><td>Timer channel 1 for PWM measurement. </td></tr>
-    <tr><td class="paramname">channel2</td><td>Timer channel 2 for PWM measurement. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="a492a4fe5ab05721268b3484b7c8e9be5" name="a492a4fe5ab05721268b3484b7c8e9be5"></a>
@@ -254,16 +230,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the pulse width values. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Struct representing a radio driver.">RadioX</a> structure. </td></tr>
-    <tr><td class="paramname">pw1</td><td>Pulse width value for channel 1. </td></tr>
-    <tr><td class="paramname">pw2</td><td>Pulse width value for channel 2. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 </div><!-- contents -->
@@ -271,7 +237,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_8d3b96ffa359d03d8cf492af853516bb.html">Inc</a></li><li class="navelem"><a class="el" href="radio__driver_8h.html">radio_driver.h</a></li>
+    <li class="navelem"><a class="el" href="dir_470b2f7df4544cd80a28c8a75644b077.html">Ball_Launcher_Main</a></li><li class="navelem"><a class="el" href="dir_8ed4b786ac1eaecb17d961b3b978f5db.html">Core</a></li><li class="navelem"><a class="el" href="dir_cc760684b4f8932e0e57497339c6a413.html">Inc</a></li><li class="navelem"><a class="el" href="radio__driver_8h.html">radio_driver.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

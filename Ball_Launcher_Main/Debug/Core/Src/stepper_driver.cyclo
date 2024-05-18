@@ -1,0 +1,4 @@
+../Core/Src/stepper_driver.c:12:6:Stepper_init	1
+../Core/Src/stepper_driver.c:19:6:Stepper_enable	1
+../Core/Src/stepper_driver.c:22:6:Stepper_disable	1
+../Core/Src/stepper_driver.c:25:6:Stepper_setspeed	1

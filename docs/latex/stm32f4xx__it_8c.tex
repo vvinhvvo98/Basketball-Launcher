@@ -1,5 +1,5 @@
-\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Src/stm32f4xx\+\_\+it.c File Reference}
-\hypertarget{stm32f4xx__it_8c}{}\label{stm32f4xx__it_8c}\index{Ball\_Launcher\_Controller/Core/Src/stm32f4xx\_it.c@{Ball\_Launcher\_Controller/Core/Src/stm32f4xx\_it.c}}
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Src/stm32f4xx\+\_\+it.c File Reference}
+\hypertarget{stm32f4xx__it_8c}{}\label{stm32f4xx__it_8c}\index{Ball\_Launcher\_Main/Core/Src/stm32f4xx\_it.c@{Ball\_Launcher\_Main/Core/Src/stm32f4xx\_it.c}}
 
 
 Interrupt Service Routines.  
@@ -27,7 +27,18 @@ void \mbox{\hyperlink{stm32f4xx__it_8c_adbdfb05858cc36fc520974df37ec3cb0}{Debug\
 void \mbox{\hyperlink{stm32f4xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}{Pend\+SV\+\_\+\+Handler}} (void)
 \begin{DoxyCompactList}\small\item\em This function handles Pendable request for system service. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{stm32f4xx__it_8c_ab5e09814056d617c521549e542639b7e}{Sys\+Tick\+\_\+\+Handler}} (void)
-\begin{DoxyCompactList}\small\item\em This function handles System tick timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function handles System tick timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stm32f4xx__it_8c_a7133f3f78767503641d307386e68bd28}{TIM4\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles TIM4 global interrupt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{stm32f4xx__it_8c_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}{USART1\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles USART1 global interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32f4xx__it_8c_a85788cec5a97ee377e4ee2e74f026484}{htim4}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32f4xx__it_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -121,6 +132,16 @@ This function handles System service call via SWI instruction.
 
 This function handles System tick timer. 
 
+\Hypertarget{stm32f4xx__it_8c_a7133f3f78767503641d307386e68bd28}\label{stm32f4xx__it_8c_a7133f3f78767503641d307386e68bd28} 
+\index{stm32f4xx\_it.c@{stm32f4xx\_it.c}!TIM4\_IRQHandler@{TIM4\_IRQHandler}}
+\index{TIM4\_IRQHandler@{TIM4\_IRQHandler}!stm32f4xx\_it.c@{stm32f4xx\_it.c}}
+\doxysubsubsection{\texorpdfstring{TIM4\_IRQHandler()}{TIM4\_IRQHandler()}}
+{\footnotesize\ttfamily void TIM4\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles TIM4 global interrupt. 
+
 \Hypertarget{stm32f4xx__it_8c_a1d98923de2ed6b7309b66f9ba2971647}\label{stm32f4xx__it_8c_a1d98923de2ed6b7309b66f9ba2971647} 
 \index{stm32f4xx\_it.c@{stm32f4xx\_it.c}!UsageFault\_Handler@{UsageFault\_Handler}}
 \index{UsageFault\_Handler@{UsageFault\_Handler}!stm32f4xx\_it.c@{stm32f4xx\_it.c}}
@@ -130,4 +151,29 @@ This function handles System tick timer.
 
 
 This function handles Undefined instruction or illegal state. 
+
+\Hypertarget{stm32f4xx__it_8c_a7139cd4baabbbcbab0c1fe6d7d4ae1cc}\label{stm32f4xx__it_8c_a7139cd4baabbbcbab0c1fe6d7d4ae1cc} 
+\index{stm32f4xx\_it.c@{stm32f4xx\_it.c}!USART1\_IRQHandler@{USART1\_IRQHandler}}
+\index{USART1\_IRQHandler@{USART1\_IRQHandler}!stm32f4xx\_it.c@{stm32f4xx\_it.c}}
+\doxysubsubsection{\texorpdfstring{USART1\_IRQHandler()}{USART1\_IRQHandler()}}
+{\footnotesize\ttfamily void USART1\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles USART1 global interrupt. 
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{stm32f4xx__it_8c_a85788cec5a97ee377e4ee2e74f026484}\label{stm32f4xx__it_8c_a85788cec5a97ee377e4ee2e74f026484} 
+\index{stm32f4xx\_it.c@{stm32f4xx\_it.c}!htim4@{htim4}}
+\index{htim4@{htim4}!stm32f4xx\_it.c@{stm32f4xx\_it.c}}
+\doxysubsubsection{\texorpdfstring{htim4}{htim4}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim4\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{stm32f4xx__it_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{stm32f4xx__it_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+\index{stm32f4xx\_it.c@{stm32f4xx\_it.c}!huart1@{huart1}}
+\index{huart1@{huart1}!stm32f4xx\_it.c@{stm32f4xx\_it.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart1\hspace{0.3cm}{\ttfamily [extern]}}
 

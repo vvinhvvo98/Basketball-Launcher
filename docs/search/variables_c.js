@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['y_0',['Y',['../struct_m_p_u6050.html#a98de3e2097facbbea557f864201e435d',1,'MPU6050::Y'],['../main_8c.html#a98de3e2097facbbea557f864201e435d',1,'Y:&#160;main.c']]]
+  ['yaw_0',['yaw',['../main_8c.html#a05209206c748bf62c46f18458c162d03',1,'main.c']]],
+  ['yawdirection_1',['yawDirection',['../main_8c.html#aaf375b72fdf3ca768336444db8ab5871',1,'main.c']]]
 ];

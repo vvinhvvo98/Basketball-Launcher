@@ -1,0 +1,48 @@
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/stepper\+\_\+driver.h File Reference}
+\hypertarget{stepper__driver_8h}{}\label{stepper__driver_8h}\index{Ball\_Launcher\_Main/Core/Inc/stepper\_driver.h@{Ball\_Launcher\_Main/Core/Inc/stepper\_driver.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_stepper_x}{StepperX}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stepper__driver_8h_a759da7f637d30f358a04cf5486770d90}{Stepper\+\_\+init}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIO, uint16\+\_\+t EN\+\_\+\+PIN, uint16\+\_\+t DIR\+\_\+\+PIN, uint16\+\_\+t STP\+\_\+\+PIN)
+\item 
+void \mbox{\hyperlink{stepper__driver_8h_aea240fcf4b912b8cb0a1b3349dbf79bc}{Stepper\+\_\+enable}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx)
+\item 
+void \mbox{\hyperlink{stepper__driver_8h_ab88702d656c15ed6196e1c312be3bf26}{Stepper\+\_\+disable}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx)
+\item 
+void \mbox{\hyperlink{stepper__driver_8h_a9da03ce23b12c6bfaedaeaea962dc53f}{Stepper\+\_\+setspeed}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx, uint16\+\_\+t speed, uint8\+\_\+t dir)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{stepper__driver_8h_ab88702d656c15ed6196e1c312be3bf26}\label{stepper__driver_8h_ab88702d656c15ed6196e1c312be3bf26} 
+\index{stepper\_driver.h@{stepper\_driver.h}!Stepper\_disable@{Stepper\_disable}}
+\index{Stepper\_disable@{Stepper\_disable}!stepper\_driver.h@{stepper\_driver.h}}
+\doxysubsubsection{\texorpdfstring{Stepper\_disable()}{Stepper\_disable()}}
+{\footnotesize\ttfamily void Stepper\+\_\+disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx }\end{DoxyParamCaption})}
+
+\Hypertarget{stepper__driver_8h_aea240fcf4b912b8cb0a1b3349dbf79bc}\label{stepper__driver_8h_aea240fcf4b912b8cb0a1b3349dbf79bc} 
+\index{stepper\_driver.h@{stepper\_driver.h}!Stepper\_enable@{Stepper\_enable}}
+\index{Stepper\_enable@{Stepper\_enable}!stepper\_driver.h@{stepper\_driver.h}}
+\doxysubsubsection{\texorpdfstring{Stepper\_enable()}{Stepper\_enable()}}
+{\footnotesize\ttfamily void Stepper\+\_\+enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx }\end{DoxyParamCaption})}
+
+\Hypertarget{stepper__driver_8h_a759da7f637d30f358a04cf5486770d90}\label{stepper__driver_8h_a759da7f637d30f358a04cf5486770d90} 
+\index{stepper\_driver.h@{stepper\_driver.h}!Stepper\_init@{Stepper\_init}}
+\index{Stepper\_init@{Stepper\_init}!stepper\_driver.h@{stepper\_driver.h}}
+\doxysubsubsection{\texorpdfstring{Stepper\_init()}{Stepper\_init()}}
+{\footnotesize\ttfamily void Stepper\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIO,  }\item[{uint16\+\_\+t}]{EN\+\_\+\+PIN,  }\item[{uint16\+\_\+t}]{DIR\+\_\+\+PIN,  }\item[{uint16\+\_\+t}]{STP\+\_\+\+PIN }\end{DoxyParamCaption})}
+
+\Hypertarget{stepper__driver_8h_a9da03ce23b12c6bfaedaeaea962dc53f}\label{stepper__driver_8h_a9da03ce23b12c6bfaedaeaea962dc53f} 
+\index{stepper\_driver.h@{stepper\_driver.h}!Stepper\_setspeed@{Stepper\_setspeed}}
+\index{Stepper\_setspeed@{Stepper\_setspeed}!stepper\_driver.h@{stepper\_driver.h}}
+\doxysubsubsection{\texorpdfstring{Stepper\_setspeed()}{Stepper\_setspeed()}}
+{\footnotesize\ttfamily void Stepper\+\_\+setspeed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx,  }\item[{uint16\+\_\+t}]{speed,  }\item[{uint8\+\_\+t}]{dir }\end{DoxyParamCaption})}
+

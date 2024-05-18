@@ -99,9 +99,6 @@ $(function(){initNavTree('struct_radio_x.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 
-<p>Struct representing a radio driver.  
- <a href="#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="">radio_driver.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -120,12 +117,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:acbcc8fb505a4cdd9573f816fd073e525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a0a90242eea451f43eeb3e08d6212b2" id="r_a7a0a90242eea451f43eeb3e08d6212b2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a0a90242eea451f43eeb3e08d6212b2">counter2</a></td></tr>
 <tr class="separator:a7a0a90242eea451f43eeb3e08d6212b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3a92e2b80deeb063f71f96c4549137" id="r_a3e3a92e2b80deeb063f71f96c4549137"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e3a92e2b80deeb063f71f96c4549137">pulseWidth</a></td></tr>
-<tr class="separator:a3e3a92e2b80deeb063f71f96c4549137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff1c7c8451b7fa9523adb103ac90b72" id="r_a9ff1c7c8451b7fa9523adb103ac90b72"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ff1c7c8451b7fa9523adb103ac90b72">pulseWidth</a></td></tr>
+<tr class="separator:a9ff1c7c8451b7fa9523adb103ac90b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219998cfb366307196d1013046d3f5d2" id="r_a219998cfb366307196d1013046d3f5d2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219998cfb366307196d1013046d3f5d2">stop</a></td></tr>
+<tr class="separator:a219998cfb366307196d1013046d3f5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Struct representing a radio driver. </p>
-</div><h2 class="groupheader">Field Documentation</h2>
+<h2 class="groupheader">Field Documentation</h2>
 <a id="a9dce966b13d986333ed5a0b5ab1fe956" name="a9dce966b13d986333ed5a0b5ab1fe956"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dce966b13d986333ed5a0b5ab1fe956">&#9670;&#160;</a></span>channel1</h2>
 
@@ -137,7 +134,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Timer channel 1 for PWM measurement. </p>
 
 </div>
 </div>
@@ -152,7 +148,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Timer channel 2 for PWM measurement. </p>
 
 </div>
 </div>
@@ -167,7 +162,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Counter for number of captures on channel 1. </p>
 
 </div>
 </div>
@@ -182,22 +176,34 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Counter for number of captures on channel 2. </p>
 
 </div>
 </div>
-<a id="a3e3a92e2b80deeb063f71f96c4549137" name="a3e3a92e2b80deeb063f71f96c4549137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e3a92e2b80deeb063f71f96c4549137">&#9670;&#160;</a></span>pulseWidth</h2>
+<a id="a9ff1c7c8451b7fa9523adb103ac90b72" name="a9ff1c7c8451b7fa9523adb103ac90b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff1c7c8451b7fa9523adb103ac90b72">&#9670;&#160;</a></span>pulseWidth</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double pulseWidth</td>
+          <td class="memname">uint32_t pulseWidth</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Calculated pulse width. </p>
+
+</div>
+</div>
+<a id="a219998cfb366307196d1013046d3f5d2" name="a219998cfb366307196d1013046d3f5d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219998cfb366307196d1013046d3f5d2">&#9670;&#160;</a></span>stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t stop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -212,7 +218,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sum of captured values for channel 1. </p>
 
 </div>
 </div>
@@ -227,7 +232,6 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sum of captured values for channel 2. </p>
 
 </div>
 </div>
@@ -242,12 +246,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Timer handle for PWM measurement. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>Ball_Launcher_Launcher/Core/Inc/<a class="el" href="">radio_driver.h</a></li>
+<li>Ball_Launcher_Main/Core/Inc/<a class="el" href="">radio_driver.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

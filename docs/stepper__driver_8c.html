@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BASKETBALL LAUNCHER: Ball_Launcher_Launcher/Core/Src/stepper_driver.c File Reference</title>
+<title>BASKETBALL LAUNCHER: Ball_Launcher_Main/Core/Src/stepper_driver.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,47 +98,31 @@ $(function(){initNavTree('stepper__driver_8c.html',''); initResizable(); });
   <div class="headertitle"><div class="title">stepper_driver.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Implementation of stepper motor driver functions.  
-<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="">stepper_driver.h</a>&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for stepper_driver.c:</div>
-<div class="dyncontent">
-<div class="center"><img src="stepper__driver_8c__incl.png" border="0" usemap="#a_ball___launcher___launcher_2_core_2_src_2stepper__driver_8c" alt=""/></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9630cd83b13f7922ecde99a323ca8385" id="r_a9630cd83b13f7922ecde99a323ca8385"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9630cd83b13f7922ecde99a323ca8385">stepper_init</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx, TIM_HandleTypeDef *timer, uint32_t channel, GPIO_TypeDef *GPIO, uint16_t EN_PIN, uint16_t DIR_PIN, uint16_t gearRatio)</td></tr>
-<tr class="memdesc:a9630cd83b13f7922ecde99a323ca8385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the stepper motor.  <br /></td></tr>
-<tr class="separator:a9630cd83b13f7922ecde99a323ca8385"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabb336128283f9f044c232509c2ee058" id="r_aabb336128283f9f044c232509c2ee058"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb336128283f9f044c232509c2ee058">stepper_enable</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx)</td></tr>
-<tr class="memdesc:aabb336128283f9f044c232509c2ee058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the stepper motor.  <br /></td></tr>
-<tr class="separator:aabb336128283f9f044c232509c2ee058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7653383f7841e64f6dc24ab3fcf4a06f" id="r_a7653383f7841e64f6dc24ab3fcf4a06f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7653383f7841e64f6dc24ab3fcf4a06f">stepper_disable</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx)</td></tr>
-<tr class="memdesc:a7653383f7841e64f6dc24ab3fcf4a06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables the stepper motor.  <br /></td></tr>
-<tr class="separator:a7653383f7841e64f6dc24ab3fcf4a06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c4230eed0c2005a01090ec319310939" id="r_a0c4230eed0c2005a01090ec319310939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c4230eed0c2005a01090ec319310939">stepper_setspeed</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx, int64_t speed)</td></tr>
-<tr class="memdesc:a0c4230eed0c2005a01090ec319310939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the speed of the stepper motor.  <br /></td></tr>
-<tr class="separator:a0c4230eed0c2005a01090ec319310939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a759da7f637d30f358a04cf5486770d90" id="r_a759da7f637d30f358a04cf5486770d90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a759da7f637d30f358a04cf5486770d90">Stepper_init</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx, GPIO_TypeDef *GPIO, uint16_t EN_PIN, uint16_t DIR_PIN, uint16_t STP_PIN)</td></tr>
+<tr class="separator:a759da7f637d30f358a04cf5486770d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea240fcf4b912b8cb0a1b3349dbf79bc" id="r_aea240fcf4b912b8cb0a1b3349dbf79bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea240fcf4b912b8cb0a1b3349dbf79bc">Stepper_enable</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx)</td></tr>
+<tr class="separator:aea240fcf4b912b8cb0a1b3349dbf79bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88702d656c15ed6196e1c312be3bf26" id="r_ab88702d656c15ed6196e1c312be3bf26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab88702d656c15ed6196e1c312be3bf26">Stepper_disable</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx)</td></tr>
+<tr class="separator:ab88702d656c15ed6196e1c312be3bf26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9da03ce23b12c6bfaedaeaea962dc53f" id="r_a9da03ce23b12c6bfaedaeaea962dc53f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9da03ce23b12c6bfaedaeaea962dc53f">Stepper_setspeed</a> (<a class="el" href="struct_stepper_x.html">StepperX</a> *stepperx, uint16_t speed, uint8_t dir)</td></tr>
+<tr class="separator:a9da03ce23b12c6bfaedaeaea962dc53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementation of stepper motor driver functions. </p>
-<p>Created on: May 3, 2024 Author: vvinh </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a7653383f7841e64f6dc24ab3fcf4a06f" name="a7653383f7841e64f6dc24ab3fcf4a06f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7653383f7841e64f6dc24ab3fcf4a06f">&#9670;&#160;</a></span>stepper_disable()</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab88702d656c15ed6196e1c312be3bf26" name="ab88702d656c15ed6196e1c312be3bf26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab88702d656c15ed6196e1c312be3bf26">&#9670;&#160;</a></span>Stepper_disable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void stepper_disable </td>
+          <td class="memname">void Stepper_disable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_stepper_x.html">StepperX</a> *</td>          <td class="paramname"><span class="paramname"><em>stepperx</em></span></td><td>)</td>
           <td></td>
@@ -146,24 +130,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disables the stepper motor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stepperx</td><td>Pointer to the <a class="el" href="struct_stepper_x.html" title="Struct representing a stepper motor.">StepperX</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="aabb336128283f9f044c232509c2ee058" name="aabb336128283f9f044c232509c2ee058"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabb336128283f9f044c232509c2ee058">&#9670;&#160;</a></span>stepper_enable()</h2>
+<a id="aea240fcf4b912b8cb0a1b3349dbf79bc" name="aea240fcf4b912b8cb0a1b3349dbf79bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea240fcf4b912b8cb0a1b3349dbf79bc">&#9670;&#160;</a></span>Stepper_enable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void stepper_enable </td>
+          <td class="memname">void Stepper_enable </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_stepper_x.html">StepperX</a> *</td>          <td class="paramname"><span class="paramname"><em>stepperx</em></span></td><td>)</td>
           <td></td>
@@ -171,36 +147,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enables the stepper motor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stepperx</td><td>Pointer to the <a class="el" href="struct_stepper_x.html" title="Struct representing a stepper motor.">StepperX</a> structure. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="a9630cd83b13f7922ecde99a323ca8385" name="a9630cd83b13f7922ecde99a323ca8385"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9630cd83b13f7922ecde99a323ca8385">&#9670;&#160;</a></span>stepper_init()</h2>
+<a id="a759da7f637d30f358a04cf5486770d90" name="a759da7f637d30f358a04cf5486770d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a759da7f637d30f358a04cf5486770d90">&#9670;&#160;</a></span>Stepper_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void stepper_init </td>
+          <td class="memname">void Stepper_init </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_stepper_x.html">StepperX</a> *</td>          <td class="paramname"><span class="paramname"><em>stepperx</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TIM_HandleTypeDef *</td>          <td class="paramname"><span class="paramname"><em>timer</em>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>channel</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -220,54 +178,36 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>gearRatio</em></span>&#160;)</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>STP_PIN</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes the stepper motor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stepperx</td><td>Pointer to the <a class="el" href="struct_stepper_x.html" title="Struct representing a stepper motor.">StepperX</a> structure. </td></tr>
-    <tr><td class="paramname">timer</td><td>Pointer to the timer handle. </td></tr>
-    <tr><td class="paramname">channel</td><td>Timer channel for PWM generation. </td></tr>
-    <tr><td class="paramname">GPIO</td><td>GPIO port for control pins. </td></tr>
-    <tr><td class="paramname">EN_PIN</td><td>Enable pin for the stepper motor driver. </td></tr>
-    <tr><td class="paramname">DIR_PIN</td><td>Direction pin for the stepper motor driver. </td></tr>
-    <tr><td class="paramname">gearRatio</td><td>Gear ratio of the stepper motor. </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="a0c4230eed0c2005a01090ec319310939" name="a0c4230eed0c2005a01090ec319310939"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c4230eed0c2005a01090ec319310939">&#9670;&#160;</a></span>stepper_setspeed()</h2>
+<a id="a9da03ce23b12c6bfaedaeaea962dc53f" name="a9da03ce23b12c6bfaedaeaea962dc53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9da03ce23b12c6bfaedaeaea962dc53f">&#9670;&#160;</a></span>Stepper_setspeed()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void stepper_setspeed </td>
+          <td class="memname">void Stepper_setspeed </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_stepper_x.html">StepperX</a> *</td>          <td class="paramname"><span class="paramname"><em>stepperx</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int64_t</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>speed</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Sets the speed of the stepper motor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">stepperx</td><td>Pointer to the <a class="el" href="struct_stepper_x.html" title="Struct representing a stepper motor.">StepperX</a> structure. </td></tr>
-    <tr><td class="paramname">speed</td><td>Desired speed of the stepper motor. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -276,7 +216,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_c1ce51abe2a085a3a7c487358c25ad30.html">Ball_Launcher_Launcher</a></li><li class="navelem"><a class="el" href="dir_68a92c5493cf2247fbbfdd73a853193e.html">Core</a></li><li class="navelem"><a class="el" href="dir_104c757465de1dcf001a2eea2d64e476.html">Src</a></li><li class="navelem"><a class="el" href="stepper__driver_8c.html">stepper_driver.c</a></li>
+    <li class="navelem"><a class="el" href="dir_470b2f7df4544cd80a28c8a75644b077.html">Ball_Launcher_Main</a></li><li class="navelem"><a class="el" href="dir_8ed4b786ac1eaecb17d961b3b978f5db.html">Core</a></li><li class="navelem"><a class="el" href="dir_9d44fe5be42f876ebc51cf230081f62d.html">Src</a></li><li class="navelem"><a class="el" href="stepper__driver_8c.html">stepper_driver.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

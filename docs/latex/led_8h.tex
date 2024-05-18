@@ -1,0 +1,48 @@
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/led.h File Reference}
+\hypertarget{led_8h}{}\label{led_8h}\index{Ball\_Launcher\_Main/Core/Inc/led.h@{Ball\_Launcher\_Main/Core/Inc/led.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_e_d_x}{LEDX}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{led_8h_a1738f0617f5288587db1eefbfa56a347}{LED\+\_\+init}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIO, uint16\+\_\+t PIN)
+\item 
+void \mbox{\hyperlink{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc}{LED\+\_\+on}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx)
+\item 
+void \mbox{\hyperlink{led_8h_ae9f7736c275436329538ba202f39ad23}{LED\+\_\+off}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx)
+\item 
+void \mbox{\hyperlink{led_8h_ad39024aa963518d6362d1364542ff611}{LED\+\_\+toggle}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{led_8h_a1738f0617f5288587db1eefbfa56a347}\label{led_8h_a1738f0617f5288587db1eefbfa56a347} 
+\index{led.h@{led.h}!LED\_init@{LED\_init}}
+\index{LED\_init@{LED\_init}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_init()}{LED\_init()}}
+{\footnotesize\ttfamily void LED\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
+
+\Hypertarget{led_8h_ae9f7736c275436329538ba202f39ad23}\label{led_8h_ae9f7736c275436329538ba202f39ad23} 
+\index{led.h@{led.h}!LED\_off@{LED\_off}}
+\index{LED\_off@{LED\_off}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_off()}{LED\_off()}}
+{\footnotesize\ttfamily void LED\+\_\+off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx }\end{DoxyParamCaption})}
+
+\Hypertarget{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc}\label{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc} 
+\index{led.h@{led.h}!LED\_on@{LED\_on}}
+\index{LED\_on@{LED\_on}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_on()}{LED\_on()}}
+{\footnotesize\ttfamily void LED\+\_\+on (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx }\end{DoxyParamCaption})}
+
+\Hypertarget{led_8h_ad39024aa963518d6362d1364542ff611}\label{led_8h_ad39024aa963518d6362d1364542ff611} 
+\index{led.h@{led.h}!LED\_toggle@{LED\_toggle}}
+\index{LED\_toggle@{LED\_toggle}!led.h@{led.h}}
+\doxysubsubsection{\texorpdfstring{LED\_toggle()}{LED\_toggle()}}
+{\footnotesize\ttfamily void LED\+\_\+toggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx }\end{DoxyParamCaption})}
+

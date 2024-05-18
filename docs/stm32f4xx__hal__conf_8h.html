@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BASKETBALL LAUNCHER: Ball_Launcher_Controller/Core/Inc/stm32f4xx_hal_conf.h File Reference</title>
+<title>BASKETBALL LAUNCHER: Ball_Launcher_Main/Core/Inc/stm32f4xx_hal_conf.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,8 +104,8 @@ $(function(){initNavTree('stm32f4xx__hal__conf_8h.html',''); initResizable(); })
 <code>#include &quot;stm32f4xx_hal_dma.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal_cortex.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal_flash.h&quot;</code><br />
-<code>#include &quot;stm32f4xx_hal_i2c.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal_pwr.h&quot;</code><br />
+<code>#include &quot;stm32f4xx_hal_tim.h&quot;</code><br />
 <code>#include &quot;stm32f4xx_hal_uart.h&quot;</code><br />
 </div>
 <p><a href="">Go to the source code of this file.</a></p>
@@ -115,8 +115,8 @@ Macros</h2></td></tr>
 <tr class="memitem:a877ae99e8c47a609ea97c888912bf75f" id="r_a877ae99e8c47a609ea97c888912bf75f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a877ae99e8c47a609ea97c888912bf75f">HAL_MODULE_ENABLED</a></td></tr>
 <tr class="memdesc:a877ae99e8c47a609ea97c888912bf75f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the list of modules to be used in the HAL driver.  <br /></td></tr>
 <tr class="separator:a877ae99e8c47a609ea97c888912bf75f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19999766418b0224871f732d800841c6" id="r_a19999766418b0224871f732d800841c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19999766418b0224871f732d800841c6">HAL_I2C_MODULE_ENABLED</a></td></tr>
-<tr class="separator:a19999766418b0224871f732d800841c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23382b8f04b3e6db2c59dfa1ef5ea4a2" id="r_a23382b8f04b3e6db2c59dfa1ef5ea4a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23382b8f04b3e6db2c59dfa1ef5ea4a2">HAL_TIM_MODULE_ENABLED</a></td></tr>
+<tr class="separator:a23382b8f04b3e6db2c59dfa1ef5ea4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a167269406e73327b95c3bb7b9cfe6d89" id="r_a167269406e73327b95c3bb7b9cfe6d89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a167269406e73327b95c3bb7b9cfe6d89">HAL_UART_MODULE_ENABLED</a></td></tr>
 <tr class="separator:a167269406e73327b95c3bb7b9cfe6d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86165f80d6078719ee0715afe13febf5" id="r_a86165f80d6078719ee0715afe13febf5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86165f80d6078719ee0715afe13febf5">HAL_GPIO_MODULE_ENABLED</a></td></tr>
@@ -256,13 +256,13 @@ Macros</h2></td></tr>
 <tr class="separator:a41e5cb0b39ad74f0aafb83dbcecf9006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bcc92663c42ec434f527847bbc4abc1" id="r_a3bcc92663c42ec434f527847bbc4abc1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bcc92663c42ec434f527847bbc4abc1">MAC_ADDR5</a>&#160;&#160;&#160;0U</td></tr>
 <tr class="separator:a3bcc92663c42ec434f527847bbc4abc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cdaf687f7a7f2dba570d5a722990786" id="r_a0cdaf687f7a7f2dba570d5a722990786"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for receive               */</td></tr>
+<tr class="memitem:a0cdaf687f7a7f2dba570d5a722990786" id="r_a0cdaf687f7a7f2dba570d5a722990786"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main___c_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for receive               */</td></tr>
 <tr class="separator:a0cdaf687f7a7f2dba570d5a722990786"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af83956dfc1b135c3c92ac409758b6cf4" id="r_af83956dfc1b135c3c92ac409758b6cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for transmit              */</td></tr>
+<tr class="memitem:af83956dfc1b135c3c92ac409758b6cf4" id="r_af83956dfc1b135c3c92ac409758b6cf4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main___c_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for transmit              */</td></tr>
 <tr class="separator:af83956dfc1b135c3c92ac409758b6cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62b0f224fa9c4f2e5574c9e52526f751" id="r_a62b0f224fa9c4f2e5574c9e52526f751"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62b0f224fa9c4f2e5574c9e52526f751">ETH_RXBUFNB</a>&#160;&#160;&#160;4U       /* 4 Rx buffers of size <a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>  */</td></tr>
+<tr class="memitem:a62b0f224fa9c4f2e5574c9e52526f751" id="r_a62b0f224fa9c4f2e5574c9e52526f751"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62b0f224fa9c4f2e5574c9e52526f751">ETH_RXBUFNB</a>&#160;&#160;&#160;4U       /* 4 Rx buffers of size <a class="el" href="stm32f4xx__hal__conf___c_8h.html#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>  */</td></tr>
 <tr class="separator:a62b0f224fa9c4f2e5574c9e52526f751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ad07ad8fa6f8639ab8ef362390d86c7" id="r_a4ad07ad8fa6f8639ab8ef362390d86c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad07ad8fa6f8639ab8ef362390d86c7">ETH_TXBUFNB</a>&#160;&#160;&#160;4U       /* 4 Tx buffers of size <a class="el" href="#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>  */</td></tr>
+<tr class="memitem:a4ad07ad8fa6f8639ab8ef362390d86c7" id="r_a4ad07ad8fa6f8639ab8ef362390d86c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ad07ad8fa6f8639ab8ef362390d86c7">ETH_TXBUFNB</a>&#160;&#160;&#160;4U       /* 4 Tx buffers of size <a class="el" href="stm32f4xx__hal__conf___c_8h.html#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>  */</td></tr>
 <tr class="separator:a4ad07ad8fa6f8639ab8ef362390d86c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25f014091aaba92bdd9d95d0b2f00503" id="r_a25f014091aaba92bdd9d95d0b2f00503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25f014091aaba92bdd9d95d0b2f00503">DP83848_PHY_ADDRESS</a></td></tr>
 <tr class="separator:a25f014091aaba92bdd9d95d0b2f00503"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -371,7 +371,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ETH_RX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for receive               */</td>
+          <td class="memname">#define ETH_RX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main___c_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for receive               */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -385,7 +385,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ETH_RXBUFNB&#160;&#160;&#160;4U       /* 4 Rx buffers of size <a class="el" href="#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>  */</td>
+          <td class="memname">#define ETH_RXBUFNB&#160;&#160;&#160;4U       /* 4 Rx buffers of size <a class="el" href="stm32f4xx__hal__conf___c_8h.html#a0cdaf687f7a7f2dba570d5a722990786">ETH_RX_BUF_SIZE</a>  */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -399,7 +399,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ETH_TX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for transmit              */</td>
+          <td class="memname">#define ETH_TX_BUF_SIZE&#160;&#160;&#160;ETH_MAX_PACKET_SIZE /* <a class="el" href="main___c_8c.html#a542df3d5bbe8c96a672476931ec18220">buffer</a> size for transmit              */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -413,7 +413,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ETH_TXBUFNB&#160;&#160;&#160;4U       /* 4 Tx buffers of size <a class="el" href="#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>  */</td>
+          <td class="memname">#define ETH_TXBUFNB&#160;&#160;&#160;4U       /* 4 Tx buffers of size <a class="el" href="stm32f4xx__hal__conf___c_8h.html#af83956dfc1b135c3c92ac409758b6cf4">ETH_TX_BUF_SIZE</a>  */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -507,20 +507,6 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a19999766418b0224871f732d800841c6" name="a19999766418b0224871f732d800841c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19999766418b0224871f732d800841c6">&#9670;&#160;</a></span>HAL_I2C_MODULE_ENABLED</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define HAL_I2C_MODULE_ENABLED</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a877ae99e8c47a609ea97c888912bf75f" name="a877ae99e8c47a609ea97c888912bf75f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a877ae99e8c47a609ea97c888912bf75f">&#9670;&#160;</a></span>HAL_MODULE_ENABLED</h2>
 
@@ -559,6 +545,20 @@ Macros</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define HAL_RCC_MODULE_ENABLED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23382b8f04b3e6db2c59dfa1ef5ea4a2" name="a23382b8f04b3e6db2c59dfa1ef5ea4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23382b8f04b3e6db2c59dfa1ef5ea4a2">&#9670;&#160;</a></span>HAL_TIM_MODULE_ENABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAL_TIM_MODULE_ENABLED</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1742,7 +1742,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a32e220f89ab7609f232780d068ad339.html">Ball_Launcher_Controller</a></li><li class="navelem"><a class="el" href="dir_3bbab98ef2025f84866ee15d6a34516b.html">Core</a></li><li class="navelem"><a class="el" href="dir_f63d1d19b1344f6eb6e4bb6cdb2a585f.html">Inc</a></li><li class="navelem"><a class="el" href="stm32f4xx__hal__conf_8h.html">stm32f4xx_hal_conf.h</a></li>
+    <li class="navelem"><a class="el" href="dir_470b2f7df4544cd80a28c8a75644b077.html">Ball_Launcher_Main</a></li><li class="navelem"><a class="el" href="dir_8ed4b786ac1eaecb17d961b3b978f5db.html">Core</a></li><li class="navelem"><a class="el" href="dir_cc760684b4f8932e0e57497339c6a413.html">Inc</a></li><li class="navelem"><a class="el" href="stm32f4xx__hal__conf_8h.html">stm32f4xx_hal_conf.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

@@ -1,20 +1,20 @@
-\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Inc/stm32f4xx\+\_\+hal\+\_\+conf.h File Reference}
-\hypertarget{stm32f4xx__hal__conf_8h}{}\label{stm32f4xx__hal__conf_8h}\index{Ball\_Launcher\_Controller/Core/Inc/stm32f4xx\_hal\_conf.h@{Ball\_Launcher\_Controller/Core/Inc/stm32f4xx\_hal\_conf.h}}
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/stm32f4xx\+\_\+hal\+\_\+conf.h File Reference}
+\hypertarget{stm32f4xx__hal__conf_8h}{}\label{stm32f4xx__hal__conf_8h}\index{Ball\_Launcher\_Main/Core/Inc/stm32f4xx\_hal\_conf.h@{Ball\_Launcher\_Main/Core/Inc/stm32f4xx\_hal\_conf.h}}
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+rcc.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+gpio.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+exti.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+dma.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+cortex.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+flash.\+h"{}}\newline
-{\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+i2c.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+pwr.\+h"{}}\newline
+{\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+tim.\+h"{}}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal\+\_\+uart.\+h"{}}\newline
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a877ae99e8c47a609ea97c888912bf75f}{HAL\+\_\+\+MODULE\+\_\+\+ENABLED}}
 \begin{DoxyCompactList}\small\item\em This is the list of modules to be used in the HAL driver. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a19999766418b0224871f732d800841c6}{HAL\+\_\+\+I2\+C\+\_\+\+MODULE\+\_\+\+ENABLED}}
+\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a23382b8f04b3e6db2c59dfa1ef5ea4a2}{HAL\+\_\+\+TIM\+\_\+\+MODULE\+\_\+\+ENABLED}}
 \item 
 \#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a167269406e73327b95c3bb7b9cfe6d89}{HAL\+\_\+\+UART\+\_\+\+MODULE\+\_\+\+ENABLED}}
 \item 
@@ -148,13 +148,13 @@
 \item 
 \#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a3bcc92663c42ec434f527847bbc4abc1}{MAC\+\_\+\+ADDR5}}~0U
 \item 
-\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a0cdaf687f7a7f2dba570d5a722990786}{ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for receive               \texorpdfstring{$\ast$}{*}/
+\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a0cdaf687f7a7f2dba570d5a722990786}{ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main___c_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for receive               \texorpdfstring{$\ast$}{*}/
 \item 
-\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_af83956dfc1b135c3c92ac409758b6cf4}{ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE}}~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for transmit              \texorpdfstring{$\ast$}{*}/
+\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_af83956dfc1b135c3c92ac409758b6cf4}{ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE}}~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main___c_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for transmit              \texorpdfstring{$\ast$}{*}/
 \item 
-\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a62b0f224fa9c4f2e5574c9e52526f751}{ETH\+\_\+\+RXBUFNB}}~4U       /\texorpdfstring{$\ast$}{*} 4 Rx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a0cdaf687f7a7f2dba570d5a722990786}{ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/
+\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a62b0f224fa9c4f2e5574c9e52526f751}{ETH\+\_\+\+RXBUFNB}}~4U       /\texorpdfstring{$\ast$}{*} 4 Rx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf___c_8h_a0cdaf687f7a7f2dba570d5a722990786}{ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/
 \item 
-\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a4ad07ad8fa6f8639ab8ef362390d86c7}{ETH\+\_\+\+TXBUFNB}}~4U       /\texorpdfstring{$\ast$}{*} 4 Tx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf_8h_af83956dfc1b135c3c92ac409758b6cf4}{ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/
+\#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a4ad07ad8fa6f8639ab8ef362390d86c7}{ETH\+\_\+\+TXBUFNB}}~4U       /\texorpdfstring{$\ast$}{*} 4 Tx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf___c_8h_af83956dfc1b135c3c92ac409758b6cf4}{ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/
 \item 
 \#define \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a25f014091aaba92bdd9d95d0b2f00503}{DP83848\+\_\+\+PHY\+\_\+\+ADDRESS}}
 \item 
@@ -235,25 +235,25 @@ Include module\textquotesingle{}s header file.
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!ETH\_RX\_BUF\_SIZE@{ETH\_RX\_BUF\_SIZE}}
 \index{ETH\_RX\_BUF\_SIZE@{ETH\_RX\_BUF\_SIZE}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{ETH\_RX\_BUF\_SIZE}{ETH\_RX\_BUF\_SIZE}}
-{\footnotesize\ttfamily \#define ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for receive               \texorpdfstring{$\ast$}{*}/}
+{\footnotesize\ttfamily \#define ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main___c_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for receive               \texorpdfstring{$\ast$}{*}/}
 
 \Hypertarget{stm32f4xx__hal__conf_8h_a62b0f224fa9c4f2e5574c9e52526f751}\label{stm32f4xx__hal__conf_8h_a62b0f224fa9c4f2e5574c9e52526f751} 
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!ETH\_RXBUFNB@{ETH\_RXBUFNB}}
 \index{ETH\_RXBUFNB@{ETH\_RXBUFNB}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{ETH\_RXBUFNB}{ETH\_RXBUFNB}}
-{\footnotesize\ttfamily \#define ETH\+\_\+\+RXBUFNB~4U       /\texorpdfstring{$\ast$}{*} 4 Rx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf_8h_a0cdaf687f7a7f2dba570d5a722990786}{ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/}
+{\footnotesize\ttfamily \#define ETH\+\_\+\+RXBUFNB~4U       /\texorpdfstring{$\ast$}{*} 4 Rx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf___c_8h_a0cdaf687f7a7f2dba570d5a722990786}{ETH\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/}
 
 \Hypertarget{stm32f4xx__hal__conf_8h_af83956dfc1b135c3c92ac409758b6cf4}\label{stm32f4xx__hal__conf_8h_af83956dfc1b135c3c92ac409758b6cf4} 
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!ETH\_TX\_BUF\_SIZE@{ETH\_TX\_BUF\_SIZE}}
 \index{ETH\_TX\_BUF\_SIZE@{ETH\_TX\_BUF\_SIZE}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{ETH\_TX\_BUF\_SIZE}{ETH\_TX\_BUF\_SIZE}}
-{\footnotesize\ttfamily \#define ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for transmit              \texorpdfstring{$\ast$}{*}/}
+{\footnotesize\ttfamily \#define ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE~ETH\+\_\+\+MAX\+\_\+\+PACKET\+\_\+\+SIZE /\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main___c_8c_a542df3d5bbe8c96a672476931ec18220}{buffer}} size for transmit              \texorpdfstring{$\ast$}{*}/}
 
 \Hypertarget{stm32f4xx__hal__conf_8h_a4ad07ad8fa6f8639ab8ef362390d86c7}\label{stm32f4xx__hal__conf_8h_a4ad07ad8fa6f8639ab8ef362390d86c7} 
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!ETH\_TXBUFNB@{ETH\_TXBUFNB}}
 \index{ETH\_TXBUFNB@{ETH\_TXBUFNB}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{ETH\_TXBUFNB}{ETH\_TXBUFNB}}
-{\footnotesize\ttfamily \#define ETH\+\_\+\+TXBUFNB~4U       /\texorpdfstring{$\ast$}{*} 4 Tx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf_8h_af83956dfc1b135c3c92ac409758b6cf4}{ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/}
+{\footnotesize\ttfamily \#define ETH\+\_\+\+TXBUFNB~4U       /\texorpdfstring{$\ast$}{*} 4 Tx buffers of size \mbox{\hyperlink{stm32f4xx__hal__conf___c_8h_af83956dfc1b135c3c92ac409758b6cf4}{ETH\+\_\+\+TX\+\_\+\+BUF\+\_\+\+SIZE}}  \texorpdfstring{$\ast$}{*}/}
 
 \Hypertarget{stm32f4xx__hal__conf_8h_a8c47c935e91e70569098b41718558648}\label{stm32f4xx__hal__conf_8h_a8c47c935e91e70569098b41718558648} 
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!EXTERNAL\_CLOCK\_VALUE@{EXTERNAL\_CLOCK\_VALUE}}
@@ -295,12 +295,6 @@ Value of the External audio frequency in Hz \Hypertarget{stm32f4xx__hal__conf_8h
 \doxysubsubsection{\texorpdfstring{HAL\_GPIO\_MODULE\_ENABLED}{HAL\_GPIO\_MODULE\_ENABLED}}
 {\footnotesize\ttfamily \#define HAL\+\_\+\+GPIO\+\_\+\+MODULE\+\_\+\+ENABLED}
 
-\Hypertarget{stm32f4xx__hal__conf_8h_a19999766418b0224871f732d800841c6}\label{stm32f4xx__hal__conf_8h_a19999766418b0224871f732d800841c6} 
-\index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!HAL\_I2C\_MODULE\_ENABLED@{HAL\_I2C\_MODULE\_ENABLED}}
-\index{HAL\_I2C\_MODULE\_ENABLED@{HAL\_I2C\_MODULE\_ENABLED}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
-\doxysubsubsection{\texorpdfstring{HAL\_I2C\_MODULE\_ENABLED}{HAL\_I2C\_MODULE\_ENABLED}}
-{\footnotesize\ttfamily \#define HAL\+\_\+\+I2\+C\+\_\+\+MODULE\+\_\+\+ENABLED}
-
 \Hypertarget{stm32f4xx__hal__conf_8h_a877ae99e8c47a609ea97c888912bf75f}\label{stm32f4xx__hal__conf_8h_a877ae99e8c47a609ea97c888912bf75f} 
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!HAL\_MODULE\_ENABLED@{HAL\_MODULE\_ENABLED}}
 \index{HAL\_MODULE\_ENABLED@{HAL\_MODULE\_ENABLED}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
@@ -322,6 +316,12 @@ This is the list of modules to be used in the HAL driver.
 \index{HAL\_RCC\_MODULE\_ENABLED@{HAL\_RCC\_MODULE\_ENABLED}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{HAL\_RCC\_MODULE\_ENABLED}{HAL\_RCC\_MODULE\_ENABLED}}
 {\footnotesize\ttfamily \#define HAL\+\_\+\+RCC\+\_\+\+MODULE\+\_\+\+ENABLED}
+
+\Hypertarget{stm32f4xx__hal__conf_8h_a23382b8f04b3e6db2c59dfa1ef5ea4a2}\label{stm32f4xx__hal__conf_8h_a23382b8f04b3e6db2c59dfa1ef5ea4a2} 
+\index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!HAL\_TIM\_MODULE\_ENABLED@{HAL\_TIM\_MODULE\_ENABLED}}
+\index{HAL\_TIM\_MODULE\_ENABLED@{HAL\_TIM\_MODULE\_ENABLED}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_MODULE\_ENABLED}{HAL\_TIM\_MODULE\_ENABLED}}
+{\footnotesize\ttfamily \#define HAL\+\_\+\+TIM\+\_\+\+MODULE\+\_\+\+ENABLED}
 
 \Hypertarget{stm32f4xx__hal__conf_8h_a167269406e73327b95c3bb7b9cfe6d89}\label{stm32f4xx__hal__conf_8h_a167269406e73327b95c3bb7b9cfe6d89} 
 \index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!HAL\_UART\_MODULE\_ENABLED@{HAL\_UART\_MODULE\_ENABLED}}

@@ -1,5 +1,5 @@
-\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Controller/\+Core/\+Src/syscalls.c File Reference}
-\hypertarget{syscalls_8c}{}\label{syscalls_8c}\index{Ball\_Launcher\_Controller/Core/Src/syscalls.c@{Ball\_Launcher\_Controller/Core/Src/syscalls.c}}
+\doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Src/syscalls.c File Reference}
+\hypertarget{syscalls_8c}{}\label{syscalls_8c}\index{Ball\_Launcher\_Main/Core/Src/syscalls.c@{Ball\_Launcher\_Main/Core/Src/syscalls.c}}
 
 
 STM32\+Cube\+IDE Minimal System calls file.  
@@ -16,7 +16,7 @@ STM32\+Cube\+IDE Minimal System calls file.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{syscalls_8c_aa53ed4b191897a1bfc205aa1da005d24}{\+\_\+\+\_\+io\+\_\+putchar}} (int ch) \mbox{\hyperlink{syscalls_8c_af9aace1b44b73111e15aa39f06f43456}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
+int \mbox{\hyperlink{syscalls_8c_aa53ed4b191897a1bfc205aa1da005d24}{\+\_\+\+\_\+io\+\_\+putchar}} (int ch) \mbox{\hyperlink{syscalls___c_8c_af9aace1b44b73111e15aa39f06f43456}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((weak))
 \item 
 int \mbox{\hyperlink{syscalls_8c_ad0122671640a3af49792ddaa59e8294e}{\+\_\+\+\_\+io\+\_\+getchar}} (void)
 \item 
@@ -32,7 +32,7 @@ void \mbox{\hyperlink{syscalls_8c_abc96bd69b58b2deaddb484478d911c1b}{\+\_\+exit}
 \item 
 int \mbox{\hyperlink{syscalls_8c_a5aab5e2acfd600e3667dc915a2bbc7cb}{\+\_\+close}} (int file)
 \item 
-int \mbox{\hyperlink{syscalls_8c_a41eef54307912a82d20e71c3d47315aa}{\+\_\+fstat}} (int file, struct \mbox{\hyperlink{main_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}st)
+int \mbox{\hyperlink{syscalls_8c_a41eef54307912a82d20e71c3d47315aa}{\+\_\+fstat}} (int file, struct \mbox{\hyperlink{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}st)
 \item 
 int \mbox{\hyperlink{syscalls_8c_ad3134a3dc296622b8d1c5456e481505b}{\+\_\+isatty}} (int file)
 \item 
@@ -46,7 +46,7 @@ int \mbox{\hyperlink{syscalls_8c_a70b2f211d665cded5637065aa2bb89dc}{\+\_\+unlink
 \item 
 int \mbox{\hyperlink{syscalls_8c_aaf727ebf57cd64d6c58b23e6ee4a4a69}{\+\_\+times}} (struct tms \texorpdfstring{$\ast$}{*}buf)
 \item 
-int \mbox{\hyperlink{syscalls_8c_a4711e961db985ed2c850a8be6597af50}{\+\_\+stat}} (char \texorpdfstring{$\ast$}{*}file, struct \mbox{\hyperlink{main_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}st)
+int \mbox{\hyperlink{syscalls_8c_a4711e961db985ed2c850a8be6597af50}{\+\_\+stat}} (char \texorpdfstring{$\ast$}{*}file, struct \mbox{\hyperlink{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}st)
 \item 
 int \mbox{\hyperlink{syscalls_8c_a31da4cd5328defa76a9e2246992aba12}{\+\_\+link}} (char \texorpdfstring{$\ast$}{*}old, char \texorpdfstring{$\ast$}{*}new)
 \item 
@@ -125,7 +125,7 @@ This software is licensed under terms that can be found in the LICENSE file in t
 \index{syscalls.c@{syscalls.c}!\_fstat@{\_fstat}}
 \index{\_fstat@{\_fstat}!syscalls.c@{syscalls.c}}
 \doxysubsubsection{\texorpdfstring{\_fstat()}{\_fstat()}}
-{\footnotesize\ttfamily int \+\_\+fstat (\begin{DoxyParamCaption}\item[{int}]{file,  }\item[{struct \mbox{\hyperlink{main_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int \+\_\+fstat (\begin{DoxyParamCaption}\item[{int}]{file,  }\item[{struct \mbox{\hyperlink{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
 
 \Hypertarget{syscalls_8c_a945e539df8e0f66d3c73c533fe1968ee}\label{syscalls_8c_a945e539df8e0f66d3c73c533fe1968ee} 
 \index{syscalls.c@{syscalls.c}!\_getpid@{\_getpid}}
@@ -167,7 +167,7 @@ This software is licensed under terms that can be found in the LICENSE file in t
 \index{syscalls.c@{syscalls.c}!\_stat@{\_stat}}
 \index{\_stat@{\_stat}!syscalls.c@{syscalls.c}}
 \doxysubsubsection{\texorpdfstring{\_stat()}{\_stat()}}
-{\footnotesize\ttfamily int \+\_\+stat (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{struct \mbox{\hyperlink{main_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int \+\_\+stat (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file,  }\item[{struct \mbox{\hyperlink{main___c_8c_a9ebb6eed90bd90fa99f9cf9e1f6c69fd}{stat}} \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
 
 \Hypertarget{syscalls_8c_aaf727ebf57cd64d6c58b23e6ee4a4a69}\label{syscalls_8c_aaf727ebf57cd64d6c58b23e6ee4a4a69} 
 \index{syscalls.c@{syscalls.c}!\_times@{\_times}}
