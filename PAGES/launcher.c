@@ -71,7 +71,9 @@
  * 
  * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
  * <div align="center">
+ * 
  * <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a>
+ * 
  * 
  * <img src="CG.png" width="800" height="800"> 
  * 
