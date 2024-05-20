@@ -18,11 +18,9 @@
  * 
  *  
  * @section schematic CONTROLLER PCBA
- * The PDF of this schematic is also attached with higher solution can be found in href="ControllerSchematic.pdf.pdf" target="_blank" style="color: blue; font-size: 15px; font-weight: bold; text-decoration: none; padding: 8px; background-color: yellow; border: 1px solid black; border-radius: 5px;">PDF SCHEMATIC</a>.
- * Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient: 
- * https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Controller
  * Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 BlackPill, mpu6050 IMU, HC-05, and LEDs together. 
- * 
+ * The PDF of this schematic is also attached with higher solution can be found in <a href="ControllerSchematic.pdf" target="_blank" style="color: blue; font-size: 15px; font-weight: bold; text-decoration: none; padding: 8px; background-color: yellow; border: 1px solid black; border-radius: 5px;">PDF SCHEMATIC</a>
+ *
  * <img src="PCBCONTROLLER.png" width="1200" height="800">
  * 
  * <img src="PCBCONTROLLERLAYOUT.png" width="1200" height="400">

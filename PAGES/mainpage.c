@@ -93,13 +93,14 @@
  * 
  * 
  * @section repository REPOSITORY REFERENCE
-
- * All code that will be referenced in this portfolio relate to project is accessible through 
-
- * <a href="https://github.com/vvinhvvo98/Basketball-Launcher" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER GITHUB PAGE</a>
+ *
+ * You may find it more useful to read through the website exploring the source code.
+ * All code that will be referenced in this portfolio relate to project is accessible through .
+ *
+ *
+ * <a href="https://github.com/vvinhvvo98/Basketball-Launcher" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER GITHUB MAIN PAGE</a>
  * 
- * However, you may find it more useful to read through the website exploring the source code.
- * 
+ *
  * NOTE: You may find the Controller's code with a small specification "_C" at the end of the file  that stands for Controller code. 
  * Files' name and the files' header code need to be renamed without that term in case the projects are recreated.
  * The inconvenience is due to the drawback of uploading codes in 2 projects to one GitHub Repository.
