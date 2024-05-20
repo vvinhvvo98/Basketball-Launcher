@@ -19,7 +19,7 @@
  * The PCBAs will be designed using Fusion 360 software and manufactured by JLCPCB.
  * The programming for the STM32 microcontroller will be done using the C language.
  * 
- * <img src="idea.png" width="1200" height="1200">
+ * <img src="idea.png" width="1200" height="1000">
  
  * The project is divided into two main assemblies:
  *
@@ -31,14 +31,19 @@
  * The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.
  *  
  * 
- * @section design DESIGN
+ * @section design IDEATION DESIGN
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
  * The sketch represents a rough idea of how all components are connected and communicate with each other.
  * The PDF of the sketch is also attached with higher solution can be found in [PDF Sketch](OverallDesign.pdf)
  * 
- * @image html overall.png
- * 
+ * <img src="overall.png" width="1200" height="800">
+ *
+ * @section cad CAD MODELING
+ * <img src="CAD.png" width="1200" height="1000">
+ *
+ * @section pcbad PCBA DESIGN
+ * <img src="pp.png" width="1200" height="1000">
  * 
  * @section launcher LAUNCHER
  * 

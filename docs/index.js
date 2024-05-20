@@ -2,7 +2,9 @@ var index =
 [
     [ "MOTIVATION", "index.html#motivation", null ],
     [ "OBJECTIVE", "index.html#detail", null ],
-    [ "DESIGN", "index.html#design", null ],
+    [ "IDEATION DESIGN", "index.html#design", null ],
+    [ "CAD MODELING", "index.html#cad", null ],
+    [ "PCBA DESIGN", "index.html#pcbad", null ],
     [ "LAUNCHER", "index.html#launcher", null ],
     [ "CONTROLLER", "index.html#controller", null ],
     [ "FUTURE IMPROVEMENT", "index.html#improve", null ],

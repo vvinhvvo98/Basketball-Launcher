@@ -102,18 +102,22 @@ MOTIVATION</h1>
 <h1><a class="anchor" id="detail"></a>
 OBJECTIVE</h1>
 <p>The objective of the project includes integrating the mechanical design with PCBA electronic component. This project will primarily use 3D-printed parts, along with shafts and bearings to support the robot's housing. The PCBAs will be designed using Fusion 360 software and manufactured by JLCPCB. The programming for the STM32 microcontroller will be done using the C language.</p>
-<p><img src="idea.png" alt="" width="1200" height="1200" class="inline"/></p>
+<p><img src="idea.png" alt="" width="1200" height="1000" class="inline"/></p>
 <p>The project is divided into two main assemblies:</p>
 <ul>
 <li>The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. The controller will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input.</li>
 <li>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller signals it. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.</li>
 </ul>
 <h1><a class="anchor" id="design"></a>
-DESIGN</h1>
+IDEATION DESIGN</h1>
 <p>The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. The overall design of the two main assemblies in the project is sketched and listed below for reference. The sketch represents a rough idea of how all components are connected and communicate with each other. The PDF of the sketch is also attached with higher solution can be found in <a href="OverallDesign.pdf">PDF Sketch</a></p>
-<div class="image">
-<img src="overall.png" alt=""/>
-</div>
+<p><img src="overall.png" alt="" width="1200" height="800" class="inline"/></p>
+<h1><a class="anchor" id="cad"></a>
+CAD MODELING</h1>
+<p><img src="CAD.png" alt="" width="1200" height="1000" class="inline"/></p>
+<h1><a class="anchor" id="pcbad"></a>
+PCBA DESIGN</h1>
+<p><img src="pp.png" alt="" width="1200" height="1000" class="inline"/></p>
 <h1><a class="anchor" id="launcher"></a>
 LAUNCHER</h1>
 <p>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning. More detail about the launcher Bill of Materials, design, source code can be found in: <a class="el" href="launcher_detail.html">LAUNCHER</a></p>
