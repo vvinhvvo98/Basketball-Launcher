@@ -35,11 +35,16 @@
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
  * The sketch represents a rough idea of how all components are connected and communicate with each other.
- * The PDF of the sketch is also attached with higher solution can be found in [PDF Sketch](OverallDesign.pdf)
+ * The PDF of the sketch is also attached with higher solution can be found in <a href="OverallDesign.pdf" target="_blank" style="color: blue; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">PDF IDEATION SKETCH</a>
  * 
  * <img src="overall.png" width="1200" height="800">
  *
  * @section cad CAD MODELING
+ * The CAD modeling phase of the project was completed early to allow the main focus to be on electronics and program implementation. The CAD figure below shows the final design of the launcher. The SolidWorks CAD model can be found at the following link:
+ * <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD" target="_blank" style="color: black; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">CAD MODEL</a>
+ * 
+ * In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from McMaster-Carr as off-the-shelf components.
+ * 
  * <img src="CAD.png" width="1200" height="1000">
  *
  * @section pcbad PCBA DESIGN
@@ -52,8 +57,8 @@
  * The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. 
  * Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning.
  * More detail about the launcher Bill of Materials, design, source code can be found in:
- * \ref launcher_detail "LAUNCHER"
- * 
+ * \ref launcher_detail
+
  * <img src="launcher.png" width="1200" height="1250">
  * 
  * PICTURE UPDATE NEEDED
@@ -65,8 +70,8 @@
  * The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. 
  * The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket.
  * More detail about the controller's Bill of Materials, design, source code can be found in:
- * \ref controller_detail "CONTROLLER"
- * 
+ * \ref controller_detail
+ *
  * <img src="control.png" width="1200" height="1000">
  * 
  * PICTURE UPDATE NEEDED
@@ -81,11 +86,17 @@
  * 
  * 
  * @section youtube YOUTUBE REFERENCE
- * YOUTUBE LINK UPDATE NEEDED <---------------------------------------------------
+ *
+ * <a href="https://www.youtube.com/channel/UCh_4F4CJVqvAhHmCMTvIb-w" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER DEMOSTRATION</a>
+ * 
+ * REQUIRED LINK UPDATE
  * 
  * 
  * @section repository REPOSITORY REFERENCE
- * All code that will be referenced in this portfolio relate to project is accessible through https://github.com/vvinhvvo98/Basketball-Launcher
+
+ * All code that will be referenced in this portfolio relate to project is accessible through 
+
+ * <a href="https://github.com/vvinhvvo98/Basketball-Launcher" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER GITHUB PAGE</a>
  * 
  * However, you may find it more useful to read through the website exploring the source code.
  * 
