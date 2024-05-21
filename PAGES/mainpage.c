@@ -88,7 +88,7 @@
  * 
  * @section youtube YOUTUBE REFERENCE
  *
- * <a href="https://www.youtube.com/channel/UCh_4F4CJVqvAhHmCMTvIb-w" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER DEMOSTRATION</a>
+ * <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdP43BUYpBcqznBU4_-Bkpg8" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER DEMOSTRATION</a>
  * 
  * REQUIRED LINK UPDATE
  * 
