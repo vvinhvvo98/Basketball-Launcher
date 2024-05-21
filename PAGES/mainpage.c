@@ -45,10 +45,8 @@
  * 
  * In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from McMaster-Carr as off-the-shelf components.
  * 
- * <img src="CAD.png" width="1200" height="1000">
+ * <img src="CAD.png" width="1200" height="900">
  *
- * @section pcbad PCBA DESIGN
- * <img src="pp.png" width="1200" height="1000">
  * 
  * @section launcher LAUNCHER
  * 
@@ -71,10 +69,8 @@
  * The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket.
  * More detail about the controller's Bill of Materials, design, source code can be found in:
  * \ref controller_detail
- *
- * <img src="control.png" width="1200" height="1000">
- * 
- * PICTURE UPDATE NEEDED
+
+ * <img src="control.png" width="1200" height="600">
  * 
  * 
  * @section improve FUTURE IMPROVEMENT

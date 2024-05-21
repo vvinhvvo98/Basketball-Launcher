@@ -116,10 +116,7 @@ IDEATION DESIGN</h1>
 CAD MODELING</h1>
 <p>The CAD modeling phase of the project was completed early to allow the main focus to be on electronics and program implementation. The CAD figure below shows the final design of the launcher. The SolidWorks CAD model can be found at the following link: <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD" target="_blank" style="color: black; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">CAD MODEL</a></p>
 <p>In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from McMaster-Carr as off-the-shelf components.</p>
-<p><img src="CAD.png" alt="" width="1200" height="1000" class="inline"/></p>
-<h1><a class="anchor" id="pcbad"></a>
-PCBA DESIGN</h1>
-<p><img src="pp.png" alt="" width="1200" height="1000" class="inline"/></p>
+<p><img src="CAD.png" alt="" width="1200" height="900" class="inline"/></p>
 <h1><a class="anchor" id="launcher"></a>
 LAUNCHER</h1>
 <p>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning. More detail about the launcher Bill of Materials, design, source code can be found in: <a class="el" href="launcher_detail.html">LAUNCHER</a></p>
@@ -128,8 +125,7 @@ LAUNCHER</h1>
 <h1><a class="anchor" id="controller"></a>
 CONTROLLER</h1>
 <p>The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket. More detail about the controller's Bill of Materials, design, source code can be found in: <a class="el" href="controller_detail.html">CONTROLLER</a></p>
-<p><img src="control.png" alt="" width="1200" height="1000" class="inline"/></p>
-<p>PICTURE UPDATE NEEDED</p>
+<p><img src="control.png" alt="" width="1200" height="600" class="inline"/></p>
 <h1><a class="anchor" id="improve"></a>
 FUTURE IMPROVEMENT</h1>
 <p>Even though, the project is built and run appropriately according to the project's objectives. The following improvements can be considered for future version. Especially, for the upcoming full scale basketball launcher</p><ul>
