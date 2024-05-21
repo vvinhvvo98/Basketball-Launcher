@@ -17,9 +17,8 @@
  * PICTURE UPDATE NEEDED
  * 
  * @section schematic1 LAUNCHER PCBA
- * The PDF of this schematic is also attached with higher solution can be found in [PDF SCHEMATIC](LauncherSchematic.pdf).
- * Moreover, everything about PCBA design for this project can be found in the repositor link that is mentioned in the mainpage, or here for convinient: 
- * https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/Ball_Launcher_Launcher.  
+ * This PCB is the main component of the project, serving as the centerpiece of the launcher. It operates the launcher based on commands received from the controller
+ * The PDF of this schematic is also attached with higher solution can be found in <a href="LauncherSchematic.pdf" target="_blank" style="color: blue; font-size: 15px; font-weight: bold; text-decoration: none; padding: 8px; background-color: yellow; border: 1px solid black; border-radius: 5px;">PDF SCHEMATIC</a>. 
  * Below are the all of the PCB schematic contains total of 4 pages describe in the table below 
  * 
  * <div align="center">
@@ -39,7 +38,7 @@
  * 
  * <img src="p4.png" width="1200" height="800">
  * 
- * <img src="fppf.png" width="1200" height="600">
+ * <img src="fppf.png" width="1200" height="500">
  * 
  * <img src="finalpcb2.png" width="1200" height="400">
  * 
@@ -55,7 +54,6 @@
  * | STATE5      | LIMIT SWITCH                  | - Return to home position after hitting the switches| - Stay in **STATE 5" until done homing <br> - Then transition to **STATE 2** when done                                                                                                    | 
  * | STATE6      | ESTOP                         | - Turn off everything if we hitting the ESTOP       | - Stop the launcher immediately                                                                                                                                                           | 
  * 
- * TABLE UPDATE NEEDED
  * 
  * <img src="FSM2.png" width="1200" height="1000"> 
  * 

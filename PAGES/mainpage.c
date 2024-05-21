@@ -5,8 +5,11 @@
 
 /**
  * @mainpage MAIN PAGE
+ 
+ * <img src="FINAL.JPEG" width="1200" height="1200">
+ * PICTURE UPDATE NEEDED
  *
- * 
+ *
  * @section motivation MOTIVATION
  * The motivation for this project is to build a prototype for a full-scale basketball-playing robot.
  * The project will start with a small-scale version to test the concept and gather insights for future improvements.
@@ -18,9 +21,11 @@
  * This project will primarily use 3D-printed parts, along with shafts and bearings to support the robot's housing.
  * The PCBAs will be designed using Fusion 360 software and manufactured by JLCPCB.
  * The programming for the STM32 microcontroller will be done using the C language.
+ *
+ * Note: The image below is provided solely for illustrative purposes and does not represent the actual project.
  * 
  * <img src="idea.png" width="1200" height="1000">
- 
+ *
  * The project is divided into two main assemblies:
  *
  * - The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand.
@@ -59,7 +64,7 @@
 
  * <img src="launcher.png" width="1200" height="1250">
  * 
- * PICTURE UPDATE NEEDED
+ * PICTURE UPDATE NEEDED with multiple pov
  * 
  * 
  * @section controller CONTROLLER
@@ -91,7 +96,7 @@
  * @section repository REPOSITORY REFERENCE
  *
  * You may find it more useful to read through the website exploring the source code.
- * All code that will be referenced in this portfolio relate to project is accessible through .
+ * All code that will be referenced in this portfolio relate to project is accessible through:
  *
  *
  * <a href="https://github.com/vvinhvvo98/Basketball-Launcher" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER GITHUB MAIN PAGE</a>

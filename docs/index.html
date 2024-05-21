@@ -96,12 +96,14 @@ $(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">MAIN PAGE </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="motivation"></a>
+<div class="textblock"><p><img src="FINAL.JPEG" alt="" width="1200" height="1200" class="inline"/> PICTURE UPDATE NEEDED</p>
+<h1><a class="anchor" id="motivation"></a>
 MOTIVATION</h1>
 <p>The motivation for this project is to build a prototype for a full-scale basketball-playing robot. The project will start with a small-scale version to test the concept and gather insights for future improvements. This approach will provide an opportunity to develop customized PCBAs that can control the robot for its intended purposes.</p>
 <h1><a class="anchor" id="detail"></a>
 OBJECTIVE</h1>
 <p>The objective of the project includes integrating the mechanical design with PCBA electronic component. This project will primarily use 3D-printed parts, along with shafts and bearings to support the robot's housing. The PCBAs will be designed using Fusion 360 software and manufactured by JLCPCB. The programming for the STM32 microcontroller will be done using the C language.</p>
+<p>Note: The image below is provided solely for illustrative purposes and does not represent the actual project.</p>
 <p><img src="idea.png" alt="" width="1200" height="1000" class="inline"/></p>
 <p>The project is divided into two main assemblies:</p>
 <ul>
@@ -121,7 +123,7 @@ CAD MODELING</h1>
 LAUNCHER</h1>
 <p>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning. More detail about the launcher Bill of Materials, design, source code can be found in: <a class="el" href="launcher_detail.html">LAUNCHER</a></p>
 <p><img src="launcher.png" alt="" width="1200" height="1250" class="inline"/></p>
-<p>PICTURE UPDATE NEEDED</p>
+<p>PICTURE UPDATE NEEDED with multiple pov</p>
 <h1><a class="anchor" id="controller"></a>
 CONTROLLER</h1>
 <p>The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket. More detail about the controller's Bill of Materials, design, source code can be found in: <a class="el" href="controller_detail.html">CONTROLLER</a></p>
@@ -139,7 +141,7 @@ YOUTUBE REFERENCE</h1>
 <p>REQUIRED LINK UPDATE</p>
 <h1><a class="anchor" id="repository"></a>
 REPOSITORY REFERENCE</h1>
-<p>You may find it more useful to read through the website exploring the source code. All code that will be referenced in this portfolio relate to project is accessible through .</p>
+<p>You may find it more useful to read through the website exploring the source code. All code that will be referenced in this portfolio relate to project is accessible through:</p>
 <p><a href="https://github.com/vvinhvvo98/Basketball-Launcher" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER GITHUB MAIN PAGE</a></p>
 <p>NOTE: You may find the Controller's code with a small specification "_C" at the end of the file that stands for Controller code. Files' name and the files' header code need to be renamed without that term in case the projects are recreated. The inconvenience is due to the drawback of uploading codes in 2 projects to one GitHub Repository.</p>
 <p>For example:</p>

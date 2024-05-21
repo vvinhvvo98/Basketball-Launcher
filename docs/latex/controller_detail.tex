@@ -4,9 +4,7 @@
 The controller will use an STM32 Black\+Pill microcontroller with an IMU sensor attached to the user\textquotesingle{}s hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor\textquotesingle{}s input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-\/05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-\/printed handle bracket. ~\newline
 
 
-
-
-PICTURE UPDATE NEEDED\hypertarget{controller_detail_schematic}{}\doxysection{\texorpdfstring{CONTROLLER PCBA}{CONTROLLER PCBA}}\label{controller_detail_schematic}
+\hypertarget{controller_detail_schematic}{}\doxysection{\texorpdfstring{CONTROLLER PCBA}{CONTROLLER PCBA}}\label{controller_detail_schematic}
 Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 Black\+Pill, mpu6050 IMU, HC-\/05, and LEDs together. The PDF of this schematic is also attached with higher solution can be found in \href{ControllerSchematic.pdf}{\texttt{ PDF SCHEMATIC}}
 
 
@@ -37,5 +35,5 @@ STATE4   &TRANSFER -\/ Send data to UART1 and UART6   &-\/ Send data to UART1 (b
 
 
 \hypertarget{controller_detail_bomm5}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ 3D PRINTED PARTS}{BILL OF MATERIAL -\/ 3D PRINTED PARTS}}\label{controller_detail_bomm5}
-Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{ https\+://github.\+com/vvinhvvo98/\+Basketball-\/\+Launcher/tree/main/\+CAD}}\hypertarget{controller_detail_bome2}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{controller_detail_bome2}
-All of the components for electronics are listed in the attached PDF file here\+: \href{BILL_OF_MATERIAL.xlsx}{\texttt{ BOM EXCEL}} 
+Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+: \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{ CAD MODEL}}\hypertarget{controller_detail_bome2}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{controller_detail_bome2}
+All of the components for electronics are listed in the attached PDF file here\+: \href{BILL_OF_MATERIAL.xlsx}{\texttt{ BILL OF MATERIAL}} 

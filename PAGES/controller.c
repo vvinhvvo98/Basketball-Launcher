@@ -12,9 +12,7 @@
  * The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. 
  * The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket.   
  * 
- * <img src="control.png" width="1200" height="1000">
- * 
- * PICTURE UPDATE NEEDED
+ * <img src="control.png" width="1200" height="600">
  * 
  *  
  * @section schematic CONTROLLER PCBA
@@ -25,7 +23,7 @@
  * 
  * <img src="PCBCONTROLLERLAYOUT.png" width="1200" height="400">
  * 
- * <img src="finalpcb1.png" width="1200" height="400">
+ * <img src="pcb1.png" width="1200" height="800">
  * 
  * @section fsm FINITE STATE MACHINE
  * | State       | Description                                        | Actions                                                | Transitions                                                                                    |
@@ -41,10 +39,10 @@
  * 
  * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS
  * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
- * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
+ * All the CAD 3D model files can be found here for reference: <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD" target="_blank" style="color: black; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">CAD MODEL</a>
  * 
  * 
  * @section bome2 BILL OF MATERIAL - ELECTRONICS
- * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BILL_OF_MATERIAL.xlsx)
+ * All of the components for electronics are listed in the attached PDF file here: <a href="BILL_OF_MATERIAL.xlsx" target="_blank" style="color: blue; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">BILL OF MATERIAL</a>
  * 
  */
