@@ -90,8 +90,6 @@
  *
  * <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdP43BUYpBcqznBU4_-Bkpg8" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER DEMOSTRATION</a>
  * 
- * REQUIRED LINK UPDATE
- * 
  * 
  * @section repository REPOSITORY REFERENCE
  *
@@ -123,7 +121,7 @@
  * 
  * <b>Phone Number:</b>   +1(714)-988-5363    
  * 
- * <b>Major:</b>          Mechanical Engineer at Cal Poly San Luis Obispo
+ * <b>Major:</b>          MS Mechanical Engineer at Cal Poly San Luis Obispo
  * 
  * <b>Date:</b>           May 15, 2024
  * </pre>
