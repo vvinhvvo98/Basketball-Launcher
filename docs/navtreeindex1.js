@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"stm32f4xx__hal__conf_8h.html#a66c4b69bd08dc25b6730365d3ff740c9":[6,0,1,0,0,5,49],
-"stm32f4xx__hal__conf_8h.html#a6879802837c27d8761d8a8fdab626891":[6,0,1,0,0,5,93],
 "stm32f4xx__hal__conf_8h.html#a68c6c7c633e6cb378824020ef00a5701":[6,0,1,0,0,5,91],
 "stm32f4xx__hal__conf_8h.html#a68ecbc9b0a1a40a1ec9d18d5e9747c4f":[6,0,1,0,0,5,18],
 "stm32f4xx__hal__conf_8h.html#a6b6254fd3dacbf1578a9d8058cd86373":[6,0,1,0,0,5,38],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e":[5,0,4,0],
 "struct_stepper_x.html#a698a514eaae8555c93d61ce6647bf5e1":[5,0,4,3],
 "struct_switch_x.html":[5,0,5],
-"struct_switch_x.html#a1cb502d7339fa12f24109da591102eb2":[5,0,5,0]
+"struct_switch_x.html#a1cb502d7339fa12f24109da591102eb2":[5,0,5,0],
+"struct_switch_x.html#a23b9db30b873d9b45f435df66328a784":[5,0,5,1],
+"struct_switch_x.html#a5393c99e246925076b1dfd69a64177ef":[5,0,5,2]
 };

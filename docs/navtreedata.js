@@ -37,8 +37,6 @@ var NAVTREE =
       [ "FINAL DESIGN", "launcher_detail.html#overview1", null ],
       [ "LAUNCHER PCBA", "launcher_detail.html#schematic1", null ],
       [ "FINITE STATE MACHINE", "launcher_detail.html#fsm1", null ],
-      [ "BILL OF MATERIAL - 3D PRINTED PARTS", "launcher_detail.html#bomm4", null ],
-      [ "BILL OF MATERIAL - ELECTRONICS", "launcher_detail.html#bome22", null ],
       [ "BILL OF MATERIAL - CYCLOIDAL GEARBOX", "launcher_detail.html#bomm3", null ],
       [ "BILL OF MATERIAL - MECHANICAL", "launcher_detail.html#bomm1", null ]
     ] ],
@@ -72,8 +70,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"stm32f4xx__hal__conf_8h.html#a66c4b69bd08dc25b6730365d3ff740c9",
-"struct_switch_x.html#a23b9db30b873d9b45f435df66328a784"
+"stm32f4xx__hal__conf_8h.html#a68c6c7c633e6cb378824020ef00a5701",
+"switch_8c.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

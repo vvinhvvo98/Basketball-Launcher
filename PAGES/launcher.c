@@ -13,8 +13,13 @@
  * The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. 
  * Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning.
  * 
- * <img src="launcher.png" width="1200" height="1250">
- * PICTURE UPDATE NEEDED
+ * <div class="image-frame">
+ * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/launcher_detail.html>
+ *      <img src="launcher.png" width="1200" height="1250" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
+ * 
+ * --> UPDATE PICTURE
  * 
  * @section schematic1 LAUNCHER PCBA
  * This PCB is the main component of the project, serving as the centerpiece of the launcher. It operates the launcher based on commands received from the controller
@@ -30,17 +35,38 @@
  * |  4  | Additional pins + test pads and connectors for limit switches + stepper motors             | 
  * </div>
  * 
- * <img src="p1.png" width="1200" height="800">
+ * <div class="image-frame">
+ *   <a href="LauncherSchematic.pdf" target="_blank">
+ *       <img src="p1.png" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;">
+ *   </a>
+ * </div>
  * 
- * <img src="p2.png" width="1200" height="800">
+ * <div class="image-frame">
+ *   <a href="LauncherSchematic.pdf" target="_blank">
+ *       <img src="p2.png" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;">
+ *   </a>
+ * </div>
  * 
- * <img src="p3.png" width="1200" height="800">
+ *  <div class="image-frame">
+ *   <a href="LauncherSchematic.pdf" target="_blank">
+ *       <img src="p3.png" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;">
+ *   </a>
+ * </div>
  * 
- * <img src="p4.png" width="1200" height="800">
+ * <div class="image-frame">
+ *   <a href="LauncherSchematic.pdf" target="_blank">
+ *       <img src="p1.png" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;">
+ *   </a>
+ * </div>
  * 
- * <img src="fppf.png" width="1200" height="500">
  * 
- * <img src="finalpcb2.png" width="1200" height="400">
+ * <div class="image-frame">
+ * <img src="fppf.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
+ * 
+ * <div class="image-frame">
+ * <img src="finalpcb2.png" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
  * 
  * 
  * @section fsm1 FINITE STATE MACHINE
@@ -57,14 +83,6 @@
  * 
  * <img src="FSM2.png" width="1200" height="1000"> 
  * 
- * 
- * @section bomm4 BILL OF MATERIAL - 3D PRINTED PARTS
- * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
- * All the CAD 3D model files can be found here for reference: https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD 
- *
- *  
- * @section bome22 BILL OF MATERIAL - ELECTRONICS
- * All of the components for electronics are listed in the attached PDF file here: [BOM EXCEL](BILL_OF_MATERIAL.xlsx)
  * 
  * 
  * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
@@ -104,8 +122,22 @@
  *
  * </div>
  * 
+ * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS
+ * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
+ * All the CAD 3D model files can be found here for reference:
+ * <div class="image-frame">
+ * <a href=https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD>
+ *      <img src="solidworks.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
  * 
-
+ * @section bome2 BILL OF MATERIAL - ELECTRONICS
+ * All of the components for electronics are listed in the attached PDF file here below
+ * <div class="image-frame">
+ *   <a href="BILL_OF_MATERIAL.xlsx" target="_blank">
+ *       <img src="bom.png" width="250" height="200" style="border: 10px solid black; border-radius: 10px;">
+ *   </a>
+ * </div>
  *
  *  
  */

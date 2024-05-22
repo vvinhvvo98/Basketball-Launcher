@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['electronics_0',['ELECTRONICS',['../controller_detail.html#bome2',1,'BILL OF MATERIAL - ELECTRONICS'],['../launcher_detail.html#bome22',1,'BILL OF MATERIAL - ELECTRONICS']]],
+  ['electronics_0',['BILL OF MATERIAL - ELECTRONICS',['../launcher_detail.html#bome2',1,'']]],
   ['en_5fpin_1',['EN_PIN',['../struct_stepper_x.html#a26cd3405b6201e6460615f64e7344b82',1,'StepperX']]],
   ['environ_2',['environ',['../syscalls___c_8c.html#aa006daaf11f1e2e45a6ababaf463212b',1,'environ:&#160;syscalls_C.c'],['../syscalls_8c.html#aa006daaf11f1e2e45a6ababaf463212b',1,'environ:&#160;syscalls.c']]],
   ['error_5fhandler_3',['Error_Handler',['../main___c_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main_C.c'],['../main___c_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main_C.c'],['../main_8c.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main.c'],['../main_8h.html#a1730ffe1e560465665eb47d9264826f9',1,'Error_Handler(void):&#160;main_C.c']]],

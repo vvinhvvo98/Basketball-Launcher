@@ -32,15 +32,15 @@
  * The project is divided into two main assemblies:
  *
  * - The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand.
- * The controller will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input.
+ * The controller will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and spin according to the IMU sensor's input.
  * 
  * - The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). 
- * It will then shoot the basketball when the controller signals it. 
+ * It will then shoot the basketball when the controller send launching flag. 
  * The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.
  *  
  * 
  * @section design IDEATION DESIGN
- * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
+ * 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
  * The sketch represents a rough idea of how all components are connected and communicate with each other.
  * The PDF of the sketch is also attached with higher solution can be found in by access through the picture below
@@ -50,10 +50,10 @@
  *       <img src="overall.png" width="1200" height="750" style="border: 10px solid black; border-radius: 50px;">
  *   </a>
  * </div>
-
  * 
  * 
  * @section cad CAD MODELING
+ * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from McMaster-Carr as off-the-shelf components.
  * The CAD modeling phase of the project was completed early to allow the main focus to be on electronics and program implementation. The CAD figure below shows the final design of the launcher. The SolidWorks CAD model can access through the CAD sketch below.
  *

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['page_0',['MAIN PAGE',['../index.html',1,'']]],
-  ['parts_1',['PARTS',['../controller_detail.html#bomm5',1,'BILL OF MATERIAL - 3D PRINTED PARTS'],['../launcher_detail.html#bomm4',1,'BILL OF MATERIAL - 3D PRINTED PARTS']]],
+  ['parts_1',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
   ['pcba_2',['PCBA',['../controller_detail.html#schematic',1,'CONTROLLER PCBA'],['../launcher_detail.html#schematic1',1,'LAUNCHER PCBA']]],
   ['pendsv_5fhandler_3',['PendSV_Handler',['../stm32f4xx__it___c_8h.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it___c_8c.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it_8c.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8h.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it_C.c']]],
   ['phy_5fautonego_5fcomplete_4',['PHY_AUTONEGO_COMPLETE',['../stm32f4xx__hal__conf___c_8h.html#a36c4dbd5f6df1f5eaefa010929ef9773',1,'PHY_AUTONEGO_COMPLETE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a36c4dbd5f6df1f5eaefa010929ef9773',1,'PHY_AUTONEGO_COMPLETE:&#160;stm32f4xx_hal_conf.h']]],
@@ -30,7 +30,7 @@ var searchData=
   ['pitch_27',['pitch',['../main_8c.html#af1879425937ee67e191d80e6390dc942',1,'main.c']]],
   ['pitchdirection_28',['pitchDirection',['../main_8c.html#a25c28ea9d15fd960d067fcde933fa2d9',1,'main.c']]],
   ['prefetch_5fenable_29',['PREFETCH_ENABLE',['../stm32f4xx__hal__conf___c_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf.h']]],
-  ['printed_20parts_30',['PRINTED PARTS',['../controller_detail.html#bomm5',1,'BILL OF MATERIAL - 3D PRINTED PARTS'],['../launcher_detail.html#bomm4',1,'BILL OF MATERIAL - 3D PRINTED PARTS']]],
+  ['printed_20parts_30',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
   ['proposal_31',['PROPOSAL',['../reports_detail.html#doc1',1,'']]],
   ['pulsewidth_32',['pulseWidth',['../struct_radio_x.html#a9ff1c7c8451b7fa9523adb103ac90b72',1,'RadioX']]]
 ];
