@@ -5,8 +5,9 @@
 
 /**
  * @mainpage MAIN PAGE
- 
+ *
  * <img src="FINAL.JPEG" width="1200" height="1200">
+ *
  * PICTURE UPDATE NEEDED
  *
  *
@@ -24,7 +25,9 @@
  *
  * Note: The image below is provided solely for illustrative purposes and does not represent the actual project.
  * 
- * <img src="idea.png" width="1200" height="1000">
+ * <div class="image-frame">
+ * <img src="idea.png" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
  *
  * The project is divided into two main assemblies:
  *
@@ -40,18 +43,25 @@
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
  * The sketch represents a rough idea of how all components are connected and communicate with each other.
- * The PDF of the sketch is also attached with higher solution can be found in <a href="OverallDesign.pdf" target="_blank" style="color: blue; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">PDF IDEATION SKETCH</a>
+ * The PDF of the sketch is also attached with higher solution can be found in by access through the picture below
  * 
- * <img src="overall.png" width="1200" height="800">
- *
+ * <div class="image-frame">
+ *   <a href="OverallDesign.pdf" target="_blank">
+ *       <img src="overall.png" width="1200" height="750" style="border: 10px solid black; border-radius: 50px;">
+ *   </a>
+ * </div>
+
+ * 
+ * 
  * @section cad CAD MODELING
- * The CAD modeling phase of the project was completed early to allow the main focus to be on electronics and program implementation. The CAD figure below shows the final design of the launcher. The SolidWorks CAD model can be found at the following link:
- * <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD" target="_blank" style="color: black; font-size: 12px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 1px solid black; border-radius: 5px;">CAD MODEL</a>
- * 
  * In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from McMaster-Carr as off-the-shelf components.
- * 
- * <img src="CAD.png" width="1200" height="900">
+ * The CAD modeling phase of the project was completed early to allow the main focus to be on electronics and program implementation. The CAD figure below shows the final design of the launcher. The SolidWorks CAD model can access through the CAD sketch below.
  *
+ * <div class="image-frame">
+ * <a href=https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD>
+ *      <img src="CAD.png" width="1200" height="900" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
  * 
  * @section launcher LAUNCHER
  * 
@@ -59,12 +69,13 @@
  * It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.
  * The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. 
  * Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning.
- * More detail about the launcher Bill of Materials, design, source code can be found in:
- * \ref launcher_detail
-
- * <img src="launcher.png" width="1200" height="1250">
- * 
- * PICTURE UPDATE NEEDED with multiple pov
+ * More detail about the launcher Bill of Materials, design, source code can be found by access through the launcher picture below:
+ *
+ * <div class="image-frame">
+ * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/launcher_detail.html>
+ *      <img src="launcher.png" width="1200" height="1250" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
  * 
  * 
  * @section controller CONTROLLER
@@ -72,11 +83,14 @@
  * It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input. 
  * The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. 
  * The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket.
- * More detail about the controller's Bill of Materials, design, source code can be found in:
- * \ref controller_detail
-
- * <img src="control.png" width="1200" height="600">
- * 
+ * More detail about the controller's Bill of Materials, design, source code can be found by access through the launcher picture below:
+ *
+ * <div class="image-frame">
+ * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html>
+ *      <img src="control.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
+ *
  * 
  * @section improve FUTURE IMPROVEMENT
  * Even though, the project is built and run appropriately according to the project's objectives. The following improvements can be considered for future version.
@@ -88,8 +102,11 @@
  * 
  * @section youtube YOUTUBE REFERENCE
  *
- * <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdP43BUYpBcqznBU4_-Bkpg8" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER DEMOSTRATION</a>
- * 
+ * <div class="image-frame">
+ * <a href=https://www.youtube.com/playlist?list=PLlT9z-PWNXdP43BUYpBcqznBU4_-Bkpg8>
+ *      <img src="youtube.png" width="250" height="200" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
  * 
  * @section repository REPOSITORY REFERENCE
  *
@@ -97,7 +114,11 @@
  * All code that will be referenced in this portfolio relate to project is accessible through:
  *
  *
- * <a href="https://github.com/vvinhvvo98/Basketball-Launcher" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">BASKETBALL LAUNCHER GITHUB MAIN PAGE</a>
+ * <div class="image-frame">
+ * <a href=https://github.com/vvinhvvo98/Basketball-Launcher>
+ *      <img src="github.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
+ * </a>
+ * </div>
  * 
  *
  * NOTE: You may find the Controller's code with a small specification "_C" at the end of the file  that stands for Controller code. 
@@ -117,9 +138,7 @@
  * 
  * <b>LinkedIn:</b>       https://www.linkedin.com/in/vinhvo98/
  * 
- * <b>Youtube:</b>        https://www.youtube.com/channel/UCh_4F4CJVqvAhHmCMTvIb-w
- * 
- * <b>Phone Number:</b>   +1(714)-988-5363    
+ * <b>Youtube:</b>        https://www.youtube.com/channel/UCh_4F4CJVqvAhHmCMTvIb-w   
  * 
  * <b>Major:</b>          MS Mechanical Engineer at Cal Poly San Luis Obispo
  * 
