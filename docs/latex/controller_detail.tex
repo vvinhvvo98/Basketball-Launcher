@@ -19,14 +19,14 @@ Below are the overall schematic and footprint of the PCBA that is used to integr
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
 \endhead
 STATE0   &INIT -\/ Attempt to connect to IMU   &-\/ Attempt to connect~\newline
- -\/ Turn on LED1 if successful   &-\/ If unsuccessful, transition to {\bfseries{STATE 1}}~\newline
- -\/ If successful, transition to {\bfseries{STATE 2}}    \\\cline{1-4}
-STATE1   &ERROR-\/ Failed to connecto IMU   &-\/ Toggle LED1 if failed to connect to the IMU   &-\/ Always transition to {\bfseries{STATE 0}}    \\\cline{1-4}
-STATE2   &IMU -\/ Read data from the IMU   &-\/ Continuosly read the data from the IMU   &-\/ Always transition to {\bfseries{STATE 3}}    \\\cline{1-4}
+ -\/ Turn on LED1 if successful   &-\/ If unsuccessful, transition to {\bfseries{STATE1}}~\newline
+ -\/ If successful, transition to {\bfseries{STATE2}}    \\\cline{1-4}
+STATE1   &ERROR-\/ Failed to connecto IMU   &-\/ Toggle LED1 if failed to connect to the IMU   &-\/ Always transition to {\bfseries{STATE0}}    \\\cline{1-4}
+STATE2   &IMU -\/ Read data from the IMU   &-\/ Continuosly read the data from the IMU   &-\/ Always transition to {\bfseries{STATE3}}    \\\cline{1-4}
 STATE3   &BUTTON\+\_\+\+LED -\/ Read buttons \& update LEDs   &-\/ Countinously read the button~\newline
- -\/ Update the LEDs   &-\/ Always transition back to {\bfseries{STATE 4}}    \\\cline{1-4}
+ -\/ Update the LEDs   &-\/ Always transition back to {\bfseries{STATE4}}    \\\cline{1-4}
 STATE4   &TRANSFER -\/ Send data to UART1 and UART6   &-\/ Send data to UART1 (bluetooth)~\newline
- -\/ UART6 (debug)   &-\/ Always transition back to {\bfseries{STATE 2}}   \\\cline{1-4}
+ -\/ UART6 (debug)   &-\/ Always transition back to {\bfseries{STATE2}}   \\\cline{1-4}
 \end{longtabu}
 
 

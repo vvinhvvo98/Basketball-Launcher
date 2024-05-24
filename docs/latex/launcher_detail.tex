@@ -46,27 +46,24 @@ This PCB is the main component of the project, serving as the centerpiece of the
 \hline
 \PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ State   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Actions   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Transitions    }\\\cline{1-4}
 \endhead
-STATE0   &INIT   &-\/ Init all objects in the system   &-\/ Always transition to {\bfseries{STATE 1}}    \\\cline{1-4}
-STATE1   &HOME POSITION CALIBRATION   &-\/ Launcher finding limit switches and homing   &-\/ Always transition to {\bfseries{STATE 2}} if done calibration ~\newline
- -\/ Otherwise stay in {\bfseries{STATE 1}}    \\\cline{1-4}
-STATE2   &DECISION HUB   &-\/ Jumping to different state according to condition   &-\/ Move to {\bfseries{STATE 3}} if MOVE == 1 \& SHOT == 0 ~\newline
- -\/ Move to {\bfseries{STATE 4}} if SHOT == 1 \& MOVE == 0 ~\newline
- -\/ Move to {\bfseries{STATE 5}} if hit any switches ~\newline
- -\/ Move to {\bfseries{STATE 6}} if ESTOP == 1    \\\cline{1-4}
-STATE3   &STEPPER RUN   &-\/ Runnning stepper motor   &-\/ Always transition to {\bfseries{STATE 2}}    \\\cline{1-4}
-STATE4   &BLDC RUN   &-\/ Running BLDC Motor until fast speed   &-\/ Always transition to {\bfseries{STATE 2}}    \\\cline{1-4}
-STATE5   &LIMIT SWITCH   &-\/ Return to home position after hitting the switches   &-\/ Stay in {\bfseries{STATE 5"{} until done homing ~\newline
- -\/ Then transition to $\ast$$\ast$\+STATE 2}} when done    \\\cline{1-4}
-STATE6   &ESTOP   &-\/ Turn off everything if we hitting the ESTOP   &-\/ Stop the launcher immediately   \\\cline{1-4}
+STATE0   &INIT   &-\/ Init all objects in the system   &-\/ Always transition to {\bfseries{STATE1}}    \\\cline{1-4}
+STATE1   &DECISION HUB   &-\/ Jump to different state according to condition   &-\/ Move to {\bfseries{STATE3}} if MOVE == 1 \& SHOT == 0 ~\newline
+ -\/ Move to {\bfseries{STATE4}} if SHOT == 1 \& MOVE == 0 ~\newline
+ -\/ Move to {\bfseries{STATE3}} if hit any switches ~\newline
+ -\/ Move to {\bfseries{STATE2}} if ESTOP == 1    \\\cline{1-4}
+STATE2   &ESTOP   &-\/ Stop all objects in the system \& wait for reset   &-\/ Move to {\bfseries{STATE1}} if dt $>$= 5000 ~\newline
+ -\/ Stay in {\bfseries{STATE2}} if dt $<$ 5000    \\\cline{1-4}
+STATE3   &STEPPER RUN   &-\/ Running stepper motors   &-\/ Always move to {\bfseries{STATE1}}    \\\cline{1-4}
+STATE4   &BLDC RUN   &-\/ Running BLDC motors   &-\/ Always move to {\bfseries{STATE1}}   \\\cline{1-4}
 \end{longtabu}
 
 
 \doxysection{BILL OF MATERIAL -\/ CYCLOIDAL GEARBOX}\label{launcher_detail_bomm3}
 
 
-{\texttt{ CYCLOIDAL GEARBOX DEMONSTRATION}}
+ {\texttt{ CYCLOIDAL GEARBOX DEMONSTRATION}}
 
-
+ 
 
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
@@ -111,6 +108,6 @@ BATTERY   &Lipo battery 11.\+1 V   &   \\\cline{1-3}
 \end{longtabu}
 
 
-\doxysection{BILL OF MATERIAL -\/ 3D PRINTED PARTS}\label{launcher_detail_bomm5}
+ \doxysection{BILL OF MATERIAL -\/ 3D PRINTED PARTS}\label{launcher_detail_bomm5}
 Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+:  {\texttt{  }} \doxysection{BILL OF MATERIAL -\/ ELECTRONICS}\label{launcher_detail_bome2}
 All of the components for electronics are listed in the attached PDF file here below  {\texttt{  }}  

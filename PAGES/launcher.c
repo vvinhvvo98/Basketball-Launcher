@@ -69,19 +69,17 @@
  * </div>
  * 
  * 
- * @section fsm1 FINITE STATE MACHINE
- * | State       | Description                   | Actions                                             | Transitions                                                                                                                                                                               |
- * |-------------|-------------------------------|---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
- * | STATE0      | INIT                          | - Init all objects in the system                    | - Always transition to **STATE 1**                                                                                                                                                        |
- * | STATE1      | HOME POSITION CALIBRATION     | - Launcher finding limit switches and homing        | - Always transition to **STATE 2** if done calibration <br> - Otherwise stay in **STATE 1**                                                                                                    |
- * | STATE2      | DECISION HUB                  | - Jumping to different state according to condition | - Move to **STATE 3** if MOVE == 1 & SHOT == 0 <br> - Move to **STATE 4** if SHOT == 1 & MOVE == 0 <br> - Move to **STATE 5** if hit any switches <br> - Move to **STATE 6** if ESTOP == 1|
- * | STATE3      | STEPPER RUN                   | - Runnning stepper motor                            | - Always transition to **STATE 2**                                                                                                                                                        |
- * | STATE4      | BLDC RUN                      | - Running BLDC Motor until fast speed               | - Always transition to **STATE 2**                                                                                                                                                        |
- * | STATE5      | LIMIT SWITCH                  | - Return to home position after hitting the switches| - Stay in **STATE 5" until done homing <br> - Then transition to **STATE 2** when done                                                                                                    | 
- * | STATE6      | ESTOP                         | - Turn off everything if we hitting the ESTOP       | - Stop the launcher immediately                                                                                                                                                           | 
+ *@section fsm1 FINITE STATE MACHINE
+ *| State       | Description                                     | Actions                                           | Transitions                                                                                                   |
+ *|-------------|-------------------------------------------------|---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+ *| STATE0      | INIT                                            | - Init all objects in the system                  | - Always transition to **STATE1**                                                                               |
+ *| STATE1      | DECISION HUB                                    | - Jump to different state according to condition  | - Move to **STATE3** if MOVE == 1 & SHOT == 0 <br> - Move to **STATE4** if SHOT == 1 & MOVE == 0 <br> - Move to **STATE3** if hit any switches <br> - Move to **STATE2** if ESTOP == 1 |
+ *| STATE2      | ESTOP                                           | - Stop all objects in the system & wait for reset | - Move to **STATE1** if dt >= 5000 <br> - Stay in **STATE2** if dt < 5000                                        |
+ *| STATE3      | STEPPER RUN                                     | - Running stepper motors                          | - Always move to **STATE1**                                                                                     |
+ *| STATE4      | BLDC RUN                                        | - Running BLDC motors                             | - Always move to **STATE1**
+
  * 
- * 
- * <img src="FSM2.png" width="1200" height="1000"> 
+ * <img src="FSM2.png" width="1200" height="500"> 
  * 
  * 
  * 

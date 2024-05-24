@@ -37,11 +37,11 @@
  * <div align="center">
  * | State       | Description                                        | Actions                                                | Transitions                                                                                    |
  * |-------------|----------------------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------|
- * | STATE0      | INIT - Attempt to connect to IMU                   | - Attempt to connect<br> - Turn on LED1 if successful  | - If unsuccessful, transition to **STATE 1**<br> - If successful, transition to **STATE 2**    |
- * | STATE1      | ERROR- Failed to connecto IMU                      | - Toggle LED1 if failed to connect to the IMU          | - Always transition to **STATE 0**                                                             |
- * | STATE2      | IMU  - Read data from the IMU                      | - Continuosly read the data from the IMU               | - Always transition to **STATE 3**                                                             |
- * | STATE3      | BUTTON_LED - Read buttons & update LEDs            | - Countinously read the button<br> - Update the LEDs   | - Always transition back to **STATE 4**                                                        | 
- * | STATE4      | TRANSFER   - Send data to UART1 and UART6          | - Send data to UART1 (bluetooth)<br> - UART6 (debug)   | - Always transition back to **STATE 2**                                                        | 
+ * | STATE0      | INIT - Attempt to connect to IMU                   | - Attempt to connect<br> - Turn on LED1 if successful  | - If unsuccessful, transition to **STATE1**<br> - If successful, transition to **STATE2**    |
+ * | STATE1      | ERROR- Failed to connecto IMU                      | - Toggle LED1 if failed to connect to the IMU          | - Always transition to **STATE0**                                                             |
+ * | STATE2      | IMU  - Read data from the IMU                      | - Continuosly read the data from the IMU               | - Always transition to **STATE3**                                                             |
+ * | STATE3      | BUTTON_LED - Read buttons & update LEDs            | - Countinously read the button<br> - Update the LEDs   | - Always transition back to **STATE4**                                                        | 
+ * | STATE4      | TRANSFER   - Send data to UART1 and UART6          | - Send data to UART1 (bluetooth)<br> - UART6 (debug)   | - Always transition back to **STATE2**                                                        | 
  * </div>
  * 
  * <div class="image-frame">

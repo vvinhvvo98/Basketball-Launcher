@@ -109,18 +109,18 @@ FINITE STATE MACHINE</h1>
 <th class="markdownTableHeadNone">State   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Actions   </th><th class="markdownTableHeadNone">Transitions    </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT - Attempt to connect to IMU   </td><td class="markdownTableBodyNone">- Attempt to connect<br  />
- - Turn on LED1 if successful   </td><td class="markdownTableBodyNone">- If unsuccessful, transition to <b>STATE 1</b><br  />
- - If successful, transition to <b>STATE 2</b>    </td></tr>
+ - Turn on LED1 if successful   </td><td class="markdownTableBodyNone">- If unsuccessful, transition to <b>STATE1</b><br  />
+ - If successful, transition to <b>STATE2</b>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">ERROR- Failed to connecto IMU   </td><td class="markdownTableBodyNone">- Toggle LED1 if failed to connect to the IMU   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 0</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">ERROR- Failed to connecto IMU   </td><td class="markdownTableBodyNone">- Toggle LED1 if failed to connect to the IMU   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE0</b>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">IMU - Read data from the IMU   </td><td class="markdownTableBodyNone">- Continuosly read the data from the IMU   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 3</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">IMU - Read data from the IMU   </td><td class="markdownTableBodyNone">- Continuosly read the data from the IMU   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE3</b>    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">BUTTON_LED - Read buttons &amp; update LEDs   </td><td class="markdownTableBodyNone">- Countinously read the button<br  />
- - Update the LEDs   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 4</b>    </td></tr>
+ - Update the LEDs   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE4</b>    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STATE4   </td><td class="markdownTableBodyNone">TRANSFER - Send data to UART1 and UART6   </td><td class="markdownTableBodyNone">- Send data to UART1 (bluetooth)<br  />
- - UART6 (debug)   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE 2</b>   </td></tr>
+ - UART6 (debug)   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE2</b>   </td></tr>
 </table>
 </div><div class="image-frame"> <img src="FSM1.png" alt="" width="1200" height="800 400" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><h1><a class="anchor" id="bomm5"></a>
 BILL OF MATERIAL - 3D PRINTED PARTS</h1>

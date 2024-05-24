@@ -121,29 +121,24 @@ FINITE STATE MACHINE</h1>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">State   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Actions   </th><th class="markdownTableHeadNone">Transitions    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT   </td><td class="markdownTableBodyNone">- Init all objects in the system   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 1</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE0   </td><td class="markdownTableBodyNone">INIT   </td><td class="markdownTableBodyNone">- Init all objects in the system   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE1</b>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">HOME POSITION CALIBRATION   </td><td class="markdownTableBodyNone">- Launcher finding limit switches and homing   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 2</b> if done calibration <br  />
- - Otherwise stay in <b>STATE 1</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE1   </td><td class="markdownTableBodyNone">DECISION HUB   </td><td class="markdownTableBodyNone">- Jump to different state according to condition   </td><td class="markdownTableBodyNone">- Move to <b>STATE3</b> if MOVE == 1 &amp; SHOT == 0 <br  />
+ - Move to <b>STATE4</b> if SHOT == 1 &amp; MOVE == 0 <br  />
+ - Move to <b>STATE3</b> if hit any switches <br  />
+ - Move to <b>STATE2</b> if ESTOP == 1    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">DECISION HUB   </td><td class="markdownTableBodyNone">- Jumping to different state according to condition   </td><td class="markdownTableBodyNone">- Move to <b>STATE 3</b> if MOVE == 1 &amp; SHOT == 0 <br  />
- - Move to <b>STATE 4</b> if SHOT == 1 &amp; MOVE == 0 <br  />
- - Move to <b>STATE 5</b> if hit any switches <br  />
- - Move to <b>STATE 6</b> if ESTOP == 1    </td></tr>
+<td class="markdownTableBodyNone">STATE2   </td><td class="markdownTableBodyNone">ESTOP   </td><td class="markdownTableBodyNone">- Stop all objects in the system &amp; wait for reset   </td><td class="markdownTableBodyNone">- Move to <b>STATE1</b> if dt &gt;= 5000 <br  />
+ - Stay in <b>STATE2</b> if dt &lt; 5000    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">STEPPER RUN   </td><td class="markdownTableBodyNone">- Runnning stepper motor   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 2</b>    </td></tr>
+<td class="markdownTableBodyNone">STATE3   </td><td class="markdownTableBodyNone">STEPPER RUN   </td><td class="markdownTableBodyNone">- Running stepper motors   </td><td class="markdownTableBodyNone">- Always move to <b>STATE1</b>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE4   </td><td class="markdownTableBodyNone">BLDC RUN   </td><td class="markdownTableBodyNone">- Running BLDC Motor until fast speed   </td><td class="markdownTableBodyNone">- Always transition to <b>STATE 2</b>    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">STATE5   </td><td class="markdownTableBodyNone">LIMIT SWITCH   </td><td class="markdownTableBodyNone">- Return to home position after hitting the switches   </td><td class="markdownTableBodyNone">- Stay in <b>STATE 5" until done homing <br  />
- - Then transition to **STATE 2</b> when done    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">STATE6   </td><td class="markdownTableBodyNone">ESTOP   </td><td class="markdownTableBodyNone">- Turn off everything if we hitting the ESTOP   </td><td class="markdownTableBodyNone">- Stop the launcher immediately   </td></tr>
+<td class="markdownTableBodyNone">STATE4   </td><td class="markdownTableBodyNone">BLDC RUN   </td><td class="markdownTableBodyNone">- Running BLDC motors   </td><td class="markdownTableBodyNone">- Always move to <b>STATE1</b>   </td></tr>
 </table>
-<p><img src="FSM2.png" alt="" width="1200" height="1000" class="inline"/></p>
+<p><img src="FSM2.png" alt="" width="1200" height="500" class="inline"/></p>
 <h1><a class="anchor" id="bomm3"></a>
 BILL OF MATERIAL - CYCLOIDAL GEARBOX</h1>
-<div align="center"></div><div align="center"><a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a></div><div align="center"><img src="CG.png" alt="" width="800" height="800" class="inline"/></div><div align="center"><table class="markdownTable">
+<div align="center"></div><div align="center"> <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a></div><div align="center"> <img src="CG.png" alt="" width="800" height="800" class="inline"/></div><div align="center"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Components   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Image    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -185,7 +180,7 @@ BILL OF MATERIAL - MECHANICAL</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">BATTERY   </td><td class="markdownTableBodyNone">Lipo battery 11.1 V   </td><td class="markdownTableBodyNone"><img src="battery.png" alt="" width="250" height="250" class="inline"/>   </td></tr>
 </table>
-</div><div align="center"></div><h1><a class="anchor" id="bomm5"></a>
+</div><div align="center"> </div><h1><a class="anchor" id="bomm5"></a>
 BILL OF MATERIAL - 3D PRINTED PARTS</h1>
 <p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. All the CAD 3D model files can be found here for reference: </p><div class="image-frame"> <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD"><img src="solidworks.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><h1><a class="anchor" id="bome2"></a>
 BILL OF MATERIAL - ELECTRONICS</h1>
