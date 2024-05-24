@@ -2,7 +2,7 @@ var searchData=
 [
   ['page_0',['MAIN PAGE',['../index.html',1,'']]],
   ['parts_1',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
-  ['pcba_2',['PCBA',['../controller_detail.html#schematic',1,'CONTROLLER PCBA'],['../launcher_detail.html#schematic1',1,'LAUNCHER PCBA']]],
+  ['pcba_2',['PCBA',['../controller_detail.html#schematic',1,'CONTROLLER PCBA'],['../controller_detail.html#pcbaC',1,'CONTROLLER PCBA'],['../launcher_detail.html#schematic1',1,'LAUNCHER PCBA'],['../launcher_detail.html#pcbal',1,'LAUNCHER PCBA']]],
   ['pendsv_5fhandler_3',['PendSV_Handler',['../stm32f4xx__it___c_8h.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it___c_8c.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it_8c.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8h.html#a6303e1f258cbdc1f970ce579cc015623',1,'PendSV_Handler(void):&#160;stm32f4xx_it_C.c']]],
   ['phy_5fautonego_5fcomplete_4',['PHY_AUTONEGO_COMPLETE',['../stm32f4xx__hal__conf___c_8h.html#a36c4dbd5f6df1f5eaefa010929ef9773',1,'PHY_AUTONEGO_COMPLETE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a36c4dbd5f6df1f5eaefa010929ef9773',1,'PHY_AUTONEGO_COMPLETE:&#160;stm32f4xx_hal_conf.h']]],
   ['phy_5fautonegotiation_5',['PHY_AUTONEGOTIATION',['../stm32f4xx__hal__conf___c_8h.html#a9b7f5c8f71047ee449f21562d26b1b43',1,'PHY_AUTONEGOTIATION:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a9b7f5c8f71047ee449f21562d26b1b43',1,'PHY_AUTONEGOTIATION:&#160;stm32f4xx_hal_conf.h']]],

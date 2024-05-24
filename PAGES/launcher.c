@@ -21,6 +21,8 @@
  * 
  * --> UPDATE PICTURE
  * 
+ * <br> <!---->
+ *
  * @section schematic1 LAUNCHER PCBA
  * This PCB is the main component of the project, serving as the centerpiece of the launcher. It operates the launcher based on commands received from the controller
  * The PDF of this schematic is also attached with higher solution can be found by access through the schematic's link below 
@@ -59,16 +61,19 @@
  *   </a>
  * </div>
  * 
- * 
+ * <br> <!---->
+ *
+ * @section pcbal LAUNCHER PCBA
  * <div class="image-frame">
  * <img src="fppf.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
  * </div>
- * 
+ * <br> <!---->
  * <div class="image-frame">
  * <img src="finalpcb2.png" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;">
  * </div>
  * 
- * 
+ * <br> <!---->
+ *
  *@section fsm1 FINITE STATE MACHINE
  *| State       | Description                                     | Actions                                           | Transitions                                                                                                   |
  *|-------------|-------------------------------------------------|---------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -77,19 +82,18 @@
  *| STATE2      | ESTOP                                           | - Stop all objects in the system & wait for reset | - Move to **STATE1** if dt >= 5000 <br> - Stay in **STATE2** if dt < 5000                                        |
  *| STATE3      | STEPPER RUN                                     | - Running stepper motors                          | - Always move to **STATE1**                                                                                     |
  *| STATE4      | BLDC RUN                                        | - Running BLDC motors                             | - Always move to **STATE1**
-
- * 
- * <img src="FSM2.png" width="1200" height="700"> 
- * 
- * 
- * 
+ *
+ * <img src="FSM2.png" width="1200" height="700" style="border-radius: 50px;"> 
+ * <br> <!---->
+ *
  * @section bomm3 BILL OF MATERIAL - CYCLOIDAL GEARBOX
  * <div align="center">
  * 
  * <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a>
- * 
- * 
- * <img src="CG.png" width="800" height="800"> 
+ *
+ * <br> <!---->
+ *
+ * <img src="CG.png" width="800" height="800" style="border-radius: 50px;"> 
  * 
  * | Components | Description                          | Image                                               |
  * | -----------| -----------------------------------  | ----------------------------------------------------|
@@ -102,7 +106,8 @@
  * | Nut        | M6         +  t =  5 mm  + Lock Nut  | <img src="locknut.png" width="250" height="250">    |
  * </div>
  * 
- * 
+ * <br> <!---->
+ *
  * @section bomm1 BILL OF MATERIAL - MECHANICAL
  * <div align="center">
  * 
@@ -120,20 +125,24 @@
  *
  * </div>
  * 
+ * <br> <!---->
+ *
  * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS
  * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
  * All the CAD 3D model files can be found here for reference:
  * <div class="image-frame">
  * <a href=https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD>
- *      <img src="solidworks.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="link.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  * 
+ * <br> <!---->
+ *
  * @section bome2 BILL OF MATERIAL - ELECTRONICS
- * All of the components for electronics are listed in the attached PDF file here below
+ * All of the components for electronics are listed in the attached PDF file below
  * <div class="image-frame">
  *   <a href="BILL_OF_MATERIAL.xlsx" target="_blank">
- *       <img src="bom.png" width="250" height="200" style="border: 10px solid black; border-radius: 10px;">
+ *       <img src="xlsx.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
  *   </a>
  * </div>
  *

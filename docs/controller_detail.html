@@ -100,9 +100,18 @@ $(function(){initNavTree('controller_detail.html',''); initResizable(); });
 FINAL DESIGN</h1>
 <p>The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor's input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-printed handle bracket. <br  />
 </p>
-<div class="image-frame"> <a href="https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html"><img src="control.png" alt="" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><h1><a class="anchor" id="schematic"></a>
+<div class="image-frame"> <a href="https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html"><img src="control.png" alt="" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><p><br  />
+</p>
+<h1><a class="anchor" id="schematic"></a>
 CONTROLLER PCBA</h1>
-<p>Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 BlackPill, mpu6050 IMU, HC-05, and LEDs together. The PDF of this schematic is also attached with higher solution can be found in the picture below </p><div class="image-frame"> <a href="ControllerSchematic.pdf" target="_blank"><img src="PCBCONTROLLER.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <img src="PCBCONTROLLERLAYOUT.png" alt="" width="1200" height="400" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </div><h1><a class="anchor" id="fsm"></a>
+<p>Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 BlackPill, mpu6050 IMU, HC-05, and LEDs together. The PDF of this schematic is also attached with higher solution can be found in the picture below </p><div class="image-frame"> <a href="ControllerSchematic.pdf" target="_blank"><img src="PCBCONTROLLER.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><p><br  />
+</p>
+<h1><a class="anchor" id="pcbaC"></a>
+CONTROLLER PCBA</h1>
+<div class="image-frame"> <img src="PCBCONTROLLERLAYOUT.png" alt="" width="1200" height="400" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><p> <br  />
+ </p><div class="image-frame"> <img src="finalpcb1.png" alt="" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><p><br  />
+</p>
+<h1><a class="anchor" id="fsm"></a>
 FINITE STATE MACHINE</h1>
 <div align="center"> <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -122,11 +131,15 @@ FINITE STATE MACHINE</h1>
 <td class="markdownTableBodyNone">STATE4   </td><td class="markdownTableBodyNone">TRANSFER - Send data to UART1 and UART6   </td><td class="markdownTableBodyNone">- Send data to UART1 (bluetooth)<br  />
  - UART6 (debug)   </td><td class="markdownTableBodyNone">- Always transition back to <b>STATE2</b>   </td></tr>
 </table>
-</div><div class="image-frame"> <img src="FSM1.png" alt="" width="1200" height="800 400" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><h1><a class="anchor" id="bomm5"></a>
+</div><div class="image-frame"> <img src="FSM1.png" alt="" width="1200" height="800 400" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><p><br  />
+</p>
+<h1><a class="anchor" id="bomm5"></a>
 BILL OF MATERIAL - 3D PRINTED PARTS</h1>
-<p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. All the CAD 3D model files can be found here for reference: </p><div class="image-frame"> <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD"><img src="solidworks.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><h1><a class="anchor" id="bome2"></a>
+<p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. All the CAD 3D model files can be found here for reference: </p><div class="image-frame"> <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD"><img src="link.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><p><br  />
+</p>
+<h1><a class="anchor" id="bome2"></a>
 BILL OF MATERIAL - ELECTRONICS</h1>
-<p>All of the components for electronics are listed in the attached PDF file here below </p><div class="image-frame"> <a href="BILL_OF_MATERIAL.xlsx" target="_blank"><img src="bom.png" alt="" width="250" height="200" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div> </div></div><!-- contents -->
+<p>All of the components for electronics are listed in the attached PDF file below </p><div class="image-frame"> <a href="BILL_OF_MATERIAL.xlsx" target="_blank"><img src="xlsx.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -2,8 +2,14 @@
 \label{index}\index{MAIN PAGE@{MAIN PAGE}}
 
 
-PICTURE UPDATE NEEDED\doxysection{MOTIVATION}\label{index_motivation}
-The motivation for this project is to build a prototype for a full-\/scale basketball-\/playing robot. The project will start with a small-\/scale version to test the concept and gather insights for future improvements. This approach will provide an opportunity to develop customized PCBAs that can control the robot for its intended purposes.\doxysection{OBJECTIVE}\label{index_detail}
+PICTURE UPDATE NEEDED
+
+~\newline
+\doxysection{MOTIVATION}\label{index_motivation}
+The motivation for this project is to build a prototype for a full-\/scale basketball-\/playing robot. The project will start with a small-\/scale version to test the concept and gather insights for future improvements. This approach will provide an opportunity to develop customized PCBAs that can control the robot for its intended purposes.
+
+~\newline
+\doxysection{OBJECTIVE}\label{index_detail}
 The objective of the project includes integrating the mechanical design with PCBA electronic component. This project will primarily use 3D-\/printed parts, along with shafts and bearings to support the robot\textquotesingle{}s housing. The PCBAs will be designed using Fusion 360 software and manufactured by JLCPCB. The programming for the STM32 microcontroller will be done using the C language.
 
 Note\+: The image below is provided solely for illustrative purposes and does not represent the actual project.
@@ -16,26 +22,45 @@ The project is divided into two main assemblies\+:
 \begin{DoxyItemize}
 \item The controller will use an STM32 Black\+Pill microcontroller with an IMU sensor attached to the user\textquotesingle{}s hand. The controller will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and spin according to the IMU sensor\textquotesingle{}s input.
 \item The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller send launching flag. The launcher will use a customized PCBA centered around the STM32\+F401\+CEU6 chip, which will act as the core component to determine movement.
-\end{DoxyItemize}\doxysection{IDEATION DESIGN}\label{index_design}
+\end{DoxyItemize}
+
+~\newline
+\doxysection{IDEATION DESIGN}\label{index_design}
 The overall design of the two main assemblies in the project is sketched and listed below for reference. The sketch represents a rough idea of how all components are connected and communicate with each other. The PDF of the sketch is also attached with higher solution can be found in by access through the picture below
 
- {\texttt{  }} \doxysection{CAD MODELING}\label{index_cad}
+ {\texttt{  }} 
+
+~\newline
+\doxysection{CAD MODELING}\label{index_cad}
 The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from Mc\+Master-\/\+Carr as off-\/the-\/shelf components. The CAD modeling phase of the project was completed early to allow the main focus to be on electronics and program implementation. The CAD figure below shows the final design of the launcher. The Solid\+Works CAD model can access through the CAD sketch below.
 
- {\texttt{  }} \doxysection{LAUNCHER}\label{index_launcher}
+ {\texttt{  }}  ~\newline
+\doxysection{LAUNCHER}\label{index_launcher}
 The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32\+F401\+CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning. More detail about the launcher Bill of Materials, design, source code can be found by access through the launcher picture below\+:
 
- {\texttt{  }} \doxysection{CONTROLLER}\label{index_controller}
+ {\texttt{  }} 
+
+~\newline
+\doxysection{CONTROLLER}\label{index_controller}
 The controller will use an STM32 Black\+Pill microcontroller with an IMU sensor attached to the user\textquotesingle{}s hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor\textquotesingle{}s input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-\/05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-\/printed handle bracket. More detail about the controller\textquotesingle{}s Bill of Materials, design, source code can be found by access through the launcher picture below\+:
 
- {\texttt{  }} \doxysection{FUTURE IMPROVEMENT}\label{index_improve}
+ {\texttt{  }} 
+
+~\newline
+\doxysection{FUTURE IMPROVEMENT}\label{index_improve}
 Even though, the project is built and run appropriately according to the project\textquotesingle{}s objectives. The following improvements can be considered for future version. Especially, for the upcoming full scale basketball launcher
 \begin{DoxyItemize}
 \item Improve the IMU to a 9 DOF sensor that can sense accurate absolute angle
 \item Improve stronger stepper driver that can allow faster and stronger rotation motion
 \item Increase moving angle of the launcher to more than 120°
-\end{DoxyItemize}\doxysection{YOUTUBE REFERENCE}\label{index_youtube}
- {\texttt{  }} \doxysection{REPOSITORY REFERENCE}\label{index_repository}
+\end{DoxyItemize}
+
+~\newline
+\doxysection{YOUTUBE REFERENCE}\label{index_youtube}
+ {\texttt{  }} 
+
+~\newline
+\doxysection{REPOSITORY REFERENCE}\label{index_repository}
 You may find it more useful to read through the website exploring the source code. All code that will be referenced in this portfolio relate to project is accessible through\+:
 
  {\texttt{  }} 
@@ -47,7 +72,10 @@ For example\+:
 
 \begin{DoxyItemize}
 \item \doxyref{main\+\_\+\+C.\+c}{p.}{main___c_8c} means the main code file for the controller. Needs to be changed to \doxyref{main.\+c}{p.}{main_8c} before running in any IDE.
-\end{DoxyItemize}\doxysection{CONTACT INFO}\label{index_info}
+\end{DoxyItemize}
+
+~\newline
+\doxysection{CONTACT INFO}\label{index_info}
 
 \begin{DoxyPre}   
 {\bfseries{Author:}}         Vinh Vo

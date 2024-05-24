@@ -18,7 +18,8 @@
  * </a>
  * </div>
  * 
- *  
+ * <br> <!---->
+ *
  * @section schematic CONTROLLER PCBA
  * Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 BlackPill, mpu6050 IMU, HC-05, and LEDs together. 
  * The PDF of this schematic is also attached with higher solution can be found in the picture below
@@ -28,11 +29,19 @@
  *   </a>
  * </div>
  * 
- * 
+ * <br> <!---->
+ *
+ * @section pcbaC CONTROLLER PCBA
  * <div class="image-frame">
- * <img src="PCBCONTROLLERLAYOUT.png" width="1200" height="400" style="border: 10px solid black; border-radius: 10px;">
+ * <img src="PCBCONTROLLERLAYOUT.png" width="1200" height="400" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
+ * <br> <!---->
+ * <div class="image-frame">
+ * <img src="finalpcb1.png" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;">
  * </div>
  * 
+ * <br> <!---->
+ *
  * @section fsm FINITE STATE MACHINE
  * <div align="center">
  * | State       | Description                                        | Actions                                                | Transitions                                                                                    |
@@ -48,20 +57,24 @@
  * <img src="FSM1.png" width="1200" height="800" height="400" style="border: 10px solid black; border-radius: 50px;">
  * </div>
  * 
+ * <br> <!---->
+ *
  * @section bomm5 BILL OF MATERIAL - 3D PRINTED PARTS
  * Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. 
  * All the CAD 3D model files can be found here for reference:
  * <div class="image-frame">
  * <a href=https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD>
- *      <img src="solidworks.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="link.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  * 
+ * <br> <!---->
+ *
  * @section bome2 BILL OF MATERIAL - ELECTRONICS
- * All of the components for electronics are listed in the attached PDF file here below
+ * All of the components for electronics are listed in the attached PDF file below
  * <div class="image-frame">
  *   <a href="BILL_OF_MATERIAL.xlsx" target="_blank">
- *       <img src="bom.png" width="250" height="200" style="border: 10px solid black; border-radius: 10px;">
+ *       <img src="xlsx.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
  *   </a>
  * </div>
  */

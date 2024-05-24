@@ -29,6 +29,7 @@ var NAVTREE =
     [ "CONTROLLER", "controller_detail.html", [
       [ "FINAL DESIGN", "controller_detail.html#overview", null ],
       [ "CONTROLLER PCBA", "controller_detail.html#schematic", null ],
+      [ "CONTROLLER PCBA", "controller_detail.html#pcbaC", null ],
       [ "FINITE STATE MACHINE", "controller_detail.html#fsm", null ],
       [ "BILL OF MATERIAL - 3D PRINTED PARTS", "controller_detail.html#bomm5", null ],
       [ "BILL OF MATERIAL - ELECTRONICS", "controller_detail.html#bome2", null ]
@@ -36,15 +37,22 @@ var NAVTREE =
     [ "LAUNCHER", "launcher_detail.html", [
       [ "FINAL DESIGN", "launcher_detail.html#overview1", null ],
       [ "LAUNCHER PCBA", "launcher_detail.html#schematic1", null ],
+      [ "LAUNCHER PCBA", "launcher_detail.html#pcbal", null ],
       [ "FINITE STATE MACHINE", "launcher_detail.html#fsm1", null ],
       [ "BILL OF MATERIAL - CYCLOIDAL GEARBOX", "launcher_detail.html#bomm3", null ],
       [ "BILL OF MATERIAL - MECHANICAL", "launcher_detail.html#bomm1", null ]
     ] ],
-    [ "REPORTS", "reports_detail.html", [
+    [ "REFERENCE", "reports_detail.html", [
+      [ "OVERALL REPORT", "reports_detail.html#doc4", null ],
       [ "PROPOSAL", "reports_detail.html#doc1", null ],
-      [ "BILL OF MATERIAL", "reports_detail.html#doc2", null ],
       [ "REFERENCE MANUAL", "reports_detail.html#doc3", null ],
-      [ "OVERALL REPORT", "reports_detail.html#doc4", null ]
+      [ "IDEATION SKETCH", "reports_detail.html#doc5", null ],
+      [ "LAUNCHER SCHEMATIC", "reports_detail.html#doc8", null ],
+      [ "CONTROLLER SCHEMATIC", "reports_detail.html#doc7", null ],
+      [ "BILL OF MATERIAL", "reports_detail.html#doc2", null ],
+      [ "3D MODEL", "reports_detail.html#doc6", null ],
+      [ "YOUTUBE", "reports_detail.html#youtube1", null ],
+      [ "REPOSITORY", "reports_detail.html#repository1", null ]
     ] ],
     [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
@@ -70,8 +78,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"stm32f4xx__hal__conf_8h.html#a54badbcdb096ce802d2eed981cbbc31a",
-"struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2"
+"stm32f4xx__hal__conf_8h.html#a474bf13e28d09b667e41b151140ee39d",
+"struct_m_p_u6050.html#abf45242a4a812df409b53ce5216f8d7e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

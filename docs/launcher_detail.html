@@ -100,6 +100,8 @@ $(function(){initNavTree('launcher_detail.html',''); initResizable(); });
 FINAL DESIGN</h1>
 <p>The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). It will then shoot the basketball when the controller sends out signals. The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement. The launcher includes a cycloidal gearbox and stepper motors with a planetary gearbox for precise movement control. Additionally, the launcher is equipped with brushless motors and 3 limit switches to ensure accurate positioning.</p>
 <div class="image-frame"> <a href="https://vvinhvvo98.github.io/Basketball-Launcher/launcher_detail.html"><img src="launcher.png" alt="" width="1200" height="1250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><p>--&gt; UPDATE PICTURE</p>
+<p><br  />
+</p>
 <h1><a class="anchor" id="schematic1"></a>
 LAUNCHER PCBA</h1>
 <p>This PCB is the main component of the project, serving as the centerpiece of the launcher. It operates the launcher based on commands received from the controller The PDF of this schematic is also attached with higher solution can be found by access through the schematic's link below Below are the all of the PCB schematic contains total of 4 pages describe in the table below</p>
@@ -115,7 +117,14 @@ LAUNCHER PCBA</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">4   </td><td class="markdownTableBodyNone">Additional pins + test pads and connectors for limit switches + stepper motors   </td></tr>
 </table>
-</div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p1.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p2.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p3.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p1.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <img src="fppf.png" alt="" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><div class="image-frame"> <img src="finalpcb2.png" alt="" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><h1><a class="anchor" id="fsm1"></a>
+</div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p1.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p2.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p3.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><div class="image-frame"> <a href="LauncherSchematic.pdf" target="_blank"><img src="p1.png" alt="" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div><p><br  />
+</p>
+<h1><a class="anchor" id="pcbal"></a>
+LAUNCHER PCBA</h1>
+<div class="image-frame"> <img src="fppf.png" alt="" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><p> <br  />
+ </p><div class="image-frame"> <img src="finalpcb2.png" alt="" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </div><p><br  />
+</p>
+<h1><a class="anchor" id="fsm1"></a>
 FINITE STATE MACHINE</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -135,10 +144,12 @@ FINITE STATE MACHINE</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">STATE4   </td><td class="markdownTableBodyNone">BLDC RUN   </td><td class="markdownTableBodyNone">- Running BLDC motors   </td><td class="markdownTableBodyNone">- Always move to <b>STATE1</b>   </td></tr>
 </table>
-<p><img src="FSM2.png" alt="" width="1200" height="700" class="inline"/></p>
+<p><img src="FSM2.png" alt="" width="1200" height="700" style="border-radius: 50px;" class="inline"/> <br  />
+</p>
 <h1><a class="anchor" id="bomm3"></a>
 BILL OF MATERIAL - CYCLOIDAL GEARBOX</h1>
-<div align="center"></div><div align="center"> <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a></div><div align="center"> <img src="CG.png" alt="" width="800" height="800" class="inline"/></div><div align="center"><table class="markdownTable">
+<div align="center"></div><div align="center"> <a href="https://www.youtube.com/playlist?list=PLlT9z-PWNXdMvf3wya2C2y9n_Qta7UkEB" target="_blank" style="color: blue; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; background-color: yellow; border: 2px solid black; border-radius: 5px;">CYCLOIDAL GEARBOX DEMONSTRATION</a></div><div align="center"> <br  />
+</div><div align="center"> <img src="CG.png" alt="" width="800" height="800" style="border-radius: 50px;" class="inline"/></div><div align="center"><table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Components   </th><th class="markdownTableHeadNone">Description   </th><th class="markdownTableHeadNone">Image    </th></tr>
 <tr class="markdownTableRowOdd">
@@ -156,7 +167,9 @@ BILL OF MATERIAL - CYCLOIDAL GEARBOX</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">Nut   </td><td class="markdownTableBodyNone">M6 + t = 5 mm + Lock Nut   </td><td class="markdownTableBodyNone"><img src="locknut.png" alt="" width="250" height="250" class="inline"/>   </td></tr>
 </table>
-</div><h1><a class="anchor" id="bomm1"></a>
+</div><p><br  />
+</p>
+<h1><a class="anchor" id="bomm1"></a>
 BILL OF MATERIAL - MECHANICAL</h1>
 <div align="center"></div><div align="center"><table class="markdownTable">
 <tr class="markdownTableHead">
@@ -180,11 +193,15 @@ BILL OF MATERIAL - MECHANICAL</h1>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">BATTERY   </td><td class="markdownTableBodyNone">Lipo battery 11.1 V   </td><td class="markdownTableBodyNone"><img src="battery.png" alt="" width="250" height="250" class="inline"/>   </td></tr>
 </table>
-</div><div align="center"> </div><h1><a class="anchor" id="bomm5"></a>
+</div><div align="center"> </div><p><br  />
+</p>
+<h1><a class="anchor" id="bomm5"></a>
 BILL OF MATERIAL - 3D PRINTED PARTS</h1>
-<p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. All the CAD 3D model files can be found here for reference: </p><div class="image-frame"> <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD"><img src="solidworks.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><h1><a class="anchor" id="bome2"></a>
+<p>Most of the 3D printed parts are printed using BambuLab XC1 3D printer and BambuLab filaments. All the CAD 3D model files can be found here for reference: </p><div class="image-frame"> <a href="https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD"><img src="link.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div><p><br  />
+</p>
+<h1><a class="anchor" id="bome2"></a>
 BILL OF MATERIAL - ELECTRONICS</h1>
-<p>All of the components for electronics are listed in the attached PDF file here below </p><div class="image-frame"> <a href="BILL_OF_MATERIAL.xlsx" target="_blank"><img src="bom.png" alt="" width="250" height="200" style="border: 10px solid black; border-radius: 10px;" class="inline"/> </a> </div> </div></div><!-- contents -->
+<p>All of the components for electronics are listed in the attached PDF file below </p><div class="image-frame"> <a href="BILL_OF_MATERIAL.xlsx" target="_blank"><img src="xlsx.png" alt="" width="250" height="250" style="border: 10px solid black; border-radius: 50px;" class="inline"/> </a> </div> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -10,13 +10,15 @@
  *
  * PICTURE UPDATE NEEDED
  *
+ * <br> <!---->
  *
  * @section motivation MOTIVATION
  * The motivation for this project is to build a prototype for a full-scale basketball-playing robot.
  * The project will start with a small-scale version to test the concept and gather insights for future improvements.
  * This approach will provide an opportunity to develop customized PCBAs that can control the robot for its intended purposes.
  * 
- * 
+ * <br> <!---->
+ *
  * @section detail OBJECTIVE
  * The objective of the project includes integrating the mechanical design with PCBA electronic component.
  * This project will primarily use 3D-printed parts, along with shafts and bearings to support the robot's housing.
@@ -38,7 +40,8 @@
  * It will then shoot the basketball when the controller send launching flag. 
  * The launcher will use a customized PCBA centered around the STM32F401CEU6 chip, which will act as the core component to determine movement.
  *  
- * 
+ * <br> <!---->
+ *
  * @section design IDEATION DESIGN
  * 
  * The overall design of the two main assemblies in the project is sketched and listed below for reference.
@@ -51,7 +54,8 @@
  *   </a>
  * </div>
  * 
- * 
+ * <br> <!---->
+ *
  * @section cad CAD MODELING
  * The design is inspired by the Peashooter from the Plants vs. Zombies mobile game. 
  * In terms of mechanical design, custom machined parts are limited to facilitate rapid prototyping and maintain focus on electronics and programming. Most custom parts will be 3D printed to save time and effort, except for bearings and shafts, which will be purchased from McMaster-Carr as off-the-shelf components.
@@ -62,7 +66,8 @@
  *      <img src="CAD.png" width="1200" height="900" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
- * 
+ * <br> <!---->
+ *
  * @section launcher LAUNCHER
  * 
  * The launcher will be the main assembly, receiving data from the controller and moving in 2 degrees of freedom (yaw and pitch angles). 
@@ -77,6 +82,7 @@
  * </a>
  * </div>
  * 
+ * <br> <!---->
  * 
  * @section controller CONTROLLER
  * The controller will use an STM32 BlackPill microcontroller with an IMU sensor attached to the user's hand. 
@@ -91,7 +97,8 @@
  * </a>
  * </div>
  *
- * 
+ * <br> <!---->
+ *
  * @section improve FUTURE IMPROVEMENT
  * Even though, the project is built and run appropriately according to the project's objectives. The following improvements can be considered for future version.
  * Especially, for the upcoming full scale basketball launcher
@@ -99,15 +106,18 @@
  * - Improve stronger stepper driver that can allow faster and stronger rotation motion
  * - Increase moving angle of the launcher to more than 120°
  * 
- * 
+ * <br> <!---->
+ *
  * @section youtube YOUTUBE REFERENCE
  *
  * <div class="image-frame">
  * <a href=https://www.youtube.com/playlist?list=PLlT9z-PWNXdP43BUYpBcqznBU4_-Bkpg8>
- *      <img src="youtube.png" width="250" height="200" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="youtube.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
- * 
+ *
+ * <br> <!---->
+ *
  * @section repository REPOSITORY REFERENCE
  *
  * You may find it more useful to read through the website exploring the source code.
@@ -129,6 +139,8 @@
  * 
  * - main_C.c means the main code file for the controller. Needs to be changed to main.c before running in any IDE.
  * 
+ * <br> <!---->
+ *
  * @section info CONTACT INFO
  * 
  * <pre>   

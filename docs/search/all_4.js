@@ -10,9 +10,10 @@ var searchData=
   ['cmsis_7',['CMSIS',['../group___c_m_s_i_s.html',1,'']]],
   ['contact_20info_8',['CONTACT INFO',['../index.html#info',1,'']]],
   ['controller_9',['CONTROLLER',['../controller_detail.html',1,'CONTROLLER'],['../index.html#controller',1,'CONTROLLER']]],
-  ['controller_20pcba_10',['CONTROLLER PCBA',['../controller_detail.html#schematic',1,'']]],
-  ['controller_2ec_11',['controller.c',['../controller_8c.html',1,'']]],
-  ['counter1_12',['counter1',['../struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525',1,'RadioX']]],
-  ['counter2_13',['counter2',['../struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2',1,'RadioX']]],
-  ['cycloidal_20gearbox_14',['BILL OF MATERIAL - CYCLOIDAL GEARBOX',['../launcher_detail.html#bomm3',1,'']]]
+  ['controller_20pcba_10',['CONTROLLER PCBA',['../controller_detail.html#schematic',1,'CONTROLLER PCBA'],['../controller_detail.html#pcbaC',1,'CONTROLLER PCBA']]],
+  ['controller_20schematic_11',['CONTROLLER SCHEMATIC',['../reports_detail.html#doc7',1,'']]],
+  ['controller_2ec_12',['controller.c',['../controller_8c.html',1,'']]],
+  ['counter1_13',['counter1',['../struct_radio_x.html#acbcc8fb505a4cdd9573f816fd073e525',1,'RadioX']]],
+  ['counter2_14',['counter2',['../struct_radio_x.html#a7a0a90242eea451f43eeb3e08d6212b2',1,'RadioX']]],
+  ['cycloidal_20gearbox_15',['BILL OF MATERIAL - CYCLOIDAL GEARBOX',['../launcher_detail.html#bomm3',1,'']]]
 ];
