@@ -29,8 +29,9 @@ var searchData=
   ['pin_26',['PIN',['../struct_l_e_d_x.html#a23b9db30b873d9b45f435df66328a784',1,'LEDX::PIN'],['../struct_switch_x.html#a23b9db30b873d9b45f435df66328a784',1,'SwitchX::PIN']]],
   ['pitch_27',['pitch',['../main_8c.html#af1879425937ee67e191d80e6390dc942',1,'main.c']]],
   ['pitchdirection_28',['pitchDirection',['../main_8c.html#a25c28ea9d15fd960d067fcde933fa2d9',1,'main.c']]],
-  ['prefetch_5fenable_29',['PREFETCH_ENABLE',['../stm32f4xx__hal__conf___c_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf.h']]],
-  ['printed_20parts_30',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
-  ['proposal_31',['PROPOSAL',['../reports_detail.html#doc1',1,'']]],
-  ['pulsewidth_32',['pulseWidth',['../struct_radio_x.html#a9ff1c7c8451b7fa9523adb103ac90b72',1,'RadioX']]]
+  ['pitchdirectionsw_29',['pitchDirectionSW',['../main_8c.html#a336f0e298a64a2c8165459e61ca8c92e',1,'main.c']]],
+  ['prefetch_5fenable_30',['PREFETCH_ENABLE',['../stm32f4xx__hal__conf___c_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf.h']]],
+  ['printed_20parts_31',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
+  ['proposal_32',['PROPOSAL',['../reports_detail.html#doc1',1,'']]],
+  ['pulsewidth_33',['pulseWidth',['../struct_radio_x.html#a9ff1c7c8451b7fa9523adb103ac90b72',1,'RadioX']]]
 ];

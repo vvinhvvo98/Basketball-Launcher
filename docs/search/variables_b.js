@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_0',['timer',['../struct_d4215_x.html#a30b15aedcc086ca7abb69f7ac012ce64',1,'D4215X::timer'],['../struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64',1,'RadioX::timer']]]
+  ['rise_0',['rise',['../main_8c.html#a02aa747717ac5dfe8fb75e3aeb57a24e',1,'main.c']]]
 ];

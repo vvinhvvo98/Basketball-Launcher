@@ -11,5 +11,6 @@ var searchData=
   ['report_8',['OVERALL REPORT',['../reports_detail.html#doc4',1,'']]],
   ['report_2ec_9',['report.c',['../report_8c.html',1,'']]],
   ['reports_10',['REPORTS',['../reports_detail.html',1,'']]],
-  ['repository_20reference_11',['REPOSITORY REFERENCE',['../index.html#repository',1,'']]]
+  ['repository_20reference_11',['REPOSITORY REFERENCE',['../index.html#repository',1,'']]],
+  ['rise_12',['rise',['../main_8c.html#a02aa747717ac5dfe8fb75e3aeb57a24e',1,'main.c']]]
 ];

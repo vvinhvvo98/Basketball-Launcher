@@ -11,7 +11,6 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
 {\ttfamily \#include "{}stepper\+\_\+driver.\+h"{}}\newline
-{\ttfamily \#include "{}radio\+\_\+driver.\+h"{}}\newline
 {\ttfamily \#include "{}switch.\+h"{}}\newline
 {\ttfamily \#include "{}d4215.\+h"{}}\newline
 {\ttfamily \#include "{}led.\+h"{}}\newline
@@ -26,8 +25,12 @@ void \mbox{\hyperlink{main_8c_ae8b1081749618dd73189ae92529669fa}{data\+Process}}
 \item 
 uint16\+\_\+t \mbox{\hyperlink{main_8c_a14f3ce24c0e30e06b6a828f85f159a5e}{speed\+Calculate}} (uint16\+\_\+t first, uint16\+\_\+t second, uint16\+\_\+t third)
 \item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a456f6450c501691b495bf89c20d7416a}{map}} (uint16\+\_\+t x, uint16\+\_\+t in\+\_\+min, uint16\+\_\+t in\+\_\+max, uint16\+\_\+t out\+\_\+min, uint16\+\_\+t out\+\_\+max)
+\item 
 int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
 \begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a77a2401a35ddd9bd0b8fc28331b81381}{HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\item 
 void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
 \begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
@@ -45,13 +48,31 @@ char \mbox{\hyperlink{main_8c_a9381894912323d745f29978b3a4b57e6}{char\+In}}
 \item 
 char \mbox{\hyperlink{main_8c_a91716121094312c93e5773788cb818ce}{data}} \mbox{[}20\mbox{]}
 \item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_a28e7b8dbc22be6c600d1479880d5c9eb}{ti}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_a39d3a509c66518960782228a2d591fb3}{tf}} = 0
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_ab6f7bbc44474a0435c694bd94b8e764e}{dt}} = 0
+\item 
 uint16\+\_\+t \mbox{\hyperlink{main_8c_a05209206c748bf62c46f18458c162d03}{yaw}} = 0
 \item 
 uint16\+\_\+t \mbox{\hyperlink{main_8c_af1879425937ee67e191d80e6390dc942}{pitch}} = 0
 \item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a5582e420e12968ea9668048d1706de8d}{angle\+Target}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a02aa747717ac5dfe8fb75e3aeb57a24e}{rise}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a78148cbbd456fb705166bc673e01b74e}{fall}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_a20555e38a389cd39adf7355ae583f15e}{total}} = 0
+\item 
 uint8\+\_\+t \mbox{\hyperlink{main_8c_aaf375b72fdf3ca768336444db8ab5871}{yaw\+Direction}} = 0
 \item 
 uint8\+\_\+t \mbox{\hyperlink{main_8c_a25c28ea9d15fd960d067fcde933fa2d9}{pitch\+Direction}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a5cbb150833a830d6738b5515eed91224}{yaw\+Direction\+SW}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a336f0e298a64a2c8165459e61ca8c92e}{pitch\+Direction\+SW}} = 0
 \item 
 uint8\+\_\+t \mbox{\hyperlink{main_8c_a266732d9c228f9bac150e7554734d112}{idx}} = 0
 \item 
@@ -71,21 +92,19 @@ uint8\+\_\+t \mbox{\hyperlink{main_8c_ac21fbfca7fe2c83d47ec82a5f510288e}{SW2}} =
 \item 
 uint8\+\_\+t \mbox{\hyperlink{main_8c_a96040f3dd5d4a1f71b22307df5240441}{SW3}} = 0
 \item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a02e1579ae4cfa59f732a66242a6619d8}{SW}} = 0
+\item 
 uint8\+\_\+t \mbox{\hyperlink{main_8c_a0ee5c1482a272080958f6eb898bc0358}{STATE}} = 0
 \item 
 uint8\+\_\+t \mbox{\hyperlink{main_8c_a36d03484cafa1f58e68396ee44402f6a}{STATE\+\_\+0\+\_\+\+INIT}} = 0
 \item 
-uint8\+\_\+t \mbox{\hyperlink{main_8c_a05488ac03381afe270adf3e92dc87c3e}{STATE\+\_\+1\+\_\+\+CAL}} = 1
+uint8\+\_\+t \mbox{\hyperlink{main_8c_adf6b30bf790ed1c38d49ef669369aedb}{STATE\+\_\+1\+\_\+\+HUB}} = 1
 \item 
-uint8\+\_\+t \mbox{\hyperlink{main_8c_a1dca9b32dde0951ba211697991f729c8}{STATE\+\_\+2\+\_\+\+HUB}} = 2
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a0ab51384d12f9c6a012febb032125dee}{STATE\+\_\+2\+\_\+\+ESTOP}} = 2
 \item 
-uint8\+\_\+t \mbox{\hyperlink{main_8c_a73c37a6671d82d6c412acba178e97a6c}{STATE\+\_\+3\+\_\+\+BLDC}} = 3
+uint8\+\_\+t \mbox{\hyperlink{main_8c_aeb358fefc9c49727c6e7f564ed17bac3}{STATE\+\_\+3\+\_\+\+STEPPER}} = 3
 \item 
-uint8\+\_\+t \mbox{\hyperlink{main_8c_a865e32c717e9b6298f41bf0e90e95e5f}{STATE\+\_\+4\+\_\+\+STEPPER}} = 4
-\item 
-uint8\+\_\+t \mbox{\hyperlink{main_8c_a314d52855b2ea73d19e16e036ece540c}{STATE\+\_\+5\+\_\+\+SWITCH}} = 5
-\item 
-uint8\+\_\+t \mbox{\hyperlink{main_8c_a39acd5364e309a8b9b6a95a0f87bfbd7}{STATE\+\_\+6\+\_\+\+ESTOP}} = 6
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a972f327658ca306299ee84734263c696}{STATE\+\_\+4\+\_\+\+BLDC}} = 4
 \end{DoxyCompactItemize}
 
 
@@ -121,6 +140,12 @@ This function is executed in case of error occurrence.
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
+\Hypertarget{main_8c_a77a2401a35ddd9bd0b8fc28331b81381}\label{main_8c_a77a2401a35ddd9bd0b8fc28331b81381} 
+\index{main.c@{main.c}!HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}}
+\index{HAL\_TIM\_IC\_CaptureCallback@{HAL\_TIM\_IC\_CaptureCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_IC\_CaptureCallback()}{HAL\_TIM\_IC\_CaptureCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+IC\+\_\+\+Capture\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim }\end{DoxyParamCaption})}
+
 \Hypertarget{main_8c_ae494a9643f29b87d6d81e5264e60e57b}\label{main_8c_ae494a9643f29b87d6d81e5264e60e57b} 
 \index{main.c@{main.c}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
 \index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!main.c@{main.c}}
@@ -142,6 +167,12 @@ The application entry point.
 {\em int} & \\
 \hline
 \end{DoxyRetVals}
+\Hypertarget{main_8c_a456f6450c501691b495bf89c20d7416a}\label{main_8c_a456f6450c501691b495bf89c20d7416a} 
+\index{main.c@{main.c}!map@{map}}
+\index{map@{map}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}}
+{\footnotesize\ttfamily uint16\+\_\+t map (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{in\+\_\+min,  }\item[{uint16\+\_\+t}]{in\+\_\+max,  }\item[{uint16\+\_\+t}]{out\+\_\+min,  }\item[{uint16\+\_\+t}]{out\+\_\+max }\end{DoxyParamCaption})}
+
 \Hypertarget{main_8c_a14f3ce24c0e30e06b6a828f85f159a5e}\label{main_8c_a14f3ce24c0e30e06b6a828f85f159a5e} 
 \index{main.c@{main.c}!speedCalculate@{speedCalculate}}
 \index{speedCalculate@{speedCalculate}!main.c@{main.c}}
@@ -170,6 +201,12 @@ Initializes the RCC Oscillators according to the specified parameters in the RCC
 Initializes the CPU, AHB and APB buses clocks
 
 \doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a5582e420e12968ea9668048d1706de8d}\label{main_8c_a5582e420e12968ea9668048d1706de8d} 
+\index{main.c@{main.c}!angleTarget@{angleTarget}}
+\index{angleTarget@{angleTarget}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{angleTarget}{angleTarget}}
+{\footnotesize\ttfamily uint16\+\_\+t angle\+Target = 0}
+
 \Hypertarget{main_8c_a1147daf8fcf28969c1c03b578a2a47fc}\label{main_8c_a1147daf8fcf28969c1c03b578a2a47fc} 
 \index{main.c@{main.c}!CAL@{CAL}}
 \index{CAL@{CAL}!main.c@{main.c}}
@@ -188,11 +225,23 @@ Initializes the CPU, AHB and APB buses clocks
 \doxysubsubsection{\texorpdfstring{data}{data}}
 {\footnotesize\ttfamily char data\mbox{[}20\mbox{]}}
 
+\Hypertarget{main_8c_ab6f7bbc44474a0435c694bd94b8e764e}\label{main_8c_ab6f7bbc44474a0435c694bd94b8e764e} 
+\index{main.c@{main.c}!dt@{dt}}
+\index{dt@{dt}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily uint32\+\_\+t dt = 0}
+
 \Hypertarget{main_8c_a91046d8402142cd58350d1df7748595c}\label{main_8c_a91046d8402142cd58350d1df7748595c} 
 \index{main.c@{main.c}!ESTOP@{ESTOP}}
 \index{ESTOP@{ESTOP}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{ESTOP}{ESTOP}}
 {\footnotesize\ttfamily uint8\+\_\+t ESTOP = 0}
+
+\Hypertarget{main_8c_a78148cbbd456fb705166bc673e01b74e}\label{main_8c_a78148cbbd456fb705166bc673e01b74e} 
+\index{main.c@{main.c}!fall@{fall}}
+\index{fall@{fall}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{fall}{fall}}
+{\footnotesize\ttfamily uint16\+\_\+t fall = 0}
 
 \Hypertarget{main_8c_a0ed518f1a3513f849860a17768802088}\label{main_8c_a0ed518f1a3513f849860a17768802088} 
 \index{main.c@{main.c}!HOME@{HOME}}
@@ -248,6 +297,18 @@ Initializes the CPU, AHB and APB buses clocks
 \doxysubsubsection{\texorpdfstring{pitchDirection}{pitchDirection}}
 {\footnotesize\ttfamily uint8\+\_\+t pitch\+Direction = 0}
 
+\Hypertarget{main_8c_a336f0e298a64a2c8165459e61ca8c92e}\label{main_8c_a336f0e298a64a2c8165459e61ca8c92e} 
+\index{main.c@{main.c}!pitchDirectionSW@{pitchDirectionSW}}
+\index{pitchDirectionSW@{pitchDirectionSW}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{pitchDirectionSW}{pitchDirectionSW}}
+{\footnotesize\ttfamily uint8\+\_\+t pitch\+Direction\+SW = 0}
+
+\Hypertarget{main_8c_a02aa747717ac5dfe8fb75e3aeb57a24e}\label{main_8c_a02aa747717ac5dfe8fb75e3aeb57a24e} 
+\index{main.c@{main.c}!rise@{rise}}
+\index{rise@{rise}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{rise}{rise}}
+{\footnotesize\ttfamily uint16\+\_\+t rise = 0}
+
 \Hypertarget{main_8c_a2de2072b2f96bc36bdbd45bca00050e4}\label{main_8c_a2de2072b2f96bc36bdbd45bca00050e4} 
 \index{main.c@{main.c}!SHOT@{SHOT}}
 \index{SHOT@{SHOT}!main.c@{main.c}}
@@ -266,41 +327,35 @@ Initializes the CPU, AHB and APB buses clocks
 \doxysubsubsection{\texorpdfstring{STATE\_0\_INIT}{STATE\_0\_INIT}}
 {\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+0\+\_\+\+INIT = 0}
 
-\Hypertarget{main_8c_a05488ac03381afe270adf3e92dc87c3e}\label{main_8c_a05488ac03381afe270adf3e92dc87c3e} 
-\index{main.c@{main.c}!STATE\_1\_CAL@{STATE\_1\_CAL}}
-\index{STATE\_1\_CAL@{STATE\_1\_CAL}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{STATE\_1\_CAL}{STATE\_1\_CAL}}
-{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+1\+\_\+\+CAL = 1}
+\Hypertarget{main_8c_adf6b30bf790ed1c38d49ef669369aedb}\label{main_8c_adf6b30bf790ed1c38d49ef669369aedb} 
+\index{main.c@{main.c}!STATE\_1\_HUB@{STATE\_1\_HUB}}
+\index{STATE\_1\_HUB@{STATE\_1\_HUB}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_1\_HUB}{STATE\_1\_HUB}}
+{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+1\+\_\+\+HUB = 1}
 
-\Hypertarget{main_8c_a1dca9b32dde0951ba211697991f729c8}\label{main_8c_a1dca9b32dde0951ba211697991f729c8} 
-\index{main.c@{main.c}!STATE\_2\_HUB@{STATE\_2\_HUB}}
-\index{STATE\_2\_HUB@{STATE\_2\_HUB}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{STATE\_2\_HUB}{STATE\_2\_HUB}}
-{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+2\+\_\+\+HUB = 2}
+\Hypertarget{main_8c_a0ab51384d12f9c6a012febb032125dee}\label{main_8c_a0ab51384d12f9c6a012febb032125dee} 
+\index{main.c@{main.c}!STATE\_2\_ESTOP@{STATE\_2\_ESTOP}}
+\index{STATE\_2\_ESTOP@{STATE\_2\_ESTOP}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_2\_ESTOP}{STATE\_2\_ESTOP}}
+{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+2\+\_\+\+ESTOP = 2}
 
-\Hypertarget{main_8c_a73c37a6671d82d6c412acba178e97a6c}\label{main_8c_a73c37a6671d82d6c412acba178e97a6c} 
-\index{main.c@{main.c}!STATE\_3\_BLDC@{STATE\_3\_BLDC}}
-\index{STATE\_3\_BLDC@{STATE\_3\_BLDC}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{STATE\_3\_BLDC}{STATE\_3\_BLDC}}
-{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+3\+\_\+\+BLDC = 3}
+\Hypertarget{main_8c_aeb358fefc9c49727c6e7f564ed17bac3}\label{main_8c_aeb358fefc9c49727c6e7f564ed17bac3} 
+\index{main.c@{main.c}!STATE\_3\_STEPPER@{STATE\_3\_STEPPER}}
+\index{STATE\_3\_STEPPER@{STATE\_3\_STEPPER}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_3\_STEPPER}{STATE\_3\_STEPPER}}
+{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+3\+\_\+\+STEPPER = 3}
 
-\Hypertarget{main_8c_a865e32c717e9b6298f41bf0e90e95e5f}\label{main_8c_a865e32c717e9b6298f41bf0e90e95e5f} 
-\index{main.c@{main.c}!STATE\_4\_STEPPER@{STATE\_4\_STEPPER}}
-\index{STATE\_4\_STEPPER@{STATE\_4\_STEPPER}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{STATE\_4\_STEPPER}{STATE\_4\_STEPPER}}
-{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+4\+\_\+\+STEPPER = 4}
+\Hypertarget{main_8c_a972f327658ca306299ee84734263c696}\label{main_8c_a972f327658ca306299ee84734263c696} 
+\index{main.c@{main.c}!STATE\_4\_BLDC@{STATE\_4\_BLDC}}
+\index{STATE\_4\_BLDC@{STATE\_4\_BLDC}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{STATE\_4\_BLDC}{STATE\_4\_BLDC}}
+{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+4\+\_\+\+BLDC = 4}
 
-\Hypertarget{main_8c_a314d52855b2ea73d19e16e036ece540c}\label{main_8c_a314d52855b2ea73d19e16e036ece540c} 
-\index{main.c@{main.c}!STATE\_5\_SWITCH@{STATE\_5\_SWITCH}}
-\index{STATE\_5\_SWITCH@{STATE\_5\_SWITCH}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{STATE\_5\_SWITCH}{STATE\_5\_SWITCH}}
-{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+5\+\_\+\+SWITCH = 5}
-
-\Hypertarget{main_8c_a39acd5364e309a8b9b6a95a0f87bfbd7}\label{main_8c_a39acd5364e309a8b9b6a95a0f87bfbd7} 
-\index{main.c@{main.c}!STATE\_6\_ESTOP@{STATE\_6\_ESTOP}}
-\index{STATE\_6\_ESTOP@{STATE\_6\_ESTOP}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{STATE\_6\_ESTOP}{STATE\_6\_ESTOP}}
-{\footnotesize\ttfamily uint8\+\_\+t STATE\+\_\+6\+\_\+\+ESTOP = 6}
+\Hypertarget{main_8c_a02e1579ae4cfa59f732a66242a6619d8}\label{main_8c_a02e1579ae4cfa59f732a66242a6619d8} 
+\index{main.c@{main.c}!SW@{SW}}
+\index{SW@{SW}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SW}{SW}}
+{\footnotesize\ttfamily uint8\+\_\+t SW = 0}
 
 \Hypertarget{main_8c_a3c3121d737548b6911a02b122b18b004}\label{main_8c_a3c3121d737548b6911a02b122b18b004} 
 \index{main.c@{main.c}!SW1@{SW1}}
@@ -320,6 +375,24 @@ Initializes the CPU, AHB and APB buses clocks
 \doxysubsubsection{\texorpdfstring{SW3}{SW3}}
 {\footnotesize\ttfamily uint8\+\_\+t SW3 = 0}
 
+\Hypertarget{main_8c_a39d3a509c66518960782228a2d591fb3}\label{main_8c_a39d3a509c66518960782228a2d591fb3} 
+\index{main.c@{main.c}!tf@{tf}}
+\index{tf@{tf}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tf}{tf}}
+{\footnotesize\ttfamily uint32\+\_\+t tf = 0}
+
+\Hypertarget{main_8c_a28e7b8dbc22be6c600d1479880d5c9eb}\label{main_8c_a28e7b8dbc22be6c600d1479880d5c9eb} 
+\index{main.c@{main.c}!ti@{ti}}
+\index{ti@{ti}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ti}{ti}}
+{\footnotesize\ttfamily uint32\+\_\+t ti = 0}
+
+\Hypertarget{main_8c_a20555e38a389cd39adf7355ae583f15e}\label{main_8c_a20555e38a389cd39adf7355ae583f15e} 
+\index{main.c@{main.c}!total@{total}}
+\index{total@{total}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{total}{total}}
+{\footnotesize\ttfamily uint16\+\_\+t total = 0}
+
 \Hypertarget{main_8c_a05209206c748bf62c46f18458c162d03}\label{main_8c_a05209206c748bf62c46f18458c162d03} 
 \index{main.c@{main.c}!yaw@{yaw}}
 \index{yaw@{yaw}!main.c@{main.c}}
@@ -331,4 +404,10 @@ Initializes the CPU, AHB and APB buses clocks
 \index{yawDirection@{yawDirection}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{yawDirection}{yawDirection}}
 {\footnotesize\ttfamily uint8\+\_\+t yaw\+Direction = 0}
+
+\Hypertarget{main_8c_a5cbb150833a830d6738b5515eed91224}\label{main_8c_a5cbb150833a830d6738b5515eed91224} 
+\index{main.c@{main.c}!yawDirectionSW@{yawDirectionSW}}
+\index{yawDirectionSW@{yawDirectionSW}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{yawDirectionSW}{yawDirectionSW}}
+{\footnotesize\ttfamily uint8\+\_\+t yaw\+Direction\+SW = 0}
 

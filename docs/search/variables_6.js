@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['hi2c_0',['hi2c',['../struct_m_p_u6050.html#abf45242a4a812df409b53ce5216f8d7e',1,'MPU6050']]],
-  ['hi2c1_1',['hi2c1',['../main___c_8c.html#af7b2c26e44dadaaa798a5c3d82914ba7',1,'main_C.c']]],
-  ['home_2',['HOME',['../main_8c.html#a0ed518f1a3513f849860a17768802088',1,'main.c']]],
-  ['htim2_3',['htim2',['../main_8c.html#a2c80fd5510e2990a59a5c90d745c716c',1,'main.c']]],
-  ['htim4_4',['htim4',['../main_8c.html#a85788cec5a97ee377e4ee2e74f026484',1,'htim4:&#160;main.c'],['../stm32f4xx__it_8c.html#a85788cec5a97ee377e4ee2e74f026484',1,'htim4:&#160;main.c']]],
-  ['huart1_5',['huart1',['../main___c_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;main_C.c'],['../main_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;main.c'],['../stm32f4xx__it_8c.html#a2cf715bef37f7e8ef385a30974a5f0d5',1,'huart1:&#160;main_C.c']]],
-  ['huart2_6',['huart2',['../main___c_8c.html#aa9479c261d65eecedd3d9582f7f0f89c',1,'main_C.c']]],
-  ['huart6_7',['huart6',['../main_8c.html#a38905dda1d2fbff006c69db48eddba9d',1,'main.c']]]
+  ['gpiox_0',['GPIOx',['../struct_l_e_d_x.html#a1cb502d7339fa12f24109da591102eb2',1,'LEDX::GPIOx'],['../struct_stepper_x.html#a1cb502d7339fa12f24109da591102eb2',1,'StepperX::GPIOx'],['../struct_switch_x.html#a1cb502d7339fa12f24109da591102eb2',1,'SwitchX::GPIOx']]],
+  ['gx_1',['gX',['../struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d',1,'MPU6050::gX'],['../main___c_8c.html#af311395520d3063de824b529c9cdb10d',1,'gX:&#160;main_C.c']]],
+  ['gx_5foffset_2',['gX_offset',['../struct_m_p_u6050.html#a8dc74401ac9eb35a6f266e1c3251d41c',1,'MPU6050']]],
+  ['gy_3',['gY',['../struct_m_p_u6050.html#a158916f3f452bccade03134dd750e452',1,'MPU6050::gY'],['../main___c_8c.html#a158916f3f452bccade03134dd750e452',1,'gY:&#160;main_C.c']]],
+  ['gy_5foffset_4',['gY_offset',['../struct_m_p_u6050.html#a6252bad7e25acad5bf9bfc2e43b08708',1,'MPU6050']]],
+  ['gz_5',['gZ',['../struct_m_p_u6050.html#a2c037649b97f103359d32fc55121c752',1,'MPU6050::gZ'],['../main___c_8c.html#a2c037649b97f103359d32fc55121c752',1,'gZ:&#160;main_C.c']]],
+  ['gz_5foffset_6',['gZ_offset',['../struct_m_p_u6050.html#a0dacdc364e59a4dec5fc6a23e7f62fac',1,'MPU6050']]]
 ];

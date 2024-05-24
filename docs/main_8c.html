@@ -108,7 +108,6 @@ $(function(){initNavTree('main_8c.html',''); initResizable(); });
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="">stepper_driver.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="">radio_driver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">switch.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">d4215.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="">led.h</a>&quot;</code><br />
@@ -124,9 +123,13 @@ Functions</h2></td></tr>
 <tr class="separator:ae8b1081749618dd73189ae92529669fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f3ce24c0e30e06b6a828f85f159a5e" id="r_a14f3ce24c0e30e06b6a828f85f159a5e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14f3ce24c0e30e06b6a828f85f159a5e">speedCalculate</a> (uint16_t first, uint16_t second, uint16_t third)</td></tr>
 <tr class="separator:a14f3ce24c0e30e06b6a828f85f159a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456f6450c501691b495bf89c20d7416a" id="r_a456f6450c501691b495bf89c20d7416a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a456f6450c501691b495bf89c20d7416a">map</a> (uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max)</td></tr>
+<tr class="separator:a456f6450c501691b495bf89c20d7416a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
 <tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <br /></td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a2401a35ddd9bd0b8fc28331b81381" id="r_a77a2401a35ddd9bd0b8fc28331b81381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a2401a35ddd9bd0b8fc28331b81381">HAL_TIM_IC_CaptureCallback</a> (TIM_HandleTypeDef *htim)</td></tr>
+<tr class="separator:a77a2401a35ddd9bd0b8fc28331b81381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
 <tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
 <tr class="separator:a1730ffe1e560465665eb47d9264826f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,14 +148,32 @@ Variables</h2></td></tr>
 <tr class="separator:a9381894912323d745f29978b3a4b57e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91716121094312c93e5773788cb818ce" id="r_a91716121094312c93e5773788cb818ce"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91716121094312c93e5773788cb818ce">data</a> [20]</td></tr>
 <tr class="separator:a91716121094312c93e5773788cb818ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e7b8dbc22be6c600d1479880d5c9eb" id="r_a28e7b8dbc22be6c600d1479880d5c9eb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28e7b8dbc22be6c600d1479880d5c9eb">ti</a> = 0</td></tr>
+<tr class="separator:a28e7b8dbc22be6c600d1479880d5c9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d3a509c66518960782228a2d591fb3" id="r_a39d3a509c66518960782228a2d591fb3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39d3a509c66518960782228a2d591fb3">tf</a> = 0</td></tr>
+<tr class="separator:a39d3a509c66518960782228a2d591fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f7bbc44474a0435c694bd94b8e764e" id="r_ab6f7bbc44474a0435c694bd94b8e764e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6f7bbc44474a0435c694bd94b8e764e">dt</a> = 0</td></tr>
+<tr class="separator:ab6f7bbc44474a0435c694bd94b8e764e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05209206c748bf62c46f18458c162d03" id="r_a05209206c748bf62c46f18458c162d03"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05209206c748bf62c46f18458c162d03">yaw</a> = 0</td></tr>
 <tr class="separator:a05209206c748bf62c46f18458c162d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1879425937ee67e191d80e6390dc942" id="r_af1879425937ee67e191d80e6390dc942"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1879425937ee67e191d80e6390dc942">pitch</a> = 0</td></tr>
 <tr class="separator:af1879425937ee67e191d80e6390dc942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5582e420e12968ea9668048d1706de8d" id="r_a5582e420e12968ea9668048d1706de8d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5582e420e12968ea9668048d1706de8d">angleTarget</a> = 0</td></tr>
+<tr class="separator:a5582e420e12968ea9668048d1706de8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02aa747717ac5dfe8fb75e3aeb57a24e" id="r_a02aa747717ac5dfe8fb75e3aeb57a24e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02aa747717ac5dfe8fb75e3aeb57a24e">rise</a> = 0</td></tr>
+<tr class="separator:a02aa747717ac5dfe8fb75e3aeb57a24e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78148cbbd456fb705166bc673e01b74e" id="r_a78148cbbd456fb705166bc673e01b74e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78148cbbd456fb705166bc673e01b74e">fall</a> = 0</td></tr>
+<tr class="separator:a78148cbbd456fb705166bc673e01b74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20555e38a389cd39adf7355ae583f15e" id="r_a20555e38a389cd39adf7355ae583f15e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20555e38a389cd39adf7355ae583f15e">total</a> = 0</td></tr>
+<tr class="separator:a20555e38a389cd39adf7355ae583f15e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf375b72fdf3ca768336444db8ab5871" id="r_aaf375b72fdf3ca768336444db8ab5871"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf375b72fdf3ca768336444db8ab5871">yawDirection</a> = 0</td></tr>
 <tr class="separator:aaf375b72fdf3ca768336444db8ab5871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25c28ea9d15fd960d067fcde933fa2d9" id="r_a25c28ea9d15fd960d067fcde933fa2d9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25c28ea9d15fd960d067fcde933fa2d9">pitchDirection</a> = 0</td></tr>
 <tr class="separator:a25c28ea9d15fd960d067fcde933fa2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbb150833a830d6738b5515eed91224" id="r_a5cbb150833a830d6738b5515eed91224"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cbb150833a830d6738b5515eed91224">yawDirectionSW</a> = 0</td></tr>
+<tr class="separator:a5cbb150833a830d6738b5515eed91224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a336f0e298a64a2c8165459e61ca8c92e" id="r_a336f0e298a64a2c8165459e61ca8c92e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a336f0e298a64a2c8165459e61ca8c92e">pitchDirectionSW</a> = 0</td></tr>
+<tr class="separator:a336f0e298a64a2c8165459e61ca8c92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a266732d9c228f9bac150e7554734d112" id="r_a266732d9c228f9bac150e7554734d112"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a266732d9c228f9bac150e7554734d112">idx</a> = 0</td></tr>
 <tr class="separator:a266732d9c228f9bac150e7554734d112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f953a116a8d466d1af8ed0316036db3" id="r_a5f953a116a8d466d1af8ed0316036db3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f953a116a8d466d1af8ed0316036db3">MOVE</a> = 0</td></tr>
@@ -171,22 +192,20 @@ Variables</h2></td></tr>
 <tr class="separator:ac21fbfca7fe2c83d47ec82a5f510288e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96040f3dd5d4a1f71b22307df5240441" id="r_a96040f3dd5d4a1f71b22307df5240441"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96040f3dd5d4a1f71b22307df5240441">SW3</a> = 0</td></tr>
 <tr class="separator:a96040f3dd5d4a1f71b22307df5240441"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02e1579ae4cfa59f732a66242a6619d8" id="r_a02e1579ae4cfa59f732a66242a6619d8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02e1579ae4cfa59f732a66242a6619d8">SW</a> = 0</td></tr>
+<tr class="separator:a02e1579ae4cfa59f732a66242a6619d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ee5c1482a272080958f6eb898bc0358" id="r_a0ee5c1482a272080958f6eb898bc0358"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ee5c1482a272080958f6eb898bc0358">STATE</a> = 0</td></tr>
 <tr class="separator:a0ee5c1482a272080958f6eb898bc0358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36d03484cafa1f58e68396ee44402f6a" id="r_a36d03484cafa1f58e68396ee44402f6a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36d03484cafa1f58e68396ee44402f6a">STATE_0_INIT</a> = 0</td></tr>
 <tr class="separator:a36d03484cafa1f58e68396ee44402f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05488ac03381afe270adf3e92dc87c3e" id="r_a05488ac03381afe270adf3e92dc87c3e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05488ac03381afe270adf3e92dc87c3e">STATE_1_CAL</a> = 1</td></tr>
-<tr class="separator:a05488ac03381afe270adf3e92dc87c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dca9b32dde0951ba211697991f729c8" id="r_a1dca9b32dde0951ba211697991f729c8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dca9b32dde0951ba211697991f729c8">STATE_2_HUB</a> = 2</td></tr>
-<tr class="separator:a1dca9b32dde0951ba211697991f729c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73c37a6671d82d6c412acba178e97a6c" id="r_a73c37a6671d82d6c412acba178e97a6c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73c37a6671d82d6c412acba178e97a6c">STATE_3_BLDC</a> = 3</td></tr>
-<tr class="separator:a73c37a6671d82d6c412acba178e97a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865e32c717e9b6298f41bf0e90e95e5f" id="r_a865e32c717e9b6298f41bf0e90e95e5f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a865e32c717e9b6298f41bf0e90e95e5f">STATE_4_STEPPER</a> = 4</td></tr>
-<tr class="separator:a865e32c717e9b6298f41bf0e90e95e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a314d52855b2ea73d19e16e036ece540c" id="r_a314d52855b2ea73d19e16e036ece540c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a314d52855b2ea73d19e16e036ece540c">STATE_5_SWITCH</a> = 5</td></tr>
-<tr class="separator:a314d52855b2ea73d19e16e036ece540c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39acd5364e309a8b9b6a95a0f87bfbd7" id="r_a39acd5364e309a8b9b6a95a0f87bfbd7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39acd5364e309a8b9b6a95a0f87bfbd7">STATE_6_ESTOP</a> = 6</td></tr>
-<tr class="separator:a39acd5364e309a8b9b6a95a0f87bfbd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf6b30bf790ed1c38d49ef669369aedb" id="r_adf6b30bf790ed1c38d49ef669369aedb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf6b30bf790ed1c38d49ef669369aedb">STATE_1_HUB</a> = 1</td></tr>
+<tr class="separator:adf6b30bf790ed1c38d49ef669369aedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ab51384d12f9c6a012febb032125dee" id="r_a0ab51384d12f9c6a012febb032125dee"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ab51384d12f9c6a012febb032125dee">STATE_2_ESTOP</a> = 2</td></tr>
+<tr class="separator:a0ab51384d12f9c6a012febb032125dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb358fefc9c49727c6e7f564ed17bac3" id="r_aeb358fefc9c49727c6e7f564ed17bac3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb358fefc9c49727c6e7f564ed17bac3">STATE_3_STEPPER</a> = 3</td></tr>
+<tr class="separator:aeb358fefc9c49727c6e7f564ed17bac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a972f327658ca306299ee84734263c696" id="r_a972f327658ca306299ee84734263c696"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a972f327658ca306299ee84734263c696">STATE_4_BLDC</a> = 4</td></tr>
+<tr class="separator:a972f327658ca306299ee84734263c696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: Main program body </p>
@@ -236,6 +255,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a77a2401a35ddd9bd0b8fc28331b81381" name="a77a2401a35ddd9bd0b8fc28331b81381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a2401a35ddd9bd0b8fc28331b81381">&#9670;&#160;</a></span>HAL_TIM_IC_CaptureCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_IC_CaptureCallback </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *</td>          <td class="paramname"><span class="paramname"><em>htim</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae494a9643f29b87d6d81e5264e60e57b" name="ae494a9643f29b87d6d81e5264e60e57b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae494a9643f29b87d6d81e5264e60e57b">&#9670;&#160;</a></span>HAL_UART_RxCpltCallback()</h2>
 
@@ -275,6 +311,42 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a456f6450c501691b495bf89c20d7416a" name="a456f6450c501691b495bf89c20d7416a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456f6450c501691b495bf89c20d7416a">&#9670;&#160;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t map </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>in_min</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>in_max</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>out_min</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>out_max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -333,6 +405,20 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a5582e420e12968ea9668048d1706de8d" name="a5582e420e12968ea9668048d1706de8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5582e420e12968ea9668048d1706de8d">&#9670;&#160;</a></span>angleTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t angleTarget = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1147daf8fcf28969c1c03b578a2a47fc" name="a1147daf8fcf28969c1c03b578a2a47fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1147daf8fcf28969c1c03b578a2a47fc">&#9670;&#160;</a></span>CAL</h2>
 
@@ -375,6 +461,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ab6f7bbc44474a0435c694bd94b8e764e" name="ab6f7bbc44474a0435c694bd94b8e764e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f7bbc44474a0435c694bd94b8e764e">&#9670;&#160;</a></span>dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dt = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a91046d8402142cd58350d1df7748595c" name="a91046d8402142cd58350d1df7748595c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91046d8402142cd58350d1df7748595c">&#9670;&#160;</a></span>ESTOP</h2>
 
@@ -383,6 +483,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">uint8_t ESTOP = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78148cbbd456fb705166bc673e01b74e" name="a78148cbbd456fb705166bc673e01b74e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78148cbbd456fb705166bc673e01b74e">&#9670;&#160;</a></span>fall</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fall = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -515,6 +629,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a336f0e298a64a2c8165459e61ca8c92e" name="a336f0e298a64a2c8165459e61ca8c92e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a336f0e298a64a2c8165459e61ca8c92e">&#9670;&#160;</a></span>pitchDirectionSW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t pitchDirectionSW = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02aa747717ac5dfe8fb75e3aeb57a24e" name="a02aa747717ac5dfe8fb75e3aeb57a24e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02aa747717ac5dfe8fb75e3aeb57a24e">&#9670;&#160;</a></span>rise</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t rise = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2de2072b2f96bc36bdbd45bca00050e4" name="a2de2072b2f96bc36bdbd45bca00050e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2de2072b2f96bc36bdbd45bca00050e4">&#9670;&#160;</a></span>SHOT</h2>
 
@@ -557,84 +699,70 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a05488ac03381afe270adf3e92dc87c3e" name="a05488ac03381afe270adf3e92dc87c3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05488ac03381afe270adf3e92dc87c3e">&#9670;&#160;</a></span>STATE_1_CAL</h2>
+<a id="adf6b30bf790ed1c38d49ef669369aedb" name="adf6b30bf790ed1c38d49ef669369aedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf6b30bf790ed1c38d49ef669369aedb">&#9670;&#160;</a></span>STATE_1_HUB</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t STATE_1_CAL = 1</td>
+          <td class="memname">uint8_t STATE_1_HUB = 1</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1dca9b32dde0951ba211697991f729c8" name="a1dca9b32dde0951ba211697991f729c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dca9b32dde0951ba211697991f729c8">&#9670;&#160;</a></span>STATE_2_HUB</h2>
+<a id="a0ab51384d12f9c6a012febb032125dee" name="a0ab51384d12f9c6a012febb032125dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ab51384d12f9c6a012febb032125dee">&#9670;&#160;</a></span>STATE_2_ESTOP</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t STATE_2_HUB = 2</td>
+          <td class="memname">uint8_t STATE_2_ESTOP = 2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a73c37a6671d82d6c412acba178e97a6c" name="a73c37a6671d82d6c412acba178e97a6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73c37a6671d82d6c412acba178e97a6c">&#9670;&#160;</a></span>STATE_3_BLDC</h2>
+<a id="aeb358fefc9c49727c6e7f564ed17bac3" name="aeb358fefc9c49727c6e7f564ed17bac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb358fefc9c49727c6e7f564ed17bac3">&#9670;&#160;</a></span>STATE_3_STEPPER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t STATE_3_BLDC = 3</td>
+          <td class="memname">uint8_t STATE_3_STEPPER = 3</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a865e32c717e9b6298f41bf0e90e95e5f" name="a865e32c717e9b6298f41bf0e90e95e5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a865e32c717e9b6298f41bf0e90e95e5f">&#9670;&#160;</a></span>STATE_4_STEPPER</h2>
+<a id="a972f327658ca306299ee84734263c696" name="a972f327658ca306299ee84734263c696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a972f327658ca306299ee84734263c696">&#9670;&#160;</a></span>STATE_4_BLDC</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t STATE_4_STEPPER = 4</td>
+          <td class="memname">uint8_t STATE_4_BLDC = 4</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a314d52855b2ea73d19e16e036ece540c" name="a314d52855b2ea73d19e16e036ece540c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a314d52855b2ea73d19e16e036ece540c">&#9670;&#160;</a></span>STATE_5_SWITCH</h2>
+<a id="a02e1579ae4cfa59f732a66242a6619d8" name="a02e1579ae4cfa59f732a66242a6619d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e1579ae4cfa59f732a66242a6619d8">&#9670;&#160;</a></span>SW</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t STATE_5_SWITCH = 5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a39acd5364e309a8b9b6a95a0f87bfbd7" name="a39acd5364e309a8b9b6a95a0f87bfbd7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39acd5364e309a8b9b6a95a0f87bfbd7">&#9670;&#160;</a></span>STATE_6_ESTOP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t STATE_6_ESTOP = 6</td>
+          <td class="memname">uint8_t SW = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -683,6 +811,48 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a39d3a509c66518960782228a2d591fb3" name="a39d3a509c66518960782228a2d591fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39d3a509c66518960782228a2d591fb3">&#9670;&#160;</a></span>tf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t tf = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28e7b8dbc22be6c600d1479880d5c9eb" name="a28e7b8dbc22be6c600d1479880d5c9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e7b8dbc22be6c600d1479880d5c9eb">&#9670;&#160;</a></span>ti</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t ti = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20555e38a389cd39adf7355ae583f15e" name="a20555e38a389cd39adf7355ae583f15e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20555e38a389cd39adf7355ae583f15e">&#9670;&#160;</a></span>total</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t total = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a05209206c748bf62c46f18458c162d03" name="a05209206c748bf62c46f18458c162d03"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05209206c748bf62c46f18458c162d03">&#9670;&#160;</a></span>yaw</h2>
 
@@ -705,6 +875,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">uint8_t yawDirection = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cbb150833a830d6738b5515eed91224" name="a5cbb150833a830d6738b5515eed91224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbb150833a830d6738b5515eed91224">&#9670;&#160;</a></span>yawDirectionSW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t yawDirectionSW = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">

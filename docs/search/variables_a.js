@@ -1,28 +1,8 @@
 var searchData=
 [
-  ['shot_0',['shot',['../main___c_8c.html#a734a6bb09e6a5fc98ebb8436df7ae452',1,'main_C.c']]],
-  ['shot_1',['SHOT',['../main_8c.html#a2de2072b2f96bc36bdbd45bca00050e4',1,'main.c']]],
-  ['speed_2',['speed',['../struct_d4215_x.html#a36dda2666e5436e608a494230ca9076b',1,'D4215X']]],
-  ['stat_3',['stat',['../main___c_8c.html#a9ebb6eed90bd90fa99f9cf9e1f6c69fd',1,'main_C.c']]],
-  ['state_4',['STATE',['../main___c_8c.html#a942cbc58d5df6ff6e78e7de2da6bb43d',1,'STATE:&#160;main_C.c'],['../main_8c.html#a0ee5c1482a272080958f6eb898bc0358',1,'STATE:&#160;main.c']]],
-  ['state_5f0_5finit_5',['STATE_0_INIT',['../main___c_8c.html#a18428ffe41044eaa981a9aa5d12c0268',1,'STATE_0_INIT:&#160;main_C.c'],['../main_8c.html#a36d03484cafa1f58e68396ee44402f6a',1,'STATE_0_INIT:&#160;main.c']]],
-  ['state_5f1_5fcal_6',['STATE_1_CAL',['../main_8c.html#a05488ac03381afe270adf3e92dc87c3e',1,'main.c']]],
-  ['state_5f1_5ferror_7',['STATE_1_ERROR',['../main___c_8c.html#ac121bcf9c6185c1391e9d76671c0cab9',1,'main_C.c']]],
-  ['state_5f2_5fhub_8',['STATE_2_HUB',['../main_8c.html#a1dca9b32dde0951ba211697991f729c8',1,'main.c']]],
-  ['state_5f2_5fimu_9',['STATE_2_IMU',['../main___c_8c.html#a5552820803f06a882be3bf1cdfbde998',1,'main_C.c']]],
-  ['state_5f3_5fbldc_10',['STATE_3_BLDC',['../main_8c.html#a73c37a6671d82d6c412acba178e97a6c',1,'main.c']]],
-  ['state_5f3_5fbutton_5fled_11',['STATE_3_BUTTON_LED',['../main___c_8c.html#aca0f5e1c40d574009ccfb91fe42929d0',1,'main_C.c']]],
-  ['state_5f4_5fstepper_12',['STATE_4_STEPPER',['../main_8c.html#a865e32c717e9b6298f41bf0e90e95e5f',1,'main.c']]],
-  ['state_5f4_5ftransfer_13',['STATE_4_TRANSFER',['../main___c_8c.html#a6e420747c5d2d0820f7a909bb0084f66',1,'main_C.c']]],
-  ['state_5f5_5fswitch_14',['STATE_5_SWITCH',['../main_8c.html#a314d52855b2ea73d19e16e036ece540c',1,'main.c']]],
-  ['state_5f6_5festop_15',['STATE_6_ESTOP',['../main_8c.html#a39acd5364e309a8b9b6a95a0f87bfbd7',1,'main.c']]],
-  ['status_16',['status',['../struct_m_p_u6050.html#a72c1658eb37db971e7f6bca046bc6f24',1,'MPU6050::status'],['../struct_switch_x.html#a5393c99e246925076b1dfd69a64177ef',1,'SwitchX::status']]],
-  ['stop_17',['stop',['../struct_radio_x.html#a219998cfb366307196d1013046d3f5d2',1,'RadioX']]],
-  ['stp_5fpin_18',['STP_PIN',['../struct_stepper_x.html#a698a514eaae8555c93d61ce6647bf5e1',1,'StepperX']]],
-  ['sum1_19',['sum1',['../struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9',1,'RadioX']]],
-  ['sum2_20',['sum2',['../struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c',1,'RadioX']]],
-  ['sw1_21',['SW1',['../main_8c.html#a3c3121d737548b6911a02b122b18b004',1,'main.c']]],
-  ['sw2_22',['SW2',['../main_8c.html#ac21fbfca7fe2c83d47ec82a5f510288e',1,'main.c']]],
-  ['sw3_23',['SW3',['../main_8c.html#a96040f3dd5d4a1f71b22307df5240441',1,'main.c']]],
-  ['systemcoreclock_24',['SystemCoreClock',['../group___s_t_m32_f4xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6',1,'SystemCoreClock:&#160;system_stm32f4xx_C.c'],['../group___s_t_m32_f4xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6',1,'SystemCoreClock:&#160;system_stm32f4xx.c']]]
+  ['pin_0',['PIN',['../struct_l_e_d_x.html#a23b9db30b873d9b45f435df66328a784',1,'LEDX::PIN'],['../struct_switch_x.html#a23b9db30b873d9b45f435df66328a784',1,'SwitchX::PIN']]],
+  ['pitch_1',['pitch',['../main_8c.html#af1879425937ee67e191d80e6390dc942',1,'main.c']]],
+  ['pitchdirection_2',['pitchDirection',['../main_8c.html#a25c28ea9d15fd960d067fcde933fa2d9',1,'main.c']]],
+  ['pitchdirectionsw_3',['pitchDirectionSW',['../main_8c.html#a336f0e298a64a2c8165459e61ca8c92e',1,'main.c']]],
+  ['pulsewidth_4',['pulseWidth',['../struct_radio_x.html#a9ff1c7c8451b7fa9523adb103ac90b72',1,'RadioX']]]
 ];
