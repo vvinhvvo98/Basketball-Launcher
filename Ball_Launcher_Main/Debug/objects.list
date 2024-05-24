@@ -1,7 +1,6 @@
 "./Core/Src/d4215.o"
 "./Core/Src/led.o"
 "./Core/Src/main.o"
-"./Core/Src/radio_driver.o"
 "./Core/Src/stepper_driver.o"
 "./Core/Src/stm32f4xx_hal_msp.o"
 "./Core/Src/stm32f4xx_it.o"

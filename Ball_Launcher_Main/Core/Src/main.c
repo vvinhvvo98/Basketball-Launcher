@@ -26,7 +26,6 @@
 #include <string.h>
 #include "stm32f4xx_hal.h"
 #include "stepper_driver.h"
-#include "radio_driver.h"
 #include "switch.h"
 #include "d4215.h"
 #include "led.h"
@@ -57,12 +56,24 @@ UART_HandleTypeDef huart6;
 /* USER CODE BEGIN PV */
 char charIn;
 char data[20];
+uint32_t ti = 0;
+uint32_t tf = 0;
+uint32_t dt = 0;
 uint16_t yaw = 0;
 uint16_t pitch = 0;
+uint16_t angleTarget = 0;
+uint16_t rise = 0;
+uint16_t fall = 0;
+uint16_t total = 0;
+
+
 uint8_t yawDirection   = 0;
 uint8_t pitchDirection = 0;
-uint8_t idx   = 0;
 
+uint8_t yawDirectionSW   = 0;
+uint8_t pitchDirectionSW = 0;
+
+uint8_t idx   = 0;
 uint8_t MOVE  = 0;
 uint8_t SHOT  = 0;
 uint8_t ESTOP = 0;
@@ -71,15 +82,14 @@ uint8_t HOME  = 0;
 uint8_t SW1   = 0;
 uint8_t SW2   = 0;
 uint8_t SW3   = 0;
-
+uint8_t SW    = 0;
 uint8_t STATE 		    = 0;
 uint8_t STATE_0_INIT    = 0;
-uint8_t STATE_1_CAL     = 1;
-uint8_t STATE_2_HUB     = 2;
-uint8_t STATE_3_BLDC    = 3;
-uint8_t STATE_4_STEPPER = 4;
-uint8_t STATE_5_SWITCH  = 5;
-uint8_t STATE_6_ESTOP   = 6;
+uint8_t STATE_1_HUB     = 1;
+uint8_t STATE_2_ESTOP   = 2;
+uint8_t STATE_3_STEPPER = 3;
+uint8_t STATE_4_BLDC    = 4;
+
 
 /* USER CODE END PV */
 
@@ -94,6 +104,7 @@ static void MX_TIM4_Init(void);
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
 void dataProcess(char* data);
 uint16_t speedCalculate(uint16_t first, uint16_t second, uint16_t third);
+uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -134,11 +145,9 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM2_Init();
   MX_TIM4_Init();
-
   /* USER CODE BEGIN 2 */
   StepperX STEPPER1;
   StepperX STEPPER2;
-  RadioX RADIO;
   D4215X ESC1;
   D4215X ESC2;
   SwitchX S1;
@@ -153,76 +162,138 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  switch (STATE) {
-	  	  case 0:
-	  		  Radio_init  (&RADIO, &htim4, TIM_CHANNEL_1, TIM_CHANNEL_2);
-	  		  Stepper_init(&STEPPER1, GPIOA, GPIO_PIN_3, GPIO_PIN_5, GPIO_PIN_7);
-	  		  Stepper_init(&STEPPER2, GPIOA, GPIO_PIN_4, GPIO_PIN_6, GPIO_PIN_8);
-	  		  D4215_init  (&ESC1,&htim2,TIM_CHANNEL_2);
-	  		  D4215_init  (&ESC2,&htim2,TIM_CHANNEL_3);
-	  		  Switch_init (&S1, GPIOB, GPIO_PIN_0);
-	  		  Switch_init (&S2, GPIOB, GPIO_PIN_1);
-	  		  Switch_init (&S3, GPIOB, GPIO_PIN_2);
-	  		  LED_init    (&LED1, GPIOB, GPIO_PIN_14);
-	  		  LED_init    (&LED2, GPIOB, GPIO_PIN_15);
-	  		  CAL = 1;
-	  		  STATE = STATE_1_CAL;
-			  break;
+      char buffer[100];
+	  HAL_UART_Receive_IT(&huart1, (uint8_t *)&charIn, 1);
+      snprintf(buffer, sizeof(buffer), "%d\t%d\t%d\t%d\t\r\n", MOVE, SHOT, ESTOP, STATE);
+      HAL_UART_Transmit(&huart6, (uint8_t *)buffer, strlen(buffer), 100);
 
-		  case 1:
-			  // CALIBRATION HERE
-			  CAL = 0;
-	  		  STATE = STATE_2_HUB;
-			  break;
+	  if (STATE == STATE_0_INIT) {
+		  HAL_TIM_Base_Start(&htim4);
+		  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
+		  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
 
-		  case 2:
-			  if (ESTOP == 1) {
-				  STATE = STATE_6_ESTOP;
-			  }
+  		  Stepper_init(&STEPPER1, GPIOA, GPIO_PIN_3, GPIO_PIN_5, GPIO_PIN_7);
+  		  Stepper_init(&STEPPER2, GPIOA, GPIO_PIN_4, GPIO_PIN_6, GPIO_PIN_8);
 
-			  else if (SW1 == 1 || SW2 == 1 || SW3 == 1) {
-				  HOME = 0;
-				  STATE = STATE_5_SWITCH;
-			  }
+  		  D4215_init  (&ESC1,&htim2,TIM_CHANNEL_2);
+  		  D4215_init  (&ESC2,&htim2,TIM_CHANNEL_3);
 
-			  else if (MOVE == 1 && SHOT == 0) {
-				  STATE = STATE_4_STEPPER;
-			  }
+  		  Switch_init (&S1, GPIOB, GPIO_PIN_0);
+  		  Switch_init (&S2, GPIOB, GPIO_PIN_1);
+  		  Switch_init (&S3, GPIOB, GPIO_PIN_2);
 
-			  else if (MOVE == 0 && SHOT == 1) {
-				  STATE = STATE_3_BLDC;
-			  }
-			  else {
-				  STATE = STATE_2_HUB;
-			  }
-			  break;
+  		  LED_init    (&LED1, GPIOB, GPIO_PIN_14);
+  		  LED_init    (&LED2, GPIOB, GPIO_PIN_15);
 
-		  case 3:
-			  // RUN BLDC HERE
-			  break;
+  		  STATE = STATE_1_HUB;
+	  }
+	  else if (STATE == STATE_1_HUB) {
+  		  Stepper_enable(&STEPPER1);
+  		  Stepper_enable(&STEPPER2);
 
-		  case 4:
-			  // RUN STEPPER HERE
-			  break;
-		  case 5:
-			  if (HOME == 1) {
-				  STATE = STATE_2_HUB;
-			  }
-			  else {
-				  STATE = STATE_5_SWITCH;
-			  }
-			  break;
-		  case 6:
-			  STATE = STATE_6_ESTOP;
-			  break;
-
-		  ESTOP =  Radio_getStatus(&RADIO);
 		  SW1   = Switch_getStatus(&S1);
 		  SW2   = Switch_getStatus(&S2);
-		  SW3   = Switch_getStatus(&S3);
-		  HAL_UART_Receive_IT(&huart1, (uint8_t *)&charIn, 1);
-    /* USER CODE END WHILE */
+//		  SW3   = Switch_getStatus(&S3);
+		  SW3   = 1;
+		  if (ESTOP == 1) {
+			  ti = HAL_GetTick();
+			  STATE = STATE_2_ESTOP;
+		  }
+		  else if ((MOVE == 1 && SHOT == 0) || SW1 == 0 || SW2 == 0 || SW3 == 0) {
+			  if (SW1 == 0) {
+			      SW = 1;
+			      angleTarget = 10;
+			      yawDirectionSW = 0;
+			  } else if (SW2 == 0) {
+			      SW = 2;
+			      angleTarget = 10;
+			      yawDirectionSW = 1;
+			  } else if (SW3 == 0) {
+				  SW = 3;
+			      angleTarget = 10;
+			      pitchDirectionSW = 0;
+			  } else {
+				  angleTarget = 10;
+				  SW = 0;
+			  }
+			  STATE = STATE_3_STEPPER;
+		  }
+		  else if (MOVE == 0 && SHOT == 1) {
+			  STATE = STATE_4_BLDC;
+		  }
+		  else {
+			  D4215_set(&ESC1, 0);
+			  D4215_set(&ESC2, 0);
+			  STATE = STATE_1_HUB;
+		  }
 	  }
+	  else if (STATE == STATE_2_ESTOP) {
+  		  Stepper_disable(&STEPPER1);
+  		  Stepper_disable(&STEPPER2);
+
+		  D4215_set(&ESC1, 0);
+		  D4215_set(&ESC2, 0);
+
+		  if (MOVE == 1 && SHOT == 1) {
+			  tf = HAL_GetTick();
+			  dt += (tf-ti);
+			  ti = tf;
+		  }
+		  else {
+			  dt = 0;
+		  }
+		  STATE = (dt > 5000) ? STATE_1_HUB : STATE_2_ESTOP;
+
+	  }
+	  else if (STATE == STATE_3_STEPPER) {
+		  if (SW == 1) {
+			  for (int i = 0; i <= angleTarget/2; i++) {
+				  Stepper_setspeed (&STEPPER1, 10, yawDirectionSW);
+			  }
+			  SW = 0;
+		  }
+		  else if (SW == 2) {
+			  for (int i = 0; i <= angleTarget/2; i ++) {
+				  Stepper_setspeed (&STEPPER1, 10, yawDirectionSW);
+			  }
+			  SW = 0;
+		  }
+		  else if (SW == 3) {
+			  for (int i = 0; i <= 10 * angleTarget; i ++) {
+				  Stepper_setspeed (&STEPPER2, 10, pitchDirectionSW);
+			  }
+			  SW = 0;
+		  }
+		  else {
+			  // slowest = 1, fastest 30
+			  uint16_t yaw_map = map(yaw, 20, 250, 5, 30);
+			  if (yaw > 20) {
+				  for (int i = 0; i <= yaw_map; i ++) {
+					  Stepper_setspeed (&STEPPER1, 1, yawDirection);
+				  }
+			  }
+
+			  // slowest = 1, fastest = 40
+			  uint16_t pitch_map = map(pitch, 20, 250, 10, 50);
+			  if (pitch > 20) {
+				  for (int i = 0; i <= pitch_map; i ++) {
+					  Stepper_setspeed (&STEPPER2, 1, pitchDirection);
+				  }
+			  }
+		  }
+		  STATE = STATE_1_HUB;
+	  }
+	  else if (STATE == STATE_4_BLDC) {
+		  D4215_set(&ESC1, 30);
+		  D4215_set(&ESC2, 30);
+		  STATE = STATE_1_HUB;
+	  }
+	  else {
+		  STATE = STATE_1_HUB;
+
+	  }
+    /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -347,7 +418,7 @@ static void MX_TIM4_Init(void)
   htim4.Instance = TIM4;
   htim4.Init.Prescaler = 95;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 19999;
+  htim4.Init.Period = 17499;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_IC_Init(&htim4) != HAL_OK)
@@ -502,12 +573,11 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   {
     if (charIn == '\n')
     {
-      // End of message, process the buffer
       data[idx] = '\0'; // Null-terminate the buffer
-      HAL_UART_Transmit(&huart6, (uint8_t*)data, idx, 100);
-      HAL_UART_Transmit(&huart6, (uint8_t*)"\r\n", 2, 100);
+//      HAL_UART_Transmit(&huart6, (uint8_t*)data, idx, 100);
+//      HAL_UART_Transmit(&huart6, (uint8_t*)"\r\n", 2, 100);
       dataProcess(data);
-      idx = 0; // Reset index for the next message
+      idx = 0;
     }
     else
     {
@@ -526,6 +596,11 @@ void dataProcess(char* data) {
 	SHOT = (int16_t)data[2] - 48;
 	yawDirection   = ((uint8_t)data[4] == 45) ? 0 : 1;
 	pitchDirection = ((uint8_t)data[9] == 45) ? 0 : 1;
+	if (pitchDirection == 0) {
+		pitchDirection == 1;
+	} else {
+		pitchDirection == 0;
+	}
 
 	uint16_t yaw1 = (uint16_t)data[5] - 48;
 	uint16_t yaw2 = (uint16_t)data[6] - 48;
@@ -539,9 +614,35 @@ void dataProcess(char* data) {
 	pitch = speedCalculate(pitch1, pitch2, pitch3);
 }
 
+
 uint16_t speedCalculate(uint16_t first, uint16_t second, uint16_t third) {
 	uint16_t number = 100 * first + 10 * second + 1 * third;
 	return number;
+}
+
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim) {
+    if (htim->Instance == TIM4) {
+        if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_1) {
+            rise = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_1);
+        } else if (htim->Channel == HAL_TIM_ACTIVE_CHANNEL_2) {
+            fall = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);
+            if (fall >= rise) {
+                total = fall - rise;
+            } else {
+                total = UINT16_MAX - rise + fall + 1;
+            }
+
+            if (total > 1800 && total < 2200) {
+            	ESTOP = 1;
+            }
+            else {
+            	ESTOP = 0;
+            }
+        }
+    }
+}
+uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
+    return (uint16_t)((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
 }
 /* USER CODE END 4 */
 

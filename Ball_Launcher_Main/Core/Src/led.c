@@ -12,7 +12,7 @@
 #include <stdint.h>
 
 void LED_init(LEDX* LEDx, GPIO_TypeDef* GPIO, uint16_t PIN) {
-	LEDx->GPIOx    = GPIO;
+	LEDx->GPIOx = GPIO;
 	LEDx->PIN   = PIN;
 }
 void LED_on(LEDX* LEDx) {

@@ -26,4 +26,6 @@ void Stepper_enable   (StepperX* stepperx);
 void Stepper_disable  (StepperX* stepperx);
 void Stepper_setspeed (StepperX* stepperx, uint16_t speed, uint8_t dir);
 
+void SysTick_Init(void);
+void Delay_us(uint32_t us);
 #endif /* INC_STEPPER_DRIVER_H_ */
