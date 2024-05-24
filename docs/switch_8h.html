@@ -99,6 +99,9 @@ $(function(){initNavTree('switch_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">switch.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Header for <a class="el" href="switch_8c.html" title="Source file for switch operations. This file contains the implementation of the functions for initial...">switch.c</a> file. This file contains the common defines of the application.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
@@ -108,16 +111,23 @@ $(function(){initNavTree('switch_8h.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_switch_x.html">SwitchX</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define a switch with GPIO port, pin, and status.  <a href="struct_switch_x.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3346944b8c3ff64b50689a32bcf4f571" id="r_a3346944b8c3ff64b50689a32bcf4f571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3346944b8c3ff64b50689a32bcf4f571">Switch_init</a> (<a class="el" href="struct_switch_x.html">SwitchX</a> *switchx, GPIO_TypeDef *GPIO, uint16_t PIN)</td></tr>
+<tr class="memdesc:a3346944b8c3ff64b50689a32bcf4f571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the switch with the specified GPIO port and pin.  <br /></td></tr>
 <tr class="separator:a3346944b8c3ff64b50689a32bcf4f571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8763451f2e26836b9518bd73d70c7e5c" id="r_a8763451f2e26836b9518bd73d70c7e5c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8763451f2e26836b9518bd73d70c7e5c">Switch_getStatus</a> (<a class="el" href="struct_switch_x.html">SwitchX</a> *switchx)</td></tr>
+<tr class="memdesc:a8763451f2e26836b9518bd73d70c7e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the status of the switch.  <br /></td></tr>
 <tr class="separator:a8763451f2e26836b9518bd73d70c7e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header for <a class="el" href="switch_8c.html" title="Source file for switch operations. This file contains the implementation of the functions for initial...">switch.c</a> file. This file contains the common defines of the application. </p>
+<p>Created on: May 17, 2024</p>
+<p>Author: vvinh </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a8763451f2e26836b9518bd73d70c7e5c" name="a8763451f2e26836b9518bd73d70c7e5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8763451f2e26836b9518bd73d70c7e5c">&#9670;&#160;</a></span>Switch_getStatus()</h2>
 
@@ -132,6 +142,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Gets the status of the switch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">switchx</td><td>Pointer to the <a class="el" href="struct_switch_x.html" title="Structure to define a switch with GPIO port, pin, and status.">SwitchX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t Status of the switch (1 if pressed, 0 if not pressed) </dd></dl>
 
 </div>
 </div>
@@ -158,6 +177,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the switch with the specified GPIO port and pin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">switchx</td><td>Pointer to the <a class="el" href="struct_switch_x.html" title="Structure to define a switch with GPIO port, pin, and status.">SwitchX</a> structure </td></tr>
+    <tr><td class="paramname">GPIO</td><td>GPIO port </td></tr>
+    <tr><td class="paramname">PIN</td><td>GPIO pin </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Assign the GPIO port</p>
+<p>&lt; Assign the GPIO pin</p>
+<p>&lt; Initialize the status to 0</p>
 
 </div>
 </div>

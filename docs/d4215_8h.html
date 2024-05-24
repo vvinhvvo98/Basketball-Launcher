@@ -99,6 +99,9 @@ $(function(){initNavTree('d4215_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">d4215.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Header for <a class="el" href="d4215_8c.html" title="Source file for D4215 motor operations. This file contains the implementation of the functions for in...">d4215.c</a> file. This file contains the common defines of the application.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
@@ -108,16 +111,23 @@ $(function(){initNavTree('d4215_8h.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d4215_x.html">D4215X</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define a D4215 motor with timer, channel, and speed.  <a href="struct_d4215_x.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a53a4b4bb8d9d42a095db242518295ff4" id="r_a53a4b4bb8d9d42a095db242518295ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53a4b4bb8d9d42a095db242518295ff4">D4215_init</a> (<a class="el" href="struct_d4215_x.html">D4215X</a> *bldcx, TIM_HandleTypeDef *timer, uint32_t channel)</td></tr>
+<tr class="memdesc:a53a4b4bb8d9d42a095db242518295ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the D4215 motor with the specified timer and channel.  <br /></td></tr>
 <tr class="separator:a53a4b4bb8d9d42a095db242518295ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7ec5d153637ca7cdb457e5f0618124a" id="r_af7ec5d153637ca7cdb457e5f0618124a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7ec5d153637ca7cdb457e5f0618124a">D4215_set</a> (<a class="el" href="struct_d4215_x.html">D4215X</a> *bldcx, int32_t speed)</td></tr>
+<tr class="memdesc:af7ec5d153637ca7cdb457e5f0618124a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the speed of the D4215 motor.  <br /></td></tr>
 <tr class="separator:af7ec5d153637ca7cdb457e5f0618124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header for <a class="el" href="d4215_8c.html" title="Source file for D4215 motor operations. This file contains the implementation of the functions for in...">d4215.c</a> file. This file contains the common defines of the application. </p>
+<p>Created on: May 1, 2024</p>
+<p>Author: vvinh </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a53a4b4bb8d9d42a095db242518295ff4" name="a53a4b4bb8d9d42a095db242518295ff4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a53a4b4bb8d9d42a095db242518295ff4">&#9670;&#160;</a></span>D4215_init()</h2>
 
@@ -142,6 +152,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the D4215 motor with the specified timer and channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bldcx</td><td>Pointer to the <a class="el" href="struct_d4215_x.html" title="Structure to define a D4215 motor with timer, channel, and speed.">D4215X</a> structure </td></tr>
+    <tr><td class="paramname">timer</td><td>Timer handle </td></tr>
+    <tr><td class="paramname">channel</td><td>Timer channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Start PWM for the specified timer and channel</p>
+
 </div>
 </div>
 <a id="af7ec5d153637ca7cdb457e5f0618124a" name="af7ec5d153637ca7cdb457e5f0618124a"></a>
@@ -158,10 +179,23 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+          <td class="paramtype">int32_t</td>          <td class="paramname"><span class="paramname"><em>spd</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets the speed of the D4215 motor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bldcx</td><td>Pointer to the <a class="el" href="struct_d4215_x.html" title="Structure to define a D4215 motor with timer, channel, and speed.">D4215X</a> structure </td></tr>
+    <tr><td class="paramname">speed</td><td>Speed of the motor (range: 0 to 100)</td></tr>
+    <tr><td class="paramname">bldcx</td><td>Pointer to the <a class="el" href="struct_d4215_x.html" title="Structure to define a D4215 motor with timer, channel, and speed.">D4215X</a> structure </td></tr>
+    <tr><td class="paramname">spd</td><td>Speed of the motor (range: 5 to 10) </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Calculate the duty cycle based on the input speed</p>
+<p>&lt; Set the duty cycle for the PWM</p>
 
 </div>
 </div>

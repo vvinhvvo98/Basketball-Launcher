@@ -1,8 +1,8 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
+  * @file           main.c
+  * @brief          Main program body
   ******************************************************************************
   * @attention
   *
@@ -54,25 +54,32 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart6;
 
 /* USER CODE BEGIN PV */
+// Initiate data buffer
 char charIn;
 char data[20];
+
+// Initiate reset timer parameter
 uint32_t ti = 0;
 uint32_t tf = 0;
 uint32_t dt = 0;
+
+// Initiate yaw + pitch angle + target angle for steppers
 uint16_t yaw = 0;
 uint16_t pitch = 0;
 uint16_t angleTarget = 0;
+
+// Initiate rise fall and total for radio driver
 uint16_t rise = 0;
 uint16_t fall = 0;
 uint16_t total = 0;
 
-
+// Initiate yaw and pitch direction from controller and direction from the switch
 uint8_t yawDirection   = 0;
 uint8_t pitchDirection = 0;
-
 uint8_t yawDirectionSW   = 0;
 uint8_t pitchDirectionSW = 0;
 
+// Initiate flags
 uint8_t idx   = 0;
 uint8_t MOVE  = 0;
 uint8_t SHOT  = 0;
@@ -83,6 +90,8 @@ uint8_t SW1   = 0;
 uint8_t SW2   = 0;
 uint8_t SW3   = 0;
 uint8_t SW    = 0;
+
+// Initiate STATE & STATE NUMBER
 uint8_t STATE 		    = 0;
 uint8_t STATE_0_INIT    = 0;
 uint8_t STATE_1_HUB     = 1;
@@ -146,6 +155,7 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
+  // Create desired object
   StepperX STEPPER1;
   StepperX STEPPER2;
   D4215X ESC1;
@@ -162,43 +172,53 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  // Print to UART6 for debug
       char buffer[100];
 	  HAL_UART_Receive_IT(&huart1, (uint8_t *)&charIn, 1);
       snprintf(buffer, sizeof(buffer), "%d\t%d\t%d\t%d\t\r\n", MOVE, SHOT, ESTOP, STATE);
       HAL_UART_Transmit(&huart6, (uint8_t *)buffer, strlen(buffer), 100);
 
+      // Run Finite State Machine
+
+      // STATE 0: INIT ALL OBJECTS
 	  if (STATE == STATE_0_INIT) {
+		  // INIT RADIO TIMER
 		  HAL_TIM_Base_Start(&htim4);
 		  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
 		  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
-
+		  // INIT STEPPER MOTOR
   		  Stepper_init(&STEPPER1, GPIOA, GPIO_PIN_3, GPIO_PIN_5, GPIO_PIN_7);
   		  Stepper_init(&STEPPER2, GPIOA, GPIO_PIN_4, GPIO_PIN_6, GPIO_PIN_8);
-
+  		  // INIT D4215 BLDC MOTORS
   		  D4215_init  (&ESC1,&htim2,TIM_CHANNEL_2);
   		  D4215_init  (&ESC2,&htim2,TIM_CHANNEL_3);
-
+  		  // INIT 3 LIMIT SWITCHES
   		  Switch_init (&S1, GPIOB, GPIO_PIN_0);
   		  Switch_init (&S2, GPIOB, GPIO_PIN_1);
   		  Switch_init (&S3, GPIOB, GPIO_PIN_2);
-
+  		  // INIT 2 EXTRA LEDS
   		  LED_init    (&LED1, GPIOB, GPIO_PIN_14);
   		  LED_init    (&LED2, GPIOB, GPIO_PIN_15);
-
+  		  // MOVE --> STATE 1: DECISION HUB
   		  STATE = STATE_1_HUB;
 	  }
+
+	  // STATE 1: DECISION HUB TO BRANCH TO DIFFERENT HUB
 	  else if (STATE == STATE_1_HUB) {
+		  // ENABLE 2 STEPPERS
   		  Stepper_enable(&STEPPER1);
   		  Stepper_enable(&STEPPER2);
-
+  		  // READ 3 LIMIT SWITCHES
 		  SW1   = Switch_getStatus(&S1);
 		  SW2   = Switch_getStatus(&S2);
 //		  SW3   = Switch_getStatus(&S3);
 		  SW3   = 1;
+		  // CHECK ESTOP
 		  if (ESTOP == 1) {
 			  ti = HAL_GetTick();
 			  STATE = STATE_2_ESTOP;
 		  }
+		  // CHECK LIMIT SWITCHES OR "MOVE" FLAG FROM CONTROLLER
 		  else if ((MOVE == 1 && SHOT == 0) || SW1 == 0 || SW2 == 0 || SW3 == 0) {
 			  if (SW1 == 0) {
 			      SW = 1;
@@ -218,22 +238,26 @@ int main(void)
 			  }
 			  STATE = STATE_3_STEPPER;
 		  }
+		  // CHECK "SHOT" FLAG FROM CONTROLLER
 		  else if (MOVE == 0 && SHOT == 1) {
 			  STATE = STATE_4_BLDC;
 		  }
+		  // STOP IF
 		  else {
 			  D4215_set(&ESC1, 0);
 			  D4215_set(&ESC2, 0);
 			  STATE = STATE_1_HUB;
 		  }
 	  }
+	  // STATE 2: EMERGENCY STOP STATE
 	  else if (STATE == STATE_2_ESTOP) {
+		  // DISABLE STEPPER MOTORS
   		  Stepper_disable(&STEPPER1);
   		  Stepper_disable(&STEPPER2);
-
+  		  // STOP BLDC MOTORS
 		  D4215_set(&ESC1, 0);
 		  D4215_set(&ESC2, 0);
-
+		  // CHECK FOR RESET BY PUSHING 2 BUTTONS AT THE SAME TIME FOR 5 SECONDS
 		  if (MOVE == 1 && SHOT == 1) {
 			  tf = HAL_GetTick();
 			  dt += (tf-ti);
@@ -245,35 +269,37 @@ int main(void)
 		  STATE = (dt > 5000) ? STATE_1_HUB : STATE_2_ESTOP;
 
 	  }
+	  // STATE 3: SPIN STEPPER MOTORS
 	  else if (STATE == STATE_3_STEPPER) {
+		  // LEFT SWITCH HIT --> MOVE TO THE RIGHT
 		  if (SW == 1) {
 			  for (int i = 0; i <= angleTarget/2; i++) {
 				  Stepper_setspeed (&STEPPER1, 10, yawDirectionSW);
 			  }
 			  SW = 0;
 		  }
+		  // RIGHT SWITCH HIT --> MOVE TO THE LEFT
 		  else if (SW == 2) {
 			  for (int i = 0; i <= angleTarget/2; i ++) {
 				  Stepper_setspeed (&STEPPER1, 10, yawDirectionSW);
 			  }
 			  SW = 0;
 		  }
+		  // MID SWITCH HIT --> MOVE UP
 		  else if (SW == 3) {
 			  for (int i = 0; i <= 10 * angleTarget; i ++) {
 				  Stepper_setspeed (&STEPPER2, 10, pitchDirectionSW);
 			  }
 			  SW = 0;
 		  }
+		  // IF NOT SWITCH, MOVE ACCODING TO THE IMU DATA
 		  else {
-			  // slowest = 1, fastest 30
 			  uint16_t yaw_map = map(yaw, 20, 250, 5, 30);
 			  if (yaw > 20) {
 				  for (int i = 0; i <= yaw_map; i ++) {
 					  Stepper_setspeed (&STEPPER1, 1, yawDirection);
 				  }
 			  }
-
-			  // slowest = 1, fastest = 40
 			  uint16_t pitch_map = map(pitch, 20, 250, 10, 50);
 			  if (pitch > 20) {
 				  for (int i = 0; i <= pitch_map; i ++) {
@@ -283,14 +309,17 @@ int main(void)
 		  }
 		  STATE = STATE_1_HUB;
 	  }
+
+	  // STATE 4: BLDC MOTOR
 	  else if (STATE == STATE_4_BLDC) {
 		  D4215_set(&ESC1, 30);
 		  D4215_set(&ESC2, 30);
 		  STATE = STATE_1_HUB;
 	  }
+
+	  // STATE 1: DECISION HUB IN CASE SOME ERROR
 	  else {
 		  STATE = STATE_1_HUB;
-
 	  }
     /* USER CODE END WHILE */
 

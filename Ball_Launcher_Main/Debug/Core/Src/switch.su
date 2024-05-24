@@ -1,2 +1,2 @@
-../Core/Src/switch.c:20:6:Switch_init	24	static
-../Core/Src/switch.c:26:9:Switch_getStatus	16	static
+../Core/Src/switch.c:26:6:Switch_init	24	static
+../Core/Src/switch.c:38:9:Switch_getStatus	16	static

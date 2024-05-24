@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"stm32f4xx__hal__conf_8h.html#a4c6fab687afc7ba4469b1b2d34472358":[6,0,1,0,0,5,95],
-"stm32f4xx__hal__conf_8h.html#a4fa7ca6faf60ee074576ebb6103f8dd4":[6,0,1,0,0,5,40],
 "stm32f4xx__hal__conf_8h.html#a54badbcdb096ce802d2eed981cbbc31a":[6,0,1,0,0,5,81],
 "stm32f4xx__hal__conf_8h.html#a560b53001fb58138f7da15dbda8f58a6":[6,0,1,0,0,5,68],
 "stm32f4xx__hal__conf_8h.html#a5729771244f68779fc694ba819cd60a5":[6,0,1,0,0,5,37],
@@ -248,6 +246,8 @@ var NAVTREEINDEX1 =
 "struct_m_p_u6050.html#af311395520d3063de824b529c9cdb10d":[5,0,2,2],
 "struct_radio_x.html":[5,0,3],
 "struct_radio_x.html#a06ad26bec06cf3a7a6300bc7185bca0d":[5,0,3,1],
-"struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c":[5,0,3,7],
-"struct_radio_x.html#a219998cfb366307196d1013046d3f5d2":[5,0,3,5]
+"struct_radio_x.html#a0fe44f0d86c23c11c828d4cb5102409c":[5,0,3,6],
+"struct_radio_x.html#a24f50adf55dc7ab33804a4105ff480d9":[5,0,3,5],
+"struct_radio_x.html#a30b15aedcc086ca7abb69f7ac012ce64":[5,0,3,7],
+"struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137":[5,0,3,4]
 };

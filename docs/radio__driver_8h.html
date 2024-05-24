@@ -99,6 +99,9 @@ $(function(){initNavTree('radio__driver_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">radio_driver.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Header for <a class="el" href="radio__driver_8c.html" title="Source file for radio driver operations. This file contains the implementation of the functions for i...">radio_driver.c</a> file. This file contains the common defines of the application.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
@@ -108,22 +111,29 @@ $(function(){initNavTree('radio__driver_8h.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_radio_x.html">RadioX</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define a radio driver with timer, channels, and pulse width parameters.  <a href="struct_radio_x.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a582f025b267f30a8b79a57cd2a95d5ea" id="r_a582f025b267f30a8b79a57cd2a95d5ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a582f025b267f30a8b79a57cd2a95d5ea">Radio_init</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio, TIM_HandleTypeDef *timer, uint32_t channel1, uint32_t channel2)</td></tr>
+<tr class="memdesc:a582f025b267f30a8b79a57cd2a95d5ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the radio driver with the specified timer and channels.  <br /></td></tr>
 <tr class="separator:a582f025b267f30a8b79a57cd2a95d5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f4cc75e4b2a4a33e163340fd57c223" id="r_a44f4cc75e4b2a4a33e163340fd57c223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f4cc75e4b2a4a33e163340fd57c223">capturePulseWidth</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
+<tr class="memdesc:a44f4cc75e4b2a4a33e163340fd57c223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Captures the pulse width for the radio driver.  <br /></td></tr>
 <tr class="separator:a44f4cc75e4b2a4a33e163340fd57c223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a492a4fe5ab05721268b3484b7c8e9be5" id="r_a492a4fe5ab05721268b3484b7c8e9be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a492a4fe5ab05721268b3484b7c8e9be5">update</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio, int pw1, int pw2)</td></tr>
+<tr class="memdesc:a492a4fe5ab05721268b3484b7c8e9be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the radio driver with pulse width values.  <br /></td></tr>
 <tr class="separator:a492a4fe5ab05721268b3484b7c8e9be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af148015dfcc60d4476a3db48ee4e5b37" id="r_af148015dfcc60d4476a3db48ee4e5b37"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af148015dfcc60d4476a3db48ee4e5b37">Radio_getPulseWidth</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
-<tr class="separator:af148015dfcc60d4476a3db48ee4e5b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaa1ddfe413c54eee0f5b043e34f094b" id="r_acaa1ddfe413c54eee0f5b043e34f094b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acaa1ddfe413c54eee0f5b043e34f094b">Radio_getStatus</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
-<tr class="separator:acaa1ddfe413c54eee0f5b043e34f094b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d11311b6d85de460732788a14962b9" id="r_ac6d11311b6d85de460732788a14962b9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6d11311b6d85de460732788a14962b9">Radio_getPulseWidth</a> (<a class="el" href="struct_radio_x.html">RadioX</a> *radio)</td></tr>
+<tr class="memdesc:ac6d11311b6d85de460732788a14962b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pulse width of the radio driver.  <br /></td></tr>
+<tr class="separator:ac6d11311b6d85de460732788a14962b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header for <a class="el" href="radio__driver_8c.html" title="Source file for radio driver operations. This file contains the implementation of the functions for i...">radio_driver.c</a> file. This file contains the common defines of the application. </p>
+<p>Created on: May 2, 2024</p>
+<p>Author: vvinh </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a44f4cc75e4b2a4a33e163340fd57c223" name="a44f4cc75e4b2a4a33e163340fd57c223"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44f4cc75e4b2a4a33e163340fd57c223">&#9670;&#160;</a></span>capturePulseWidth()</h2>
 
@@ -139,16 +149,27 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Captures the pulse width for the radio driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Structure to define a radio driver with timer, channels, and pulse width parameters.">RadioX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Read captured value for channel 1</p>
+<p>&lt; Read captured value for channel 2</p>
+<p>&lt; Calculate the pulse width</p>
+
 </div>
 </div>
-<a id="af148015dfcc60d4476a3db48ee4e5b37" name="af148015dfcc60d4476a3db48ee4e5b37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af148015dfcc60d4476a3db48ee4e5b37">&#9670;&#160;</a></span>Radio_getPulseWidth()</h2>
+<a id="ac6d11311b6d85de460732788a14962b9" name="ac6d11311b6d85de460732788a14962b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6d11311b6d85de460732788a14962b9">&#9670;&#160;</a></span>Radio_getPulseWidth()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t Radio_getPulseWidth </td>
+          <td class="memname">double Radio_getPulseWidth </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_radio_x.html">RadioX</a> *</td>          <td class="paramname"><span class="paramname"><em>radio</em></span></td><td>)</td>
           <td></td>
@@ -156,22 +177,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="acaa1ddfe413c54eee0f5b043e34f094b" name="acaa1ddfe413c54eee0f5b043e34f094b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaa1ddfe413c54eee0f5b043e34f094b">&#9670;&#160;</a></span>Radio_getStatus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Radio_getStatus </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_radio_x.html">RadioX</a> *</td>          <td class="paramname"><span class="paramname"><em>radio</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Gets the pulse width of the radio driver. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Structure to define a radio driver with timer, channels, and pulse width parameters.">RadioX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double Pulse width value</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Structure to define a radio driver with timer, channels, and pulse width parameters.">RadioX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double Pulse width value in milliseconds </dd></dl>
 
 </div>
 </div>
@@ -204,6 +224,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the radio driver with the specified timer and channels. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Structure to define a radio driver with timer, channels, and pulse width parameters.">RadioX</a> structure </td></tr>
+    <tr><td class="paramname">timer</td><td>Timer handle </td></tr>
+    <tr><td class="paramname">channel1</td><td>Timer channel 1 </td></tr>
+    <tr><td class="paramname">channel2</td><td>Timer channel 2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Start input capture interrupt for channel 1</p>
+<p>&lt; Start input capture interrupt for channel 2</p>
+
 </div>
 </div>
 <a id="a492a4fe5ab05721268b3484b7c8e9be5" name="a492a4fe5ab05721268b3484b7c8e9be5"></a>
@@ -229,6 +262,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the radio driver with pulse width values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radio</td><td>Pointer to the <a class="el" href="struct_radio_x.html" title="Structure to define a radio driver with timer, channels, and pulse width parameters.">RadioX</a> structure </td></tr>
+    <tr><td class="paramname">pw1</td><td>Pulse width value for channel 1 </td></tr>
+    <tr><td class="paramname">pw2</td><td>Pulse width value for channel 2 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

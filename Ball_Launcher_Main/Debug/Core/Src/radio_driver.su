@@ -1,5 +1,4 @@
-../Core/Src/radio_driver.c:13:6:Radio_init	24	static
-../Core/Src/radio_driver.c:33:6:capturePulseWidth	24	static
-../Core/Src/radio_driver.c:40:6:update	40	static
-../Core/Src/radio_driver.c:59:10:Radio_getPulseWidth	16	static
-../Core/Src/radio_driver.c:67:9:Radio_getStatus	24	static
+../Core/Src/radio_driver.c:26:6:Radio_init	24	static
+../Core/Src/radio_driver.c:47:6:capturePulseWidth	24	static
+../Core/Src/radio_driver.c:61:6:update	40	static
+../Core/Src/radio_driver.c:89:8:Radio_getPulseWidth	16	static

@@ -1,5 +1,10 @@
 \doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/radio\+\_\+driver.h File Reference}
 \hypertarget{radio__driver_8h}{}\label{radio__driver_8h}\index{Ball\_Launcher\_Main/Core/Inc/radio\_driver.h@{Ball\_Launcher\_Main/Core/Inc/radio\_driver.h}}
+
+
+Header for \doxylink{radio__driver_8c}{radio\+\_\+driver.\+c} file. This file contains the common defines of the application.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdint.\+h$>$}\newline
 {\ttfamily \#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
@@ -7,21 +12,26 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_radio_x}{RadioX}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Structure to define a radio driver with timer, channels, and pulse width parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{radio__driver_8h_a582f025b267f30a8b79a57cd2a95d5ea}{Radio\+\_\+init}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio, TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}timer, uint32\+\_\+t channel1, uint32\+\_\+t channel2)
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the radio driver with the specified timer and channels. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{radio__driver_8h_a44f4cc75e4b2a4a33e163340fd57c223}{capture\+Pulse\+Width}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
-\item 
+\begin{DoxyCompactList}\small\item\em Captures the pulse width for the radio driver. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{radio__driver_8h_a492a4fe5ab05721268b3484b7c8e9be5}{update}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio, int pw1, int pw2)
-\item 
-uint32\+\_\+t \mbox{\hyperlink{radio__driver_8h_af148015dfcc60d4476a3db48ee4e5b37}{Radio\+\_\+get\+Pulse\+Width}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
-\item 
-uint8\+\_\+t \mbox{\hyperlink{radio__driver_8h_acaa1ddfe413c54eee0f5b043e34f094b}{Radio\+\_\+get\+Status}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the radio driver with pulse width values. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{radio__driver_8h_ac6d11311b6d85de460732788a14962b9}{Radio\+\_\+get\+Pulse\+Width}} (\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}radio)
+\begin{DoxyCompactList}\small\item\em Gets the pulse width of the radio driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Header for \doxylink{radio__driver_8c}{radio\+\_\+driver.\+c} file. This file contains the common defines of the application. 
+
+Created on\+: May 2, 2024
+
+Author\+: vvinh 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{radio__driver_8h_a44f4cc75e4b2a4a33e163340fd57c223}\label{radio__driver_8h_a44f4cc75e4b2a4a33e163340fd57c223} 
@@ -30,27 +40,84 @@ uint8\+\_\+t \mbox{\hyperlink{radio__driver_8h_acaa1ddfe413c54eee0f5b043e34f094b
 \doxysubsubsection{\texorpdfstring{capturePulseWidth()}{capturePulseWidth()}}
 {\footnotesize\ttfamily void capture\+Pulse\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
 
-\Hypertarget{radio__driver_8h_af148015dfcc60d4476a3db48ee4e5b37}\label{radio__driver_8h_af148015dfcc60d4476a3db48ee4e5b37} 
+
+
+Captures the pulse width for the radio driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the \doxylink{struct_radio_x}{RadioX} structure \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Read captured value for channel 1
+
+\texorpdfstring{$<$}{<} Read captured value for channel 2
+
+\texorpdfstring{$<$}{<} Calculate the pulse width\Hypertarget{radio__driver_8h_ac6d11311b6d85de460732788a14962b9}\label{radio__driver_8h_ac6d11311b6d85de460732788a14962b9} 
 \index{radio\_driver.h@{radio\_driver.h}!Radio\_getPulseWidth@{Radio\_getPulseWidth}}
 \index{Radio\_getPulseWidth@{Radio\_getPulseWidth}!radio\_driver.h@{radio\_driver.h}}
 \doxysubsubsection{\texorpdfstring{Radio\_getPulseWidth()}{Radio\_getPulseWidth()}}
-{\footnotesize\ttfamily uint32\+\_\+t Radio\+\_\+get\+Pulse\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily double Radio\+\_\+get\+Pulse\+Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
 
-\Hypertarget{radio__driver_8h_acaa1ddfe413c54eee0f5b043e34f094b}\label{radio__driver_8h_acaa1ddfe413c54eee0f5b043e34f094b} 
-\index{radio\_driver.h@{radio\_driver.h}!Radio\_getStatus@{Radio\_getStatus}}
-\index{Radio\_getStatus@{Radio\_getStatus}!radio\_driver.h@{radio\_driver.h}}
-\doxysubsubsection{\texorpdfstring{Radio\_getStatus()}{Radio\_getStatus()}}
-{\footnotesize\ttfamily uint8\+\_\+t Radio\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio }\end{DoxyParamCaption})}
 
+
+Gets the pulse width of the radio driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the \doxylink{struct_radio_x}{RadioX} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Pulse width value
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the \doxylink{struct_radio_x}{RadioX} structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Pulse width value in milliseconds 
+\end{DoxyReturn}
 \Hypertarget{radio__driver_8h_a582f025b267f30a8b79a57cd2a95d5ea}\label{radio__driver_8h_a582f025b267f30a8b79a57cd2a95d5ea} 
 \index{radio\_driver.h@{radio\_driver.h}!Radio\_init@{Radio\_init}}
 \index{Radio\_init@{Radio\_init}!radio\_driver.h@{radio\_driver.h}}
 \doxysubsubsection{\texorpdfstring{Radio\_init()}{Radio\_init()}}
 {\footnotesize\ttfamily void Radio\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio,  }\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{timer,  }\item[{uint32\+\_\+t}]{channel1,  }\item[{uint32\+\_\+t}]{channel2 }\end{DoxyParamCaption})}
 
-\Hypertarget{radio__driver_8h_a492a4fe5ab05721268b3484b7c8e9be5}\label{radio__driver_8h_a492a4fe5ab05721268b3484b7c8e9be5} 
+
+
+Initializes the radio driver with the specified timer and channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the \doxylink{struct_radio_x}{RadioX} structure \\
+\hline
+{\em timer} & Timer handle \\
+\hline
+{\em channel1} & Timer channel 1 \\
+\hline
+{\em channel2} & Timer channel 2 \\
+\hline
+\end{DoxyParams}
+\texorpdfstring{$<$}{<} Start input capture interrupt for channel 1
+
+\texorpdfstring{$<$}{<} Start input capture interrupt for channel 2\Hypertarget{radio__driver_8h_a492a4fe5ab05721268b3484b7c8e9be5}\label{radio__driver_8h_a492a4fe5ab05721268b3484b7c8e9be5} 
 \index{radio\_driver.h@{radio\_driver.h}!update@{update}}
 \index{update@{update}!radio\_driver.h@{radio\_driver.h}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
 {\footnotesize\ttfamily void update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_radio_x}{RadioX}} \texorpdfstring{$\ast$}{*}}]{radio,  }\item[{int}]{pw1,  }\item[{int}]{pw2 }\end{DoxyParamCaption})}
 
+
+
+Updates the radio driver with pulse width values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radio} & Pointer to the \doxylink{struct_radio_x}{RadioX} structure \\
+\hline
+{\em pw1} & Pulse width value for channel 1 \\
+\hline
+{\em pw2} & Pulse width value for channel 2 \\
+\hline
+\end{DoxyParams}

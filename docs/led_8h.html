@@ -99,6 +99,9 @@ $(function(){initNavTree('led_8h.html',''); initResizable(); });
   <div class="headertitle"><div class="title">led.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Header for <a class="el" href="led_8c.html" title="Source file for LED operations. This file contains the implementation of the functions for initializi...">led.c</a> file. This file contains the common defines of the application.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
@@ -108,20 +111,29 @@ $(function(){initNavTree('led_8h.html',''); initResizable(); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_l_e_d_x.html">LEDX</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define an LED with GPIO port and pin.  <a href="struct_l_e_d_x.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1738f0617f5288587db1eefbfa56a347" id="r_a1738f0617f5288587db1eefbfa56a347"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1738f0617f5288587db1eefbfa56a347">LED_init</a> (<a class="el" href="struct_l_e_d_x.html">LEDX</a> *LEDx, GPIO_TypeDef *GPIO, uint16_t PIN)</td></tr>
+<tr class="memdesc:a1738f0617f5288587db1eefbfa56a347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the LED with the specified GPIO port and pin.  <br /></td></tr>
 <tr class="separator:a1738f0617f5288587db1eefbfa56a347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31df2d6b5dd5a4f9105d82955cff48fc" id="r_a31df2d6b5dd5a4f9105d82955cff48fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31df2d6b5dd5a4f9105d82955cff48fc">LED_on</a> (<a class="el" href="struct_l_e_d_x.html">LEDX</a> *LEDx)</td></tr>
+<tr class="memdesc:a31df2d6b5dd5a4f9105d82955cff48fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns on the LED.  <br /></td></tr>
 <tr class="separator:a31df2d6b5dd5a4f9105d82955cff48fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f7736c275436329538ba202f39ad23" id="r_ae9f7736c275436329538ba202f39ad23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9f7736c275436329538ba202f39ad23">LED_off</a> (<a class="el" href="struct_l_e_d_x.html">LEDX</a> *LEDx)</td></tr>
+<tr class="memdesc:ae9f7736c275436329538ba202f39ad23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turns off the LED.  <br /></td></tr>
 <tr class="separator:ae9f7736c275436329538ba202f39ad23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad39024aa963518d6362d1364542ff611" id="r_ad39024aa963518d6362d1364542ff611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad39024aa963518d6362d1364542ff611">LED_toggle</a> (<a class="el" href="struct_l_e_d_x.html">LEDX</a> *LEDx)</td></tr>
+<tr class="memdesc:ad39024aa963518d6362d1364542ff611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the LED state.  <br /></td></tr>
 <tr class="separator:ad39024aa963518d6362d1364542ff611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header for <a class="el" href="led_8c.html" title="Source file for LED operations. This file contains the implementation of the functions for initializi...">led.c</a> file. This file contains the common defines of the application. </p>
+<p>Created on: May 17, 2024</p>
+<p>Author: vvinh </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1738f0617f5288587db1eefbfa56a347" name="a1738f0617f5288587db1eefbfa56a347"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1738f0617f5288587db1eefbfa56a347">&#9670;&#160;</a></span>LED_init()</h2>
 
@@ -146,6 +158,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the LED with the specified GPIO port and pin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LEDx</td><td>Pointer to the <a class="el" href="struct_l_e_d_x.html" title="Structure to define an LED with GPIO port and pin.">LEDX</a> structure </td></tr>
+    <tr><td class="paramname">GPIO</td><td>GPIO port </td></tr>
+    <tr><td class="paramname">PIN</td><td>GPIO pin </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Assign the GPIO port</p>
+<p>&lt; Assign the GPIO pin</p>
+
 </div>
 </div>
 <a id="ae9f7736c275436329538ba202f39ad23" name="ae9f7736c275436329538ba202f39ad23"></a>
@@ -162,6 +186,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Turns off the LED. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LEDx</td><td>Pointer to the <a class="el" href="struct_l_e_d_x.html" title="Structure to define an LED with GPIO port and pin.">LEDX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Set the pin low to turn off the LED</p>
 
 </div>
 </div>
@@ -180,6 +213,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Turns on the LED. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LEDx</td><td>Pointer to the <a class="el" href="struct_l_e_d_x.html" title="Structure to define an LED with GPIO port and pin.">LEDX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Set the pin high to turn on the LED</p>
+
 </div>
 </div>
 <a id="ad39024aa963518d6362d1364542ff611" name="ad39024aa963518d6362d1364542ff611"></a>
@@ -196,6 +238,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Toggles the LED state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LEDx</td><td>Pointer to the <a class="el" href="struct_l_e_d_x.html" title="Structure to define an LED with GPIO port and pin.">LEDX</a> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Toggle the pin to change the LED state</p>
 
 </div>
 </div>
