@@ -23,7 +23,7 @@
  * 
  * @section schematic1 LAUNCHER PCBA
  * This PCB is the main component of the project, serving as the centerpiece of the launcher. It operates the launcher based on commands received from the controller
- * The PDF of this schematic is also attached with higher solution can be found in <a href="LauncherSchematic.pdf" target="_blank" style="color: blue; font-size: 15px; font-weight: bold; text-decoration: none; padding: 8px; background-color: yellow; border: 1px solid black; border-radius: 5px;">PDF SCHEMATIC</a>. 
+ * The PDF of this schematic is also attached with higher solution can be found by access through the schematic's link below 
  * Below are the all of the PCB schematic contains total of 4 pages describe in the table below 
  * 
  * <div align="center">
@@ -79,7 +79,7 @@
  *| STATE4      | BLDC RUN                                        | - Running BLDC motors                             | - Always move to **STATE1**
 
  * 
- * <img src="FSM2.png" width="1200" height="500"> 
+ * <img src="FSM2.png" width="1200" height="700"> 
  * 
  * 
  * 

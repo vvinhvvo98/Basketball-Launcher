@@ -32,7 +32,7 @@ void D4215_init(D4215X* bldcx, TIM_HandleTypeDef* timer, uint32_t channel) {
   * @brief Sets the speed of the D4215 motor.
   *
   * @param bldcx Pointer to the D4215X structure
-  * @param spd Speed of the motor (range: 5 to 10)
+  * @param spd Speed of the motor (range: 0 to 100)
   */
 void D4215_set(D4215X* bldcx, int32_t spd) {
 	float speed = 0.05 * spd + 5; /**< Calculate the duty cycle based on the input speed */
