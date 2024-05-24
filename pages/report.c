@@ -18,7 +18,7 @@
  *
  * @section doc1 PROPOSAL
  * <div class="image-frame">
- *   <a href="Proposal.pdf" target="_blank">
+ *   <a href="PROPOSAL.pdf" target="_blank">
  *       <img src="pdf.png" width="250" height="250" style="border: 10px solid black; border-radius: 50px;">
  *   </a>
  * </div>
@@ -54,7 +54,7 @@
  * 
  * @section doc7 CONTROLLER SCHEMATIC
  * <div class="image-frame">
- *   <a href="ControllerSChematic.pdf" target="_blank">
+ *   <a href="ControllerSchematic.pdf" target="_blank">
  *       <img src="pdf.png" width="250" height="250" style="border: 10px solid black; border-radius: 10px;">
  *   </a>
  * </div>
