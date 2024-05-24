@@ -1,8 +1,8 @@
 \doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/switch.h File Reference}
-\hypertarget{switch_8h}{}\label{switch_8h}\index{Ball\_Launcher\_Main/Core/Inc/switch.h@{Ball\_Launcher\_Main/Core/Inc/switch.h}}
+\label{switch_8h}\index{Ball\_Launcher\_Main/Core/Inc/switch.h@{Ball\_Launcher\_Main/Core/Inc/switch.h}}
 
 
-Header for \doxylink{switch_8c}{switch.\+c} file. This file contains the common defines of the application.  
+Header for \doxyref{switch.\+c}{p.}{switch_8c} file. This file contains the common defines of the application.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -11,30 +11,30 @@ Header for \doxylink{switch_8c}{switch.\+c} file. This file contains the common 
 \doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_switch_x}{SwitchX}}
+struct \textbf{ SwitchX}
 \begin{DoxyCompactList}\small\item\em Structure to define a switch with GPIO port, pin, and status. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{switch_8h_a3346944b8c3ff64b50689a32bcf4f571}{Switch\+\_\+init}} (\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}switchx, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIO, uint16\+\_\+t PIN)
+void \textbf{ Switch\+\_\+init} (\textbf{ SwitchX} $\ast$switchx, GPIO\+\_\+\+Type\+Def $\ast$GPIO, uint16\+\_\+t PIN)
 \begin{DoxyCompactList}\small\item\em Initializes the switch with the specified GPIO port and pin. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{switch_8h_a8763451f2e26836b9518bd73d70c7e5c}{Switch\+\_\+get\+Status}} (\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}switchx)
+uint8\+\_\+t \textbf{ Switch\+\_\+get\+Status} (\textbf{ SwitchX} $\ast$switchx)
 \begin{DoxyCompactList}\small\item\em Gets the status of the switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Header for \doxylink{switch_8c}{switch.\+c} file. This file contains the common defines of the application. 
+Header for \doxyref{switch.\+c}{p.}{switch_8c} file. This file contains the common defines of the application. 
 
 Created on\+: May 17, 2024
 
 Author\+: vvinh 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{switch_8h_a8763451f2e26836b9518bd73d70c7e5c}\label{switch_8h_a8763451f2e26836b9518bd73d70c7e5c} 
+\label{switch_8h_a8763451f2e26836b9518bd73d70c7e5c} 
 \index{switch.h@{switch.h}!Switch\_getStatus@{Switch\_getStatus}}
 \index{Switch\_getStatus@{Switch\_getStatus}!switch.h@{switch.h}}
-\doxysubsubsection{\texorpdfstring{Switch\_getStatus()}{Switch\_getStatus()}}
-{\footnotesize\ttfamily uint8\+\_\+t Switch\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}}]{switchx }\end{DoxyParamCaption})}
+\doxysubsubsection{Switch\_getStatus()}
+{\footnotesize\ttfamily uint8\+\_\+t Switch\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\textbf{ SwitchX} $\ast$}]{switchx }\end{DoxyParamCaption})}
 
 
 
@@ -42,17 +42,17 @@ Gets the status of the switch.
 
 
 \begin{DoxyParams}{Parameters}
-{\em switchx} & Pointer to the \doxylink{struct_switch_x}{SwitchX} structure \\
+{\em switchx} & Pointer to the \doxyref{SwitchX}{p.}{struct_switch_x} structure \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 uint8\+\_\+t Status of the switch (1 if pressed, 0 if not pressed) 
 \end{DoxyReturn}
-\Hypertarget{switch_8h_a3346944b8c3ff64b50689a32bcf4f571}\label{switch_8h_a3346944b8c3ff64b50689a32bcf4f571} 
+\label{switch_8h_a3346944b8c3ff64b50689a32bcf4f571} 
 \index{switch.h@{switch.h}!Switch\_init@{Switch\_init}}
 \index{Switch\_init@{Switch\_init}!switch.h@{switch.h}}
-\doxysubsubsection{\texorpdfstring{Switch\_init()}{Switch\_init()}}
-{\footnotesize\ttfamily void Switch\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}}]{switchx,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
+\doxysubsubsection{Switch\_init()}
+{\footnotesize\ttfamily void Switch\+\_\+init (\begin{DoxyParamCaption}\item[{\textbf{ SwitchX} $\ast$}]{switchx,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
 
 
 
@@ -60,15 +60,15 @@ Initializes the switch with the specified GPIO port and pin.
 
 
 \begin{DoxyParams}{Parameters}
-{\em switchx} & Pointer to the \doxylink{struct_switch_x}{SwitchX} structure \\
+{\em switchx} & Pointer to the \doxyref{SwitchX}{p.}{struct_switch_x} structure \\
 \hline
 {\em GPIO} & GPIO port \\
 \hline
 {\em PIN} & GPIO pin \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Assign the GPIO port
+$<$ Assign the GPIO port
 
-\texorpdfstring{$<$}{<} Assign the GPIO pin
+$<$ Assign the GPIO pin
 
-\texorpdfstring{$<$}{<} Initialize the status to 0
+$<$ Initialize the status to 0

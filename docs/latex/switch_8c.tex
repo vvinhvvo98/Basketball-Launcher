@@ -1,5 +1,5 @@
 \doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Src/switch.c File Reference}
-\hypertarget{switch_8c}{}\label{switch_8c}\index{Ball\_Launcher\_Main/Core/Src/switch.c@{Ball\_Launcher\_Main/Core/Src/switch.c}}
+\label{switch_8c}\index{Ball\_Launcher\_Main/Core/Src/switch.c@{Ball\_Launcher\_Main/Core/Src/switch.c}}
 
 
 Source file for switch operations. This file contains the implementation of the functions for initializing and getting the status of a switch.  
@@ -12,9 +12,9 @@ Source file for switch operations. This file contains the implementation of the 
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{switch_8c_a3346944b8c3ff64b50689a32bcf4f571}{Switch\+\_\+init}} (\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}switchx, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIO, uint16\+\_\+t PIN)
+void \textbf{ Switch\+\_\+init} (\textbf{ SwitchX} $\ast$switchx, GPIO\+\_\+\+Type\+Def $\ast$GPIO, uint16\+\_\+t PIN)
 \begin{DoxyCompactList}\small\item\em Initializes the switch with the specified GPIO port and pin. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{switch_8c_a8763451f2e26836b9518bd73d70c7e5c}{Switch\+\_\+get\+Status}} (\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}switchx)
+uint8\+\_\+t \textbf{ Switch\+\_\+get\+Status} (\textbf{ SwitchX} $\ast$switchx)
 \begin{DoxyCompactList}\small\item\em Gets the status of the switch. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -26,11 +26,11 @@ Created on\+: May 17, 2024
 Author\+: vvinh 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{switch_8c_a8763451f2e26836b9518bd73d70c7e5c}\label{switch_8c_a8763451f2e26836b9518bd73d70c7e5c} 
+\label{switch_8c_a8763451f2e26836b9518bd73d70c7e5c} 
 \index{switch.c@{switch.c}!Switch\_getStatus@{Switch\_getStatus}}
 \index{Switch\_getStatus@{Switch\_getStatus}!switch.c@{switch.c}}
-\doxysubsubsection{\texorpdfstring{Switch\_getStatus()}{Switch\_getStatus()}}
-{\footnotesize\ttfamily uint8\+\_\+t Switch\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}}]{switchx }\end{DoxyParamCaption})}
+\doxysubsubsection{Switch\_getStatus()}
+{\footnotesize\ttfamily uint8\+\_\+t Switch\+\_\+get\+Status (\begin{DoxyParamCaption}\item[{\textbf{ SwitchX} $\ast$}]{switchx }\end{DoxyParamCaption})}
 
 
 
@@ -38,17 +38,17 @@ Gets the status of the switch.
 
 
 \begin{DoxyParams}{Parameters}
-{\em switchx} & Pointer to the \doxylink{struct_switch_x}{SwitchX} structure \\
+{\em switchx} & Pointer to the \doxyref{SwitchX}{p.}{struct_switch_x} structure \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 uint8\+\_\+t Status of the switch (1 if pressed, 0 if not pressed) 
 \end{DoxyReturn}
-\Hypertarget{switch_8c_a3346944b8c3ff64b50689a32bcf4f571}\label{switch_8c_a3346944b8c3ff64b50689a32bcf4f571} 
+\label{switch_8c_a3346944b8c3ff64b50689a32bcf4f571} 
 \index{switch.c@{switch.c}!Switch\_init@{Switch\_init}}
 \index{Switch\_init@{Switch\_init}!switch.c@{switch.c}}
-\doxysubsubsection{\texorpdfstring{Switch\_init()}{Switch\_init()}}
-{\footnotesize\ttfamily void Switch\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_switch_x}{SwitchX}} \texorpdfstring{$\ast$}{*}}]{switchx,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
+\doxysubsubsection{Switch\_init()}
+{\footnotesize\ttfamily void Switch\+\_\+init (\begin{DoxyParamCaption}\item[{\textbf{ SwitchX} $\ast$}]{switchx,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
 
 
 
@@ -56,15 +56,15 @@ Initializes the switch with the specified GPIO port and pin.
 
 
 \begin{DoxyParams}{Parameters}
-{\em switchx} & Pointer to the \doxylink{struct_switch_x}{SwitchX} structure \\
+{\em switchx} & Pointer to the \doxyref{SwitchX}{p.}{struct_switch_x} structure \\
 \hline
 {\em GPIO} & GPIO port \\
 \hline
 {\em PIN} & GPIO pin \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Assign the GPIO port
+$<$ Assign the GPIO port
 
-\texorpdfstring{$<$}{<} Assign the GPIO pin
+$<$ Assign the GPIO pin
 
-\texorpdfstring{$<$}{<} Initialize the status to 0
+$<$ Initialize the status to 0

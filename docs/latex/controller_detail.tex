@@ -1,13 +1,13 @@
 \chapter{CONTROLLER}
-\hypertarget{controller_detail}{}\label{controller_detail}\index{CONTROLLER@{CONTROLLER}}
-\hypertarget{controller_detail_overview}{}\doxysection{\texorpdfstring{FINAL DESIGN}{FINAL DESIGN}}\label{controller_detail_overview}
+\label{controller_detail}\index{CONTROLLER@{CONTROLLER}}
+\doxysection{FINAL DESIGN}\label{controller_detail_overview}
 The controller will use an STM32 Black\+Pill microcontroller with an IMU sensor attached to the user\textquotesingle{}s hand. It will send signals via Bluetooth to the launcher, allowing the launcher to receive the data and rotate according to the IMU sensor\textquotesingle{}s input. The data transfer includes the velocity of the angles, and the communication uses a UART connection between the HC-\/05 Bluetooth module. The controller also features buttons and an indicator LED, all mounted on a 3D-\/printed handle bracket. ~\newline
 
 
- \href{https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html}{\texttt{  }} \hypertarget{controller_detail_schematic}{}\doxysection{\texorpdfstring{CONTROLLER PCBA}{CONTROLLER PCBA}}\label{controller_detail_schematic}
-Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 Black\+Pill, mpu6050 IMU, HC-\/05, and LEDs together. The PDF of this schematic is also attached with higher solution can be found in the picture below  \href{ControllerSchematic.pdf}{\texttt{  }} 
+ {\texttt{  }} \doxysection{CONTROLLER PCBA}\label{controller_detail_schematic}
+Below are the overall schematic and footprint of the PCBA that is used to integrate the STM32 Black\+Pill, mpu6050 IMU, HC-\/05, and LEDs together. The PDF of this schematic is also attached with higher solution can be found in the picture below  {\texttt{  }} 
 
-  \hypertarget{controller_detail_fsm}{}\doxysection{\texorpdfstring{FINITE STATE MACHINE}{FINITE STATE MACHINE}}\label{controller_detail_fsm}
+  \doxysection{FINITE STATE MACHINE}\label{controller_detail_fsm}
  \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
 \hline
@@ -30,6 +30,6 @@ STATE4   &TRANSFER -\/ Send data to UART1 and UART6   &-\/ Send data to UART1 (b
 \end{longtabu}
 
 
-  \hypertarget{launcher_detail_bomm5}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ 3D PRINTED PARTS}{BILL OF MATERIAL -\/ 3D PRINTED PARTS}}\label{launcher_detail_bomm5}
-Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+:  \href{https://github.com/vvinhvvo98/Basketball-Launcher/tree/main/CAD}{\texttt{  }} \hypertarget{launcher_detail_bome2}{}\doxysection{\texorpdfstring{BILL OF MATERIAL -\/ ELECTRONICS}{BILL OF MATERIAL -\/ ELECTRONICS}}\label{launcher_detail_bome2}
-All of the components for electronics are listed in the attached PDF file here below  \href{BILL_OF_MATERIAL.xlsx}{\texttt{  }}  
+  \doxysection{BILL OF MATERIAL -\/ 3D PRINTED PARTS}\label{launcher_detail_bomm5}
+Most of the 3D printed parts are printed using Bambu\+Lab XC1 3D printer and Bambu\+Lab filaments. All the CAD 3D model files can be found here for reference\+:  {\texttt{  }} \doxysection{BILL OF MATERIAL -\/ ELECTRONICS}\label{launcher_detail_bome2}
+All of the components for electronics are listed in the attached PDF file here below  {\texttt{  }}  

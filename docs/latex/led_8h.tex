@@ -1,8 +1,8 @@
 \doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Inc/led.h File Reference}
-\hypertarget{led_8h}{}\label{led_8h}\index{Ball\_Launcher\_Main/Core/Inc/led.h@{Ball\_Launcher\_Main/Core/Inc/led.h}}
+\label{led_8h}\index{Ball\_Launcher\_Main/Core/Inc/led.h@{Ball\_Launcher\_Main/Core/Inc/led.h}}
 
 
-Header for \doxylink{led_8c}{led.\+c} file. This file contains the common defines of the application.  
+Header for \doxyref{led.\+c}{p.}{led_8c} file. This file contains the common defines of the application.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -11,34 +11,34 @@ Header for \doxylink{led_8c}{led.\+c} file. This file contains the common define
 \doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_l_e_d_x}{LEDX}}
+struct \textbf{ LEDX}
 \begin{DoxyCompactList}\small\item\em Structure to define an LED with GPIO port and pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{led_8h_a1738f0617f5288587db1eefbfa56a347}{LED\+\_\+init}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIO, uint16\+\_\+t PIN)
+void \textbf{ LED\+\_\+init} (\textbf{ LEDX} $\ast$LEDx, GPIO\+\_\+\+Type\+Def $\ast$GPIO, uint16\+\_\+t PIN)
 \begin{DoxyCompactList}\small\item\em Initializes the LED with the specified GPIO port and pin. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc}{LED\+\_\+on}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx)
+void \textbf{ LED\+\_\+on} (\textbf{ LEDX} $\ast$LEDx)
 \begin{DoxyCompactList}\small\item\em Turns on the LED. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{led_8h_ae9f7736c275436329538ba202f39ad23}{LED\+\_\+off}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx)
+void \textbf{ LED\+\_\+off} (\textbf{ LEDX} $\ast$LEDx)
 \begin{DoxyCompactList}\small\item\em Turns off the LED. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{led_8h_ad39024aa963518d6362d1364542ff611}{LED\+\_\+toggle}} (\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}LEDx)
+void \textbf{ LED\+\_\+toggle} (\textbf{ LEDX} $\ast$LEDx)
 \begin{DoxyCompactList}\small\item\em Toggles the LED state. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Header for \doxylink{led_8c}{led.\+c} file. This file contains the common defines of the application. 
+Header for \doxyref{led.\+c}{p.}{led_8c} file. This file contains the common defines of the application. 
 
 Created on\+: May 17, 2024
 
 Author\+: vvinh 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{led_8h_a1738f0617f5288587db1eefbfa56a347}\label{led_8h_a1738f0617f5288587db1eefbfa56a347} 
+\label{led_8h_a1738f0617f5288587db1eefbfa56a347} 
 \index{led.h@{led.h}!LED\_init@{LED\_init}}
 \index{LED\_init@{LED\_init}!led.h@{led.h}}
-\doxysubsubsection{\texorpdfstring{LED\_init()}{LED\_init()}}
-{\footnotesize\ttfamily void LED\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
+\doxysubsubsection{LED\_init()}
+{\footnotesize\ttfamily void LED\+\_\+init (\begin{DoxyParamCaption}\item[{\textbf{ LEDX} $\ast$}]{LEDx,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{GPIO,  }\item[{uint16\+\_\+t}]{PIN }\end{DoxyParamCaption})}
 
 
 
@@ -46,20 +46,20 @@ Initializes the LED with the specified GPIO port and pin.
 
 
 \begin{DoxyParams}{Parameters}
-{\em LEDx} & Pointer to the \doxylink{struct_l_e_d_x}{LEDX} structure \\
+{\em LEDx} & Pointer to the \doxyref{LEDX}{p.}{struct_l_e_d_x} structure \\
 \hline
 {\em GPIO} & GPIO port \\
 \hline
 {\em PIN} & GPIO pin \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Assign the GPIO port
+$<$ Assign the GPIO port
 
-\texorpdfstring{$<$}{<} Assign the GPIO pin\Hypertarget{led_8h_ae9f7736c275436329538ba202f39ad23}\label{led_8h_ae9f7736c275436329538ba202f39ad23} 
+$<$ Assign the GPIO pin\label{led_8h_ae9f7736c275436329538ba202f39ad23} 
 \index{led.h@{led.h}!LED\_off@{LED\_off}}
 \index{LED\_off@{LED\_off}!led.h@{led.h}}
-\doxysubsubsection{\texorpdfstring{LED\_off()}{LED\_off()}}
-{\footnotesize\ttfamily void LED\+\_\+off (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx }\end{DoxyParamCaption})}
+\doxysubsubsection{LED\_off()}
+{\footnotesize\ttfamily void LED\+\_\+off (\begin{DoxyParamCaption}\item[{\textbf{ LEDX} $\ast$}]{LEDx }\end{DoxyParamCaption})}
 
 
 
@@ -67,14 +67,14 @@ Turns off the LED.
 
 
 \begin{DoxyParams}{Parameters}
-{\em LEDx} & Pointer to the \doxylink{struct_l_e_d_x}{LEDX} structure \\
+{\em LEDx} & Pointer to the \doxyref{LEDX}{p.}{struct_l_e_d_x} structure \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Set the pin low to turn off the LED\Hypertarget{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc}\label{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc} 
+$<$ Set the pin low to turn off the LED\label{led_8h_a31df2d6b5dd5a4f9105d82955cff48fc} 
 \index{led.h@{led.h}!LED\_on@{LED\_on}}
 \index{LED\_on@{LED\_on}!led.h@{led.h}}
-\doxysubsubsection{\texorpdfstring{LED\_on()}{LED\_on()}}
-{\footnotesize\ttfamily void LED\+\_\+on (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx }\end{DoxyParamCaption})}
+\doxysubsubsection{LED\_on()}
+{\footnotesize\ttfamily void LED\+\_\+on (\begin{DoxyParamCaption}\item[{\textbf{ LEDX} $\ast$}]{LEDx }\end{DoxyParamCaption})}
 
 
 
@@ -82,14 +82,14 @@ Turns on the LED.
 
 
 \begin{DoxyParams}{Parameters}
-{\em LEDx} & Pointer to the \doxylink{struct_l_e_d_x}{LEDX} structure \\
+{\em LEDx} & Pointer to the \doxyref{LEDX}{p.}{struct_l_e_d_x} structure \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Set the pin high to turn on the LED\Hypertarget{led_8h_ad39024aa963518d6362d1364542ff611}\label{led_8h_ad39024aa963518d6362d1364542ff611} 
+$<$ Set the pin high to turn on the LED\label{led_8h_ad39024aa963518d6362d1364542ff611} 
 \index{led.h@{led.h}!LED\_toggle@{LED\_toggle}}
 \index{LED\_toggle@{LED\_toggle}!led.h@{led.h}}
-\doxysubsubsection{\texorpdfstring{LED\_toggle()}{LED\_toggle()}}
-{\footnotesize\ttfamily void LED\+\_\+toggle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_l_e_d_x}{LEDX}} \texorpdfstring{$\ast$}{*}}]{LEDx }\end{DoxyParamCaption})}
+\doxysubsubsection{LED\_toggle()}
+{\footnotesize\ttfamily void LED\+\_\+toggle (\begin{DoxyParamCaption}\item[{\textbf{ LEDX} $\ast$}]{LEDx }\end{DoxyParamCaption})}
 
 
 
@@ -97,7 +97,7 @@ Toggles the LED state.
 
 
 \begin{DoxyParams}{Parameters}
-{\em LEDx} & Pointer to the \doxylink{struct_l_e_d_x}{LEDX} structure \\
+{\em LEDx} & Pointer to the \doxyref{LEDX}{p.}{struct_l_e_d_x} structure \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Toggle the pin to change the LED state
+$<$ Toggle the pin to change the LED state

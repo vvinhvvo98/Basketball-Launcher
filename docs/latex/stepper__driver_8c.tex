@@ -1,5 +1,5 @@
 \doxysection{Ball\+\_\+\+Launcher\+\_\+\+Main/\+Core/\+Src/stepper\+\_\+driver.c File Reference}
-\hypertarget{stepper__driver_8c}{}\label{stepper__driver_8c}\index{Ball\_Launcher\_Main/Core/Src/stepper\_driver.c@{Ball\_Launcher\_Main/Core/Src/stepper\_driver.c}}
+\label{stepper__driver_8c}\index{Ball\_Launcher\_Main/Core/Src/stepper\_driver.c@{Ball\_Launcher\_Main/Core/Src/stepper\_driver.c}}
 
 
 Source file for stepper motor driver operations. This file contains the implementation of the functions for initializing and controlling a stepper motor.  
@@ -12,17 +12,17 @@ Source file for stepper motor driver operations. This file contains the implemen
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{stepper__driver_8c_a759da7f637d30f358a04cf5486770d90}{Stepper\+\_\+init}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIO, uint16\+\_\+t EN\+\_\+\+PIN, uint16\+\_\+t DIR\+\_\+\+PIN, uint16\+\_\+t STP\+\_\+\+PIN)
+void \textbf{ Stepper\+\_\+init} (\textbf{ StepperX} $\ast$stepperx, GPIO\+\_\+\+Type\+Def $\ast$GPIO, uint16\+\_\+t EN\+\_\+\+PIN, uint16\+\_\+t DIR\+\_\+\+PIN, uint16\+\_\+t STP\+\_\+\+PIN)
 \begin{DoxyCompactList}\small\item\em Initializes the stepper motor driver with the specified GPIO port and pins. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{stepper__driver_8c_aea240fcf4b912b8cb0a1b3349dbf79bc}{Stepper\+\_\+enable}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx)
+void \textbf{ Stepper\+\_\+enable} (\textbf{ StepperX} $\ast$stepperx)
 \begin{DoxyCompactList}\small\item\em Enables the stepper motor driver. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{stepper__driver_8c_ab88702d656c15ed6196e1c312be3bf26}{Stepper\+\_\+disable}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx)
+void \textbf{ Stepper\+\_\+disable} (\textbf{ StepperX} $\ast$stepperx)
 \begin{DoxyCompactList}\small\item\em Disables the stepper motor driver. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{stepper__driver_8c_a9da03ce23b12c6bfaedaeaea962dc53f}{Stepper\+\_\+setspeed}} (\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}stepperx, uint16\+\_\+t speed, uint8\+\_\+t dir)
+void \textbf{ Stepper\+\_\+setspeed} (\textbf{ StepperX} $\ast$stepperx, uint16\+\_\+t speed, uint8\+\_\+t dir)
 \begin{DoxyCompactList}\small\item\em Sets the speed and direction of the stepper motor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{stepper__driver_8c_aeb71ef4b996788e4aa8cda6ef617f58f}{Sys\+Tick\+\_\+\+Init}} (void)
+void \textbf{ Sys\+Tick\+\_\+\+Init} (void)
 \begin{DoxyCompactList}\small\item\em Initializes the system tick for microsecond delays. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{stepper__driver_8c_a0e816b30894e177b44f464a4065cd0cd}{Delay\+\_\+us}} (uint32\+\_\+t us)
+void \textbf{ Delay\+\_\+us} (uint32\+\_\+t us)
 \begin{DoxyCompactList}\small\item\em Delays the program execution for a specified number of microseconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -34,10 +34,10 @@ Created on\+: May 17, 2024
 Author\+: vvinh 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{stepper__driver_8c_a0e816b30894e177b44f464a4065cd0cd}\label{stepper__driver_8c_a0e816b30894e177b44f464a4065cd0cd} 
+\label{stepper__driver_8c_a0e816b30894e177b44f464a4065cd0cd} 
 \index{stepper\_driver.c@{stepper\_driver.c}!Delay\_us@{Delay\_us}}
 \index{Delay\_us@{Delay\_us}!stepper\_driver.c@{stepper\_driver.c}}
-\doxysubsubsection{\texorpdfstring{Delay\_us()}{Delay\_us()}}
+\doxysubsubsection{Delay\_us()}
 {\footnotesize\ttfamily void Delay\+\_\+us (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{us }\end{DoxyParamCaption})}
 
 
@@ -49,11 +49,11 @@ Delays the program execution for a specified number of microseconds.
 {\em us} & Number of microseconds to delay \\
 \hline
 \end{DoxyParams}
-\Hypertarget{stepper__driver_8c_ab88702d656c15ed6196e1c312be3bf26}\label{stepper__driver_8c_ab88702d656c15ed6196e1c312be3bf26} 
+\label{stepper__driver_8c_ab88702d656c15ed6196e1c312be3bf26} 
 \index{stepper\_driver.c@{stepper\_driver.c}!Stepper\_disable@{Stepper\_disable}}
 \index{Stepper\_disable@{Stepper\_disable}!stepper\_driver.c@{stepper\_driver.c}}
-\doxysubsubsection{\texorpdfstring{Stepper\_disable()}{Stepper\_disable()}}
-{\footnotesize\ttfamily void Stepper\+\_\+disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx }\end{DoxyParamCaption})}
+\doxysubsubsection{Stepper\_disable()}
+{\footnotesize\ttfamily void Stepper\+\_\+disable (\begin{DoxyParamCaption}\item[{\textbf{ StepperX} $\ast$}]{stepperx }\end{DoxyParamCaption})}
 
 
 
@@ -61,14 +61,14 @@ Disables the stepper motor driver.
 
 
 \begin{DoxyParams}{Parameters}
-{\em stepperx} & Pointer to the \doxylink{struct_stepper_x}{StepperX} structure \\
+{\em stepperx} & Pointer to the \doxyref{StepperX}{p.}{struct_stepper_x} structure \\
 \hline
 \end{DoxyParams}
-\Hypertarget{stepper__driver_8c_aea240fcf4b912b8cb0a1b3349dbf79bc}\label{stepper__driver_8c_aea240fcf4b912b8cb0a1b3349dbf79bc} 
+\label{stepper__driver_8c_aea240fcf4b912b8cb0a1b3349dbf79bc} 
 \index{stepper\_driver.c@{stepper\_driver.c}!Stepper\_enable@{Stepper\_enable}}
 \index{Stepper\_enable@{Stepper\_enable}!stepper\_driver.c@{stepper\_driver.c}}
-\doxysubsubsection{\texorpdfstring{Stepper\_enable()}{Stepper\_enable()}}
-{\footnotesize\ttfamily void Stepper\+\_\+enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx }\end{DoxyParamCaption})}
+\doxysubsubsection{Stepper\_enable()}
+{\footnotesize\ttfamily void Stepper\+\_\+enable (\begin{DoxyParamCaption}\item[{\textbf{ StepperX} $\ast$}]{stepperx }\end{DoxyParamCaption})}
 
 
 
@@ -76,14 +76,14 @@ Enables the stepper motor driver.
 
 
 \begin{DoxyParams}{Parameters}
-{\em stepperx} & Pointer to the \doxylink{struct_stepper_x}{StepperX} structure \\
+{\em stepperx} & Pointer to the \doxyref{StepperX}{p.}{struct_stepper_x} structure \\
 \hline
 \end{DoxyParams}
-\Hypertarget{stepper__driver_8c_a759da7f637d30f358a04cf5486770d90}\label{stepper__driver_8c_a759da7f637d30f358a04cf5486770d90} 
+\label{stepper__driver_8c_a759da7f637d30f358a04cf5486770d90} 
 \index{stepper\_driver.c@{stepper\_driver.c}!Stepper\_init@{Stepper\_init}}
 \index{Stepper\_init@{Stepper\_init}!stepper\_driver.c@{stepper\_driver.c}}
-\doxysubsubsection{\texorpdfstring{Stepper\_init()}{Stepper\_init()}}
-{\footnotesize\ttfamily void Stepper\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIO,  }\item[{uint16\+\_\+t}]{EN\+\_\+\+PIN,  }\item[{uint16\+\_\+t}]{DIR\+\_\+\+PIN,  }\item[{uint16\+\_\+t}]{STP\+\_\+\+PIN }\end{DoxyParamCaption})}
+\doxysubsubsection{Stepper\_init()}
+{\footnotesize\ttfamily void Stepper\+\_\+init (\begin{DoxyParamCaption}\item[{\textbf{ StepperX} $\ast$}]{stepperx,  }\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{GPIO,  }\item[{uint16\+\_\+t}]{EN\+\_\+\+PIN,  }\item[{uint16\+\_\+t}]{DIR\+\_\+\+PIN,  }\item[{uint16\+\_\+t}]{STP\+\_\+\+PIN }\end{DoxyParamCaption})}
 
 
 
@@ -91,7 +91,7 @@ Initializes the stepper motor driver with the specified GPIO port and pins.
 
 
 \begin{DoxyParams}{Parameters}
-{\em stepperx} & Pointer to the \doxylink{struct_stepper_x}{StepperX} structure \\
+{\em stepperx} & Pointer to the \doxyref{StepperX}{p.}{struct_stepper_x} structure \\
 \hline
 {\em GPIO} & GPIO port \\
 \hline
@@ -102,11 +102,11 @@ Initializes the stepper motor driver with the specified GPIO port and pins.
 {\em STP\+\_\+\+PIN} & Step pin \\
 \hline
 \end{DoxyParams}
-\Hypertarget{stepper__driver_8c_a9da03ce23b12c6bfaedaeaea962dc53f}\label{stepper__driver_8c_a9da03ce23b12c6bfaedaeaea962dc53f} 
+\label{stepper__driver_8c_a9da03ce23b12c6bfaedaeaea962dc53f} 
 \index{stepper\_driver.c@{stepper\_driver.c}!Stepper\_setspeed@{Stepper\_setspeed}}
 \index{Stepper\_setspeed@{Stepper\_setspeed}!stepper\_driver.c@{stepper\_driver.c}}
-\doxysubsubsection{\texorpdfstring{Stepper\_setspeed()}{Stepper\_setspeed()}}
-{\footnotesize\ttfamily void Stepper\+\_\+setspeed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_stepper_x}{StepperX}} \texorpdfstring{$\ast$}{*}}]{stepperx,  }\item[{uint16\+\_\+t}]{speed,  }\item[{uint8\+\_\+t}]{dir }\end{DoxyParamCaption})}
+\doxysubsubsection{Stepper\_setspeed()}
+{\footnotesize\ttfamily void Stepper\+\_\+setspeed (\begin{DoxyParamCaption}\item[{\textbf{ StepperX} $\ast$}]{stepperx,  }\item[{uint16\+\_\+t}]{speed,  }\item[{uint8\+\_\+t}]{dir }\end{DoxyParamCaption})}
 
 
 
@@ -114,25 +114,25 @@ Sets the speed and direction of the stepper motor.
 
 
 \begin{DoxyParams}{Parameters}
-{\em stepperx} & Pointer to the \doxylink{struct_stepper_x}{StepperX} structure \\
+{\em stepperx} & Pointer to the \doxyref{StepperX}{p.}{struct_stepper_x} structure \\
 \hline
 {\em speed} & Speed of the stepper motor (delay between steps) \\
 \hline
 {\em dir} & Direction of the stepper motor (1 for one direction, 0 for the opposite) \\
 \hline
 \end{DoxyParams}
-\texorpdfstring{$<$}{<} Set the direction pin
+$<$ Set the direction pin
 
-\texorpdfstring{$<$}{<} Set the step pin high
+$<$ Set the step pin high
 
-\texorpdfstring{$<$}{<} Delay to control the speed
+$<$ Delay to control the speed
 
-\texorpdfstring{$<$}{<} Set the step pin low
+$<$ Set the step pin low
 
-\texorpdfstring{$<$}{<} Delay to control the speed\Hypertarget{stepper__driver_8c_aeb71ef4b996788e4aa8cda6ef617f58f}\label{stepper__driver_8c_aeb71ef4b996788e4aa8cda6ef617f58f} 
+$<$ Delay to control the speed\label{stepper__driver_8c_aeb71ef4b996788e4aa8cda6ef617f58f} 
 \index{stepper\_driver.c@{stepper\_driver.c}!SysTick\_Init@{SysTick\_Init}}
 \index{SysTick\_Init@{SysTick\_Init}!stepper\_driver.c@{stepper\_driver.c}}
-\doxysubsubsection{\texorpdfstring{SysTick\_Init()}{SysTick\_Init()}}
+\doxysubsubsection{SysTick\_Init()}
 {\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
