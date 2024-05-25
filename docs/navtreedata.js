@@ -51,7 +51,7 @@ var NAVTREE =
       [ "CONTROLLER SCHEMATIC", "reports_detail.html#doc7", null ],
       [ "BILL OF MATERIAL", "reports_detail.html#doc2", null ],
       [ "3D MODEL", "reports_detail.html#doc6", null ],
-      [ "YOUTUBE", "reports_detail.html#youtube1", null ],
+      [ "YOUTUBE", "reports_detail.html#youtube11", null ],
       [ "REPOSITORY", "reports_detail.html#repository1", null ]
     ] ],
     [ "Topics", "topics.html", "topics" ],
