@@ -15,11 +15,10 @@
  * 
  * <div class="image-frame">
  * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/launcher_detail.html>
- *      <img src="launcher.png" width="1200" height="1250" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="launcher.png" width="1200" height="600" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  * 
- * --> UPDATE PICTURE
  * 
  * <br> <!---->
  *

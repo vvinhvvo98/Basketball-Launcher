@@ -14,7 +14,7 @@
  * 
  * <div class="image-frame">
  * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html>
- *      <img src="control.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="control.png" width="1200" height="600" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  * 
@@ -37,7 +37,7 @@
  * </div>
  * <br> <!---->
  * <div class="image-frame">
- * <img src="finalpcb1.png" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;">
+ * <img src="pcb1.png" width="1200" height="800" style="border: 10px solid black; border-radius: 50px;">
  * </div>
  * 
  * <br> <!---->

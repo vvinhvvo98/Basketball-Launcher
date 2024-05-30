@@ -6,9 +6,9 @@
 /**
  * @mainpage MAIN PAGE
  *
- * <img src="FINAL.JPEG" width="1200" height="1200">
- *
- * PICTURE UPDATE NEEDED
+ * <div class="image-frame">
+ * <img src="FINAL.png" width="1200" height="1200" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
  *
  * <br> <!---->
  *
@@ -78,7 +78,7 @@
  *
  * <div class="image-frame">
  * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/launcher_detail.html>
- *      <img src="launcher.png" width="1200" height="1250" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="launcher.png" width="1200" height="600" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  * 
@@ -93,7 +93,7 @@
  *
  * <div class="image-frame">
  * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html>
- *      <img src="control.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="control.png" width="1200" height="600" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  *
