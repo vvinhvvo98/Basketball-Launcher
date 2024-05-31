@@ -205,14 +205,15 @@ int main(void)
 
 	  // STATE 1: DECISION HUB TO BRANCH TO DIFFERENT HUB
 	  else if (STATE == STATE_1_HUB) {
+		  LED_off(&LED1);
+		  LED_off(&LED2);
 		  // ENABLE 2 STEPPERS
   		  Stepper_enable(&STEPPER1);
   		  Stepper_enable(&STEPPER2);
   		  // READ 3 LIMIT SWITCHES
 		  SW1   = Switch_getStatus(&S1);
 		  SW2   = Switch_getStatus(&S2);
-//		  SW3   = Switch_getStatus(&S3);
-		  SW3   = 1;
+		  SW3   = Switch_getStatus(&S3);
 		  // CHECK ESTOP
 		  if (ESTOP == 1) {
 			  ti = HAL_GetTick();
@@ -270,7 +271,8 @@ int main(void)
 
 	  }
 	  // STATE 3: SPIN STEPPER MOTORS
-	  else if (STATE == STATE_3_STEPPER) {
+	  else if (STATE == STATE_3_STEPPER) {\
+		  LED_on(&LED1);
 		  // LEFT SWITCH HIT --> MOVE TO THE RIGHT
 		  if (SW == 1) {
 			  for (int i = 0; i <= angleTarget/2; i++) {
@@ -287,7 +289,7 @@ int main(void)
 		  }
 		  // MID SWITCH HIT --> MOVE UP
 		  else if (SW == 3) {
-			  for (int i = 0; i <= 10 * angleTarget; i ++) {
+			  for (int i = 0; i <= 10 * angleTarget/2; i ++) {
 				  Stepper_setspeed (&STEPPER2, 10, pitchDirectionSW);
 			  }
 			  SW = 0;
@@ -300,7 +302,7 @@ int main(void)
 					  Stepper_setspeed (&STEPPER1, 1, yawDirection);
 				  }
 			  }
-			  uint16_t pitch_map = map(pitch, 20, 250, 10, 50);
+			  uint16_t pitch_map = map(pitch, 20, 250, 5, 50);
 			  if (pitch > 20) {
 				  for (int i = 0; i <= pitch_map; i ++) {
 					  Stepper_setspeed (&STEPPER2, 1, pitchDirection);
@@ -312,6 +314,7 @@ int main(void)
 
 	  // STATE 4: BLDC MOTOR
 	  else if (STATE == STATE_4_BLDC) {
+		  LED_on(&LED2);
 		  D4215_set(&ESC1, 30);
 		  D4215_set(&ESC2, 30);
 		  STATE = STATE_1_HUB;
@@ -567,7 +570,8 @@ static void MX_GPIO_Init(void)
                           |GPIO_PIN_7|GPIO_PIN_8, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_10|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+                          |GPIO_PIN_15|GPIO_PIN_8|GPIO_PIN_9, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PA3 PA4 PA5 PA6
                            PA7 PA8 */
@@ -584,8 +588,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB14 PB15 */
-  GPIO_InitStruct.Pin = GPIO_PIN_14|GPIO_PIN_15;
+  /*Configure GPIO pins : PB10 PB12 PB13 PB14
+                           PB15 PB8 PB9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14
+                          |GPIO_PIN_15|GPIO_PIN_8|GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -625,11 +631,17 @@ void dataProcess(char* data) {
 	SHOT = (int16_t)data[2] - 48;
 	yawDirection   = ((uint8_t)data[4] == 45) ? 0 : 1;
 	pitchDirection = ((uint8_t)data[9] == 45) ? 0 : 1;
-	if (pitchDirection == 0) {
-		pitchDirection == 1;
-	} else {
-		pitchDirection == 0;
-	}
+//	if (pitchDirection == 0) {
+//		pitchDirection == 1;
+//	} else {
+//		pitchDirection == 0;
+//	}
+//
+//	if (yawDirection == 0) {
+//		yawDirection == 1;
+//	} else {
+//		yawDirection == 0;
+//	}
 
 	uint16_t yaw1 = (uint16_t)data[5] - 48;
 	uint16_t yaw2 = (uint16_t)data[6] - 48;
