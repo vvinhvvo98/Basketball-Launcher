@@ -34,9 +34,38 @@ This PCB is the main component of the project, serving as the centerpiece of the
 
  {\texttt{  }} 
 
+NOTE\+: After assemble the PCBA, there are some issues that required to modify so that the launcher can operate appropriately. The modifications are includes\+:
+\begin{DoxyItemize}
+\item Capacitors\+: C27 and C28 need to be in parallel instead of in series, connect them in series limit the voltage to power the mcu. Solution for this issue would be remove both C27 and C28 then short all pad to 3V3 using solder paste
+\item Resistors\+: R2 has the value of 50k\+Ohm which also limit the current from VREF, and the DRV8825 driver chip cannot sense the current that small. Solution for this issue would be replace the R2 with a 10k\+Ohm resistor with SMD 0805.
+\item Connectors\+: Stepper1 and Stepper2 connectors are in the wrong order comparing to the cable from stepper motor manufaturer. Solution for this issue would be adjust the cable from the stepper motors as following picture
+\end{DoxyItemize}
+
+   
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ PIN   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ PIN   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+PIN 1   &1A -\/ GREEN    \\\cline{1-2}
+PIN 2   &2B -\/ RED    \\\cline{1-2}
+PIN 3   &2A -\/ BLUE    \\\cline{1-2}
+PIN 4   &1B -\/ BLACK   \\\cline{1-2}
+\end{longtabu}
+
+
+ 
+
 ~\newline
 \doxysection{LAUNCHER PCBA}\label{launcher_detail_pcbal}
    ~\newline
+    ~\newline
    
 
 ~\newline

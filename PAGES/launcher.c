@@ -56,8 +56,32 @@
  * 
  * <div class="image-frame">
  *   <a href="LauncherSchematic.pdf" target="_blank">
- *       <img src="p1.png" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;">
+ *       <img src="p4.png" width="1200" height="800" style="border: 10px solid black; border-radius: 10px;">
  *   </a>
+ * </div>
+ * 
+ * 
+ * NOTE: After assemble the PCBA, there are some issues that required to modify so that the launcher can operate
+ * appropriately. The modifications are includes:
+ * - Capacitors: C27 and C28 need to be in parallel instead of in series, connect them in series limit the voltage to power the mcu.
+ * Solution for this issue would be remove both C27 and C28 then short all pad to 3V3 using solder paste
+ * - Resistors: R2 has the value of 50kOhm which also limit the current from VREF, and the DRV8825 driver chip cannot sense the current that small.
+ * Solution for this issue would be replace the R2 with a 10kOhm resistor with SMD 0805.
+ * - Connectors: Stepper1 and Stepper2 connectors are in the wrong order comparing to the cable from stepper motor manufaturer.
+ * Solution for this issue would be adjust the cable from the stepper motors as following picture
+ * 
+ * <div align="center">
+ * <div class="image-frame">
+ * <img src="cable.png" width="400" height="400" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
+ * 
+ * |  PIN  | Description  |
+ * |-------|--------------|
+ * | PIN 1 |   1A - GREEN |
+ * | PIN 2 |   2B - RED   |
+ * | PIN 3 |   2A - BLUE  |
+ * | PIN 4 |   1B - BLACK | 
+ * 
  * </div>
  * 
  * <br> <!---->
@@ -69,6 +93,10 @@
  * <br> <!---->
  * <div class="image-frame">
  * <img src="finalpcb2.png" width="1200" height="1000" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
+  * <br> <!---->
+ * <div class="image-frame">
+ *     <img src="ebox.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
  * </div>
  * 
  * <br> <!---->
