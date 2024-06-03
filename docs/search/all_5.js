@@ -13,5 +13,6 @@ var searchData=
   ['design_10',['DESIGN',['../controller_detail.html#overview',1,'FINAL DESIGN'],['../launcher_detail.html#overview1',1,'FINAL DESIGN'],['../index.html#design',1,'IDEATION DESIGN']]],
   ['dir_5fpin_11',['DIR_PIN',['../struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e',1,'StepperX']]],
   ['dp83848_5fphy_5faddress_12',['DP83848_PHY_ADDRESS',['../stm32f4xx__hal__conf___c_8h.html#a25f014091aaba92bdd9d95d0b2f00503',1,'DP83848_PHY_ADDRESS:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a25f014091aaba92bdd9d95d0b2f00503',1,'DP83848_PHY_ADDRESS:&#160;stm32f4xx_hal_conf.h']]],
-  ['dt_13',['dt',['../struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416',1,'MPU6050::dt'],['../main_8c.html#ab6f7bbc44474a0435c694bd94b8e764e',1,'dt:&#160;main.c']]]
+  ['drop_13',['DROP',['../main_8c.html#a6e397e2f5a057b0961ee9930899610f6',1,'main.c']]],
+  ['dt_14',['dt',['../struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416',1,'MPU6050::dt'],['../main_8c.html#ab6f7bbc44474a0435c694bd94b8e764e',1,'dt:&#160;main.c']]]
 ];

@@ -48,6 +48,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim4;
 
 UART_HandleTypeDef huart1;
@@ -86,6 +87,7 @@ uint8_t SHOT  = 0;
 uint8_t ESTOP = 0;
 uint8_t CAL   = 0;
 uint8_t HOME  = 0;
+uint8_t DROP  = 0;
 uint8_t SW1   = 0;
 uint8_t SW2   = 0;
 uint8_t SW3   = 0;
@@ -109,6 +111,7 @@ static void MX_USART1_UART_Init(void);
 static void MX_USART6_UART_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM4_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
 void dataProcess(char* data);
@@ -154,12 +157,14 @@ int main(void)
   MX_USART6_UART_Init();
   MX_TIM2_Init();
   MX_TIM4_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
   // Create desired object
   StepperX STEPPER1;
   StepperX STEPPER2;
   D4215X ESC1;
   D4215X ESC2;
+  D4215X SER1;
   SwitchX S1;
   SwitchX S2;
   SwitchX S3;
@@ -182,6 +187,8 @@ int main(void)
 
       // STATE 0: INIT ALL OBJECTS
 	  if (STATE == STATE_0_INIT) {
+		  //INIT SERVO
+		  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
 		  // INIT RADIO TIMER
 		  HAL_TIM_Base_Start(&htim4);
 		  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
@@ -192,6 +199,7 @@ int main(void)
   		  // INIT D4215 BLDC MOTORS
   		  D4215_init  (&ESC1,&htim2,TIM_CHANNEL_2);
   		  D4215_init  (&ESC2,&htim2,TIM_CHANNEL_3);
+  		  D4215_init  (&SER1,&htim3,TIM_CHANNEL_2);
   		  // INIT 3 LIMIT SWITCHES
   		  Switch_init (&S1, GPIOB, GPIO_PIN_0);
   		  Switch_init (&S2, GPIOB, GPIO_PIN_1);
@@ -205,6 +213,7 @@ int main(void)
 
 	  // STATE 1: DECISION HUB TO BRANCH TO DIFFERENT HUB
 	  else if (STATE == STATE_1_HUB) {
+		  // TURN OFF 2 LEDS
 		  LED_off(&LED1);
 		  LED_off(&LED2);
 		  // ENABLE 2 STEPPERS
@@ -214,6 +223,12 @@ int main(void)
 		  SW1   = Switch_getStatus(&S1);
 		  SW2   = Switch_getStatus(&S2);
 		  SW3   = Switch_getStatus(&S3);
+		  if (DROP == 1) {
+			  D4215_set(&SER1, 30);
+		  }
+		  else {
+			  D4215_set(&SER1, 0);
+		  }
 		  // CHECK ESTOP
 		  if (ESTOP == 1) {
 			  ti = HAL_GetTick();
@@ -271,7 +286,7 @@ int main(void)
 
 	  }
 	  // STATE 3: SPIN STEPPER MOTORS
-	  else if (STATE == STATE_3_STEPPER) {\
+	  else if (STATE == STATE_3_STEPPER) {
 		  LED_on(&LED1);
 		  // LEFT SWITCH HIT --> MOVE TO THE RIGHT
 		  if (SW == 1) {
@@ -315,8 +330,9 @@ int main(void)
 	  // STATE 4: BLDC MOTOR
 	  else if (STATE == STATE_4_BLDC) {
 		  LED_on(&LED2);
-		  D4215_set(&ESC1, 30);
-		  D4215_set(&ESC2, 30);
+		  // TURN SERVO RELEASE BALL
+		  D4215_set(&ESC1, 50);
+		  D4215_set(&ESC2, 50);
 		  STATE = STATE_1_HUB;
 	  }
 
@@ -426,6 +442,55 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 2 */
   HAL_TIM_MspPostInit(&htim2);
+
+}
+
+/**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 95;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 19999;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+  HAL_TIM_MspPostInit(&htim3);
 
 }
 
@@ -653,6 +718,8 @@ void dataProcess(char* data) {
 
 	yaw   = speedCalculate(yaw1, yaw2, yaw3);
 	pitch = speedCalculate(pitch1, pitch2, pitch3);
+
+	DROP  = (int16_t)data[14] - 48;
 }
 
 

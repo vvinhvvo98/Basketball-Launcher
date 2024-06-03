@@ -38,6 +38,8 @@ void \textbf{ Error\+\_\+\+Handler} (void)
 \item 
 TIM\+\_\+\+Handle\+Type\+Def \textbf{ htim2}
 \item 
+TIM\+\_\+\+Handle\+Type\+Def \textbf{ htim3}
+\item 
 TIM\+\_\+\+Handle\+Type\+Def \textbf{ htim4}
 \item 
 UART\+\_\+\+Handle\+Type\+Def \textbf{ huart1}
@@ -85,6 +87,8 @@ uint8\+\_\+t \textbf{ ESTOP} = 0
 uint8\+\_\+t \textbf{ CAL} = 0
 \item 
 uint8\+\_\+t \textbf{ HOME} = 0
+\item 
+uint8\+\_\+t \textbf{ DROP} = 0
 \item 
 uint8\+\_\+t \textbf{ SW1} = 0
 \item 
@@ -225,6 +229,12 @@ Initializes the CPU, AHB and APB buses clocks
 \doxysubsubsection{data}
 {\footnotesize\ttfamily char data[20]}
 
+\label{main_8c_a6e397e2f5a057b0961ee9930899610f6} 
+\index{main.c@{main.c}!DROP@{DROP}}
+\index{DROP@{DROP}!main.c@{main.c}}
+\doxysubsubsection{DROP}
+{\footnotesize\ttfamily uint8\+\_\+t DROP = 0}
+
 \label{main_8c_ab6f7bbc44474a0435c694bd94b8e764e} 
 \index{main.c@{main.c}!dt@{dt}}
 \index{dt@{dt}!main.c@{main.c}}
@@ -254,6 +264,12 @@ Initializes the CPU, AHB and APB buses clocks
 \index{htim2@{htim2}!main.c@{main.c}}
 \doxysubsubsection{htim2}
 {\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim2}
+
+\label{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62} 
+\index{main.c@{main.c}!htim3@{htim3}}
+\index{htim3@{htim3}!main.c@{main.c}}
+\doxysubsubsection{htim3}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def htim3}
 
 \label{main_8c_a85788cec5a97ee377e4ee2e74f026484} 
 \index{main.c@{main.c}!htim4@{htim4}}
