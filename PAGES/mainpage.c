@@ -93,7 +93,7 @@
  *
  * <div class="image-frame">
  * <a href=https://vvinhvvo98.github.io/Basketball-Launcher/controller_detail.html>
- *      <img src="control.png" width="1200" height="600" style="border: 10px solid black; border-radius: 50px;">
+ *      <img src="control.png" width="1200" height="500" style="border: 10px solid black; border-radius: 50px;">
  * </a>
  * </div>
  *
@@ -105,6 +105,13 @@
  * - Improve the IMU to a 9 DOF sensor that can sense accurate absolute angle
  * - Improve stronger stepper driver that can allow faster and stronger rotation motion
  * - Increase moving angle of the launcher to more than 120°
+ * 
+ * <br> <!---->
+ * 
+ * @section demo_day CAL POLY DEMONSTRATION DAY
+ * <div class="image-frame">
+ * <img src="DSC02620.jpg" width="1200" height="700" style="border: 10px solid black; border-radius: 50px;">
+ * </div>
  * 
  * <br> <!---->
  *

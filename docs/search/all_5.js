@@ -8,11 +8,13 @@ var searchData=
   ['data_5',['data',['../main_8c.html#a91716121094312c93e5773788cb818ce',1,'main.c']]],
   ['data_5fcache_5fenable_6',['DATA_CACHE_ENABLE',['../stm32f4xx__hal__conf___c_8h.html#a5b4c32a40cf49b06c0d761e385949a6b',1,'DATA_CACHE_ENABLE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a5b4c32a40cf49b06c0d761e385949a6b',1,'DATA_CACHE_ENABLE:&#160;stm32f4xx_hal_conf.h']]],
   ['dataprocess_7',['dataProcess',['../main_8c.html#ae8b1081749618dd73189ae92529669fa',1,'main.c']]],
-  ['debugmon_5fhandler_8',['DebugMon_Handler',['../stm32f4xx__it___c_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it___c_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it_C.c']]],
-  ['delay_5fus_9',['Delay_us',['../stepper__driver_8c.html#a0e816b30894e177b44f464a4065cd0cd',1,'Delay_us(uint32_t us):&#160;stepper_driver.c'],['../stepper__driver_8h.html#a0e816b30894e177b44f464a4065cd0cd',1,'Delay_us(uint32_t us):&#160;stepper_driver.c']]],
-  ['design_10',['DESIGN',['../controller_detail.html#overview',1,'FINAL DESIGN'],['../launcher_detail.html#overview1',1,'FINAL DESIGN'],['../index.html#design',1,'IDEATION DESIGN']]],
-  ['dir_5fpin_11',['DIR_PIN',['../struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e',1,'StepperX']]],
-  ['dp83848_5fphy_5faddress_12',['DP83848_PHY_ADDRESS',['../stm32f4xx__hal__conf___c_8h.html#a25f014091aaba92bdd9d95d0b2f00503',1,'DP83848_PHY_ADDRESS:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a25f014091aaba92bdd9d95d0b2f00503',1,'DP83848_PHY_ADDRESS:&#160;stm32f4xx_hal_conf.h']]],
-  ['drop_13',['DROP',['../main_8c.html#a6e397e2f5a057b0961ee9930899610f6',1,'main.c']]],
-  ['dt_14',['dt',['../struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416',1,'MPU6050::dt'],['../main_8c.html#ab6f7bbc44474a0435c694bd94b8e764e',1,'dt:&#160;main.c']]]
+  ['day_8',['CAL POLY DEMONSTRATION DAY',['../index.html#demo_day',1,'']]],
+  ['debugmon_5fhandler_9',['DebugMon_Handler',['../stm32f4xx__it___c_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it___c_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it_C.c'],['../stm32f4xx__it_8c.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8h.html#adbdfb05858cc36fc520974df37ec3cb0',1,'DebugMon_Handler(void):&#160;stm32f4xx_it_C.c']]],
+  ['delay_5fus_10',['Delay_us',['../stepper__driver_8c.html#a0e816b30894e177b44f464a4065cd0cd',1,'Delay_us(uint32_t us):&#160;stepper_driver.c'],['../stepper__driver_8h.html#a0e816b30894e177b44f464a4065cd0cd',1,'Delay_us(uint32_t us):&#160;stepper_driver.c']]],
+  ['demonstration_20day_11',['CAL POLY DEMONSTRATION DAY',['../index.html#demo_day',1,'']]],
+  ['design_12',['DESIGN',['../controller_detail.html#overview',1,'FINAL DESIGN'],['../launcher_detail.html#overview1',1,'FINAL DESIGN'],['../index.html#design',1,'IDEATION DESIGN']]],
+  ['dir_5fpin_13',['DIR_PIN',['../struct_stepper_x.html#a3921d1e1b140f1cb684cc18f883f4f3e',1,'StepperX']]],
+  ['dp83848_5fphy_5faddress_14',['DP83848_PHY_ADDRESS',['../stm32f4xx__hal__conf___c_8h.html#a25f014091aaba92bdd9d95d0b2f00503',1,'DP83848_PHY_ADDRESS:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a25f014091aaba92bdd9d95d0b2f00503',1,'DP83848_PHY_ADDRESS:&#160;stm32f4xx_hal_conf.h']]],
+  ['drop_15',['DROP',['../main_8c.html#a6e397e2f5a057b0961ee9930899610f6',1,'main.c']]],
+  ['dt_16',['dt',['../struct_m_p_u6050.html#a7f5f503663caaac1aba5da597ea15416',1,'MPU6050::dt'],['../main_8c.html#ab6f7bbc44474a0435c694bd94b8e764e',1,'dt:&#160;main.c']]]
 ];

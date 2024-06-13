@@ -30,8 +30,9 @@ var searchData=
   ['pitch_27',['pitch',['../main_8c.html#af1879425937ee67e191d80e6390dc942',1,'main.c']]],
   ['pitchdirection_28',['pitchDirection',['../main_8c.html#a25c28ea9d15fd960d067fcde933fa2d9',1,'main.c']]],
   ['pitchdirectionsw_29',['pitchDirectionSW',['../main_8c.html#a336f0e298a64a2c8165459e61ca8c92e',1,'main.c']]],
-  ['prefetch_5fenable_30',['PREFETCH_ENABLE',['../stm32f4xx__hal__conf___c_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf.h']]],
-  ['printed_20parts_31',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
-  ['proposal_32',['PROPOSAL',['../reports_detail.html#doc1',1,'']]],
-  ['pulsewidth_33',['pulseWidth',['../struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137',1,'RadioX']]]
+  ['poly_20demonstration_20day_30',['CAL POLY DEMONSTRATION DAY',['../index.html#demo_day',1,'']]],
+  ['prefetch_5fenable_31',['PREFETCH_ENABLE',['../stm32f4xx__hal__conf___c_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf_C.h'],['../stm32f4xx__hal__conf_8h.html#a13fc0d5e7bb925385c0cc0772ba6a391',1,'PREFETCH_ENABLE:&#160;stm32f4xx_hal_conf.h']]],
+  ['printed_20parts_32',['BILL OF MATERIAL - 3D PRINTED PARTS',['../launcher_detail.html#bomm5',1,'']]],
+  ['proposal_33',['PROPOSAL',['../reports_detail.html#doc1',1,'']]],
+  ['pulsewidth_34',['pulseWidth',['../struct_radio_x.html#a3e3a92e2b80deeb063f71f96c4549137',1,'RadioX']]]
 ];
